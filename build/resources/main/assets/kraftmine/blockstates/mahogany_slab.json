@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kraftmine:block/mahogany_slab"
+    },
+    "type=top": {
+      "model": "kraftmine:block/mahogany_slab_top"
+    },
+    "type=double": {
+      "model": "kraftmine:block/mahogany_slab_full"
+    }
+  }
+}

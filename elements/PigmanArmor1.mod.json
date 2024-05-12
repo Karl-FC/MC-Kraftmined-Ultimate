@@ -1,0 +1,35 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.LEATHER_LEGGINGS"
+      },
+      {
+        "value": "Items.CHAINMAIL_LEGGINGS"
+      },
+      {
+        "value": "Items.GOLDEN_LEGGINGS"
+      },
+      {
+        "value": "Items.DIAMOND_LEGGINGS"
+      },
+      {
+        "value": "Items.NETHERITE_LEGGINGS"
+      },
+      {
+        "value": "CUSTOM:ObsidianArmor.legs"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "pigman_armor_1",
+    "namespace": "forge"
+  }
+}

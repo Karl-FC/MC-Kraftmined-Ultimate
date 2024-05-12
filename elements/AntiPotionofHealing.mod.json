@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Anti-Potion of Healing",
+    "splashName": "Splash Anti-Potion of Healing",
+    "lingeringName": "Lingering Anti-Potion of Healing",
+    "arrowName": "Arrow of Anti-Potion of Healing",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:AntiHeal"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

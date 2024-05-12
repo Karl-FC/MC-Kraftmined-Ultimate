@@ -1,0 +1,15 @@
+{
+  "_fv": 39,
+  "_type": "itemextension",
+  "definition": {
+    "item": {
+      "value": "CUSTOM:ProbabilitiesShard"
+    },
+    "enableFuel": false,
+    "hasDispenseBehavior": true,
+    "dispenseResultItemstack": {
+      "name": "PositioningShardOnDispenseAttemptWithResult"
+    },
+    "compostLayerChance": 0.0
+  }
+}

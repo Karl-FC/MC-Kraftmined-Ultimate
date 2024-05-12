@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:plastic"
+    },
+    "2": {
+      "item": "kraftmine:plastic"
+    },
+    "3": {
+      "item": "kraftmine:plastic"
+    },
+    "4": {
+      "item": "kraftmine:plastic"
+    },
+    "5": {
+      "item": "kraftmine:plastic"
+    },
+    "6": {
+      "item": "kraftmine:plastic"
+    },
+    "7": {
+      "item": "kraftmine:plastic"
+    },
+    "8": {
+      "item": "kraftmine:plastic"
+    }
+  },
+  "result": {
+    "item": "kraftmine:plastic_armor_chestplate",
+    "count": 1
+  }
+}

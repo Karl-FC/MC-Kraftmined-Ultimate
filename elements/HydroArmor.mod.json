@@ -1,0 +1,82 @@
+{
+  "_fv": 39,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "hydro_helmet",
+    "enableBody": true,
+    "textureBody": "hydro_tunic",
+    "enableLeggings": true,
+    "textureLeggings": "hydro_leggings",
+    "enableBoots": true,
+    "textureBoots": "hydro_boots",
+    "onHelmetTick": {
+      "name": "HydroArmorHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "HydroArmorBodyTickEvent"
+    },
+    "onLeggingsTick": {
+      "name": "HydroArmorBodyTickEvent"
+    },
+    "onBootsTick": {
+      "name": "HydroArmorBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "armorTextureFile": "blank_",
+    "helmetName": "Water Helmet",
+    "bodyName": "Water Tunic",
+    "leggingsName": "Water Leggings",
+    "bootsName": "Water Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Modelwater",
+    "helmetModelPart": "helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Modelwater",
+    "bodyModelPart": "chestplate",
+    "armsModelPartL": "Leftarm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Modelwater",
+    "leggingsModelPartL": "leggingsleft",
+    "leggingsModelPartR": "leggingsright",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Modelwater",
+    "bootsModelPartL": "LeftFoot",
+    "bootsModelPartR": "RightFoot",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 25,
+    "damageValueHelmet": 0,
+    "damageValueBody": 0,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 0,
+    "enchantability": 9,
+    "toughness": 0.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": "ambient.underwater.enter"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:WaterCharge"
+      }
+    ]
+  }
+}

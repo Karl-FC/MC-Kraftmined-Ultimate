@@ -1,0 +1,193 @@
+{
+  "_fv": 39,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Goose",
+    "mobLabel": "",
+    "mobModelName": "ModelGoose",
+    "mobModelTexture": "goosetexture.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -9421005,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 3,
+    "attackKnockback": 0.2,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.30000000000000004,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 16,
+    "xpAmount": 4,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": true,
+    "immuneToDragonBreath": true,
+    "mobDrop": {
+      "value": "Items.EGG"
+    },
+    "livingSound": {
+      "value": "CUSTOM:goose.honk"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:goose.honk"
+    },
+    "deathSound": {
+      "value": "entity.chicken.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "onStruckByLightning": {
+      "name": "GooseItIsStruckByLightning"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"148\" y=\"30\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.5</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">20</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT_SEEDS</field></block></value><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityMonster</field><field name=\"radius\">6</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityAnimal</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "ParasNaturalEntitySpawningCondition"
+    },
+    "spawningProbability": 15,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 10,
+    "restrictionBiomes": [
+      {
+        "value": "plains"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "forest"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "grove"
+      },
+      {
+        "value": "river"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "mutated_savanna_rock"
+      },
+      {
+        "value": "mutated_swampland"
+      },
+      {
+        "value": "taiga_hills"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "birch_forest_hills"
+      },
+      {
+        "value": "mutated_roofed_forest"
+      },
+      {
+        "value": "forest_hills"
+      },
+      {
+        "value": "mutated_birch_forest_hills"
+      },
+      {
+        "value": "redwood_taiga_hills"
+      },
+      {
+        "value": "mutated_redwood_taiga_hills"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      }
+    ],
+    "spawnInDungeons": false
+  }
+}

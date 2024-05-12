@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Terrifying Screams",
+    "splashName": "Splash Potion of Terrifying Screams",
+    "lingeringName": "Lingering Potion of Terrifying Screams",
+    "arrowName": "Arrow of Terrifying Screams",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:PotionCry"
+        },
+        "duration": 300,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

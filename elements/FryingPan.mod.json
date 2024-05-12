@@ -1,0 +1,30 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "fryingpan",
+    "customModelName": "Normal",
+    "name": "Frying Pan",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 6.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 2.0,
+    "usageCount": 32,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
+    "onEntityHitWith": {
+      "name": "FryingPanLivingEntityIsHitWithTool"
+    }
+  }
+}

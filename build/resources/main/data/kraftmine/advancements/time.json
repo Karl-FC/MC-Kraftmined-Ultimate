@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "kraftmine:shard_time"
+    },
+    "title": {
+      "translate": "advancements.time.title"
+    },
+    "description": {
+      "translate": "advancements.time.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "time": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kraftmine:shard_time"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 250
+  },
+  "parent": "kraftmine:kraftmine_base_power"
+}

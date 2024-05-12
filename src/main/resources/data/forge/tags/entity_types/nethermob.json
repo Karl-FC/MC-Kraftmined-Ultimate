@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "zombified_piglin",
+    "piglin_brute",
+    "wither_skeleton"
+  ]
+}

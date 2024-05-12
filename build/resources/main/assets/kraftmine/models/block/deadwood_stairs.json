@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "kraftmine:blocks/deadwood_planks",
+    "top": "kraftmine:blocks/deadwood_planks",
+    "side": "kraftmine:blocks/deadwood_planks"
+  },
+  "render_type": "solid"
+}

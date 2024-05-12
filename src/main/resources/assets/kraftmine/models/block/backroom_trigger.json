@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:blocks/ore_overlay_10",
+    "up": "kraftmine:blocks/ore_overlay_10",
+    "north": "kraftmine:blocks/ore_overlay_10",
+    "east": "kraftmine:blocks/ore_overlay_10",
+    "south": "kraftmine:blocks/ore_overlay_10",
+    "west": "kraftmine:blocks/ore_overlay_10",
+    "particle": "kraftmine:blocks/ore_overlay_10"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,33 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "sandstone_pickaxe",
+    "customModelName": "Normal",
+    "name": "Sandstone Pickaxe",
+    "specialInfo": [
+      "Has a chance to temporarily blind those near it"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 2,
+    "efficiency": 5.0,
+    "attackSpeed": 1.0,
+    "enchantability": 11,
+    "damageVsEntity": 2.0,
+    "usageCount": 183,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Blocks.SANDSTONE#0"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "kraftmine:custom/empty_can",
+  "textures": {
+    "all": "kraftmine:blocks/mahogany_log_side",
+    "particle": "kraftmine:blocks/mahogany_log_side",
+    "0": "kraftmine:blocks/can_empty"
+  },
+  "render_type": "solid"
+}

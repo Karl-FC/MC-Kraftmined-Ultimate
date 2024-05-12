@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:mahogany_log",
+    "kraftmine:mahogany_planks",
+    "kraftmine:cherry_log",
+    "kraftmine:cherry_planks",
+    "kraftmine:bamboo_planks",
+    "kraftmine:supply_crate",
+    "kraftmine:wallnut",
+    "kraftmine:deadwood_wood",
+    "kraftmine:deadwood_log",
+    "kraftmine:deadwood_planks"
+  ]
+}

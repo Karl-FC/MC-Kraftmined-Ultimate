@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "kraftmine:reactor_core"
+    },
+    "title": {
+      "translate": "advancements.kraftmine_base_power.title"
+    },
+    "description": {
+      "translate": "advancements.kraftmine_base_power.descr"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "kraftmine_base_power": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

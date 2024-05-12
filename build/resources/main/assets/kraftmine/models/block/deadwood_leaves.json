@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "kraftmine:blocks/deadwood_leaves",
+    "particle": "kraftmine:blocks/deadwood_leaves"
+  }
+}

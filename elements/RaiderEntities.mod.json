@@ -1,0 +1,35 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityIllusionIllager"
+      },
+      {
+        "value": "EntityPillager"
+      },
+      {
+        "value": "EntityEvoker"
+      },
+      {
+        "value": "EntityVindicator"
+      },
+      {
+        "value": "EntityRavager"
+      },
+      {
+        "value": "EntityWitch"
+      },
+      {
+        "value": "CUSTOM:Iceologer"
+      }
+    ],
+    "name": "raiders",
+    "namespace": "minecraft"
+  }
+}

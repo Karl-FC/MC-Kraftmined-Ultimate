@@ -1,0 +1,47 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Nextbot1"
+      },
+      {
+        "value": "CUSTOM:Nextbot10"
+      },
+      {
+        "value": "CUSTOM:Nextbot11"
+      },
+      {
+        "value": "CUSTOM:Nextbot2"
+      },
+      {
+        "value": "CUSTOM:Nextbot3"
+      },
+      {
+        "value": "CUSTOM:Nextbot4"
+      },
+      {
+        "value": "CUSTOM:Nextbot5"
+      },
+      {
+        "value": "CUSTOM:Nextbot6"
+      },
+      {
+        "value": "CUSTOM:Nextbot7"
+      },
+      {
+        "value": "CUSTOM:Nextbot8"
+      },
+      {
+        "value": "CUSTOM:Nextbot9"
+      }
+    ],
+    "name": "nextbot_tags",
+    "namespace": "forge"
+  }
+}

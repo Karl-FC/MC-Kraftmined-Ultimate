@@ -1,0 +1,45 @@
+{
+  "_fv": 39,
+  "_type": "structure",
+  "definition": {
+    "structure": "palm_small",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First block",
+    "spawnProbability": 70000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 5,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.GRASS"
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": "Blocks.SAND#0"
+      },
+      {
+        "value": "Blocks.GRAVEL"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Tropics"
+      },
+      {
+        "value": "beaches"
+      }
+    ],
+    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK",
+    "generateCondition": {
+      "name": "AdditionalGenerationCondition"
+    }
+  }
+}

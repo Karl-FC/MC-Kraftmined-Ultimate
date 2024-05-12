@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:blocks/cave_vines_stems",
+    "up": "kraftmine:blocks/cave_vines_stems",
+    "north": "kraftmine:blocks/cave_vines_stems",
+    "east": "kraftmine:blocks/cave_vines_stems",
+    "south": "kraftmine:blocks/cave_vines_stems",
+    "west": "kraftmine:blocks/cave_vines_stems",
+    "particle": "kraftmine:blocks/cave_vines_stems"
+  },
+  "render_type": "solid"
+}

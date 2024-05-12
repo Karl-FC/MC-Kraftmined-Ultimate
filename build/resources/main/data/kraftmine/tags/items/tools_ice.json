@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:ice_pickaxe",
+    "kraftmine:ice_axe",
+    "kraftmine:ice_hoe",
+    "kraftmine:ice_sword",
+    "kraftmine:ice_shovel"
+  ]
+}

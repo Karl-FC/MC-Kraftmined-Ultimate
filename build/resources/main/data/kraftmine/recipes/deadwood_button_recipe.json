@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kraftmine:deadwood_planks"
+    }
+  ],
+  "result": {
+    "item": "kraftmine:deadwood_button",
+    "count": 1
+  }
+}

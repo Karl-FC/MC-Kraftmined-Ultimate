@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:planks"
+    },
+    "2": {
+      "tag": "minecraft:planks"
+    },
+    "3": {
+      "tag": "minecraft:planks"
+    },
+    "4": {
+      "tag": "minecraft:planks"
+    },
+    "5": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "kraftmine:wooden_cup",
+    "count": 3
+  }
+}

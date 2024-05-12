@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:glass_sword",
+    "kraftmine:glass_shovel",
+    "kraftmine:glass_pickaxe",
+    "kraftmine:glass_axe",
+    "kraftmine:glass_hoe"
+  ]
+}

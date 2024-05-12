@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:cherry_planks"
+    },
+    "1": {
+      "item": "kraftmine:cherry_planks"
+    },
+    "2": {
+      "item": "kraftmine:cherry_planks"
+    }
+  },
+  "result": {
+    "item": "kraftmine:cherry_slab",
+    "count": 6
+  }
+}

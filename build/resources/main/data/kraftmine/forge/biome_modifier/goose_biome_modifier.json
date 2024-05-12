@@ -1,0 +1,31 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "savanna_plateau",
+    "forest",
+    "sunflower_plains",
+    "taiga",
+    "flower_forest",
+    "birch_forest",
+    "swamp",
+    "old_growth_birch_forest",
+    "grove",
+    "windswept_hills",
+    "dark_forest",
+    "old_growth_pine_taiga",
+    "plains",
+    "savanna",
+    "windswept_savanna",
+    "windswept_forest",
+    "river",
+    "windswept_gravelly_hills",
+    "meadow",
+    "old_growth_spruce_taiga"
+  ],
+  "spawners": {
+    "type": "kraftmine:goose",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 10
+  }
+}

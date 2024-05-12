@@ -1,0 +1,124 @@
+{
+  "_fv": 39,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Sleuth",
+    "mobLabel": "",
+    "mobModelName": "Modelsleuth",
+    "mobModelTexture": "sleuth.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 3.0,
+    "modelHeight": 2.6,
+    "modelShadowSize": 3.0,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 16,
+    "attackKnockback": 0.7,
+    "knockbackResistance": 0.1,
+    "movementSpeed": 0.35,
+    "armorBaseValue": 0.0,
+    "trackingRange": 75,
+    "followRange": 16,
+    "health": 75,
+    "xpAmount": 25,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "CUSTOM:sleuth.idle"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:sleuth.hurt"
+    },
+    "deathSound": {
+      "value": "CUSTOM:sleuth.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">GhostSpiderNight,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "BkEntitiesNaturalEntitySpawningCondition"
+    },
+    "spawningProbability": 20,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:BackroomLevel0"
+      }
+    ],
+    "spawnInDungeons": true
+  }
+}

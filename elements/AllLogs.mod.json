@@ -1,0 +1,71 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:MahoganyLog"
+      },
+      {
+        "value": "CUSTOM:CherryLog"
+      },
+      {
+        "value": "CUSTOM:PalmWoodLog"
+      },
+      {
+        "value": "Blocks.LOG"
+      },
+      {
+        "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "Blocks.LOG#1"
+      },
+      {
+        "value": "Blocks.LOG#2"
+      },
+      {
+        "value": "Blocks.LOG#3"
+      },
+      {
+        "value": "Blocks.LOG2"
+      },
+      {
+        "value": "Blocks.LOG2#0"
+      },
+      {
+        "value": "Blocks.LOG2#1"
+      },
+      {
+        "value": "Blocks.STRIPPED_OAK_LOG"
+      },
+      {
+        "value": "Blocks.STRIPPED_SPRUCE_LOG"
+      },
+      {
+        "value": "Blocks.STRIPPED_BIRCH_LOG"
+      },
+      {
+        "value": "Blocks.STRIPPED_JUNGLE_LOG"
+      },
+      {
+        "value": "Blocks.STRIPPED_ACACIA_LOG"
+      },
+      {
+        "value": "Blocks.STRIPPED_DARK_OAK_LOG"
+      },
+      {
+        "value": "CUSTOM:DeadwoodWood"
+      },
+      {
+        "value": "CUSTOM:DeadwoodLog"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "all_logs",
+    "namespace": "mod"
+  }
+}

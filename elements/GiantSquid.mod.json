@@ -1,0 +1,120 @@
+{
+  "_fv": 39,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Giant Squid",
+    "mobLabel": "",
+    "mobModelName": "Ghast",
+    "mobModelTexture": "squid_ghast.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 4.0,
+    "modelHeight": 4.0,
+    "modelShadowSize": 3.0,
+    "mountedYOffset": 4.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -16750951,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -3381760,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "WATER",
+    "attackStrength": 10,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 1.0,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 10.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 30,
+    "xpAmount": 5,
+    "waterMob": true,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "Items.DYE#0"
+    },
+    "livingSound": {
+      "value": "entity.squid.ambient"
+    },
+    "hurtSound": {
+      "value": "entity.squid.hurt"
+    },
+    "deathSound": {
+      "value": "entity.squid.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "GiantSquidNaturalEntitySpawningCondition"
+    },
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 5,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 1.4,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:TitaniumOre"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:TitaniumIngot"
+    },
+    "name": "deepslate_titanium_ore_smelting",
+    "namespace": "mod"
+  }
+}

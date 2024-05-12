@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Roasting",
+    "splashName": "Splash Potion of Roasting",
+    "lingeringName": "Lingering Potion of Roasting",
+    "arrowName": "Arrow of Roasting",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Burnheal"
+        },
+        "duration": 2400,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

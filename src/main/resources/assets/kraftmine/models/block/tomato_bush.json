@@ -1,0 +1,8 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "kraftmine:blocks/tomato_bush_0",
+    "particle": "kraftmine:blocks/tomato_bush_0"
+  },
+  "render_type": "cutout"
+}

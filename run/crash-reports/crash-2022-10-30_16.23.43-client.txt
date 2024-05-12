@@ -1,0 +1,156 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 10/30/22, 4:23 PM
+Description: Unexpected error
+
+java.util.ConcurrentModificationException: null
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1597) ~[?:?] {}
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1630) ~[?:?] {}
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1628) ~[?:?] {}
+	at net.minecraft.client.sounds.SoundEngine.tickNonPaused(SoundEngine.java:257) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.sounds.SoundEngine.tick(SoundEngine.java:220) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.sounds.SoundManager.tick(SoundManager.java:202) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1696) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1019) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:663) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:24) ~[fmlloader-1.18.2-40.1.0.jar%230!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1597) ~[?:?] {}
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1630) ~[?:?] {}
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1628) ~[?:?] {}
+	at net.minecraft.client.sounds.SoundEngine.tickNonPaused(SoundEngine.java:257) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.sounds.SoundEngine.tick(SoundEngine.java:220) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.sounds.SoundManager.tick(SoundManager.java:202) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/330, l='ClientLevel', x=140.70, y=73.00, z=-24.30]]
+	Chunk stats: 225, 121
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (96,73,0), Section: (at 0,9,0 in 6,4,0; chunk contains blocks 96,-64,0 to 111,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 4092 game time, 4092 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.ClientLevel.fillReportDetails(ClientLevel.java:406) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2255) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:685) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:24) ~[fmlloader-1.18.2-40.1.0.jar%230!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default, Mod Resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.3, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 116620648 bytes (111 MiB) / 1148190720 bytes (1095 MiB) up to 2090860544 bytes (1994 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz
+	Identifier: Intel64 Family 6 Model 140 Stepping 1
+	Microarchitecture: Tiger Lake
+	Frequency (GHz): 3.11
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: Intel(R) Iris(R) Xe Graphics
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MB): 1024.00
+	Graphics card #0 deviceId: 0x9a49
+	Graphics card #0 versionInfo: DriverVersion=30.0.101.1960
+	Graphics card #1 name: NVIDIA GeForce RTX 3050 Ti Laptop GPU
+	Graphics card #1 vendor: NVIDIA (0x10de)
+	Graphics card #1 VRAM (MB): 4095.00
+	Graphics card #1 deviceId: 0x25a0
+	Graphics card #1 versionInfo: DriverVersion=30.0.15.1295
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Virtual memory max (MB): 17129.12
+	Virtual memory used (MB): 13916.50
+	Swap memory total (MB): 9153.81
+	Swap memory used (MB): 1754.38
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: Intel(R) Iris(R) Xe Graphics GL version 3.2.0 - Build 30.0.101.1960, Intel
+	Window size: 1920x991
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 8x 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/330, l='ServerLevel[New World10-30]', x=140.70, y=73.00, z=-24.30]]
+	Data Packs: vanilla (incompatible), mod:forge (incompatible), mod:kraftmine
+	World Generation: Experimental
+	ModLauncher: 9.1.3+9.1.3+main.9b69c82a
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 slf4jfixer PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+	Mod List: 
+		forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.|Minecraft                     |minecraft                     |1.18.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |40.1.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Kraftmine                     |kraftmine                     |1.1.8               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 7e6393c2-657f-4fb8-976b-a8b336792bcc
+	FML: 40.1
+	Forge: net.minecraftforge:40.1.0

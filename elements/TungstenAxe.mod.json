@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "t_axe",
+    "customModelName": "Normal",
+    "name": "Tungsten Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 4,
+    "efficiency": 9.0,
+    "attackSpeed": 1.0,
+    "enchantability": 28,
+    "damageVsEntity": 18.0,
+    "usageCount": 660,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:TungstenIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "sticc",
+    "customModelName": "Normal",
+    "name": "Stick Of Death",
+    "specialInfo": [
+      "Use wisely"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 1.0,
+    "attackSpeed": 0.1,
+    "enchantability": 0,
+    "damageVsEntity": 8.200000000000001,
+    "usageCount": 3,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "StickOfDeathLivingEntityIsHitWithTool"
+    }
+  }
+}

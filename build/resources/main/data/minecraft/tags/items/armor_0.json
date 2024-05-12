@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:tungsten_armor_boots",
+    "kraftmine:nickel_armor_boots",
+    "kraftmine:obsidian_armor_boots",
+    "kraftmine:drip_armor_boots",
+    "minecraft:chainmail_boots",
+    "minecraft:iron_boots",
+    "minecraft:netherite_boots",
+    "kraftmine:carbon_armor_boots",
+    "minecraft:diamond_boots",
+    "kraftmine:titanium_armor_boots",
+    "kraftmine:lapis_lazuli_armor_boots",
+    "kraftmine:redstone_armor_boots",
+    "minecraft:golden_boots",
+    "minecraft:leather_boots"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dead_bush"
+    },
+    "title": {
+      "translate": "advancements.knowledge_alternates.title"
+    },
+    "description": {
+      "translate": "advancements.knowledge_alternates.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "knowledge_alternates": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "kraftmine:mastery_time"
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:bamboo_planks"
+    },
+    "3": {
+      "item": "kraftmine:bamboo_planks"
+    },
+    "4": {
+      "item": "kraftmine:bamboo_planks"
+    },
+    "6": {
+      "item": "kraftmine:bamboo_planks"
+    },
+    "7": {
+      "item": "kraftmine:bamboo_planks"
+    },
+    "8": {
+      "item": "kraftmine:bamboo_planks"
+    }
+  },
+  "result": {
+    "item": "kraftmine:bamboo_stairs",
+    "count": 4
+  }
+}

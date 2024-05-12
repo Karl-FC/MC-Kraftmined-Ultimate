@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:cloud_block_rain"
+    },
+    "1": {
+      "item": "kraftmine:cloud_block_rain"
+    },
+    "2": {
+      "item": "kraftmine:cloud_block_rain"
+    },
+    "3": {
+      "item": "kraftmine:cloud_block_rain"
+    },
+    "5": {
+      "item": "kraftmine:cloud_block_rain"
+    }
+  },
+  "result": {
+    "item": "kraftmine:condensed_armor_helmet",
+    "count": 1
+  }
+}

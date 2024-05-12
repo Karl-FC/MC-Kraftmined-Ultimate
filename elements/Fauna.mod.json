@@ -1,0 +1,227 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.TALLGRASS"
+      },
+      {
+        "value": "Blocks.TALLGRASS#1"
+      },
+      {
+        "value": "Blocks.TALLGRASS#2"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#2"
+      },
+      {
+        "value": "Blocks.SEAGRASS"
+      },
+      {
+        "value": "Blocks.TALL_SEAGRASS"
+      },
+      {
+        "value": "Blocks.FLOWERING_AZALEA_LEAVES"
+      },
+      {
+        "value": "Blocks.YELLOW_FLOWER"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#0"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#1"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#2"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#3"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#4"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#5"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#6"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#7"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#8"
+      },
+      {
+        "value": "Blocks.CORNFLOWER"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#0"
+      },
+      {
+        "value": "Blocks.CHORUS_FLOWER"
+      },
+      {
+        "value": "Blocks.FLOWER_POT"
+      },
+      {
+        "value": "Blocks.POTTED_CORNFLOWER"
+      },
+      {
+        "value": "Blocks.POTTED_FLOWERING_AZALEA_BUSH"
+      },
+      {
+        "value": "Blocks.FLOWERING_AZALEA"
+      },
+      {
+        "value": "Blocks.SAPLING#0"
+      },
+      {
+        "value": "Blocks.SAPLING#1"
+      },
+      {
+        "value": "Blocks.SAPLING#2"
+      },
+      {
+        "value": "Blocks.SAPLING#3"
+      },
+      {
+        "value": "Blocks.SAPLING#4"
+      },
+      {
+        "value": "Blocks.SAPLING#5"
+      },
+      {
+        "value": "Blocks.LOG"
+      },
+      {
+        "value": "Blocks.LOG2"
+      },
+      {
+        "value": "Blocks.PUMPKIN_STEM"
+      },
+      {
+        "value": "Blocks.ATTACHED_PUMPKIN_STEM"
+      },
+      {
+        "value": "Blocks.SWEET_BERRY_BUSH"
+      },
+      {
+        "value": "Blocks.POTTED_OAK_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_SPRUCE_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_BIRCH_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_JUNGLE_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_ACACIA_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_DARK_OAK_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_FERN"
+      },
+      {
+        "value": "Blocks.POTTED_DANDELION"
+      },
+      {
+        "value": "Blocks.POTTED_POPPY"
+      },
+      {
+        "value": "Blocks.POTTED_BLUE_ORCHID"
+      },
+      {
+        "value": "Blocks.POTTED_ALLIUM"
+      },
+      {
+        "value": "Blocks.POTTED_AZURE_BLUET"
+      },
+      {
+        "value": "Blocks.POTTED_RED_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_ORANGE_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_WHITE_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_PINK_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_OXEYE_DAISY"
+      },
+      {
+        "value": "Blocks.POTTED_LILY_OF_THE_VALLEY"
+      },
+      {
+        "value": "Blocks.POTTED_RED_MUSHROOM"
+      },
+      {
+        "value": "Blocks.POTTED_BROWN_MUSHROOM"
+      },
+      {
+        "value": "Blocks.POTTED_DEAD_BUSH"
+      },
+      {
+        "value": "Blocks.POTTED_CACTUS"
+      },
+      {
+        "value": "Blocks.POTTED_BAMBOO"
+      },
+      {
+        "value": "Blocks.POTTED_CRIMSON_FUNGUS"
+      },
+      {
+        "value": "Blocks.POTTED_WARPED_FUNGUS"
+      },
+      {
+        "value": "Blocks.POTTED_CRIMSON_ROOTS"
+      },
+      {
+        "value": "Blocks.POTTED_WARPED_ROOTS"
+      },
+      {
+        "value": "Blocks.POTTED_AZALEA_BUSH"
+      },
+      {
+        "value": "Blocks.CAVE_VINES"
+      },
+      {
+        "value": "Blocks.CAVE_VINES_PLANT"
+      },
+      {
+        "value": "Blocks.SPORE_BLOSSOM"
+      },
+      {
+        "value": "Blocks.LILY_OF_THE_VALLEY"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#1"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#3"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#4"
+      },
+      {
+        "value": "CUSTOM:MahoganyLog"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "fauna",
+    "namespace": "mod"
+  }
+}

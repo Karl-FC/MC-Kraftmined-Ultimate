@@ -1,0 +1,37 @@
+{
+  "_fv": 39,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "razor_bod",
+    "customModelName": "Normal",
+    "name": "Blade Of Despair",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": true,
+    "usageCount": 300,
+    "actionSound": {
+      "value": "item.axe.wax_off"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 3.5,
+    "bulletPower": 1.0,
+    "bulletDamage": 3.9999999999999996,
+    "bulletKnockback": 1,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:BladeOfDespair"
+    },
+    "bulletModel": "Modelbod",
+    "customBulletModelTexture": "bod.png"
+  }
+}

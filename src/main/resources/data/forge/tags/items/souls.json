@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:soul_sprite",
+    "kraftmine:soul_flight",
+    "kraftmine:soul_blight",
+    "kraftmine:soul_sight",
+    "kraftmine:soul_might",
+    "kraftmine:soul_right",
+    "kraftmine:soul_night",
+    "kraftmine:soul_calcite",
+    "kraftmine:soul_fright",
+    "kraftmine:soul_light"
+  ]
+}

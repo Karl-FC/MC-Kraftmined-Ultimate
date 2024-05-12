@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "beach",
+    "kraftmine:tropics"
+  ],
+  "features": "kraftmine:palmmid",
+  "step": "surface_structures"
+}

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:apple"
+    },
+    "title": {
+      "translate": "advancements.talent_life.title"
+    },
+    "description": {
+      "translate": "advancements.talent_life.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "talent_life": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "kraftmine:ruby_block"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "kraftmine:talents"
+}

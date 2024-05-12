@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:deadwood_log"
+    },
+    "1": {
+      "item": "kraftmine:deadwood_log"
+    },
+    "2": {
+      "item": "kraftmine:deadwood_log"
+    },
+    "3": {
+      "item": "kraftmine:deadwood_log"
+    }
+  },
+  "result": {
+    "item": "kraftmine:deadwood_wood",
+    "count": 3
+  }
+}

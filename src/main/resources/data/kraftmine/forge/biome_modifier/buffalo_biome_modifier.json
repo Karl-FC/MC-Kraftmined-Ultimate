@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "plains",
+    "meadow",
+    "kraftmine:tropics"
+  ],
+  "spawners": {
+    "type": "kraftmine:buffalo",
+    "weight": 21,
+    "minCount": 3,
+    "maxCount": 5
+  }
+}

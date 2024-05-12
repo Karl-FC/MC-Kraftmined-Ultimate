@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:chainmail_leggings"
+  },
+  "addition": {
+    "item": "minecraft:leather_leggings"
+  },
+  "result": {
+    "item": "kraftmine:studded_armor_leggings"
+  }
+}

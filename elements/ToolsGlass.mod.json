@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:GlassPickaxe"
+      },
+      {
+        "value": "CUSTOM:GlassAxe"
+      },
+      {
+        "value": "CUSTOM:GlassSword"
+      },
+      {
+        "value": "CUSTOM:GlassShovel"
+      },
+      {
+        "value": "CUSTOM:GlassHoe"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "tools_glass",
+    "namespace": "mod"
+  }
+}

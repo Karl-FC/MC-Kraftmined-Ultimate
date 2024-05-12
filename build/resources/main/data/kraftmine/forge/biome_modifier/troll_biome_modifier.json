@@ -1,0 +1,28 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "savanna_plateau",
+    "dripstone_caves",
+    "sparse_jungle",
+    "lush_caves",
+    "kraftmine:roblox",
+    "eroded_badlands",
+    "badlands",
+    "kraftmine:wasteland",
+    "windswept_hills",
+    "wooded_badlands",
+    "plains",
+    "savanna",
+    "windswept_savanna",
+    "stony_peaks",
+    "windswept_gravelly_hills",
+    "jungle",
+    "kraftmine:tropics"
+  ],
+  "spawners": {
+    "type": "kraftmine:troll",
+    "weight": 10,
+    "minCount": 2,
+    "maxCount": 10
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MahoganyLog"
+      },
+      {
+        "value": "CUSTOM:CherryLog"
+      },
+      {
+        "value": "CUSTOM:PalmWoodLog"
+      },
+      {
+        "value": "Blocks.LOG"
+      },
+      {
+        "value": "Blocks.LOG2"
+      },
+      {
+        "value": "CUSTOM:PalmWoodLeaves"
+      },
+      {
+        "value": "CUSTOM:MahoganyWood"
+      },
+      {
+        "value": "CUSTOM:CherryWood"
+      },
+      {
+        "value": "CUSTOM:PalmWoodWood"
+      },
+      {
+        "value": "CUSTOM:DeadwoodLog"
+      },
+      {
+        "value": "CUSTOM:DeadwoodWood"
+      },
+      {
+        "value": "CUSTOM:DeadwoodLeaves"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}

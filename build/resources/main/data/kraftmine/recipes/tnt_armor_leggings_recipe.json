@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:tnt"
+    },
+    "1": {
+      "item": "minecraft:tnt"
+    },
+    "2": {
+      "item": "minecraft:tnt"
+    },
+    "3": {
+      "item": "minecraft:tnt"
+    },
+    "5": {
+      "item": "minecraft:tnt"
+    },
+    "6": {
+      "item": "minecraft:tnt"
+    },
+    "8": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "kraftmine:tnt_armor_leggings",
+    "count": 1
+  }
+}

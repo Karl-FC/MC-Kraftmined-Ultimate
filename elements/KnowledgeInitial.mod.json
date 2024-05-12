@@ -1,0 +1,25 @@
+{
+  "_fv": 39,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Knowledge from the Origin of the Universe",
+    "achievementDescription": "Learned the power of the Initial Shard",
+    "achievementIcon": {
+      "value": "Items.END_CRYSTAL"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 50,
+    "achievementType": "goal",
+    "parent": {
+      "value": "CUSTOM:KnowledgeRealities"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"50\" y=\"63\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+  }
+}

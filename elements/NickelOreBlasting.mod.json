@@ -1,0 +1,20 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 0.63,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:NickelOre"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:NickelIngot"
+    },
+    "name": "nickel_ore_blasting",
+    "namespace": "mod"
+  }
+}

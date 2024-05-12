@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "POTION:LONG_WATER_BREATHING"
+    },
+    "brewingIngredientStack": {
+      "value": "Items.EXPERIENCE_BOTTLE"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:InfinitePotionWaterBreathing"
+    },
+    "name": "infinite_potion_water_breathing_recipe",
+    "namespace": "mod"
+  }
+}

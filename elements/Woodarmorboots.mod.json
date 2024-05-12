@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:kraftmine:all_wood"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:kraftmine:all_wood"
+      },
+      {
+        "value": "TAG:kraftmine:all_wood"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:kraftmine:all_wood"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:WoodArmor.boots"
+    },
+    "name": "woodarmorboots",
+    "namespace": "mod"
+  }
+}

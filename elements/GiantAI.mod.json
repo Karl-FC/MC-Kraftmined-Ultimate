@@ -1,0 +1,123 @@
+{
+  "_fv": 39,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Giant",
+    "mobLabel": "",
+    "mobModelName": "Modelgiant_ai",
+    "mobModelTexture": "giant_2.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 7.5,
+    "modelHeight": 16.0,
+    "modelShadowSize": 5.0,
+    "mountedYOffset": 20.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -16738048,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -10092544,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 12,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 1.5,
+    "movementSpeed": 0.19999999999999998,
+    "armorBaseValue": 0.5,
+    "trackingRange": 64,
+    "followRange": 32,
+    "health": 150,
+    "xpAmount": 15,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": true,
+    "immuneToPotions": true,
+    "immuneToPlayer": false,
+    "immuneToExplosion": true,
+    "immuneToTrident": false,
+    "immuneToAnvil": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": true,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "CUSTOM:giant.ambient"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:giant.hurt"
+    },
+    "deathSound": {
+      "value": "CUSTOM:giant.death"
+    },
+    "stepSound": {
+      "value": "CUSTOM:giant.step"
+    },
+    "onPlayerCollidesWith": {
+      "name": "GiantAIPlayerCollidesWithThisEntity"
+    },
+    "onInitialSpawn": {
+      "name": "GiantAIOnInitialEntitySpawn"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 1,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 10,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

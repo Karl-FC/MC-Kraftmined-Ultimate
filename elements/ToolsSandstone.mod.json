@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SandstonePickaxe"
+      },
+      {
+        "value": "CUSTOM:SandstoneAxe"
+      },
+      {
+        "value": "CUSTOM:SandstoneSword"
+      },
+      {
+        "value": "CUSTOM:SandstoneShovel"
+      },
+      {
+        "value": "CUSTOM:SandstoneHoe"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "tools_sandstone",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "kraftmine:blocks/corn_stage_1",
+    "particle": "kraftmine:blocks/corn_stage_1"
+  },
+  "render_type": "cutout"
+}

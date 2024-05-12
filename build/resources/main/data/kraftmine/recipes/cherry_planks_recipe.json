@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:cherry_log"
+    }
+  ],
+  "result": {
+    "item": "kraftmine:cherry_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:EgghellArmor.boots"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:MoltenObsidian"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:EgghellArmor.boots"
+    },
+    "name": "egghell_armor_boots_recipe",
+    "namespace": "mod"
+  }
+}

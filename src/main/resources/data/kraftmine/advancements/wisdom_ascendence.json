@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:knowledge_book"
+    },
+    "title": {
+      "translate": "advancements.wisdom_ascendence.title"
+    },
+    "description": {
+      "translate": "advancements.wisdom_ascendence.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wisdom_ascendence": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "kraftmine:wisdom_trancendence"
+}
