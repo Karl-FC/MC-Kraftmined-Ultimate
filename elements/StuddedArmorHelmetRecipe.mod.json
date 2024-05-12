@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.LEATHER_HELMET"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.CHAINMAIL_HELMET"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:StuddedArmor.helmet"
+    },
+    "name": "studded_armor_helmet_recipe",
+    "namespace": "mod"
+  }
+}

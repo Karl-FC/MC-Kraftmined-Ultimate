@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "kraftmine:mob_floating_eye",
+    "weight": 40,
+    "minCount": 4,
+    "maxCount": 5
+  }
+}

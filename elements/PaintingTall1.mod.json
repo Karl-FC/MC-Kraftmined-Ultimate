@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "painting",
+  "definition": {
+    "texture": "painting_creeper.png",
+    "width": 16,
+    "height": 32
+  }
+}

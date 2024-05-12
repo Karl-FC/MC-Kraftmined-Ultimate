@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:air",
+    "kraftmine:wall_block",
+    "kraftmine:cloud",
+    "kraftmine:cloud_block_rain",
+    "minecraft:stone",
+    "minecraft:coarse_dirt",
+    "kraftmine:coarse_grass_block"
+  ]
+}

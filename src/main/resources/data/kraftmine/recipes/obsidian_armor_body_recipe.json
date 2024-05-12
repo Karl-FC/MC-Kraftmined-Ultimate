@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "2": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "3": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "4": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "5": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "6": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "7": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "8": {
+      "item": "kraftmine:obsidianscrap"
+    }
+  },
+  "result": {
+    "item": "kraftmine:obsidian_armor_chestplate",
+    "count": 1
+  }
+}

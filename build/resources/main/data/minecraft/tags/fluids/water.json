@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:milk_bucket",
+    "kraftmine:flowing_milk_bucket",
+    "kraftmine:acid",
+    "kraftmine:flowing_acid"
+  ]
+}

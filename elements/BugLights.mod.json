@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.TORCH"
+      },
+      {
+        "value": "Blocks.WALL_TORCH"
+      },
+      {
+        "value": "Blocks.CAMPFIRE"
+      },
+      {
+        "value": "Blocks.LIT_REDSTONE_LAMP"
+      },
+      {
+        "value": "Blocks.LIT_PUMPKIN"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "bug_lights",
+    "namespace": "forge"
+  }
+}

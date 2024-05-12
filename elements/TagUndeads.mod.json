@@ -1,0 +1,62 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityZombie"
+      },
+      {
+        "value": "EntitySkeleton"
+      },
+      {
+        "value": "EntityZoglin"
+      },
+      {
+        "value": "EntityHusk"
+      },
+      {
+        "value": "EntityStray"
+      },
+      {
+        "value": "EntityZombieVillager"
+      },
+      {
+        "value": "EntityWither"
+      },
+      {
+        "value": "EntityWitherSkeleton"
+      },
+      {
+        "value": "EntityZombieHorse"
+      },
+      {
+        "value": "EntitySkeletonHorse"
+      },
+      {
+        "value": "EntityZombieHorse"
+      },
+      {
+        "value": "EntityPhantom"
+      },
+      {
+        "value": "EntityDrowned"
+      },
+      {
+        "value": "CUSTOM:Anomaly"
+      },
+      {
+        "value": "CUSTOM:MobFloatingEye"
+      },
+      {
+        "value": "CUSTOM:MobShade"
+      }
+    ],
+    "name": "undead",
+    "namespace": "forge"
+  }
+}

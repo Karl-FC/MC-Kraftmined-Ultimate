@@ -1,0 +1,35 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:TimeShard"
+      },
+      {
+        "value": "CUSTOM:ProbabilitiesShard"
+      },
+      {
+        "value": "CUSTOM:RealityShard"
+      },
+      {
+        "value": "CUSTOM:InitialShard"
+      },
+      {
+        "value": "CUSTOM:TranscendenceShard"
+      },
+      {
+        "value": "CUSTOM:AscendanceShard"
+      },
+      {
+        "value": "CUSTOM:OmnipotenceShard"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "shard_level_2",
+    "namespace": "mod"
+  }
+}

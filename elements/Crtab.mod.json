@@ -1,0 +1,11 @@
+{
+  "_fv": 39,
+  "_type": "tab",
+  "definition": {
+    "name": "Kraftmined",
+    "icon": {
+      "value": "CUSTOM:FoodMaterwelon"
+    },
+    "showSearch": true
+  }
+}

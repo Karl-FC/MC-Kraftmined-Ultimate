@@ -1,0 +1,53 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MahoganyFence"
+      },
+      {
+        "value": "CUSTOM:CherryFence"
+      },
+      {
+        "value": "CUSTOM:BambooFence"
+      },
+      {
+        "value": "CUSTOM:PalmWoodFence"
+      },
+      {
+        "value": "Blocks.OAK_FENCE"
+      },
+      {
+        "value": "Blocks.SPRUCE_FENCE"
+      },
+      {
+        "value": "Blocks.BIRCH_FENCE"
+      },
+      {
+        "value": "Blocks.JUNGLE_FENCE"
+      },
+      {
+        "value": "Blocks.ACACIA_FENCE"
+      },
+      {
+        "value": "Blocks.DARK_OAK_FENCE"
+      },
+      {
+        "value": "Blocks.CRIMSON_FENCE"
+      },
+      {
+        "value": "Blocks.WARPED_FENCE"
+      },
+      {
+        "value": "Blocks.NETHER_BRICK_FENCE"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "fences",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "cob_cannon",
+    "customModelName": "Normal",
+    "name": "POP Corn",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:PlantCharge"
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.firework.launch"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "PopCornRangedItemUsed"
+    },
+    "bulletPower": 1.2,
+    "bulletDamage": 15.0,
+    "bulletKnockback": 1,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelplant_charge",
+    "customBulletModelTexture": "shulker_bullet.png",
+    "onBulletHitsBlock": {
+      "name": "PopCornProjectileHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "PopCornProjectileHitsBlock"
+    }
+  }
+}

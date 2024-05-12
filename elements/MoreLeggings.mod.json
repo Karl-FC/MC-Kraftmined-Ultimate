@@ -1,0 +1,53 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DripArmor.legs"
+      },
+      {
+        "value": "CUSTOM:NickelArmor.legs"
+      },
+      {
+        "value": "CUSTOM:TitaniumArmor.legs"
+      },
+      {
+        "value": "CUSTOM:CarbonArmor.legs"
+      },
+      {
+        "value": "CUSTOM:LapisLazuliArmor.legs"
+      },
+      {
+        "value": "CUSTOM:RedstoneArmor.legs"
+      },
+      {
+        "value": "CUSTOM:CactusArmor.legs"
+      },
+      {
+        "value": "CUSTOM:TNTArmor.legs"
+      },
+      {
+        "value": "CUSTOM:WoodArmor.legs"
+      },
+      {
+        "value": "CUSTOM:EggArmor.legs"
+      },
+      {
+        "value": "CUSTOM:EgghellArmor.legs"
+      },
+      {
+        "value": "CUSTOM:CondensedArmor.legs"
+      },
+      {
+        "value": "CUSTOM:StuddedArmor.legs"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "more_leggings",
+    "namespace": "forge"
+  }
+}

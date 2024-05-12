@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Freshness",
+    "splashName": "Splash Potion of Freshness",
+    "lingeringName": "Lingering Potion of Freshness",
+    "arrowName": "Arrow of Freshness",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Sanitation"
+        },
+        "duration": 2400,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

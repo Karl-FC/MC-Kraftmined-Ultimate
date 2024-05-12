@@ -1,0 +1,20 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_ocean",
+    "frozen_river",
+    "windswept_hills",
+    "snowy_plains",
+    "ice_spikes",
+    "snowy_slopes",
+    "frozen_peaks",
+    "snowy_taiga",
+    "deep_frozen_ocean"
+  ],
+  "spawners": {
+    "type": "kraftmine:iceologer",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

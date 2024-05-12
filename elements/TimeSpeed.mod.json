@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Time Speed",
+    "description": "Controls the world time. This number is added to the world time each time the world ticks. You can set it to -1 to stop time, or lesser to make time run backwards.",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

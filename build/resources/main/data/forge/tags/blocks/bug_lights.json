@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wall_torch",
+    "minecraft:redstone_lamp",
+    "minecraft:torch",
+    "minecraft:jack_o_lantern",
+    "minecraft:campfire"
+  ]
+}

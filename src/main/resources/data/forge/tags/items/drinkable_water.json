@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:potion",
+    "kraftmine:water_cup_mug",
+    "kraftmine:water_cup_glass",
+    "kraftmine:water_cup",
+    "kraftmine:water_gold"
+  ]
+}

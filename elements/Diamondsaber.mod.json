@@ -1,0 +1,37 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "saber_blue",
+    "customModelName": "Normal",
+    "name": "Diamond Saber",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 2,
+    "efficiency": 15.0,
+    "attackSpeed": 2.5,
+    "enchantability": 2,
+    "damageVsEntity": 12.0,
+    "usageCount": 2150,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ReactorCore"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "SaberOffhand"
+    },
+    "onEntityHitWith": {
+      "name": "Saberhit"
+    }
+  }
+}

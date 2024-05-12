@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:golden_axe",
+    "kraftmine:tungsten_axe",
+    "kraftmine:obsidian_axe",
+    "kraftmine:netherite_battle_axe",
+    "minecraft:netherite_axe",
+    "minecraft:diamond_axe",
+    "minecraft:iron_axe"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:IcePickaxe"
+      },
+      {
+        "value": "CUSTOM:IceAxe"
+      },
+      {
+        "value": "CUSTOM:IceSword"
+      },
+      {
+        "value": "CUSTOM:IceShovel"
+      },
+      {
+        "value": "CUSTOM:IceHoe"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "tools_ice",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kraftmine:block/cherry_slab"
+    },
+    "type=top": {
+      "model": "kraftmine:block/cherry_slab_top"
+    },
+    "type=double": {
+      "model": "kraftmine:block/cherry_slab_full"
+    }
+  }
+}

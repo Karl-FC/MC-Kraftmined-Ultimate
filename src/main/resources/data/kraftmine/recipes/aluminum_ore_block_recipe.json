@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:aluminum"
+    },
+    "1": {
+      "item": "kraftmine:aluminum"
+    },
+    "2": {
+      "item": "kraftmine:aluminum"
+    },
+    "3": {
+      "item": "kraftmine:aluminum"
+    },
+    "4": {
+      "item": "kraftmine:aluminum"
+    },
+    "5": {
+      "item": "kraftmine:aluminum"
+    },
+    "6": {
+      "item": "kraftmine:aluminum"
+    },
+    "7": {
+      "item": "kraftmine:aluminum"
+    },
+    "8": {
+      "item": "kraftmine:aluminum"
+    }
+  },
+  "result": {
+    "item": "kraftmine:aluminum_block",
+    "count": 1
+  }
+}

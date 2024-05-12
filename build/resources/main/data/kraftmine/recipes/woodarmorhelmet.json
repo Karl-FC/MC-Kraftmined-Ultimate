@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "tag": "kraftmine:all_wood"
+    },
+    "1": {
+      "tag": "kraftmine:all_wood"
+    },
+    "2": {
+      "tag": "kraftmine:all_wood"
+    },
+    "3": {
+      "tag": "kraftmine:all_wood"
+    },
+    "5": {
+      "tag": "kraftmine:all_wood"
+    }
+  },
+  "result": {
+    "item": "kraftmine:wood_armor_helmet",
+    "count": 1
+  }
+}

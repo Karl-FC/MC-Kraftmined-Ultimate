@@ -1,0 +1,113 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BambooSword"
+      },
+      {
+        "value": "CUSTOM:ObsidiantoolsSword"
+      },
+      {
+        "value": "CUSTOM:TungstenSword"
+      },
+      {
+        "value": "Items.WOODEN_SWORD"
+      },
+      {
+        "value": "Items.STONE_SWORD"
+      },
+      {
+        "value": "Items.IRON_SWORD"
+      },
+      {
+        "value": "Items.GOLDEN_SWORD"
+      },
+      {
+        "value": "Items.DIAMOND_SWORD"
+      },
+      {
+        "value": "Items.NETHERITE_SWORD"
+      },
+      {
+        "value": "Items.SHIELD"
+      },
+      {
+        "value": "Items.TRIDENT"
+      },
+      {
+        "value": "CUSTOM:TungstenPickaxe"
+      },
+      {
+        "value": "CUSTOM:TungstenAxe"
+      },
+      {
+        "value": "CUSTOM:BambooPickaxe"
+      },
+      {
+        "value": "CUSTOM:BambooAxe"
+      },
+      {
+        "value": "CUSTOM:ObsidiantoolsPickaxe"
+      },
+      {
+        "value": "CUSTOM:ObsidiantoolsAxe"
+      },
+      {
+        "value": "CUSTOM:NetheriteBattleAxe"
+      },
+      {
+        "value": "Items.WOODEN_PICKAXE"
+      },
+      {
+        "value": "Items.WOODEN_AXE"
+      },
+      {
+        "value": "Items.STONE_PICKAXE"
+      },
+      {
+        "value": "Items.STONE_AXE"
+      },
+      {
+        "value": "Items.IRON_PICKAXE"
+      },
+      {
+        "value": "Items.IRON_AXE"
+      },
+      {
+        "value": "Items.GOLDEN_PICKAXE"
+      },
+      {
+        "value": "Items.GOLDEN_AXE"
+      },
+      {
+        "value": "Items.DIAMOND_PICKAXE"
+      },
+      {
+        "value": "Items.DIAMOND_AXE"
+      },
+      {
+        "value": "Items.NETHERITE_PICKAXE"
+      },
+      {
+        "value": "Items.NETHERITE_AXE"
+      },
+      {
+        "value": "CUSTOM:HuskClaw"
+      },
+      {
+        "value": "CUSTOM:Stonespear"
+      },
+      {
+        "value": "CUSTOM:FryingPan"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "weapons",
+    "namespace": "forge"
+  }
+}

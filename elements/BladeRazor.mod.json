@@ -1,0 +1,40 @@
+{
+  "_fv": 39,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "razor_blade",
+    "customModelName": "Normal",
+    "name": "Razor Blade",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "stackSize": 64,
+    "ammoItem": {
+      "value": "CUSTOM:BladeRazor"
+    },
+    "shootConstantly": true,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "item.axe.scrape"
+    },
+    "hasGlow": false,
+    "animation": "spear",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 1.0,
+    "bulletPower": 0.9,
+    "bulletDamage": 1.5,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:BladeRazor"
+    },
+    "bulletModel": "Modelrazor",
+    "customBulletModelTexture": "razor.png",
+    "onBulletHitsBlock": {
+      "name": "BladeRazorProjectileHitsBlock"
+    }
+  }
+}

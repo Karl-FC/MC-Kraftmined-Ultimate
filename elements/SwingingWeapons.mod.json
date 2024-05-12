@@ -1,0 +1,104 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BambooSword"
+      },
+      {
+        "value": "CUSTOM:ObsidiantoolsSword"
+      },
+      {
+        "value": "CUSTOM:TungstenSword"
+      },
+      {
+        "value": "CUSTOM:PlasticSword"
+      },
+      {
+        "value": "CUSTOM:IceSword"
+      },
+      {
+        "value": "CUSTOM:SandstoneSword"
+      },
+      {
+        "value": "CUSTOM:PrismarineSword"
+      },
+      {
+        "value": "CUSTOM:GlassSword"
+      },
+      {
+        "value": "CUSTOM:PlasticBroadsword"
+      },
+      {
+        "value": "Items.WOODEN_SWORD"
+      },
+      {
+        "value": "Items.STONE_SWORD"
+      },
+      {
+        "value": "Items.IRON_SWORD"
+      },
+      {
+        "value": "Items.GOLDEN_SWORD"
+      },
+      {
+        "value": "Items.DIAMOND_SWORD"
+      },
+      {
+        "value": "Items.NETHERITE_SWORD"
+      },
+      {
+        "value": "Items.WOODEN_AXE"
+      },
+      {
+        "value": "Items.STONE_AXE"
+      },
+      {
+        "value": "Items.IRON_AXE"
+      },
+      {
+        "value": "Items.GOLDEN_AXE"
+      },
+      {
+        "value": "Items.DIAMOND_AXE"
+      },
+      {
+        "value": "Items.NETHERITE_AXE"
+      },
+      {
+        "value": "CUSTOM:TungstenAxe"
+      },
+      {
+        "value": "CUSTOM:BambooAxe"
+      },
+      {
+        "value": "CUSTOM:ObsidiantoolsAxe"
+      },
+      {
+        "value": "CUSTOM:NetheriteBattleAxe"
+      },
+      {
+        "value": "CUSTOM:PlasticAxe"
+      },
+      {
+        "value": "CUSTOM:IceAxe"
+      },
+      {
+        "value": "CUSTOM:SandstoneAxe"
+      },
+      {
+        "value": "CUSTOM:PrismarineAxe"
+      },
+      {
+        "value": "CUSTOM:GlassAxe"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "swinging_weapons",
+    "namespace": "mod"
+  }
+}

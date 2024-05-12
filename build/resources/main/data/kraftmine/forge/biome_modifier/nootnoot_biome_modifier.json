@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_ocean",
+    "ice_spikes",
+    "frozen_peaks",
+    "deep_frozen_ocean"
+  ],
+  "spawners": {
+    "type": "kraftmine:nootnoot",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

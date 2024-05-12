@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:ice_wand",
+    "kraftmine:lightning_rod",
+    "kraftmine:the_switcher",
+    "kraftmine:fire_scepter"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "kraftmine:soul_might"
+    },
+    "title": {
+      "translate": "advancements.mastery_space.title"
+    },
+    "description": {
+      "translate": "advancements.mastery_space.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mastery_space": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "kraftmine:mastery_air"
+}

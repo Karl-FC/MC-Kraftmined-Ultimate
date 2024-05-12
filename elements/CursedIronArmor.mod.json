@@ -1,0 +1,70 @@
+{
+  "_fv": 39,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "steel_head",
+    "enableBody": true,
+    "textureBody": "steel_body",
+    "enableLeggings": true,
+    "textureLeggings": "steel_leggings",
+    "enableBoots": true,
+    "textureBoots": "steel_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Crtabcombat"
+    },
+    "armorTextureFile": "steel",
+    "helmetName": "Iron Helmet",
+    "bodyName": "Iron Chestplate",
+    "leggingsName": "Iron Leggings",
+    "bootsName": "Iron Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Modelcursediron",
+    "helmetModelPart": "helmet",
+    "helmetModelTexture": "cursed_iron.png",
+    "bodyModelName": "Modelcursediron",
+    "bodyModelPart": "chestplate",
+    "armsModelPartL": "Leftarm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "cursed_iron.png",
+    "leggingsModelName": "Modelcursediron",
+    "leggingsModelPartL": "leggingsleft",
+    "leggingsModelPartR": "leggingsright",
+    "leggingsModelTexture": "cursed_iron.png",
+    "bootsModelName": "Modelcursediron",
+    "bootsModelPartL": "LeftFoot",
+    "bootsModelPartR": "RightFoot",
+    "bootsModelTexture": "cursed_iron.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 15,
+    "damageValueHelmet": 2,
+    "damageValueBody": 5,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 2,
+    "enchantability": 30,
+    "toughness": 1.0,
+    "knockbackResistance": 0.5,
+    "equipSound": {
+      "value": "item.armor.equip_iron"
+    },
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
+  }
+}

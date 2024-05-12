@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Bottle of Milk",
+    "splashName": "Splash Potion of Milk",
+    "lingeringName": "Lingering Potion of  Milk",
+    "arrowName": "Arrow of Milk",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Milked"
+        },
+        "duration": 60,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

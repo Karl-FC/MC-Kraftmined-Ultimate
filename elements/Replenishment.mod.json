@@ -1,0 +1,61 @@
+{
+  "_fv": 39,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Replenishment",
+    "type": "VANISHABLE",
+    "rarity": "COMMON",
+    "minLevel": 1,
+    "maxLevel": 2,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "excludeEnchantments": false,
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:InfinitePotionRevitalization"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionLeaping"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionStrength"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionResistance"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionFireResistance"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionInvisibility"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionSlowFalling"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionDrip"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionHydration"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionSaturation"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionSwiftness"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionNightVision"
+      },
+      {
+        "value": "CUSTOM:InfinitePotionWaterBreathing"
+      }
+    ],
+    "excludeItems": false,
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

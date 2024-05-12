@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:MobAmogusGrey"
+      },
+      {
+        "value": "CUSTOM:MobAmogusBlue"
+      },
+      {
+        "value": "CUSTOM:MobAmogus"
+      },
+      {
+        "value": "CUSTOM:MobAmogusGreen"
+      },
+      {
+        "value": "CUSTOM:Amongamite"
+      }
+    ],
+    "name": "amogus",
+    "namespace": "forge"
+  }
+}

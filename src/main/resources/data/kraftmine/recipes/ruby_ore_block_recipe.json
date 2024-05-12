@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:ruby"
+    },
+    "1": {
+      "item": "kraftmine:ruby"
+    },
+    "2": {
+      "item": "kraftmine:ruby"
+    },
+    "3": {
+      "item": "kraftmine:ruby"
+    },
+    "4": {
+      "item": "kraftmine:ruby"
+    },
+    "5": {
+      "item": "kraftmine:ruby"
+    },
+    "6": {
+      "item": "kraftmine:ruby"
+    },
+    "7": {
+      "item": "kraftmine:ruby"
+    },
+    "8": {
+      "item": "kraftmine:ruby"
+    }
+  },
+  "result": {
+    "item": "kraftmine:ruby_block",
+    "count": 1
+  }
+}

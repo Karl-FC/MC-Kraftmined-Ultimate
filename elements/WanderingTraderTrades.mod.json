@@ -1,0 +1,105 @@
+{
+  "_fv": 39,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "WANDERING_TRADER"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice2": 36,
+            "offer": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 36,
+            "offer": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 5,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 5,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice1": 32,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Items.EMERALD"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countOffer": 32,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}

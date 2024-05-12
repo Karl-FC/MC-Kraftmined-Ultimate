@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:leather_chestplate"
+  },
+  "addition": {
+    "item": "minecraft:chainmail_chestplate"
+  },
+  "result": {
+    "item": "kraftmine:studded_armor_chestplate"
+  }
+}

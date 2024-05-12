@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "kraftmine:egg_armor_helmet"
+  },
+  "addition": {
+    "item": "kraftmine:molten_obsidian"
+  },
+  "result": {
+    "item": "kraftmine:egghell_armor_helmet"
+  }
+}

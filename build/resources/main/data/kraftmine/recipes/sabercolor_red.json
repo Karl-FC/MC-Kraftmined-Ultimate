@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "lightsabers"
+  },
+  "addition": {
+    "item": "kraftmine:crystalred"
+  },
+  "result": {
+    "item": "kraftmine:saber_red"
+  }
+}

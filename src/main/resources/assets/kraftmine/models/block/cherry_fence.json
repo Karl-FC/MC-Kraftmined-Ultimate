@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "kraftmine:blocks/cherry_planks",
+    "particle": "kraftmine:blocks/cherry_planks"
+  },
+  "render_type": "solid"
+}

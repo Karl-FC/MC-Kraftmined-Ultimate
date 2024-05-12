@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "kraftmine:blocks/bamboo_planks",
+    "top": "kraftmine:blocks/bamboo_planks",
+    "side": "kraftmine:blocks/bamboo_planks"
+  },
+  "render_type": "solid"
+}

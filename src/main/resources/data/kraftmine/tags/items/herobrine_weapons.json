@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:nethers_wrath",
+    "minecraft:diamond_sword",
+    "minecraft:netherite_sword"
+  ]
+}

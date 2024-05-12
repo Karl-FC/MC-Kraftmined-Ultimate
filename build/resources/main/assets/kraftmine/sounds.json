@@ -1,0 +1,1383 @@
+{
+  "goose.honk": {
+    "category": "hostile",
+    "subtitle": "subtitles.goose.honk",
+    "sounds": [
+      {
+        "name": "kraftmine:honk-sound",
+        "stream": false
+      }
+    ]
+  },
+  "horror.jumpscare.short": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:ennard_jumpscare",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:five-nights-at-freddys-3-springtraps-jumpscare-brightened",
+        "stream": false
+      }
+    ]
+  },
+  "horror.jumpscare.lol": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:defaultdance",
+        "stream": false
+      }
+    ]
+  },
+  "horror.jumpscare.med": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:cassidy-cannon-fredbear-jumpscare",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:fnaf-6-jumpscare-sound-effect",
+        "stream": false
+      }
+    ]
+  },
+  "horror.jumpscare.long": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nightmare-jumpscare",
+        "stream": false
+      }
+    ]
+  },
+  "mickey.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.mickey.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:mickey1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickey2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickey3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickey4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickey5",
+        "stream": false
+      }
+    ]
+  },
+  "mickey.death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:mickeydeath",
+        "stream": false
+      }
+    ]
+  },
+  "mickey.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:mickeyhurt1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickeyhurt2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickeyhurt3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickeyhurt4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:mickeyhurt5",
+        "stream": false
+      }
+    ]
+  },
+  "travel.aether": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:travel_aether",
+        "stream": true
+      }
+    ]
+  },
+  "theme.aot": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:aot",
+        "stream": true
+      }
+    ]
+  },
+  "horror.jumpscare.criminal": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:criminal-criminal",
+        "stream": false
+      }
+    ]
+  },
+  "potion.timefreeze": {
+    "category": "player",
+    "subtitle": "subtitles.potion.timefreeze",
+    "sounds": [
+      {
+        "name": "kraftmine:za_warudo_-_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "attack.saber": {
+    "category": "player",
+    "subtitle": "subtitles.attack.saber",
+    "sounds": [
+      {
+        "name": "kraftmine:light1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light6",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light7",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light8",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light9",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:light10",
+        "stream": false
+      }
+    ]
+  },
+  "music.classical": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:mozart_-_lacrimosa",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:the_blue_danube",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:the_four_seasons_-_spring_in_e_major_rv._269_-_i._allegro",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:the_four_seasons_-_winter_in_f_minor_rv._297_-_i._allegro_non_molto",
+        "stream": true
+      }
+    ]
+  },
+  "music.terraria": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:terraria_music_-_alternate_day",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:terraria_music_-_day",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:terraria_music_-_rain",
+        "stream": true
+      }
+    ]
+  },
+  "music.sweden.remix": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:c418_-_sweden_caution__crisis_remix",
+        "stream": true
+      }
+    ]
+  },
+  "music.underground": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:terraria_music_-_underground",
+        "stream": true
+      }
+    ]
+  },
+  "music.dorime": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:dorime_final_boss_ver._full",
+        "stream": true
+      }
+    ]
+  },
+  "ambient.backrooms": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:ambience",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:ambience2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:yume_nikki_ost_-_hellish_hum",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:yume_nikki_ost_-_pink_sea",
+        "stream": false
+      }
+    ]
+  },
+  "music.backrooms": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:instupendo_-_six_forty_seven",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:the_caretaker_-_its_just_a_burning_memory_2016",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:undertale_ost_-_085_-_fallen_down_reprise",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:poppy_playtime_ost_01_-_its_playtime",
+        "stream": true
+      }
+    ]
+  },
+  "effects.backrooms": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:back_rooms_creatures_sound_effect___made_by_me",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:back_rooms_creatures_sound_effect___made_by_me2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:what_the_backroom",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:what_the_backrooms_found_footage_entity_is_saying",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:where_did_everyone_go",
+        "stream": false
+      }
+    ]
+  },
+  "mob.sans": {
+    "category": "hostile",
+    "subtitle": "subtitles.mob.sans",
+    "sounds": [
+      {
+        "name": "kraftmine:san1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:san2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:san3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:san4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:san5",
+        "stream": false
+      }
+    ]
+  },
+  "mob.generalgrievous.ambience": {
+    "category": "hostile",
+    "subtitle": "subtitles.mob.generalgrievous.ambience",
+    "sounds": [
+      {
+        "name": "kraftmine:g1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g3",
+        "stream": false
+      }
+    ]
+  },
+  "mob.sans.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:undertale_sound_effect_-_inflicting_damage",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:undertale_sound_effect_-_taking_damage",
+        "stream": false
+      }
+    ]
+  },
+  "mob.senator.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:general1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general6",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general7",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:general8",
+        "stream": false
+      }
+    ]
+  },
+  "mob.generalgrievous.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:g5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g6",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g7",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g8",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:g9",
+        "stream": false
+      }
+    ]
+  },
+  "siren.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:siren.hurt1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.hurt2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.hurt3",
+        "stream": false
+      }
+    ]
+  },
+  "siren.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.siren.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:siren.idle1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.idle2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.idle3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.idle4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.idle5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:siren.idle6",
+        "stream": false
+      }
+    ]
+  },
+  "siren.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.siren.death",
+    "sounds": [
+      {
+        "name": "kraftmine:siren.death",
+        "stream": false
+      }
+    ]
+  },
+  "mob.senator.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.mob.senator.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:igeneral1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:igeneral2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:igeneral3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:igeneral4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:igeneral5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:igeneral6",
+        "stream": false
+      }
+    ]
+  },
+  "mob.senator.death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:dgeneral",
+        "stream": false
+      }
+    ]
+  },
+  "amogus.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.amogus.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:amogus",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:among_us_scream",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:among-us-roundstart",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:sus",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:vent",
+        "stream": false
+      }
+    ]
+  },
+  "amogus.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:imposter.hurt",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:imposter.hurt2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:imposter",
+        "stream": false
+      }
+    ]
+  },
+  "amogus.death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:imposter.death",
+        "stream": false
+      }
+    ]
+  },
+  "sleuth.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.sleuth.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:sleuth.idle1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:sleuth.idle2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:sleuth.idle3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:sleuth.idle4",
+        "stream": false
+      }
+    ]
+  },
+  "sleuth.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:sleuth.hurt1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:sleuth.hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "sleuth.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.sleuth.death",
+    "sounds": [
+      {
+        "name": "kraftmine:sleuth.death",
+        "stream": false
+      }
+    ]
+  },
+  "giant.ambient": {
+    "category": "hostile",
+    "subtitle": "subtitles.giant.ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:giant_roar_1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:giant_roar_2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:giant_roar_3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:giant_roar_4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:giant_roar_5",
+        "stream": false
+      }
+    ]
+  },
+  "giant.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:giant.hurt",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:giant.hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "giant.step": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:giant.step",
+        "stream": false
+      }
+    ]
+  },
+  "giant.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.giant.death",
+    "sounds": [
+      {
+        "name": "kraftmine:giant.death",
+        "stream": false
+      }
+    ]
+  },
+  "anomaly.ambient": {
+    "category": "hostile",
+    "subtitle": "subtitles.anomaly.ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:anomaly.whisper1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:anomaly.whisper2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:anomaly.whisper3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:anomaly.whisper4",
+        "stream": false
+      }
+    ]
+  },
+  "anomaly.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:anomaly.hurt",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:anomaly.hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "anomaly.death": {
+    "category": "neutral",
+    "subtitle": "subtitles.anomaly.death",
+    "sounds": [
+      {
+        "name": "kraftmine:anomaly.death",
+        "stream": false
+      }
+    ]
+  },
+  "eye.ambient": {
+    "category": "hostile",
+    "subtitle": "subtitles.eye.ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:eye.ambient",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.ambient2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.ambient3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.ambient4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.ambient5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.ambient6",
+        "stream": false
+      }
+    ]
+  },
+  "eye.hurts": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:eye.hurt1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.hurt2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.hurt3",
+        "stream": false
+      }
+    ]
+  },
+  "eye.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.eye.death",
+    "sounds": [
+      {
+        "name": "kraftmine:eye.die",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:eye.die2",
+        "stream": false
+      }
+    ]
+  },
+  "music.disc.rushe": {
+    "category": "record",
+    "subtitle": "subtitles.music.disc.rushe",
+    "sounds": [
+      {
+        "name": "kraftmine:record_e",
+        "stream": true
+      }
+    ]
+  },
+  "music.disc.rickroll": {
+    "category": "record",
+    "subtitle": "subtitles.music.disc.rickroll",
+    "sounds": [
+      {
+        "name": "kraftmine:rick_astley_-_never_gonna_give_you_up",
+        "stream": true
+      }
+    ]
+  },
+  "shade.ambient": {
+    "category": "hostile",
+    "subtitle": "subtitles.shade.ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:shade1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shade2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shade3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shade4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shade5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shade6",
+        "stream": false
+      }
+    ]
+  },
+  "shade.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.shade.death",
+    "sounds": [
+      {
+        "name": "kraftmine:shade.death",
+        "stream": false
+      }
+    ]
+  },
+  "nightmarrione": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nightmarione1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:nightmarione2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:nightmarione3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:nightmarione4",
+        "stream": false
+      }
+    ]
+  },
+  "horror.jumpscare": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:cassidy-cannon-fredbear-jumpscare",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:ennard_jumpscare",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:five-nights-at-freddys-3-springtraps-jumpscare-brightened",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:fnaf-6-jumpscare-sound-effect",
+        "stream": false
+      }
+    ]
+  },
+  "theme.starwars": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:star_wars_-_duel_of_the_fates___epic_version_remastered_v2",
+        "stream": true
+      }
+    ]
+  },
+  "theme.takemedown": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:take_me_down",
+        "stream": true
+      }
+    ]
+  },
+  "mob.penguin": {
+    "category": "neutral",
+    "subtitle": "subtitles.mob.penguin",
+    "sounds": [
+      {
+        "name": "kraftmine:wenk",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:wenk2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:wenk3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:wenk4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:wenk5",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:wenk6",
+        "stream": false
+      }
+    ]
+  },
+  "pingu.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:noo1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noo2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noo3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noo4",
+        "stream": false
+      }
+    ]
+  },
+  "pingu.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.pingu.idle",
+    "sounds": [
+      {
+        "name": "kraftmine:noot1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noot2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noot3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noot4",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:noot5",
+        "stream": false
+      }
+    ]
+  },
+  "pingu.die": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nootnoot1",
+        "stream": false
+      }
+    ]
+  },
+  "mob.stomping": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kraftmine:stomp1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:stomp2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:stomp3",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:stomp4",
+        "stream": false
+      }
+    ]
+  },
+  "theme.24": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:24_oras_theme_2016-present_pinaka_stereo_version-corrected",
+        "stream": true
+      }
+    ]
+  },
+  "music.frostcaverns": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:dance_of_the_sugar_plum_fairy_-_kevin_macleod_no_copyright_music",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:morning_snowflake",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:snowdrop",
+        "stream": true
+      }
+    ]
+  },
+  "music.wasteland": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:undertale_-_fallen_down_-_orchestral_cover",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:terraria_music_-_eerie",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:sonic.exe_green_hill_zone_extended",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:dark_ambient",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:samsung_lofi",
+        "stream": true
+      }
+    ]
+  },
+  "mood.backrooms": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:fnaf_2_hallway_ambience_meme_sound_effect",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:fnaf_3_bad_ending_song_hq_version",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:grandfathers_clock_music_box",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:les_toreadors_old_radio",
+        "stream": false
+      }
+    ]
+  },
+  "mood.wastelands": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "kraftmine:phone_guy_-hello_hello",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:phone_guy_-hello",
+        "stream": false
+      }
+    ]
+  },
+  "ad.rickroll": {
+    "category": "player",
+    "subtitle": "subtitles.ad.rickroll",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_rickroll",
+        "stream": false
+      }
+    ]
+  },
+  "ad.dog": {
+    "category": "player",
+    "subtitle": "subtitles.ad.dog",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_wenamechainasama",
+        "stream": false
+      }
+    ]
+  },
+  "ad.yoasobi": {
+    "category": "player",
+    "subtitle": "subtitles.ad.yoasobi",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_yoasobi",
+        "stream": false
+      }
+    ]
+  },
+  "ad.saul": {
+    "category": "player",
+    "subtitle": "subtitles.ad.saul",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_better_call_saul",
+        "stream": false
+      }
+    ]
+  },
+  "ad.crab": {
+    "category": "player",
+    "subtitle": "subtitles.ad.crab",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_crab_rave",
+        "stream": false
+      }
+    ]
+  },
+  "ad.cat": {
+    "category": "player",
+    "subtitle": "subtitles.ad.cat",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_turi_ip_ip",
+        "stream": false
+      }
+    ]
+  },
+  "ad.sponge": {
+    "category": "player",
+    "subtitle": "subtitles.ad.sponge",
+    "sounds": [
+      {
+        "name": "kraftmine:ad_-_super_idol",
+        "stream": false
+      }
+    ]
+  },
+  "ad.seashanty": {
+    "category": "player",
+    "subtitle": "subtitles.ad.seashanty",
+    "sounds": [
+      {
+        "name": "kraftmine:shanty_-_drunken_sailor",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shanty_-_leave_her_johnny",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shanty_-_santiana",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:shanty_-_wellerman",
+        "stream": false
+      }
+    ]
+  },
+  "music.disc.toreador": {
+    "category": "record",
+    "subtitle": "subtitles.music.disc.toreador",
+    "sounds": [
+      {
+        "name": "kraftmine:les_toreadors_from_carmen_-_bizet_no_copyright_music",
+        "stream": true
+      }
+    ]
+  },
+  "player.oof": {
+    "category": "player",
+    "subtitle": "subtitles.player.oof",
+    "sounds": [
+      {
+        "name": "kraftmine:roblox_oof_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "music.eerie": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:sweden_-_terrifying_remix",
+        "stream": true
+      }
+    ]
+  },
+  "music.disc.pvz": {
+    "category": "record",
+    "subtitle": "subtitles.music.disc.pvz",
+    "sounds": [
+      {
+        "name": "kraftmine:cerebrawl_-_pvz_remastered",
+        "stream": true
+      }
+    ]
+  },
+  "ambient.eerie": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:kyomis_lullaby",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:cry_of_the_unheard",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:forgotten",
+        "stream": true
+      },
+      {
+        "name": "kraftmine:nosleep",
+        "stream": true
+      }
+    ]
+  },
+  "mob.nextbot.target": {
+    "category": "hostile",
+    "subtitle": "subtitles.mob.nextbot.target",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_fnaf",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.obunga": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:obunga_beatbox_meme",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.bong": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:bong1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:bong2",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.quandale": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:quandale1",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:quandale2",
+        "stream": false
+      },
+      {
+        "name": "kraftmine:quandale3",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.yoshie": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_uncanny2-high_pitched",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.entity": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_nightmarionne",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.pig": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_uncanny",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.incredible": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_uncanny4",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.smile": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:nextbot_uncanny2",
+        "stream": false
+      }
+    ]
+  },
+  "mob.nextbot.teeth": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "kraftmine:criminal-criminal",
+        "stream": false
+      }
+    ]
+  },
+  "theme.gigachad": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kraftmine:gigachad_theme",
+        "stream": true
+      }
+    ]
+  }
+}

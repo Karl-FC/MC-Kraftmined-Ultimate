@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kraftmine:block/palm_wood_slab"
+    },
+    "type=top": {
+      "model": "kraftmine:block/palm_wood_slab_top"
+    },
+    "type=double": {
+      "model": "kraftmine:block/palm_wood_slab_full"
+    }
+  }
+}

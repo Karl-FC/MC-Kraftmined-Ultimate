@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "1": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "2": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "3": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "5": {
+      "item": "kraftmine:obsidianscrap"
+    }
+  },
+  "result": {
+    "item": "kraftmine:obsidian_armor_helmet",
+    "count": 1
+  }
+}

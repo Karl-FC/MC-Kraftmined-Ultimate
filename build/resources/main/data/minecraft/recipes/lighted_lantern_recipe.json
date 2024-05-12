@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kraftmine:empty_lantern"
+    },
+    {
+      "item": "minecraft:candle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lantern",
+    "count": 1
+  }
+}

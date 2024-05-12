@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "kraftmine:block/mahogany_pressure_plate"
+    },
+    "powered=true": {
+      "model": "kraftmine:block/mahogany_pressure_plate_down"
+    }
+  }
+}

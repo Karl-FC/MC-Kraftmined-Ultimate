@@ -1,0 +1,86 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:TungstenArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:ObsidianArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:DripArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:Eyepatch.helmet"
+      },
+      {
+        "value": "CUSTOM:NickelArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:TitaniumArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:CarbonArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:LapisLazuliArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:RedstoneArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:DepressureHelmet.helmet"
+      },
+      {
+        "value": "Items.LEATHER_HELMET"
+      },
+      {
+        "value": "Items.CHAINMAIL_HELMET"
+      },
+      {
+        "value": "Items.TURTLE_HELMET"
+      },
+      {
+        "value": "Items.IRON_HELMET"
+      },
+      {
+        "value": "Items.GOLDEN_HELMET"
+      },
+      {
+        "value": "Items.DIAMOND_HELMET"
+      },
+      {
+        "value": "Items.NETHERITE_HELMET"
+      },
+      {
+        "value": "Items.SKULL#0"
+      },
+      {
+        "value": "Items.SKULL#1"
+      },
+      {
+        "value": "Items.SKULL#2"
+      },
+      {
+        "value": "Items.SKULL#3"
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": "Items.SKULL#5"
+      },
+      {
+        "value": "Blocks.CARVED_PUMPKIN"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "armor_3",
+    "namespace": "minecraft"
+  }
+}

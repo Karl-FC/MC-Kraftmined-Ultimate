@@ -1,0 +1,26 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DripArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:DripArmor.body"
+      },
+      {
+        "value": "CUSTOM:DripArmor.legs"
+      },
+      {
+        "value": "CUSTOM:DripArmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "dripwear",
+    "namespace": "forge"
+  }
+}

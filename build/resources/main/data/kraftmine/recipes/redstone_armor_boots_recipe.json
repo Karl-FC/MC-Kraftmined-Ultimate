@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:redstone_ingot"
+    },
+    "2": {
+      "item": "kraftmine:redstone_ingot"
+    },
+    "3": {
+      "item": "kraftmine:redstone_ingot"
+    },
+    "5": {
+      "item": "kraftmine:redstone_ingot"
+    }
+  },
+  "result": {
+    "item": "kraftmine:redstone_armor_boots",
+    "count": 1
+  }
+}

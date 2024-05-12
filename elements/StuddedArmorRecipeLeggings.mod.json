@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.CHAINMAIL_LEGGINGS"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.LEATHER_LEGGINGS"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:StuddedArmor.legs"
+    },
+    "name": "studded_armor_recipe_leggings",
+    "namespace": "mod"
+  }
+}

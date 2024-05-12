@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:blocks/netherbricks",
+    "up": "kraftmine:blocks/netherbricks",
+    "north": "kraftmine:blocks/netherbricks",
+    "east": "kraftmine:blocks/netherbricks",
+    "south": "kraftmine:blocks/netherbricks",
+    "west": "kraftmine:blocks/netherbricks",
+    "particle": "kraftmine:blocks/netherbricks"
+  },
+  "render_type": "solid"
+}

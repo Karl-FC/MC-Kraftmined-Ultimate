@@ -1,0 +1,20 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 160,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "TAG:kraftmine:all_leaves"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:CookedLeaves"
+    },
+    "name": "cooked_leaves",
+    "namespace": "mod"
+  }
+}

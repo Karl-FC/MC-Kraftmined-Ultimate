@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [
+      {
+        "value": "Blocks.FARMLAND"
+      }
+    ],
+    "blocks": [
+      {
+        "value": "Blocks.FARMLAND"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "farmland",
+    "namespace": "forge"
+  }
+}

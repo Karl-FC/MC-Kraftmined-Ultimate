@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "obsidian_shovel",
+    "customModelName": "Normal",
+    "name": "Obsidian Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 4,
+    "efficiency": 12.0,
+    "attackSpeed": 2.0,
+    "enchantability": 45,
+    "damageVsEntity": 5.0,
+    "usageCount": 130,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Obsidianscrap"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

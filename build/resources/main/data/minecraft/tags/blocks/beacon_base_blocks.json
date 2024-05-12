@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:redstone_block",
+    "kraftmine:golden_apple_block",
+    "minecraft:copper_block",
+    "minecraft:diamond_block",
+    "kraftmine:saphhire_block",
+    "minecraft:lapis_block",
+    "minecraft:exposed_copper",
+    "minecraft:gold_block",
+    "kraftmine:titanium_block",
+    "minecraft:emerald_block",
+    "minecraft:amethyst_block",
+    "minecraft:iron_block",
+    "kraftmine:tungsten_block",
+    "kraftmine:ruby_block"
+  ]
+}

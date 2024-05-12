@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shield",
+    "kraftmine:netherite_battle_axe",
+    "minecraft:air",
+    "minecraft:netherite_sword",
+    "minecraft:golden_sword",
+    "minecraft:golden_pickaxe"
+  ]
+}

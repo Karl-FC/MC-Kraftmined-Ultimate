@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Combat Use",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "CombatUseOnKeyPressed"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ObsidianArmor.boots"
+      },
+      {
+        "value": "Items.LEATHER_BOOTS"
+      },
+      {
+        "value": "Items.CHAINMAIL_BOOTS"
+      },
+      {
+        "value": "Items.GOLDEN_BOOTS"
+      },
+      {
+        "value": "Items.DIAMOND_BOOTS"
+      },
+      {
+        "value": "Items.NETHERITE_BOOTS"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "pigman_armor_0",
+    "namespace": "forge"
+  }
+}

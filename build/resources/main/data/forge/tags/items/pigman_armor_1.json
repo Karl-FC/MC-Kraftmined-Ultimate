@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:golden_leggings",
+    "minecraft:diamond_leggings",
+    "minecraft:chainmail_leggings",
+    "minecraft:air",
+    "minecraft:leather_leggings",
+    "kraftmine:obsidian_armor_leggings",
+    "minecraft:netherite_leggings"
+  ]
+}

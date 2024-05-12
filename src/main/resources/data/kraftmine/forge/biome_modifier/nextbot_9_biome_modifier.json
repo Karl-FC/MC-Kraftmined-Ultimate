@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "kraftmine:wasteland",
+  "spawners": {
+    "type": "kraftmine:nextbot_9",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

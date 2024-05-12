@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kraftmine:bamboo_planks"
+    }
+  ],
+  "result": {
+    "item": "kraftmine:bamboo_button",
+    "count": 1
+  }
+}

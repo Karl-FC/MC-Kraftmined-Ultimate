@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "t_pickaxe",
+    "customModelName": "Normal",
+    "name": "Tungsten Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 5,
+    "efficiency": 15.0,
+    "attackSpeed": 2.0,
+    "enchantability": 28,
+    "damageVsEntity": 4.0,
+    "usageCount": 660,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:TungstenIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:titanium_ingot"
+    },
+    "2": {
+      "item": "kraftmine:titanium_ingot"
+    },
+    "3": {
+      "item": "kraftmine:titanium_ingot"
+    },
+    "5": {
+      "item": "kraftmine:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "kraftmine:titanium_armor_boots",
+    "count": 1
+  }
+}

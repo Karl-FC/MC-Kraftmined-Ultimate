@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "1": {
+      "item": "kraftmine:blade_razor"
+    },
+    "2": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "3": {
+      "item": "minecraft:iron_ingot"
+    },
+    "4": {
+      "item": "minecraft:gold_nugget"
+    },
+    "5": {
+      "item": "minecraft:iron_ingot"
+    },
+    "6": {
+      "item": "kraftmine:obsidianscrap"
+    },
+    "7": {
+      "item": "kraftmine:blade_razor"
+    },
+    "8": {
+      "item": "kraftmine:obsidianscrap"
+    }
+  },
+  "result": {
+    "item": "kraftmine:blade_of_despair",
+    "count": 1
+  }
+}

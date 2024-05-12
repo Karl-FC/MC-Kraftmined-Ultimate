@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:obsidian_armor_chestplate",
+    "minecraft:golden_chestplate",
+    "minecraft:air",
+    "minecraft:chainmail_chestplate",
+    "minecraft:netherite_chestplate",
+    "minecraft:diamond_chestplate",
+    "minecraft:leather_chestplate"
+  ]
+}

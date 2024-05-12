@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Extra Use Button",
+    "keyBindingCategoryKey": "kraftmine",
+    "onKeyPressed": {
+      "name": "ExtraUseButtonOnKeyPressed"
+    }
+  }
+}

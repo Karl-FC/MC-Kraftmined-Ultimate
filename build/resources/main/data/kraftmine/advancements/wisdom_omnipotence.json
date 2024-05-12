@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:command_block"
+    },
+    "title": {
+      "translate": "advancements.wisdom_omnipotence.title"
+    },
+    "description": {
+      "translate": "advancements.wisdom_omnipotence.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wisdom_omnipotence": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "kraftmine:wisdom_ascendence"
+}

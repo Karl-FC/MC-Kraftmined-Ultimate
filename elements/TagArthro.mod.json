@@ -1,0 +1,35 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntitySpider"
+      },
+      {
+        "value": "CUSTOM:GhostSpider"
+      },
+      {
+        "value": "EntityBee"
+      },
+      {
+        "value": "EntityCaveSpider"
+      },
+      {
+        "value": "EntityEndermite"
+      },
+      {
+        "value": "EntitySilverfish"
+      },
+      {
+        "value": "CUSTOM:MobBig"
+      }
+    ],
+    "name": "arthropod",
+    "namespace": "forge"
+  }
+}

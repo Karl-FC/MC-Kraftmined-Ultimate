@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "kraftmine:carbon_fiber"
+    },
+    "2": {
+      "item": "kraftmine:carbon_fiber"
+    },
+    "3": {
+      "item": "kraftmine:carbon_fiber"
+    },
+    "5": {
+      "item": "kraftmine:carbon_fiber"
+    }
+  },
+  "result": {
+    "item": "kraftmine:carbon_armor_boots",
+    "count": 1
+  }
+}

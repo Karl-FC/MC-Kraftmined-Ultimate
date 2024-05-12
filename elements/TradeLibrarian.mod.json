@@ -1,0 +1,501 @@
+{
+  "_fv": 39,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "LIBRARIAN"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:Corn"
+            },
+            "countPrice1": 20,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countOffer": 15,
+            "level": 1,
+            "maxTrades": 16,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice1": 48,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:Wallnut"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 12,
+            "xp": 1,
+            "priceMultiplier": 0.2
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:Cherry"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 3,
+            "xp": 1,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Coconut"
+            },
+            "countPrice1": 8,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 3,
+            "priceMultiplier": 0.049999999999999996
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:CornSeeds"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countOffer": 15,
+            "level": 2,
+            "maxTrades": 10,
+            "xp": 3,
+            "priceMultiplier": 0.09999999999999999
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:SoulLight"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 5,
+            "xp": 3,
+            "priceMultiplier": 0.049999999999999996
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countPrice2": 36,
+            "offer": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 0,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice2": 36,
+            "offer": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.1
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 10,
+            "priceMultiplier": 0.1
+          },
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countOffer": 32,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 10,
+            "xp": 2,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice2": 36,
+            "offer": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 10,
+            "xp": 2,
+            "priceMultiplier": 0.01
+          },
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 10,
+            "xp": 2,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.01
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": "Blocks.AZALEA_LEAVES"
+            },
+            "countPrice2": 24,
+            "offer": {
+              "value": "CUSTOM:GhillieSuit.helmet"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.09999999999999999
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": "Blocks.AZALEA_LEAVES"
+            },
+            "countPrice2": 24,
+            "offer": {
+              "value": "CUSTOM:GhillieSuit.body"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.09999999999999999
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": "Blocks.AZALEA_LEAVES"
+            },
+            "countPrice2": 24,
+            "offer": {
+              "value": "CUSTOM:GhillieSuit.legs"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.09999999999999999
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": "Blocks.AZALEA_LEAVES"
+            },
+            "countPrice2": 24,
+            "offer": {
+              "value": "CUSTOM:GhillieSuit.boots"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.1
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": "Items.BEETROOT"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:Beetsniper"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 3,
+            "xp": 15,
+            "priceMultiplier": 0.25
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "CUSTOM:Corn"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:PlantCharge"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 16,
+            "xp": 10,
+            "priceMultiplier": 0.5
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countPrice1": 5,
+            "price2": {
+              "value": "Items.MELON_SEEDS"
+            },
+            "countPrice2": 16,
+            "offer": {
+              "value": "CUSTOM:SeedMachineGun"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 3,
+            "xp": 10,
+            "priceMultiplier": 0.2
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 24,
+            "price2": {
+              "value": "Items.POISONOUS_POTATO"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:MPPotato"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 3,
+            "xp": 10,
+            "priceMultiplier": 0.09999999999999999
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Emeraldcoin"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "CUSTOM:RangedTomato"
+            },
+            "countPrice2": 16,
+            "offer": {
+              "value": "CUSTOM:TomatoShuriken"
+            },
+            "countOffer": 16,
+            "level": 2,
+            "maxTrades": 16,
+            "xp": 2,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RangedTomato"
+            },
+            "countPrice1": 16,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:SapphireCoin"
+            },
+            "countOffer": 32,
+            "level": 1,
+            "maxTrades": 16,
+            "xp": 2,
+            "priceMultiplier": 0.01
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countPrice1": 12,
+            "price2": {
+              "value": "CUSTOM:Corn"
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:PopCorn"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 10,
+            "xp": 15,
+            "priceMultiplier": 0.25
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Appleblock"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:RubyCoin"
+            },
+            "countOffer": 8,
+            "level": 3,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:DiamondCoin"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:GoldenAppleBlock"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 5,
+            "xp": 5,
+            "priceMultiplier": 0.2
+          }
+        ]
+      }
+    ]
+  }
+}

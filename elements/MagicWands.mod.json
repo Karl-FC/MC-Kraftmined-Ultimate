@@ -1,0 +1,26 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:LightningRod"
+      },
+      {
+        "value": "CUSTOM:FireScepter"
+      },
+      {
+        "value": "CUSTOM:IceWand"
+      },
+      {
+        "value": "CUSTOM:TheSwitcher"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "magic_wands",
+    "namespace": "mod"
+  }
+}

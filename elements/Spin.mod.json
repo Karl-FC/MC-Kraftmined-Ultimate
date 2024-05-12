@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Helicopter",
+    "splashName": "Splash Potion of Helicopter",
+    "lingeringName": "Lingering Potion of Helicopter",
+    "arrowName": "Arrow of Helicopter",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Helicopter"
+        },
+        "duration": 300,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

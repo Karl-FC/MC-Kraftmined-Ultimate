@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:tnt"
+    },
+    "1": {
+      "item": "minecraft:tnt"
+    },
+    "2": {
+      "item": "minecraft:tnt"
+    },
+    "3": {
+      "item": "minecraft:tnt"
+    },
+    "5": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "kraftmine:tnt_armor_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "_fv": 39,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Creepiest",
+    "mobLabel": "",
+    "mobModelName": "Creeper",
+    "mobModelTexture": "creepest.png",
+    "mobModelGlowTexture": "",
+    "isShakingCondition": {
+      "name": "CreepestEntityShakingCondition"
+    },
+    "modelWidth": 0.6,
+    "modelHeight": 1.7,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -16751104,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -16738048,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 0,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.5,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 30.0,
+    "trackingRange": 64,
+    "followRange": 30,
+    "health": 20,
+    "xpAmount": 8,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": true,
+    "immuneToPotions": true,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "Items.GUNPOWDER"
+    },
+    "livingSound": {
+      "value": "entity.creeper.primed"
+    },
+    "hurtSound": {
+      "value": "entity.creeper.hurt"
+    },
+    "deathSound": {
+      "value": "entity.creeper.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "hasAI": true,
+    "aiBase": "Creeper",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 1,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": true
+  }
+}

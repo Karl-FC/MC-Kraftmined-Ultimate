@@ -1,0 +1,34 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "ice_pickaxe",
+    "customModelName": "Normal",
+    "name": "Ice Pickaxe",
+    "specialInfo": [
+      "Deals extra frost damage",
+      "Slows down the player"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Crtab"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 1,
+    "efficiency": 5.0,
+    "attackSpeed": 1.0,
+    "enchantability": 10,
+    "damageVsEntity": 1.0,
+    "usageCount": 152,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Blocks.PACKED_ICE"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

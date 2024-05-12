@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityWitherSkeleton"
+      },
+      {
+        "value": "EntityPiglinBrute"
+      },
+      {
+        "value": "EntityPigZombie"
+      }
+    ],
+    "name": "nethermob",
+    "namespace": "forge"
+  }
+}
