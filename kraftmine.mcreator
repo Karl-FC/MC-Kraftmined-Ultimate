@@ -5234,6 +5234,7 @@
       }
     },
     {
+<<<<<<< Updated upstream
       "name": "AmogusSpawnEggRightclickedOnBlock",
       "type": "procedure",
       "sortid": 562,
@@ -5296,6 +5297,8 @@
       }
     },
     {
+=======
+>>>>>>> Stashed changes
       "name": "Refreshed",
       "type": "potioneffect",
       "sortid": 564,
@@ -24260,7 +24263,11 @@
       "subtitles.ad.sponge": "Press BACKSPACE to close ad",
       "subtitles.pingu.idle": "NootNoot",
       "item.kraftmine.soul_sight": "Soul of Sight",
+<<<<<<< Updated upstream
       "item.kraftmine.amogus_spawn_egg": "Spawn Amogus",
+=======
+      "painting.kraftmine.painting_tall_2.title": "Painting Tall 2",
+>>>>>>> Stashed changes
       "item.kraftmine.glass_shovel": "Glass Shovel",
       "item.kraftmine.clay_bottle": "Clay Bottle",
       "block.kraftmine.tungsten_block": "Block of Tungsten",

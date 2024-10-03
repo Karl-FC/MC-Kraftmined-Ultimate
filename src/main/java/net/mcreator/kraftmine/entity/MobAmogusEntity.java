@@ -26,6 +26,7 @@ import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.ClimbOnTopOfPowderSnowGoal;
 import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -38,15 +39,27 @@ import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+<<<<<<< Updated upstream
 import net.minecraft.network.protocol.Packet;
+=======
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
+>>>>>>> Stashed changes
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class MobAmogusEntity extends Monster {
+<<<<<<< Updated upstream
 	public MobAmogusEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(KraftmineModEntities.MOB_AMOGUS.get(), world);
 	}
+=======
+	public static final EntityDataAccessor<Integer> DATA_Color = SynchedEntityData.defineId(MobAmogusEntity.class, EntityDataSerializers.INT);
+>>>>>>> Stashed changes
 
 	public MobAmogusEntity(EntityType<MobAmogusEntity> type, Level world) {
 		super(type, world);
@@ -55,8 +68,14 @@ public class MobAmogusEntity extends Monster {
 	}
 
 	@Override
+<<<<<<< Updated upstream
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+=======
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_Color, 0);
+>>>>>>> Stashed changes
 	}
 
 	@Override
@@ -79,7 +98,8 @@ public class MobAmogusEntity extends Monster {
 		this.goalSelector.addGoal(10, new OpenDoorGoal(this, true));
 		this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, AmbientCreature.class, (float) 6));
 		this.goalSelector.addGoal(12, new RandomStrollGoal(this, 0.9));
-		this.goalSelector.addGoal(13, new FloatGoal(this));
+		this.goalSelector.addGoal(13, new ClimbOnTopOfPowderSnowGoal(this, this.level()));
+		this.goalSelector.addGoal(14, new FloatGoal(this));
 	}
 
 	@Override
@@ -129,10 +149,34 @@ public class MobAmogusEntity extends Monster {
 		return super.hurt(source, amount);
 	}
 
+<<<<<<< Updated upstream
 	public static void init() {
 		SpawnPlacements.register(KraftmineModEntities.MOB_AMOGUS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
 		DungeonHooks.addDungeonMob(KraftmineModEntities.MOB_AMOGUS.get(), 180);
+=======
+	@Override
+	public boolean ignoreExplosion(Explosion explosion) {
+		return true;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putInt("DataColor", this.entityData.get(DATA_Color));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataColor"))
+			this.entityData.set(DATA_Color, compound.getInt("DataColor"));
+	}
+
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.MOB_AMOGUS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8), RegisterSpawnPlacementsEvent.Operation.REPLACE);
+>>>>>>> Stashed changes
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
