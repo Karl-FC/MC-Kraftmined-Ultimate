@@ -22962,6 +22962,10 @@
       "EntityBee",
       "CUSTOM:MobBig"
     ],
+    "ENTITIES:minecraft:skeletons": [
+      "EntityCreeper",
+      "CUSTOM:MobAmogus"
+    ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:GigaArmor.body",
       "~CUSTOM:LavaArmor.body",
@@ -22987,10 +22991,6 @@
       "~CUSTOM:DripArmor.body",
       "~CUSTOM:ObsidianArmor.body",
       "~CUSTOM:TungstenArmor.body"
-    ],
-    "ENTITIES:minecraft:skeletons": [
-      "EntityCreeper",
-      "CUSTOM:MobAmogus"
     ],
     "ITEMS:forge:clay_bottles": [
       "CUSTOM:ClayWaterBottle",
