@@ -1,9 +1,0 @@
-{
-  "parent": "kraftmine:custom/empty_can",
-  "textures": {
-    "all": "kraftmine:block/wallnut_side",
-    "particle": "kraftmine:block/wallnut_side",
-    "0": "kraftmine:block/can_empty"
-  },
-  "render_type": "solid"
-}

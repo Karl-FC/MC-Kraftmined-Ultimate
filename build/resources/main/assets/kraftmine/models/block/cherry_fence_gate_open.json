@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_fence_gate_open",
-  "textures": {
-    "particle": "kraftmine:block/cherry_planks",
-    "texture": "kraftmine:block/cherry_planks"
-  },
-  "render_type": "solid"
-}

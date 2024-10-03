@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmine:block/cherry_planks",
-    "particle": "kraftmine:block/cherry_planks"
-  },
-  "render_type": "solid"
-}
