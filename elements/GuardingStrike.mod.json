@@ -1,20 +1,21 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Guarding Strike",
-    "type": "WEAPON",
-    "rarity": "VERY_RARE",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 1,
+    "anvilCost": 8,
     "maxLevel": 3,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/weapon"
+      }
+    ],
     "isTreasureEnchantment": true,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

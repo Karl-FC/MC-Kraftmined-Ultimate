@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,18 +22,28 @@
     "onBootsTick": {
       "name": "HydroArmorBootsTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "blank_",
     "helmetName": "Water Helmet",
     "bodyName": "Water Tunic",
     "leggingsName": "Water Leggings",
     "bootsName": "Water Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Modelwater",
     "helmetModelPart": "helmet",
     "helmetModelTexture": "From armor",

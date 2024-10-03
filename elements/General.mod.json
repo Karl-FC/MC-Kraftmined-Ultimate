@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "General Calcium",
     "mobLabel": "",
     "mobModelName": "Modelgeneral",
     "mobModelTexture": "general.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 3.2,
     "modelHeight": 4.2,
     "modelShadowSize": 1.0,
@@ -20,9 +20,11 @@
       "value": -16777216,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": true,
     "bossBarColor": "RED",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 1.0,
     "knockbackResistance": 0.30000000000000004,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 50.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 500,
     "xpAmount": 50,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "whenMobDies": {
       "name": "GeneralEntityDies"
     },
@@ -118,6 +125,15 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "SCP-049",
     "mobLabel": "",
     "mobModelName": "Witch",
     "mobModelTexture": "scp_049.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.6,
     "modelHeight": 1.9500000000000002,
     "modelShadowSize": 0.5,
@@ -20,9 +20,11 @@
       "value": -10066330,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
+    "stepHeight": 0.6,
     "armorBaseValue": 20.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 26,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "Witch",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
@@ -128,6 +135,15 @@
         "value": "CUSTOM:Eerie"
       }
     ],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

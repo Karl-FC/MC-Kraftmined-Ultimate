@@ -13,11 +13,11 @@ import net.mcreator.kraftmine.entity.ZombiePigManEntity;
 public class ZombiePigManRenderer extends HumanoidMobRenderer<ZombiePigManEntity, HumanoidModel<ZombiePigManEntity>> {
 	public ZombiePigManRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(ZombiePigManEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/original-zombie-pigmen-on-planetminecraft-com.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/original-zombie-pigmen-on-planetminecraft-com.png");
 	}
 }

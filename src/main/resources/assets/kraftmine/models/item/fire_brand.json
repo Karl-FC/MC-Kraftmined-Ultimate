@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/firebrand"
+    "layer0": "kraftmine:item/firebrand"
   }
 }

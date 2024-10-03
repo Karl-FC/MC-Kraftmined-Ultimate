@@ -16,6 +16,6 @@ public class GiantSquidRenderer extends MobRenderer<GiantSquidEntity, GhastModel
 
 	@Override
 	public ResourceLocation getTextureLocation(GiantSquidEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/squid_ghast.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/squid_ghast.png");
 	}
 }

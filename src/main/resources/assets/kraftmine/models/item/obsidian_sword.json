@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/obsidiantools_sword"
+    "layer0": "kraftmine:item/obsidiantools_sword"
   }
 }

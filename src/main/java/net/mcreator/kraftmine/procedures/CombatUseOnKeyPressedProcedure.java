@@ -1,7 +1,5 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -28,21 +26,24 @@ public class CombatUseOnKeyPressedProcedure {
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == KraftmineModItems.QUIVER_ARMOR_CHESTPLATE.get()) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("Quivergui");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				_ent.openMenu(new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("Quivergui");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new QuiverguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new QuiverguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		}
 	}

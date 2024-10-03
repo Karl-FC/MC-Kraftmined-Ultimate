@@ -6,11 +6,9 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
-import net.mcreator.kraftmine.init.KraftmineModTabs;
-
 public class CarbonFiberItem extends Item {
 	public CarbonFiberItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
 	}
 
 	@Override

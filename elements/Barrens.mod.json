@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -44,10 +44,17 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
+    "enableIgniter": true,
     "igniterName": "Barrens Portal Igniter",
-    "igniterTab": {
-      "value": "CUSTOM:Crtab"
+    "igniterRarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
     },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "texture": "",
     "portalTexture": "",
     "enablePortal": false

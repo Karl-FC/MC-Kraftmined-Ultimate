@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,18 +10,28 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "cone_",
     "helmetName": "Traffic Cone",
     "bodyName": "Eyepatch Body",
     "leggingsName": "Eyepatch Leggings",
     "bootsName": "Eyepatch Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Modelcone",
     "helmetModelPart": "headwear",
     "helmetModelTexture": "cone_layer_1.png",

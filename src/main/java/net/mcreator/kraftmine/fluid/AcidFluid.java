@@ -1,7 +1,7 @@
 
 package net.mcreator.kraftmine.fluid;
 
-import net.minecraftforge.fluids.ForgeFlowingFluid;
+import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluid;
@@ -16,9 +16,9 @@ import net.mcreator.kraftmine.init.KraftmineModFluids;
 import net.mcreator.kraftmine.init.KraftmineModFluidTypes;
 import net.mcreator.kraftmine.init.KraftmineModBlocks;
 
-public abstract class AcidFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> KraftmineModFluidTypes.ACID_TYPE.get(), () -> KraftmineModFluids.ACID.get(), () -> KraftmineModFluids.FLOWING_ACID.get())
-			.explosionResistance(100f).tickRate(10).levelDecreasePerBlock(2).slopeFindDistance(5).bucket(() -> KraftmineModItems.ACID_BUCKET.get()).block(() -> (LiquidBlock) KraftmineModBlocks.ACID.get());
+public abstract class AcidFluid extends BaseFlowingFluid {
+	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> KraftmineModFluidTypes.ACID_TYPE.get(), () -> KraftmineModFluids.ACID.get(), () -> KraftmineModFluids.FLOWING_ACID.get()).explosionResistance(100f)
+			.tickRate(10).levelDecreasePerBlock(2).slopeFindDistance(5).bucket(() -> KraftmineModItems.ACID_BUCKET.get()).block(() -> (LiquidBlock) KraftmineModBlocks.ACID.get());
 
 	private AcidFluid() {
 		super(PROPERTIES);

@@ -13,11 +13,11 @@ import net.mcreator.kraftmine.entity.TestDummyEntity;
 public class TestDummyRenderer extends HumanoidMobRenderer<TestDummyEntity, HumanoidModel<TestDummyEntity>> {
 	public TestDummyRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(TestDummyEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/dungeons-dummy-skin-on-planetminecraft-com.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/dungeons-dummy-skin-on-planetminecraft-com.png");
 	}
 }

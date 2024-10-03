@@ -30,16 +30,16 @@ public class LocateblockprocedureProcedure {
 		found = false;
 		PosYup = y;
 		PosYdown = y;
-		for (int index0 = 0; index0 < (int) (200); index0++) {
-			if ((world.getBlockState(new BlockPos(x, PosYup, z))).is(BlockTags.create(new ResourceLocation((blockneed).toLowerCase(java.util.Locale.ENGLISH))))) {
+		for (int index0 = 0; index0 < 200; index0++) {
+			if ((world.getBlockState(BlockPos.containing(x, PosYup, z))).is(BlockTags.create(ResourceLocation.parse((blockneed).toLowerCase(java.util.Locale.ENGLISH))))) {
 				found = true;
 			}
 			PosYup = PosYup + 1;
 		}
 		if (found == false) {
 			PosYdown = y;
-			for (int index1 = 0; index1 < (int) (100); index1++) {
-				if ((world.getBlockState(new BlockPos(x, PosYdown, z))).is(BlockTags.create(new ResourceLocation((blockneed).toLowerCase(java.util.Locale.ENGLISH))))) {
+			for (int index1 = 0; index1 < 100; index1++) {
+				if ((world.getBlockState(BlockPos.containing(x, PosYdown, z))).is(BlockTags.create(ResourceLocation.parse((blockneed).toLowerCase(java.util.Locale.ENGLISH))))) {
 					found = true;
 				}
 				PosYdown = PosYdown - 1;
@@ -47,15 +47,15 @@ public class LocateblockprocedureProcedure {
 		}
 		if (found == true) {
 			if (PosYup - y < y + PosYdown) {
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal(("The nearest" + blockneed + " is at " + x + PosYup + z)), (false));
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("The nearest" + blockneed + " is at " + x + PosYup + z)), false);
 			} else {
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal(("The nearest" + blockneed + " is at " + x + PosYdown + z)), (false));
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("The nearest" + blockneed + " is at " + x + PosYdown + z)), false);
 			}
 		} else {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("Unable to locate the requested block or block tag within a square of 1000x400x1000 blocks area"), (false));
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Unable to locate the requested block or block tag within a square of 1000x400x1000 blocks area"), false);
 		}
 	}
 }

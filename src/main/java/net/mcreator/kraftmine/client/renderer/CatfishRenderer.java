@@ -15,6 +15,6 @@ public class CatfishRenderer extends MobRenderer<CatfishEntity, Modelcatfish<Cat
 
 	@Override
 	public ResourceLocation getTextureLocation(CatfishEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/big.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/big.png");
 	}
 }

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:potion",
+    "minecraft:beetroot_soup",
+    "minecraft:mushroom_stew",
+    "minecraft:suspicious_stew",
+    "minecraft:rabbit_stew",
+    "minecraft:melon_slice",
+    "minecraft:apple",
+    "kraftmine:water_cup_glass",
+    "kraftmine:water_cup_mug",
+    "kraftmine:water_cup",
+    "kraftmine:water_gold",
+    "minecraft:milk_bucket"
+  ]
+}

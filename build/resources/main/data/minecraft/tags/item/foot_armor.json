@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:giga_armor_boots",
+    "kraftmine:lava_armor_boots",
+    "kraftmine:hydro_armor_boots",
+    "kraftmine:prismarine_armor_boots",
+    "kraftmine:ghillie_suit_boots",
+    "kraftmine:plastic_armor_boots",
+    "kraftmine:studded_armor_boots",
+    "kraftmine:condensed_armor_boots",
+    "kraftmine:egghell_armor_boots",
+    "kraftmine:egg_armor_boots",
+    "kraftmine:wood_armor_boots",
+    "kraftmine:tnt_armor_boots",
+    "kraftmine:cactus_armor_boots",
+    "kraftmine:cursed_iron_armor_boots",
+    "kraftmine:redstone_armor_boots",
+    "kraftmine:lapis_lazuli_armor_boots",
+    "kraftmine:carbon_armor_boots",
+    "kraftmine:titanium_armor_boots",
+    "kraftmine:nickel_armor_boots",
+    "kraftmine:drip_armor_boots",
+    "kraftmine:obsidian_armor_boots",
+    "kraftmine:tungsten_armor_boots"
+  ]
+}

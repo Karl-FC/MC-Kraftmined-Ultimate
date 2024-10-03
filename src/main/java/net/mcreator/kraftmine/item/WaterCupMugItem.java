@@ -12,14 +12,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.CupDrinkMugProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WaterCupMugItem extends Item {
 	public WaterCupMugItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).alwaysEat()
-
-				.build()));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -28,8 +25,8 @@ public class WaterCupMugItem extends Item {
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0F;
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
+		return 0f;
 	}
 
 	@Override
@@ -39,7 +36,6 @@ public class WaterCupMugItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		CupDrinkMugProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;

@@ -23,19 +23,18 @@ public class BleedEffectActiveTickConditionProcedure {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 				}
 				return false;
 			}
-		}.checkGamemode(entity)) && (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.BLEED_EFFECT.get()) : false) == true
-				&& (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.REGENERATION) : false) == false) {
-			if (entity instanceof LivingEntity _entity)
+		}.checkGamemode(entity)) && (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(KraftmineModMobEffects.BLEED_EFFECT)) == true && (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.REGENERATION)) == false) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 45,
-						entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.BLEED_EFFECT.get()) ? _livEnt.getEffect(KraftmineModMobEffects.BLEED_EFFECT.get()).getAmplifier() : 0, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
+						entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.BLEED_EFFECT) ? _livEnt.getEffect(KraftmineModMobEffects.BLEED_EFFECT).getAmplifier() : 0, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 45,
-						entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.BLEED_EFFECT.get()) ? _livEnt.getEffect(KraftmineModMobEffects.BLEED_EFFECT.get()).getAmplifier() : 0, (false), (false)));
+						entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.BLEED_EFFECT) ? _livEnt.getEffect(KraftmineModMobEffects.BLEED_EFFECT).getAmplifier() : 0, false, false));
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (KraftmineModParticleTypes.BLOOD.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 10, 1, 2, 1, 0);
 		}

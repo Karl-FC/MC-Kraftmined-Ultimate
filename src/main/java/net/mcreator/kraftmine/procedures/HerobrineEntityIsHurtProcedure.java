@@ -1,7 +1,5 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -19,6 +17,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.KraftmineMod;
@@ -32,7 +32,7 @@ public class HerobrineEntityIsHurtProcedure {
 		if (Math.random() < 0.5) {
 			RandomX = x + Mth.nextInt(RandomSource.create(), -5, 5);
 			RandomZ = z + Mth.nextInt(RandomSource.create(), -5, 5);
-			if ((world.getBlockState(new BlockPos(RandomX, y + 1, RandomZ))).getBlock() == Blocks.AIR) {
+			if ((world.getBlockState(BlockPos.containing(RandomX, y + 1, RandomZ))).getBlock() == Blocks.AIR) {
 				{
 					Entity _ent = entity;
 					_ent.teleportTo(RandomX, y, RandomZ);
@@ -51,23 +51,23 @@ public class HerobrineEntityIsHurtProcedure {
 			}
 		}
 		if (Math.random() < 0.5) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 3, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, 1, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, (false), (false)));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 3, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, 1, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false));
 		}
 		if (Math.random() <= 0.25) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 3, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60, 3, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, 1, (false), (false)));
-			entity.setSecondsOnFire(1);
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 3, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60, 3, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, 1, false, false));
+			entity.igniteForSeconds(1);
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
@@ -105,21 +105,23 @@ public class HerobrineEntityIsHurtProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+				ItemStack _setstack = new ItemStack(
+						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+				ItemStack _setstack = new ItemStack(
+						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
 			KraftmineMod.queueServerWork(200, () -> {
-				entity.setSecondsOnFire(1);
+				entity.igniteForSeconds(1);
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
@@ -157,14 +159,14 @@ public class HerobrineEntityIsHurtProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR);
+					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR);
+					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -173,11 +175,11 @@ public class HerobrineEntityIsHurtProcedure {
 			});
 		}
 		if (Math.random() <= 0.75) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, (false), (false)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 2, (false), (false)));
-			entity.setSecondsOnFire(1);
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 2, false, false));
+			entity.igniteForSeconds(1);
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
@@ -215,31 +217,33 @@ public class HerobrineEntityIsHurtProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+				ItemStack _setstack = new ItemStack(
+						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+				ItemStack _setstack = new ItemStack(
+						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("mod:herobrine_weapons"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
 			if (Math.random() > 0.5) {
-				((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
-				((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
 				if (Math.random() > 0.5) {
-					((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
-					((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
-					((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
-					((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)).enchant(Enchantments.UNBREAKING, 3);
+					(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
+					(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
+					(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
+					(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING), 3);
 				}
 			}
 			KraftmineMod.queueServerWork(200, () -> {
-				entity.setSecondsOnFire(1);
+				entity.igniteForSeconds(1);
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
@@ -277,14 +281,14 @@ public class HerobrineEntityIsHurtProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR);
+					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR);
+					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 					if (_entity instanceof Player _player)

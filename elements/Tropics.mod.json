@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "biome",
   "definition": {
     "name": "Tropics",
@@ -63,15 +63,6 @@
       "min": -1.4270117638836768,
       "max": 0.5729882361163232
     },
-    "grassPerChunk": 4,
-    "seagrassPerChunk": 4,
-    "flowersPerChunk": 4,
-    "mushroomsPerChunk": 0,
-    "bigMushroomsChunk": 0,
-    "sandPatchesPerChunk": 10,
-    "gravelPatchesPerChunk": 5,
-    "reedsPerChunk": 0,
-    "cactiPerChunk": 1,
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
     "treeType": 0,
@@ -88,6 +79,16 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "FrozenTopLayer",
+      "OceanCaves",
+      "ReedsAndPumpkins",
+      "ForestGrass",
+      "DefaultFlowers",
+      "DesertFeatures"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
@@ -108,13 +109,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "defaultFeatures": [
-      "Caves",
-      "Ores",
-      "FrozenTopLayer",
-      "OceanCaves",
-      "ReedsAndPumpkins"
-    ],
     "spawnEntries": []
   }
 }

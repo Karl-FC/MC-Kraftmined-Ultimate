@@ -15,6 +15,6 @@ public class TrollgeLvl2Renderer extends MobRenderer<TrollgeLvl2Entity, Modeltro
 
 	@Override
 	public ResourceLocation getTextureLocation(TrollgeLvl2Entity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/trollge2.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/trollge2.png");
 	}
 }

@@ -1,7 +1,5 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,12 +21,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.init.KraftmineModBlocks;
 import net.mcreator.kraftmine.entity.ZombiePigManEntity;
 
-import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
 
@@ -41,8 +39,7 @@ public class WallnutUpdateTickProcedure {
 				|| !world.getEntitiesOfClass(Zoglin.class, AABB.ofSize(new Vec3(x, y, z), 2, 2, 2), e -> true).isEmpty()) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof Zombie || entityiterator instanceof Husk || entityiterator instanceof ZombieVillager || entityiterator instanceof ZombiePigManEntity || entityiterator instanceof ZombifiedPiglin
 							|| entityiterator instanceof Zoglin || entityiterator instanceof ZombieHorse) {
@@ -54,7 +51,7 @@ public class WallnutUpdateTickProcedure {
 							_entity.swing(InteractionHand.MAIN_HAND, true);
 						if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 							if (!world.isClientSide()) {
-								BlockPos _bp = new BlockPos(x, y, z);
+								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
@@ -65,13 +62,13 @@ public class WallnutUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, new BlockPos(x, y, z), "Health") + 5));
+									}.getValue(world, BlockPos.containing(x, y, z), "Health") + 5));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						} else {
 							if (!world.isClientSide()) {
-								BlockPos _bp = new BlockPos(x, y, z);
+								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
@@ -82,7 +79,7 @@ public class WallnutUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, new BlockPos(x, y, z), "Health") + 1));
+									}.getValue(world, BlockPos.containing(x, y, z), "Health") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -90,9 +87,9 @@ public class WallnutUpdateTickProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.attack_wooden_door")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.zombie.attack_wooden_door")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.attack_wooden_door")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.zombie.attack_wooden_door")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 					Tick = 0;
@@ -106,9 +103,9 @@ public class WallnutUpdateTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "Health") >= 50) {
-			world.destroyBlock(new BlockPos(x, y, z), false);
-			world.levelEvent(2001, new BlockPos(x, y, z), Block.getId(KraftmineModBlocks.WALLNUT.get().defaultBlockState()));
+		}.getValue(world, BlockPos.containing(x, y, z), "Health") >= 50) {
+			world.destroyBlock(BlockPos.containing(x, y, z), false);
+			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(KraftmineModBlocks.WALLNUT.get().defaultBlockState()));
 		}
 	}
 }

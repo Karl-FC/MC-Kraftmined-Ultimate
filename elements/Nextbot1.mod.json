@@ -1,15 +1,15 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Nextbot",
     "mobLabel": "",
     "mobModelName": "Modelnextbot",
     "mobModelTexture": "nextbot_obunga.png",
-    "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 1.0,
     "modelShadowSize": 1.0,
@@ -23,9 +23,11 @@
       "value": -10079488,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -53,12 +55,16 @@
     "attackKnockback": 0.30000000000000004,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 86,
     "followRange": 64,
     "health": 8,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -95,6 +101,7 @@
     "stepSound": {
       "value": "block.wood.step"
     },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "NextbotOnEntityTickUpdate"
     },
@@ -125,6 +132,15 @@
         "value": "CUSTOM:Wasteland"
       }
     ],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "kraftmine:obsidian_nugget"
+  },
+  "addition": {
+    "item": "kraftmine:obsidian_nugget"
+  },
+  "result": {
+    "id": "kraftmine:obsidianscrap"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "legoblock",
@@ -33,15 +33,20 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Life Orb",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 1.1500000000000001,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -98,7 +103,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -120,17 +125,23 @@
     "onRightClicked": {
       "name": "LifeOrbOnBlockRightClicked"
     },
-    "spawnWorldTypes": [
-      "Surface",
-      "CUSTOM:Aether"
-    ],
+    "generateFeature": true,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.DEEPSLATE"
       },
       {
-        "value": "Blocks.DEEPSLATE"
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
       }
     ],
     "generationShape": "UNIFORM",

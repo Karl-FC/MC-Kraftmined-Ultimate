@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "plant",
   "definition": {
     "renderType": 13,
@@ -11,12 +11,10 @@
     "tintType": "No tint",
     "isItemTinted": false,
     "plantType": "normal",
-    "staticPlantGenerationType": "Flower",
     "suspiciousStewEffect": "SPEED",
     "suspiciousStewDuration": 100,
     "growapableSpawnType": "Crop",
     "growapableMaxHeight": 3,
-    "doublePlantGenerationType": "Flower",
     "customBoundingBox": false,
     "disableOffset": false,
     "boundingBoxes": [
@@ -31,10 +29,10 @@
       }
     ],
     "name": "Corn Crops Stage 1",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "No creative tab entry"
+    "specialInformation": {
+      "fixedValue": []
     },
+    "creativeTabs": [],
     "hardness": 0.0,
     "resistance": 0.0,
     "luminance": 0,
@@ -84,10 +82,13 @@
     },
     "isBonemealable": false,
     "frequencyOnChunks": 0,
-    "spawnWorldTypes": [
-      "Surface"
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "#is_overworld"
+      }
     ],
-    "restrictionBiomes": [],
+    "generationType": "Flower",
     "patchSize": 64,
     "generateAtAnyHeight": false,
     "onTickUpdate": {

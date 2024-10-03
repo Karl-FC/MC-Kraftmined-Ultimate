@@ -7,11 +7,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 import net.mcreator.kraftmine.procedures.TestDummyItemRightclickedOnBlockProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class TestDummyItemItem extends Item {
 	public TestDummyItemItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

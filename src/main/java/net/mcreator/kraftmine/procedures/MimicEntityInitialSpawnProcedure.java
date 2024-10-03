@@ -18,12 +18,12 @@ public class MimicEntityInitialSpawnProcedure {
 			entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "execute run data merge entity @s {NoAI:1}");
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "execute run data merge entity @s {NoAI:1}");
 				}
 			}
-			if (!((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.AIR)) {
+			if (!((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.AIR)) {
 				{
 					Entity _ent = entity;
 					_ent.setYRot(0);
@@ -38,7 +38,7 @@ public class MimicEntityInitialSpawnProcedure {
 					}
 				}
 			}
-			if (!((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock() == Blocks.AIR)) {
+			if (!((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.AIR)) {
 				{
 					Entity _ent = entity;
 					_ent.setYRot(90);
@@ -53,7 +53,7 @@ public class MimicEntityInitialSpawnProcedure {
 					}
 				}
 			}
-			if (!((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock() == Blocks.AIR)) {
+			if (!((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.AIR)) {
 				{
 					Entity _ent = entity;
 					_ent.setYRot(-90);
@@ -68,7 +68,7 @@ public class MimicEntityInitialSpawnProcedure {
 					}
 				}
 			}
-			if (!((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock() == Blocks.AIR)) {
+			if (!((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.AIR)) {
 				{
 					Entity _ent = entity;
 					_ent.setYRot(180);

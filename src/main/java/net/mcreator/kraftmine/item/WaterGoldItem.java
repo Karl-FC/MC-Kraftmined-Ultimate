@@ -1,8 +1,8 @@
 
 package net.mcreator.kraftmine.item;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -15,14 +15,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.ChaliceDrinkCupProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WaterGoldItem extends Item {
 	public WaterGoldItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(1).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(1f).alwaysEat()
-
-				.build()));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -31,13 +28,13 @@ public class WaterGoldItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 40;
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0F;
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
+		return 0f;
 	}
 
 	@Override
@@ -53,7 +50,6 @@ public class WaterGoldItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		ChaliceDrinkCupProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;

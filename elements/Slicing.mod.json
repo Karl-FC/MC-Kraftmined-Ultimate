@@ -1,57 +1,172 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Slicing",
-    "type": "WEAPON",
-    "rarity": "COMMON",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 4,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
-        "value": "CUSTOM:SaberSwing"
+        "value": "CUSTOM:BaneofMetapod"
       },
       {
-        "value": "CUSTOM:BleedingEdge"
+        "value": "CUSTOM:Lifesteal"
       },
       {
-        "value": "CUSTOM:Stunning"
+        "value": "CUSTOM:DyingPan"
       },
       {
-        "value": "SHARPNESS"
+        "value": "CUSTOM:Reconstruction"
       },
       {
-        "value": "SMITE"
+        "value": "CUSTOM:Conjuring"
       },
       {
-        "value": "BANE_OF_ARTHROPODS"
+        "value": "CUSTOM:Replenishment"
       },
       {
-        "value": "KNOCKBACK"
+        "value": "CUSTOM:Efficacy"
       },
       {
-        "value": "FIRE_ASPECT"
+        "value": "CUSTOM:STAB"
       },
       {
-        "value": "LOOTING"
+        "value": "CUSTOM:Holdup"
       },
       {
-        "value": "SWEEPING"
+        "value": "CUSTOM:Committed"
       },
       {
-        "value": "UNBREAKING"
+        "value": "CUSTOM:Antibac"
       },
       {
-        "value": "MENDING"
+        "value": "CUSTOM:Backstabbing"
+      },
+      {
+        "value": "CUSTOM:Swiftfooted"
+      },
+      {
+        "value": "CUSTOM:Superstitious"
+      },
+      {
+        "value": "CUSTOM:MagicianSecret"
+      },
+      {
+        "value": "CUSTOM:BonusStrike"
+      },
+      {
+        "value": "CUSTOM:GuardingStrike"
+      },
+      {
+        "value": "PROTECTION"
+      },
+      {
+        "value": "FIRE_PROTECTION"
+      },
+      {
+        "value": "FEATHER_FALLING"
+      },
+      {
+        "value": "BLAST_PROTECTION"
+      },
+      {
+        "value": "PROJECTILE_PROTECTION"
+      },
+      {
+        "value": "RESPIRATION"
+      },
+      {
+        "value": "AQUA_AFFINITY"
+      },
+      {
+        "value": "THORNS"
+      },
+      {
+        "value": "DEPTH_STRIDER"
+      },
+      {
+        "value": "FROST_WALKER"
+      },
+      {
+        "value": "BINDING_CURSE"
+      },
+      {
+        "value": "EFFICIENCY"
+      },
+      {
+        "value": "SILK_TOUCH"
+      },
+      {
+        "value": "FORTUNE"
+      },
+      {
+        "value": "POWER"
+      },
+      {
+        "value": "PUNCH"
+      },
+      {
+        "value": "FLAME"
+      },
+      {
+        "value": "INFINITY"
+      },
+      {
+        "value": "LUCK_OF_THE_SEA"
+      },
+      {
+        "value": "LURE"
+      },
+      {
+        "value": "LOYALTY"
+      },
+      {
+        "value": "IMPALING"
+      },
+      {
+        "value": "RIPTIDE"
+      },
+      {
+        "value": "CHANNELING"
+      },
+      {
+        "value": "MULTISHOT"
+      },
+      {
+        "value": "QUICK_CHARGE"
+      },
+      {
+        "value": "PIERCING"
+      },
+      {
+        "value": "DENSITY"
+      },
+      {
+        "value": "BREACH"
+      },
+      {
+        "value": "WIND_BURST"
+      },
+      {
+        "value": "VANISHING_CURSE"
+      },
+      {
+        "value": "SOUL_SPEED"
+      },
+      {
+        "value": "SWIFT_SNEAK"
       }
     ],
-    "excludeEnchantments": false,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/weapon"
+      }
+    ],
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

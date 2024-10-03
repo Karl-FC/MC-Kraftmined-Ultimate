@@ -8,8 +8,8 @@ public class LavaArmorHelmetTickEventProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (!entity.fireImmune() || !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.FIRE_RESISTANCE) : false)) {
-			entity.setSecondsOnFire(5);
+		if (!entity.fireImmune() || !(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.FIRE_RESISTANCE))) {
+			entity.igniteForSeconds(5);
 		}
 	}
 }

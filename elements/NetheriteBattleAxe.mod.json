@@ -1,30 +1,35 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Axe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "netherite_battleaxe",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Netherite Battleaxe",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
+    "specialInformation": {
+      "fixedValue": []
     },
-    "toolType": "Axe",
-    "harvestLevel": 4,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "efficiency": 9.0,
     "attackSpeed": 1.1,
     "enchantability": 28,
     "damageVsEntity": 12.0,
     "usageCount": 2000,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "CUSTOM:TungstenIngot"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

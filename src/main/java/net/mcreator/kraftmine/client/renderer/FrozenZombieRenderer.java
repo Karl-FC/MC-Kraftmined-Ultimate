@@ -13,11 +13,11 @@ import net.mcreator.kraftmine.entity.FrozenZombieEntity;
 public class FrozenZombieRenderer extends HumanoidMobRenderer<FrozenZombieEntity, HumanoidModel<FrozenZombieEntity>> {
 	public FrozenZombieRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(FrozenZombieEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/frozen_zombie.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/frozen_zombie.png");
 	}
 }

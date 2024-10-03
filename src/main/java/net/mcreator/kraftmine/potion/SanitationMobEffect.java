@@ -14,17 +14,13 @@ public class SanitationMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.kraftmine.sanitation";
-	}
-
-	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		SanitationOnEffectActiveTickProcedure.execute(entity);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
 		return SanitationActiveTickConditionProcedure.execute(amplifier, duration);
+	}
+
+	@Override
+	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+		SanitationOnEffectActiveTickProcedure.execute(entity);
+		return super.applyEffectTick(entity, amplifier);
 	}
 }

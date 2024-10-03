@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "minecraft:leather_helmet"
+  },
+  "addition": {
+    "item": "minecraft:chainmail_helmet"
+  },
+  "result": {
+    "id": "kraftmine:studded_armor_helmet"
+  }
+}

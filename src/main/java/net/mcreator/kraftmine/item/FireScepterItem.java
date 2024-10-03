@@ -1,38 +1,32 @@
 
 package net.mcreator.kraftmine.item;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.kraftmine.procedures.MagicWandItemUsedProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
-import net.mcreator.kraftmine.entity.FireScepterEntity;
-
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
+import net.mcreator.kraftmine.entity.FireScepterProjectileEntity;
 
 public class FireScepterItem extends Item {
 	public FireScepterItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT).stacksTo(1));
-	}
-
-	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		entity.startUsingItem(hand);
-		return new InteractionResultHolder(InteractionResult.SUCCESS, entity.getItemInHand(hand));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)
+				.attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, 2, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+						.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.4, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 	}
 
 	@Override
@@ -41,36 +35,49 @@ public class FireScepterItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 72000;
 	}
 
 	@Override
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot) {
-		if (slot == EquipmentSlot.MAINHAND) {
-			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-			builder.putAll(super.getDefaultAttributeModifiers(slot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Ranged item modifier", (double) 1, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Ranged item modifier", -2.4, AttributeModifier.Operation.ADDITION));
-			return builder.build();
-		}
-		return super.getDefaultAttributeModifiers(slot);
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
+		return 0f;
 	}
 
 	@Override
-	public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
-		Level world = entityLiving.level;
-		if (!world.isClientSide() && entityLiving instanceof ServerPlayer entity) {
-			double x = entity.getX();
-			double y = entity.getY();
-			double z = entity.getZ();
-			if (true) {
-				FireScepterEntity entityarrow = FireScepterEntity.shoot(world, entity, world.getRandom(), 1f, 0, 0);
-				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
-				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-				MagicWandItemUsedProcedure.execute(world, entity, itemstack);
-				entity.releaseUsingItem();
-			}
+	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.fail(entity.getItemInHand(hand));
+		if (entity.getAbilities().instabuild || findAmmo(entity) != ItemStack.EMPTY) {
+			ar = InteractionResultHolder.success(entity.getItemInHand(hand));
+			entity.startUsingItem(hand);
 		}
+		return ar;
+	}
+
+	@Override
+	public void onUseTick(Level world, LivingEntity entity, ItemStack itemstack, int count) {
+		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
+			ItemStack stack = findAmmo(player);
+			if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
+				FireScepterProjectileEntity projectile = FireScepterProjectileEntity.shoot(world, entity, world.getRandom());
+				if (player.getAbilities().instabuild) {
+					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
+				} else {
+					if (stack.isDamageableItem()) {
+						if (world instanceof ServerLevel serverLevel)
+							stack.hurtAndBreak(1, serverLevel, player, _stkprov -> {
+							});
+					} else {
+						stack.shrink(1);
+					}
+				}
+				MagicWandItemUsedProcedure.execute(world, entity, itemstack);
+			}
+			entity.releaseUsingItem();
+		}
+	}
+
+	private ItemStack findAmmo(Player player) {
+		return new ItemStack(FireScepterProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "biome",
   "definition": {
     "name": "Domain",
@@ -59,15 +59,6 @@
       "min": -0.09966509833166581,
       "max": -0.09966509833166581
     },
-    "grassPerChunk": 0,
-    "seagrassPerChunk": 0,
-    "flowersPerChunk": 0,
-    "mushroomsPerChunk": 0,
-    "bigMushroomsChunk": 0,
-    "sandPatchesPerChunk": 0,
-    "gravelPatchesPerChunk": 0,
-    "reedsPerChunk": 0,
-    "cactiPerChunk": 0,
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
     "treeType": 0,
@@ -84,6 +75,7 @@
     "treeFruits": {
       "value": ""
     },
+    "defaultFeatures": [],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
@@ -104,7 +96,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "defaultFeatures": [],
     "spawnEntries": []
   }
 }

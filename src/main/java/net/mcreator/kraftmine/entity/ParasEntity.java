@@ -1,9 +1,7 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,25 +20,21 @@ import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.procedures.ParasNaturalEntitySpawningConditionProcedure;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class ParasEntity extends Monster {
-	public ParasEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.PARAS.get(), world);
-	}
-
 	public ParasEntity(EntityType<ParasEntity> type, Level world) {
 		super(type, world);
 		xpReward = 4;
@@ -48,17 +42,12 @@ public class ParasEntity extends Monster {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2, true) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, true));
@@ -70,43 +59,38 @@ public class ParasEntity extends Monster {
 		this.goalSelector.addGoal(8, new FloatGoal(this));
 	}
 
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(Blocks.RED_MUSHROOM));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.imitate.spider"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.parrot.imitate.spider"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.death")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death"));
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.PARAS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.PARAS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			return ParasNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
-		});
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -116,6 +100,7 @@ public class ParasEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.2);
 		return builder;
 	}

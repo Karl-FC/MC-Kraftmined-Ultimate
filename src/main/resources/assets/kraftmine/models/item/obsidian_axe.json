@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/obsidian_axe"
+    "layer0": "kraftmine:item/obsidian_axe"
   }
 }

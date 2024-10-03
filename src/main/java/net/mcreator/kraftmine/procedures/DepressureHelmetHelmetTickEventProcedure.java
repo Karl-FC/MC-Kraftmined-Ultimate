@@ -15,33 +15,33 @@ import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 public class DepressureHelmetHelmetTickEventProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.WATER || (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.WATER) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 300, 1, (true), (false)));
+		if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.WATER) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 300, 1, true, false));
 		}
-		if ((entity.level.dimension()) == (Level.OVERWORLD) && y < -60) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 100, (false), (false)));
+		if ((entity.level().dimension()) == Level.OVERWORLD && y < -60) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 100, false, false));
 		}
-		if (y < -64 && (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.VOID_AIR) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1, (true), (false)));
+		if (y < -64 && (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.VOID_AIR) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1, true, false));
 			{
 				Entity _ent = entity;
 				_ent.teleportTo(x, (y + 64), z);
 				if (_ent instanceof ServerPlayer _serverPlayer)
 					_serverPlayer.connection.teleport(x, (y + 64), z, _ent.getYRot(), _ent.getXRot());
 			}
-			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:backrooms"));
-				if (_player.level.dimension() == destinationType)
+			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:backrooms"));
+				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);
 				if (nextLevel != null) {
@@ -49,11 +49,11 @@ public class DepressureHelmetHelmetTickEventProcedure {
 					_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 					_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 					for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:backrooms")))) {
+			if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:backrooms"))) {
 				BackroomsOriginProcedure.execute(world, x, y, z, entity);
 			}
 		}

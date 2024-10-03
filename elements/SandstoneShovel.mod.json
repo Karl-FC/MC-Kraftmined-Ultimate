@@ -1,32 +1,37 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Spade",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "sandstone_shovel",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Sandstone Shovel",
-    "specialInfo": [
-      "Has a chance to temporarily blind those near it"
-    ],
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
+    "specialInformation": {
+      "fixedValue": [
+        "Has a chance to temporarily blind those near it"
+      ]
     },
-    "toolType": "Spade",
-    "harvestLevel": 2,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "efficiency": 5.0,
     "attackSpeed": 1.0,
     "enchantability": 11,
     "damageVsEntity": 2.0,
     "usageCount": 183,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "Blocks.SANDSTONE#0"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "IRON",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

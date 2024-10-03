@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -13,18 +13,28 @@
     "onHelmetTick": {
       "name": "RedstoneArmorHelmetTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "redstone",
     "helmetName": "Redstone Helmet",
     "bodyName": "Redstone Chestplate",
     "leggingsName": "Redstone Leggings",
     "bootsName": "Redstone Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

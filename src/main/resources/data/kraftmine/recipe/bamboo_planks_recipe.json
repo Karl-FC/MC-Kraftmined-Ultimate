@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:bamboo"
+    }
+  ],
+  "result": {
+    "id": "kraftmine:bamboo_planks",
+    "count": 1
+  }
+}

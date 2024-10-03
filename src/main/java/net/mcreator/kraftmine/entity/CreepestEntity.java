@@ -1,10 +1,8 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.DungeonHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
@@ -15,33 +13,25 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class CreepestEntity extends Creeper {
-	public CreepestEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.CREEPIEST.get(), world);
-	}
-
 	public CreepestEntity(EntityType<CreepestEntity> type, Level world) {
 		super(type, world);
 		xpReward = 8;
 		setNoAi(false);
-	}
-
-	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
@@ -50,44 +40,46 @@ public class CreepestEntity extends Creeper {
 
 	}
 
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEAD;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(Items.GUNPOWDER));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.creeper.primed"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.creeper.primed"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.creeper.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.creeper.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.creeper.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.creeper.death"));
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
-		return super.hurt(source, amount);
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.CREEPIEST.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(KraftmineModEntities.CREEPIEST.get(), 180);
+	@Override
+	public boolean fireImmune() {
+		return true;
+	}
+
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.CREEPIEST.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -97,6 +89,7 @@ public class CreepestEntity extends Creeper {
 		builder = builder.add(Attributes.ARMOR, 30);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 30);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		return builder;
 	}

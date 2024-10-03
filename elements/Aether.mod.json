@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -38,10 +38,17 @@
     "portalSound": {
       "value": "CUSTOM:travel.aether"
     },
+    "enableIgniter": true,
     "igniterName": "Enchanted Flint and Steel",
-    "igniterTab": {
-      "value": "CUSTOM:Crtab"
+    "igniterRarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
     },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "texture": "flintandsteelenchanted",
     "portalTexture": "portalaether",
     "enablePortal": true

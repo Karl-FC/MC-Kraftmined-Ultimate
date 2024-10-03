@@ -15,6 +15,6 @@ public class TrollRenderer extends MobRenderer<TrollEntity, Modeltroll<TrollEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(TrollEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/troll.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/troll.png");
 	}
 }

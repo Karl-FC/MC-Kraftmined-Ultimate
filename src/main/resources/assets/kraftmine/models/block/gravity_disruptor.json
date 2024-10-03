@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/gravity_disruptor",
-    "up": "kraftmine:blocks/gravity_disruptor",
-    "north": "kraftmine:blocks/gravity_disruptor",
-    "east": "kraftmine:blocks/gravity_disruptor",
-    "south": "kraftmine:blocks/gravity_disruptor",
-    "west": "kraftmine:blocks/gravity_disruptor",
-    "particle": "kraftmine:blocks/gravity_disruptor"
+    "down": "kraftmine:block/gravity_disruptor",
+    "up": "kraftmine:block/gravity_disruptor",
+    "north": "kraftmine:block/gravity_disruptor",
+    "east": "kraftmine:block/gravity_disruptor",
+    "south": "kraftmine:block/gravity_disruptor",
+    "west": "kraftmine:block/gravity_disruptor",
+    "particle": "kraftmine:block/gravity_disruptor"
   },
   "render_type": "solid"
 }

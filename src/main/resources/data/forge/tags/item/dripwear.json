@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:drip_armor_helmet",
+    "kraftmine:drip_armor_chestplate",
+    "kraftmine:drip_armor_leggings",
+    "kraftmine:drip_armor_boots"
+  ]
+}

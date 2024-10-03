@@ -1,13 +1,10 @@
 {
-  "type": "kraftmine:acid_feature",
+  "type": "minecraft:lake",
   "config": {
     "fluid": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "kraftmine:acid",
-        "Properties": {
-          "level": "0"
-        }
+        "Name": "kraftmine:acid"
       }
     },
     "barrier": {

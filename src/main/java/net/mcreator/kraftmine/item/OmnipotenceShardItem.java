@@ -1,8 +1,8 @@
 
 package net.mcreator.kraftmine.item;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
@@ -14,13 +14,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.kraftmine.procedures.OmnipotenceShardItemIsCraftedsmeltedProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 import java.util.List;
 
 public class OmnipotenceShardItem extends Item {
 	public OmnipotenceShardItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.EPIC));
 	}
 
 	@Override
@@ -35,8 +34,9 @@ public class OmnipotenceShardItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.literal("Press Z to use"));
 	}
 

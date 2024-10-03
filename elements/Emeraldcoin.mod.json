@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "emerald_coin",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Emeraldcoin",
     "rarity": "UNCOMMON",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
@@ -24,13 +28,18 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "1Ec = 100Sc"
-    ],
-    "hasGlow": false,
+    "specialInformation": {
+      "fixedValue": [
+        "1Ec = 100Sc"
+      ]
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

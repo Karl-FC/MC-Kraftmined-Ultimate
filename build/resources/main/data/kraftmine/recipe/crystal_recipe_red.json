@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "addition": {
+    "item": "minecraft:red_dye"
+  },
+  "result": {
+    "id": "kraftmine:crystalred"
+  }
+}

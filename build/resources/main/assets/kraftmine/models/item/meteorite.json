@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/soul_of_fright_copy"
+    "layer0": "kraftmine:item/soul_of_fright_copy"
   },
   "display": {
     "thirdperson_righthand": {

@@ -15,6 +15,6 @@ public class GhostSpiderMutantRenderer extends MobRenderer<GhostSpiderMutantEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(GhostSpiderMutantEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/ghostspider3.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/ghostspider3.png");
 	}
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:plastic"
+    }
+  },
+  "result": {
+    "id": "kraftmine:plastic_armor_chestplate",
+    "count": 1
+  }
+}

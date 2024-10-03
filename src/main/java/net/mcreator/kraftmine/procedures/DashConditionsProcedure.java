@@ -10,24 +10,17 @@ public class DashConditionsProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).IsDashing == false
-				&& (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.BEASTMODE.get()) : false)) {
+		if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).IsDashing == false && entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KraftmineModMobEffects.BEASTMODE)) {
 			{
-				double _setval = 0;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ThirstExhaustionLevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.ThirstExhaustionLevel = 0;
+				_vars.syncPlayerVariables(entity);
 			}
-		} else if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).IsDashing == false
-				&& (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel > 4) {
+		} else if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).IsDashing == false && entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel > 4) {
 			{
-				double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel
-						- (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).DashStamina;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Thirstlevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.Thirstlevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel - entity.getData(KraftmineModVariables.PLAYER_VARIABLES).DashStamina;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 		return true;

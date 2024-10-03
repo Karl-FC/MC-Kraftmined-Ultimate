@@ -1,30 +1,35 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Sword",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "tungstensword",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Tungsten Sword",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
+    "specialInformation": {
+      "fixedValue": []
     },
-    "toolType": "Sword",
-    "harvestLevel": 1,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "efficiency": 4.0,
     "attackSpeed": 1.6,
     "enchantability": 12,
     "damageVsEntity": 4.0,
     "usageCount": 2031,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "CUSTOM:TungstenIngot"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

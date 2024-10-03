@@ -1,9 +1,11 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "painting",
   "definition": {
     "texture": "p17.png",
     "width": 16,
-    "height": 16
+    "height": 16,
+    "title": "Painting Small 1",
+    "author": "Unknown"
   }
 }

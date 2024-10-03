@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:cloud_block_rain"
+    }
+  },
+  "result": {
+    "id": "kraftmine:condensed_armor_helmet",
+    "count": 1
+  }
+}

@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/wallnut_side",
-    "up": "kraftmine:blocks/wallnut_side",
-    "north": "kraftmine:blocks/wallnut_face",
-    "east": "kraftmine:blocks/wallnut_side",
-    "south": "kraftmine:blocks/wallnut_side",
-    "west": "kraftmine:blocks/wallnut_side",
-    "particle": "kraftmine:blocks/wallnut_side"
+    "down": "kraftmine:block/wallnut_side",
+    "up": "kraftmine:block/wallnut_side",
+    "north": "kraftmine:block/wallnut_face",
+    "east": "kraftmine:block/wallnut_side",
+    "south": "kraftmine:block/wallnut_side",
+    "west": "kraftmine:block/wallnut_side",
+    "particle": "kraftmine:block/wallnut_side"
   },
   "render_type": "solid"
 }

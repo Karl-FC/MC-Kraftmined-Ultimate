@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "tag": "kraftmine:all_wood"
+    }
+  },
+  "result": {
+    "id": "kraftmine:wood_armor_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "kraftmine:reactor_core"
+  },
+  "result": {
+    "id": "kraftmine:diamondsaber"
+  }
+}

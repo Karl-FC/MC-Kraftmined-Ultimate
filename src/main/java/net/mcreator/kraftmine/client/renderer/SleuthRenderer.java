@@ -15,6 +15,6 @@ public class SleuthRenderer extends MobRenderer<SleuthEntity, Modelsleuth<Sleuth
 
 	@Override
 	public ResourceLocation getTextureLocation(SleuthEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/sleuth.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/sleuth.png");
 	}
 }

@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -20,11 +20,11 @@ import net.mcreator.kraftmine.network.KraftmineModVariables;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class TalentLifeContinousProcedure {
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
-		execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -35,10 +35,10 @@ public class TalentLifeContinousProcedure {
 		if (entity == null)
 			return;
 		double addhealth = 0;
-		if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("kraftmine:talent_life"))).isDone() : false) {
+		if (entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("kraftmine:talent_life"))).isDone()) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("attribute @p minecraft:generic.max_health base set" + (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).PlayerMaxHealth));
+						("attribute @p minecraft:generic.max_health base set" + entity.getData(KraftmineModVariables.PLAYER_VARIABLES).PlayerMaxHealth));
 		}
 	}
 }

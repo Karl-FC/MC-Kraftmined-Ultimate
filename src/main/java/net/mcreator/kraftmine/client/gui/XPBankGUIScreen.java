@@ -1,5 +1,7 @@
 package net.mcreator.kraftmine.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -8,15 +10,14 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.kraftmine.world.inventory.XPBankGUIMenu;
 import net.mcreator.kraftmine.network.XPBankGUIButtonMessage;
-import net.mcreator.kraftmine.KraftmineMod;
 
 import java.util.HashMap;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class XPBankGUIScreen extends AbstractContainerScreen<XPBankGUIMenu> {
@@ -47,23 +48,22 @@ public class XPBankGUIScreen extends AbstractContainerScreen<XPBankGUIMenu> {
 		this.imageHeight = 190;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("kraftmine:textures/screens/xp_bank_gui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("kraftmine:textures/screens/xp_bank_gui.png");
 
 	@Override
-	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(ms);
-		super.render(ms, mouseX, mouseY, partialTicks);
-		this.renderTooltip(ms, mouseX, mouseY);
-		XPStoredCount.render(ms, mouseX, mouseY, partialTicks);
+	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		XPStoredCount.render(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		RenderSystem.setShaderTexture(0, texture);
-		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
 	}
 
@@ -79,34 +79,24 @@ public class XPBankGUIScreen extends AbstractContainerScreen<XPBankGUIMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-		XPStoredCount.tick();
+	public void resize(Minecraft minecraft, int width, int height) {
+		String XPStoredCountValue = XPStoredCount.getValue();
+		super.resize(minecraft, width, height);
+		XPStoredCount.setValue(XPStoredCountValue);
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.kraftmine.xp_bank_gui.label_deposit"), 43, 77, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.kraftmine.xp_bank_gui.label_claim"), 204, 77, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.kraftmine.xp_bank_gui.label_stored_xp_levels"), 24, 36, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.kraftmine.xp_bank_gui.label_xp_bank"), 126, 8, -12829636);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
+	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.kraftmine.xp_bank_gui.label_deposit"), 43, 77, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.kraftmine.xp_bank_gui.label_claim"), 204, 77, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.kraftmine.xp_bank_gui.label_stored_xp_levels"), 24, 36, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.kraftmine.xp_bank_gui.label_xp_bank"), 126, 8, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		XPStoredCount = new EditBox(this.font, this.leftPos + 136, this.topPos + 32, 120, 20, Component.translatable("gui.kraftmine.xp_bank_gui.XPStoredCount")) {
-			{
-				setSuggestion(Component.translatable("gui.kraftmine.xp_bank_gui.XPStoredCount").getString());
-			}
-
+		XPStoredCount = new EditBox(this.font, this.leftPos + 137, this.topPos + 33, 118, 18, Component.translatable("gui.kraftmine.xp_bank_gui.XPStoredCount")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -117,8 +107,8 @@ public class XPBankGUIScreen extends AbstractContainerScreen<XPBankGUIMenu> {
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.kraftmine.xp_bank_gui.XPStoredCount").getString());
 				else
@@ -126,86 +116,87 @@ public class XPBankGUIScreen extends AbstractContainerScreen<XPBankGUIMenu> {
 			}
 		};
 		XPStoredCount.setMaxLength(32767);
+		XPStoredCount.setSuggestion(Component.translatable("gui.kraftmine.xp_bank_gui.XPStoredCount").getString());
 		guistate.put("text:XPStoredCount", XPStoredCount);
 		this.addWidget(this.XPStoredCount);
-		button_deposit_all = new Button(this.leftPos + 33, this.topPos + 157, 82, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_deposit_all"), e -> {
+		button_deposit_all = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_deposit_all"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(0, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 33, this.topPos + 157, 82, 20).build();
 		guistate.put("button:button_deposit_all", button_deposit_all);
 		this.addRenderableWidget(button_deposit_all);
-		button_claim_all = new Button(this.leftPos + 185, this.topPos + 158, 72, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_claim_all"), e -> {
+		button_claim_all = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_claim_all"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(1, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 185, this.topPos + 158, 72, 20).build();
 		guistate.put("button:button_claim_all", button_claim_all);
 		this.addRenderableWidget(button_claim_all);
-		button_1 = new Button(this.leftPos + 32, this.topPos + 98, 30, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_1"), e -> {
+		button_1 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_1"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(2, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 32, this.topPos + 98, 30, 20).build();
 		guistate.put("button:button_1", button_1);
 		this.addRenderableWidget(button_1);
-		button_5 = new Button(this.leftPos + 83, this.topPos + 98, 30, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_5"), e -> {
+		button_5 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_5"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(3, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(3, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 83, this.topPos + 98, 30, 20).build();
 		guistate.put("button:button_5", button_5);
 		this.addRenderableWidget(button_5);
-		button_10 = new Button(this.leftPos + 27, this.topPos + 131, 35, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_10"), e -> {
+		button_10 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_10"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(4, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(4, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 27, this.topPos + 131, 35, 20).build();
 		guistate.put("button:button_10", button_10);
 		this.addRenderableWidget(button_10);
-		button_11 = new Button(this.leftPos + 183, this.topPos + 98, 30, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_11"), e -> {
+		button_11 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_11"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(5, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(5, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 183, this.topPos + 98, 30, 20).build();
 		guistate.put("button:button_11", button_11);
 		this.addRenderableWidget(button_11);
-		button_51 = new Button(this.leftPos + 230, this.topPos + 98, 30, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_51"), e -> {
+		button_51 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_51"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(6, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(6, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 230, this.topPos + 98, 30, 20).build();
 		guistate.put("button:button_51", button_51);
 		this.addRenderableWidget(button_51);
-		button_101 = new Button(this.leftPos + 177, this.topPos + 131, 35, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_101"), e -> {
+		button_101 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_101"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(7, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(7, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 177, this.topPos + 131, 35, 20).build();
 		guistate.put("button:button_101", button_101);
 		this.addRenderableWidget(button_101);
-		button_20 = new Button(this.leftPos + 83, this.topPos + 131, 35, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_20"), e -> {
+		button_20 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_20"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(8, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(8, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 83, this.topPos + 131, 35, 20).build();
 		guistate.put("button:button_20", button_20);
 		this.addRenderableWidget(button_20);
-		button_201 = new Button(this.leftPos + 230, this.topPos + 131, 35, 20, Component.translatable("gui.kraftmine.xp_bank_gui.button_201"), e -> {
+		button_201 = Button.builder(Component.translatable("gui.kraftmine.xp_bank_gui.button_201"), e -> {
 			if (true) {
-				KraftmineMod.PACKET_HANDLER.sendToServer(new XPBankGUIButtonMessage(9, x, y, z));
+				PacketDistributor.sendToServer(new XPBankGUIButtonMessage(9, x, y, z));
 				XPBankGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
-		});
+		}).bounds(this.leftPos + 230, this.topPos + 131, 35, 20).build();
 		guistate.put("button:button_201", button_201);
 		this.addRenderableWidget(button_201);
 	}

@@ -15,6 +15,6 @@ public class NootnootRenderer extends MobRenderer<NootnootEntity, Modelnootnoot<
 
 	@Override
 	public ResourceLocation getTextureLocation(NootnootEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/noot.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/noot.png");
 	}
 }

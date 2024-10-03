@@ -1,16 +1,15 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Saber Art",
-    "type": "WEAPON",
-    "rarity": "COMMON",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 2,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "CUSTOM:SaberRed"
       },
@@ -36,10 +35,8 @@
         "value": "CUSTOM:SaberYellow"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

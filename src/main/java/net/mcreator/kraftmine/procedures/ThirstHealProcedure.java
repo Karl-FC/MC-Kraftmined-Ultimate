@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHealEvent;
+import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
@@ -20,11 +20,11 @@ import net.mcreator.kraftmine.init.KraftmineModGameRules;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ThirstHealProcedure {
 	@SubscribeEvent
 	public static void onEntityHealed(LivingHealEvent event) {
-		execute(event, event.getEntity().level, event.getEntity(), event.getAmount());
+		execute(event, event.getEntity().level(), event.getEntity(), event.getAmount());
 	}
 
 	public static void execute(LevelAccessor world, Entity entity, double amount) {
@@ -39,21 +39,18 @@ public class ThirstHealProcedure {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 				}
 				return false;
 			}
 		}.checkGamemode(entity) && world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.HYDRATION) == true && !(world.getDifficulty() == Difficulty.PEACEFUL)
-				&& !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.HYDRATED.get()) : false)
-				&& (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel > 0) {
+				&& !(entity instanceof LivingEntity _livEnt4 && _livEnt4.hasEffect(KraftmineModMobEffects.HYDRATED)) && entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel > 0) {
 			healamount = amount / 10;
 			{
-				double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel + healamount;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ThirstExhaustionLevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + healamount;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "biome",
   "definition": {
     "name": "Backroom Level 0",
@@ -75,15 +75,6 @@
       "min": 0.04782322579218351,
       "max": 0.44782322579218353
     },
-    "grassPerChunk": 0,
-    "seagrassPerChunk": 0,
-    "flowersPerChunk": 0,
-    "mushroomsPerChunk": 0,
-    "bigMushroomsChunk": 0,
-    "sandPatchesPerChunk": 0,
-    "gravelPatchesPerChunk": 0,
-    "reedsPerChunk": 0,
-    "cactiPerChunk": 0,
     "treesPerChunk": 5,
     "vanillaTreeType": "Default",
     "treeType": 1,
@@ -100,6 +91,7 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
+    "defaultFeatures": [],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
@@ -120,7 +112,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "defaultFeatures": [],
     "spawnEntries": [
       {
         "entity": {

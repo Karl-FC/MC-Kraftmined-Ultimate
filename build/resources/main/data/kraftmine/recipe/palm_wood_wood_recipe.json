@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:palm_wood_log"
+    }
+  },
+  "result": {
+    "id": "kraftmine:palm_wood_wood",
+    "count": 3
+  }
+}

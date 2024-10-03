@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "zombie",
+    "skeleton",
+    "zoglin",
+    "husk",
+    "stray",
+    "zombie_villager",
+    "wither",
+    "wither_skeleton",
+    "zombie_horse",
+    "skeleton_horse",
+    "phantom",
+    "drowned",
+    "kraftmine:anomaly",
+    "kraftmine:mob_floating_eye",
+    "kraftmine:mob_shade"
+  ]
+}

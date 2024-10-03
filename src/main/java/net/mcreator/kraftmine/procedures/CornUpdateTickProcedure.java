@@ -24,14 +24,14 @@ public class CornUpdateTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "GrowthTime") >= 20400) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, new BlockPos(x, y, z))) {
-				world.setBlock(new BlockPos(x, y, z), stage1, 3);
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, new BlockPos(x, y, z))) {
-				world.setBlock(new BlockPos(x, y, z), stage2, 3);
+		}.getValue(world, BlockPos.containing(x, y, z), "GrowthTime") >= 20400) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, BlockPos.containing(x, y, z))) {
+				world.setBlock(BlockPos.containing(x, y, z), stage1, 3);
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, BlockPos.containing(x, y, z))) {
+				world.setBlock(BlockPos.containing(x, y, z), stage2, 3);
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -41,7 +41,7 @@ public class CornUpdateTickProcedure {
 			}
 		} else {
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -52,7 +52,7 @@ public class CornUpdateTickProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(x, y, z), "GrowthTime") + 1));
+					}.getValue(world, BlockPos.containing(x, y, z), "GrowthTime") + 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

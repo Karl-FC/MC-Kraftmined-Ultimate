@@ -1,12 +1,11 @@
 
 package net.mcreator.kraftmine.block;
 
-import net.minecraftforge.common.PlantType;
-
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.pathfinder.PathType;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,13 +16,11 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
@@ -37,17 +34,8 @@ import net.mcreator.kraftmine.block.entity.CornCrop2BlockEntity;
 
 public class CornCrop2Block extends FlowerBlock implements EntityBlock {
 	public CornCrop2Block() {
-		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of(Material.PLANT).randomTicks().sound(SoundType.CROP).instabreak().noCollission());
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 100;
-	}
-
-	@Override
-	public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
-		return useContext.getItemInHand().getItem() != this.asItem();
+		super(MobEffects.MOVEMENT_SPEED, 100,
+				BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.CROP).instabreak().noCollission().replaceable().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -56,12 +44,12 @@ public class CornCrop2Block extends FlowerBlock implements EntityBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
-		return BlockPathTypes.WALKABLE;
+	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return PathType.WALKABLE;
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(KraftmineModItems.CORN_SEEDS.get());
 	}
 
@@ -86,19 +74,13 @@ public class CornCrop2Block extends FlowerBlock implements EntityBlock {
 	}
 
 	@Override
-	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
-		return PlantType.CROP;
-	}
-
-	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
-		super.tick(blockstate, world, pos, random);
+	public void randomTick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		CornUpdateTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
+	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
+		super.useWithoutItem(blockstate, world, pos, entity, hit);
 		CornBoneMealProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return InteractionResult.SUCCESS;
 	}

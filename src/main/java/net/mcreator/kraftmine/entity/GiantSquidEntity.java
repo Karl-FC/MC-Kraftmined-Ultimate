@@ -1,12 +1,12 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.ForgeMod;
+import net.neoforged.neoforge.fluids.FluidType;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
@@ -24,30 +24,28 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.GiantSquidNaturalEntitySpawningConditionProcedure;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class GiantSquidEntity extends Monster {
-	public GiantSquidEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.GIANT_SQUID.get(), world);
-	}
-
 	public GiantSquidEntity(EntityType<GiantSquidEntity> type, Level world) {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
+		this.setPathfindingMalus(PathType.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
@@ -83,11 +81,6 @@ public class GiantSquidEntity extends Monster {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected PathNavigation createNavigation(Level world) {
 		return new WaterBoundPathNavigation(this, world);
 	}
@@ -97,8 +90,8 @@ public class GiantSquidEntity extends Monster {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
@@ -108,38 +101,28 @@ public class GiantSquidEntity extends Monster {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.WATER;
+	protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float f) {
+		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, 4f, 0);
 	}
 
-	@Override
-	public double getPassengersRidingOffset() {
-		return super.getPassengersRidingOffset() + 4;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(Items.INK_SAC));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.ambient"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.squid.ambient"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.squid.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.death"));
-	}
-
-	@Override
-	public boolean canBreatheUnderwater() {
-		return true;
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.squid.death"));
 	}
 
 	@Override
@@ -148,17 +131,22 @@ public class GiantSquidEntity extends Monster {
 	}
 
 	@Override
-	public boolean isPushedByFluid() {
+	public boolean canDrownInFluidType(FluidType type) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
 		return false;
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.GIANT_SQUID.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.GIANT_SQUID.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			return GiantSquidNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
-		});
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -168,8 +156,9 @@ public class GiantSquidEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
+		builder = builder.add(NeoForgeMod.SWIM_SPEED, 0.3);
 		return builder;
 	}
 }

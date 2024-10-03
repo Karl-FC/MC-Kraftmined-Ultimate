@@ -1,30 +1,35 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Sword",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "wood_bat",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Wooden Bat",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
+    "specialInformation": {
+      "fixedValue": []
     },
-    "toolType": "Sword",
-    "harvestLevel": 0,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "efficiency": 0.0,
     "attackSpeed": 1.2999999999999998,
     "enchantability": 5,
     "damageVsEntity": 3.9999999999999996,
     "usageCount": 60,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "CUSTOM:WoodIngot"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onEntityHitWith": {

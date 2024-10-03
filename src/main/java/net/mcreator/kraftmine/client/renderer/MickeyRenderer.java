@@ -15,6 +15,6 @@ public class MickeyRenderer extends MobRenderer<MickeyEntity, ModelMickey<Mickey
 
 	@Override
 	public ResourceLocation getTextureLocation(MickeyEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/mickey.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/mickey.png");
 	}
 }

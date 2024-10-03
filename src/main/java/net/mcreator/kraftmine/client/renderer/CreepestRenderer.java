@@ -2,7 +2,6 @@
 package net.mcreator.kraftmine.client.renderer;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -19,13 +18,12 @@ public class CreepestRenderer extends MobRenderer<CreepestEntity, CreeperModel<C
 
 	@Override
 	public ResourceLocation getTextureLocation(CreepestEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/creepest.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/creepest.png");
 	}
 
 	@Override
-	protected boolean isShaking(CreepestEntity _ent) {
-		Entity entity = _ent;
-		Level world = entity.level;
+	protected boolean isShaking(CreepestEntity entity) {
+		Level world = entity.level();
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();

@@ -10,7 +10,7 @@ public class CanRabbitStewOnBlockRightClickedProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) < 20) {
-			world.destroyBlock(new BlockPos(x, y, z), false);
+			world.destroyBlock(BlockPos.containing(x, y, z), false);
 			if (entity instanceof Player _player)
 				_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) + 10));
 			if (entity instanceof Player _player)

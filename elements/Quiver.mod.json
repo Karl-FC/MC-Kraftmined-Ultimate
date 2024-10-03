@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -13,20 +13,30 @@
     "onBodyTick": {
       "name": "QuiverArmor"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "quiver_",
     "helmetName": "Quiver Helmet",
     "bodyName": "Quiver Body",
     "leggingsName": "Quiver Leggings",
     "bootsName": "Quiver Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [
-      "Extra storage for arrows"
-    ],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Extra storage for arrows"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/switcher"
+    "layer0": "kraftmine:item/switcher"
   },
   "display": {
     "thirdperson_righthand": {

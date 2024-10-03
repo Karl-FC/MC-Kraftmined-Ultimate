@@ -8,14 +8,4 @@ public class RefreshedMobEffect extends MobEffect {
 	public RefreshedMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13395457);
 	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.kraftmine.hydrated";
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

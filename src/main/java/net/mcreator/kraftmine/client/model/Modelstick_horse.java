@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modelstick_horse<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("kraftmine", "modelstick_horse"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("kraftmine", "modelstick_horse"), "main");
 	public final ModelPart head;
 	public final ModelPart body;
 	public final ModelPart saddle;
@@ -55,10 +55,10 @@ public class Modelstick_horse<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		saddle.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
+		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		saddle.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

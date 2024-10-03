@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/ice_hoe"
+    "layer0": "kraftmine:item/ice_hoe"
   }
 }

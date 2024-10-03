@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -11,12 +11,10 @@
     "tintType": "No tint",
     "isItemTinted": false,
     "plantType": "normal",
-    "staticPlantGenerationType": "Grass",
     "suspiciousStewEffect": "GLOWING",
     "suspiciousStewDuration": 100,
     "growapableSpawnType": "Cave",
     "growapableMaxHeight": 3,
-    "doublePlantGenerationType": "Flower",
     "customBoundingBox": false,
     "disableOffset": false,
     "boundingBoxes": [
@@ -31,10 +29,14 @@
       }
     ],
     "name": "Glow Shroom",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
+    "specialInformation": {
+      "fixedValue": []
     },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "hardness": 0.0,
     "resistance": 0.0,
     "luminance": 7,
@@ -88,17 +90,13 @@
     ],
     "isBonemealable": false,
     "frequencyOnChunks": 40,
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "generateFeature": false,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:GlowShroomBiome"
       }
     ],
-    "generateCondition": {
-      "name": "GlowShroomAdditionalGenerationCondition"
-    },
+    "generationType": "Grass",
     "patchSize": 128,
     "generateAtAnyHeight": true,
     "onRandomUpdateEvent": {

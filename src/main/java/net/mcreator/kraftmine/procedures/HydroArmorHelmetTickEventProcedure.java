@@ -8,7 +8,7 @@ public class HydroArmorHelmetTickEventProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.WATER_BREATHING) : false)) {
+		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.WATER_BREATHING))) {
 			entity.setAirSupply((int) (entity.getAirSupply() - 1));
 		}
 		if (entity.isOnFire()) {

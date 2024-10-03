@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "flower_forest",
+    "forest",
+    "plains",
+    "windswept_forest"
+  ],
+  "features": "kraftmine:mahogany_tree_feature",
+  "step": "surface_structures"
+}

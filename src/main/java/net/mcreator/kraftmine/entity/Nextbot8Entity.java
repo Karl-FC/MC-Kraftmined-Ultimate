@@ -1,9 +1,8 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
@@ -20,26 +19,22 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.NextbotOnEntityTickUpdateProcedure;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class Nextbot8Entity extends Monster {
-	public Nextbot8Entity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.NEXTBOT_8.get(), world);
-	}
-
 	public Nextbot8Entity(EntityType<Nextbot8Entity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
@@ -47,17 +42,12 @@ public class Nextbot8Entity extends Monster {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
@@ -69,61 +59,57 @@ public class Nextbot8Entity extends Monster {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:mob.nextbot.teeth"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:mob.nextbot.teeth"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.step"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.wood.step"));
 	}
 
 	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
+			return false;
+		if (damagesource.getDirectEntity() instanceof Player)
+			return false;
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+			return false;
+		if (damagesource.is(DamageTypes.FALL))
+			return false;
+		if (damagesource.is(DamageTypes.CACTUS))
+			return false;
+		if (damagesource.is(DamageTypes.DROWN))
+			return false;
+		if (damagesource.is(DamageTypes.TRIDENT))
+			return false;
+		if (damagesource.is(DamageTypes.FALLING_ANVIL))
+			return false;
+		if (damagesource.is(DamageTypes.DRAGON_BREATH))
+			return false;
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
-			return false;
-		if (source.getDirectEntity() instanceof Player)
-			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
-			return false;
-		if (source == DamageSource.FALL)
-			return false;
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source.getMsgId().equals("trident"))
-			return false;
-		if (source == DamageSource.ANVIL)
-			return false;
-		if (source == DamageSource.DRAGON_BREATH)
-			return false;
-		if (source == DamageSource.WITHER)
-			return false;
-		if (source.getMsgId().equals("witherSkull"))
-			return false;
-		return super.hurt(source, amount);
+	public boolean fireImmune() {
+		return true;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		NextbotOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		NextbotOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.NEXTBOT_8.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.NEXTBOT_8.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -133,7 +119,8 @@ public class Nextbot8Entity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 64);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.30000000000000004);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.3);
 		return builder;
 	}
 }

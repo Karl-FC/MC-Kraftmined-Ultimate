@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.animal.Animal;
@@ -16,7 +16,7 @@ import net.mcreator.kraftmine.init.KraftmineModGameRules;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class BuffedPassiveMobsProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
@@ -32,29 +32,29 @@ public class BuffedPassiveMobsProcedure {
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.BUFFEDMOBS) == true && entity instanceof Animal) {
 			if (Math.random() <= 0.1) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 9999, 3, (false), (true)));
-				entity.getPersistentData().putBoolean("isBuffed", (true));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 9999, 3, false, true));
+				entity.getPersistentData().putBoolean("isBuffed", true);
 			}
 			if (Math.random() <= 0.05) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 9999, 3, (false), (true)));
-				entity.getPersistentData().putBoolean("isBuffed", (true));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 9999, 3, false, true));
+				entity.getPersistentData().putBoolean("isBuffed", true);
 			}
 			if (Math.random() <= 0.05) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 9999, 2, (false), (true)));
-				entity.getPersistentData().putBoolean("isBuffed", (true));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 9999, 2, false, true));
+				entity.getPersistentData().putBoolean("isBuffed", true);
 			}
 			if (Math.random() <= 0.05) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 9999, 3, (false), (true)));
-				entity.getPersistentData().putBoolean("isBuffed", (true));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 9999, 3, false, true));
+				entity.getPersistentData().putBoolean("isBuffed", true);
 			}
 			if (Math.random() >= 0.9) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 9999, 2, (false), (true)));
-				entity.getPersistentData().putBoolean("isBuffed", (true));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 9999, 2, false, true));
+				entity.getPersistentData().putBoolean("isBuffed", true);
 			}
 		}
 	}

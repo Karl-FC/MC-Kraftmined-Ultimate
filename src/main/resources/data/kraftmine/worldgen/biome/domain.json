@@ -1,0 +1,44 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "effects": {
+    "music": {
+      "sound": "kraftmine:music.dorime",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
+    },
+    "foliage_color": 10387789,
+    "grass_color": 9470285,
+    "sky_color": -65536,
+    "fog_color": -65536,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

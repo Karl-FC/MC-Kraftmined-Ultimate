@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -57,6 +57,7 @@
         "data": {
           "name": "button_overworld",
           "text": "Overworld",
+          "isUndecorated": false,
           "onClick": {
             "name": "PossibilityShardButton2"
           },
@@ -71,6 +72,7 @@
         "data": {
           "name": "button_nether",
           "text": "Nether",
+          "isUndecorated": false,
           "onClick": {
             "name": "PossibilityShardButton1"
           },
@@ -85,6 +87,7 @@
         "data": {
           "name": "button_the_end",
           "text": "The End",
+          "isUndecorated": false,
           "onClick": {
             "name": "PossibilityShardButton3"
           },

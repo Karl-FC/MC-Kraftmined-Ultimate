@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "fluid",
   "definition": {
     "name": "Milk",
@@ -23,14 +23,18 @@
     "type": "WATER",
     "generateBucket": false,
     "textureBucket": "",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "emptySound": {
       "value": ""
     },
     "rarity": "COMMON",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "resistance": 100.0,
     "luminance": 0,
     "lightOpacity": 0,

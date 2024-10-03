@@ -1,162 +1,70 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Committed",
-    "type": "WEAPON",
-    "rarity": "RARE",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 2,
+    "anvilCost": 4,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
-        "value": "CUSTOM:SaberSwing"
+        "value": "CUSTOM:BaneofMetapod"
       },
       {
-        "value": "CUSTOM:DyingPan"
+        "value": "CUSTOM:Lifesteal"
       },
       {
-        "value": "CUSTOM:Reconstruction"
+        "value": "CUSTOM:BleedingEdge"
       },
       {
-        "value": "CUSTOM:Conjuring"
+        "value": "CUSTOM:Stunning"
       },
       {
-        "value": "CUSTOM:Replenishment"
+        "value": "CUSTOM:Holdup"
       },
       {
-        "value": "CUSTOM:Efficacy"
+        "value": "CUSTOM:Antibac"
       },
       {
-        "value": "CUSTOM:Slicing"
+        "value": "CUSTOM:Backstabbing"
       },
       {
-        "value": "CUSTOM:STAB"
+        "value": "CUSTOM:Swiftfooted"
       },
       {
-        "value": "CUSTOM:Committed"
+        "value": "CUSTOM:Superstitious"
       },
       {
-        "value": "PROTECTION"
+        "value": "CUSTOM:MagicianSecret"
       },
       {
-        "value": "FIRE_PROTECTION"
+        "value": "CUSTOM:BonusStrike"
       },
       {
-        "value": "FEATHER_FALLING"
+        "value": "CUSTOM:GuardingStrike"
       },
       {
-        "value": "BLAST_PROTECTION"
+        "value": "DENSITY"
       },
       {
-        "value": "PROJECTILE_PROTECTION"
+        "value": "BREACH"
       },
       {
-        "value": "RESPIRATION"
+        "value": "WIND_BURST"
       },
       {
-        "value": "AQUA_AFFINITY"
-      },
-      {
-        "value": "THORNS"
-      },
-      {
-        "value": "DEPTH_STRIDER"
-      },
-      {
-        "value": "FROST_WALKER"
-      },
-      {
-        "value": "BINDING_CURSE"
-      },
-      {
-        "value": "SHARPNESS"
-      },
-      {
-        "value": "SMITE"
-      },
-      {
-        "value": "BANE_OF_ARTHROPODS"
-      },
-      {
-        "value": "KNOCKBACK"
-      },
-      {
-        "value": "FIRE_ASPECT"
-      },
-      {
-        "value": "LOOTING"
-      },
-      {
-        "value": "SWEEPING"
-      },
-      {
-        "value": "EFFICIENCY"
-      },
-      {
-        "value": "SILK_TOUCH"
-      },
-      {
-        "value": "UNBREAKING"
-      },
-      {
-        "value": "FORTUNE"
-      },
-      {
-        "value": "POWER"
-      },
-      {
-        "value": "PUNCH"
-      },
-      {
-        "value": "FLAME"
-      },
-      {
-        "value": "INFINITY"
-      },
-      {
-        "value": "LUCK_OF_THE_SEA"
-      },
-      {
-        "value": "LURE"
-      },
-      {
-        "value": "LOYALTY"
-      },
-      {
-        "value": "IMPALING"
-      },
-      {
-        "value": "RIPTIDE"
-      },
-      {
-        "value": "CHANNELING"
-      },
-      {
-        "value": "MULTISHOT"
-      },
-      {
-        "value": "QUICK_CHARGE"
-      },
-      {
-        "value": "PIERCING"
-      },
-      {
-        "value": "MENDING"
-      },
-      {
-        "value": "VANISHING_CURSE"
-      },
-      {
-        "value": "SOUL_SPEED"
+        "value": "SWIFT_SNEAK"
       }
     ],
-    "excludeEnchantments": false,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/weapon"
+      }
+    ],
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

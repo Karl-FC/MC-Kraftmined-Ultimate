@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:cloud_block_rain"
+    }
+  },
+  "result": {
+    "id": "kraftmine:condensed_armor_chestplate",
+    "count": 1
+  }
+}

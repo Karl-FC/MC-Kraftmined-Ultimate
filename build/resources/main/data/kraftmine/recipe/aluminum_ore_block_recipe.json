@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:aluminum"
+    }
+  },
+  "result": {
+    "id": "kraftmine:aluminum_block",
+    "count": 1
+  }
+}

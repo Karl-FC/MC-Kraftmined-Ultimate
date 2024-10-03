@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "cup4",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Filled Chalice",
     "rarity": "UNCOMMON",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 40,
@@ -24,14 +28,22 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": true,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": true
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onFinishUsingItem": {
       "name": "ChaliceDrinkCup"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 0,
     "saturation": 1.0,

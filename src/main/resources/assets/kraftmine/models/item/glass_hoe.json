@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/glass_hoe"
+    "layer0": "kraftmine:item/glass_hoe"
   }
 }

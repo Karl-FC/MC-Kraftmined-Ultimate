@@ -11,7 +11,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
-import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
 
@@ -22,24 +21,23 @@ public class TimeFreezeExpiresProcedure {
 		if (entity instanceof Player) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(32 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(32 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator) && (entityiterator instanceof Monster || entityiterator instanceof Animal)) {
-						if (entityiterator instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 200, (false), (false)));
-						if (entityiterator instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 60, 200, (false), (false)));
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 200, false, false));
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 60, 200, false, false));
 						if (entityiterator instanceof Player _player) {
-							_player.getAbilities().invulnerable = ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false)
+							_player.getAbilities().invulnerable = (entityiterator instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(MobEffects.MOVEMENT_SLOWDOWN)
 									&& (entityiterator instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) ? _livEnt.getEffect(MobEffects.MOVEMENT_SLOWDOWN).getAmplifier() : 0) == 200);
 							_player.onUpdateAbilities();
 						}
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 60, 1, (false), (false)));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 60, 1, false, false));
 		}
 	}
 }

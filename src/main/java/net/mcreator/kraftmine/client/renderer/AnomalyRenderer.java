@@ -15,6 +15,6 @@ public class AnomalyRenderer extends MobRenderer<AnomalyEntity, Modelanomaly<Ano
 
 	@Override
 	public ResourceLocation getTextureLocation(AnomalyEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/anomaly.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/anomaly.png");
 	}
 }

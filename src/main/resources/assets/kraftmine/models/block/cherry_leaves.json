@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "kraftmine:blocks/cherry_leaves",
-    "particle": "kraftmine:blocks/cherry_leaves"
+    "all": "kraftmine:block/cherry_leaves",
+    "particle": "kraftmine:block/cherry_leaves"
   }
 }

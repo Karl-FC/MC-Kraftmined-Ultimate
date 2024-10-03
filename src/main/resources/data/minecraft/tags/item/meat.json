@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:cooked_drumstick",
+    "kraftmine:drumstick",
+    "kraftmine:sprite_cranberry",
+    "kraftmine:cooked_carabeef",
+    "kraftmine:carabeef"
+  ]
+}

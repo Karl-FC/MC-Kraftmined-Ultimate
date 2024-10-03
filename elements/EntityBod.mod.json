@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Blade of Despair",
     "mobLabel": "",
     "mobModelName": "Modelbod",
     "mobModelTexture": "bod.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 1.0,
     "modelShadowSize": 0.5,
@@ -20,9 +20,7 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +48,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.0,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 0,
     "followRange": 16,
     "health": 0,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +94,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": false,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"104\" y=\"45\"></block></xml>",
@@ -112,6 +115,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

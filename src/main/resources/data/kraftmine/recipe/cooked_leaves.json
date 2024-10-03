@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 160,
+  "ingredient": {
+    "tag": "kraftmine:all_leaves"
+  },
+  "result": {
+    "id": "kraftmine:cooked_leaves"
+  }
+}

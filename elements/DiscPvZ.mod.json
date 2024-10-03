@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "musicdisc",
   "definition": {
     "name": "Music Disc",
+    "rarity": "RARE",
     "texture": "music_disc_pvz",
     "description": "Plants vs. Zombies - \"Cerebrawl\"",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
     },
-    "specialInfo": [],
-    "hasGlow": false,
     "music": {
       "value": "CUSTOM:music.disc.pvz"
     },

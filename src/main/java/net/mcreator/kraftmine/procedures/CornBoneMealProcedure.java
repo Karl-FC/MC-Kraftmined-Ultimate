@@ -27,14 +27,14 @@ public class CornBoneMealProcedure {
 		stage1 = KraftmineModBlocks.CORN_CROP_1.get().defaultBlockState();
 		stage2 = KraftmineModBlocks.CORN_CROP_2.get().defaultBlockState();
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, new BlockPos(x, y, z))) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, BlockPos.containing(x, y, z))) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = stage1;
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata();
+						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -42,20 +42,20 @@ public class CornBoneMealProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.load(_bnbt);
+								_be.loadWithComponents(_bnbt, world.registryAccess());
 							} catch (Exception ignored) {
 							}
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, new BlockPos(x, y, z))) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, BlockPos.containing(x, y, z))) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = stage2;
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata();
+						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -63,7 +63,7 @@ public class CornBoneMealProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.load(_bnbt);
+								_be.loadWithComponents(_bnbt, world.registryAccess());
 							} catch (Exception ignored) {
 							}
 						}
@@ -71,7 +71,7 @@ public class CornBoneMealProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -80,7 +80,7 @@ public class CornBoneMealProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.MYCELIUM, x, y, z, 3, 3, 3, 3, 1);
+				_level.sendParticles(ParticleTypes.CRIT, x, y, z, 3, 3, 3, 3, 1);
 		}
 	}
 }

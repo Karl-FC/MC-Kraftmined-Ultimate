@@ -16,6 +16,6 @@ public class CreepRenderer extends MobRenderer<CreepEntity, ChickenModel<CreepEn
 
 	@Override
 	public ResourceLocation getTextureLocation(CreepEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/creep.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/creep.png");
 	}
 }

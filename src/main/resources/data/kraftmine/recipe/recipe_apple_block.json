@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "id": "kraftmine:appleblock",
+    "count": 1
+  }
+}

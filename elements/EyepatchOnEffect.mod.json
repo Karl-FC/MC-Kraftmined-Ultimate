@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Pirate Vision",
@@ -9,9 +9,11 @@
       "falpha": 0.0
     },
     "isInstant": false,
-    "isBad": false,
-    "isBenefitical": true,
+    "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
-    "renderStatusInHUD": false
+    "renderStatusInHUD": false,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false
   }
 }

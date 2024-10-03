@@ -12,14 +12,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.CupDrinkGlassProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WaterCupGlassItem extends Item {
 	public WaterCupGlassItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).alwaysEat()
-
-				.build()));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -28,13 +25,13 @@ public class WaterCupGlassItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 20;
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0F;
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
+		return 0f;
 	}
 
 	@Override
@@ -44,7 +41,6 @@ public class WaterCupGlassItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		CupDrinkGlassProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;

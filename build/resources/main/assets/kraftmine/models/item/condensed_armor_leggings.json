@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/condensed_leggings"
+    "layer0": "kraftmine:item/condensed_leggings"
   }
 }

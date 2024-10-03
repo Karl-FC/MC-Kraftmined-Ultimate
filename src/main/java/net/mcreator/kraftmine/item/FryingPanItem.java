@@ -1,49 +1,59 @@
 
 package net.mcreator.kraftmine.item;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
 
 import net.mcreator.kraftmine.procedures.FryingPanLivingEntityIsHitWithToolProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class FryingPanItem extends SwordItem {
+	private static final Tier TOOL_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return 32;
+		}
+
+		@Override
+		public float getSpeed() {
+			return 6f;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 0;
+		}
+
+		@Override
+		public TagKey<Block> getIncorrectBlocksForDrops() {
+			return BlockTags.INCORRECT_FOR_STONE_TOOL;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 2;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.of();
+		}
+	};
+
 	public FryingPanItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 32;
-			}
-
-			public float getSpeed() {
-				return 6f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 0f;
-			}
-
-			public int getLevel() {
-				return 1;
-			}
-
-			public int getEnchantmentValue() {
-				return 2;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
-			}
-		}, 3, -3f, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT).fireResistant());
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 1f, -3f)).fireResistant());
 	}
 
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		FryingPanLivingEntityIsHitWithToolProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity, sourceentity, itemstack);
+		FryingPanLivingEntityIsHitWithToolProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, sourceentity, itemstack);
 		return retval;
 	}
 

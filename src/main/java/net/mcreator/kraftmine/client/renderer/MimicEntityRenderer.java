@@ -15,6 +15,6 @@ public class MimicEntityRenderer extends MobRenderer<MimicEntityEntity, ModelMim
 
 	@Override
 	public ResourceLocation getTextureLocation(MimicEntityEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/mimic.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/mimic.png");
 	}
 }

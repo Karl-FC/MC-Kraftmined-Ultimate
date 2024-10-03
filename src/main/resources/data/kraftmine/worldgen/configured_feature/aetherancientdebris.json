@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 2,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:aetherancientdebris"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud_block_rain"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:aetherancientdebris"
+        }
+      }
+    ]
+  }
+}

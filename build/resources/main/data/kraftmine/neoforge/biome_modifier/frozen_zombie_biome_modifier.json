@@ -1,0 +1,22 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "frozen_ocean",
+    "frozen_peaks",
+    "frozen_river",
+    "grove",
+    "ice_spikes",
+    "jagged_peaks",
+    "snowy_slopes",
+    "snowy_beach",
+    "plains",
+    "snowy_plains",
+    "snowy_taiga"
+  ],
+  "spawners": {
+    "type": "kraftmine:frozen_zombie",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:cherry_log"
+    }
+  ],
+  "result": {
+    "id": "kraftmine:cherry_planks",
+    "count": 4
+  }
+}

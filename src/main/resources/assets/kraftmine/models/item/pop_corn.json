@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/cob_cannon"
+    "layer0": "kraftmine:item/cob_cannon"
   },
   "display": {
     "thirdperson_righthand": {

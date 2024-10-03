@@ -22,7 +22,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ModelMickey<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("kraftmine", "model_mickey"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("kraftmine", "model_mickey"), "main");
 	public final ModelPart head;
 	public final ModelPart left_ear;
 	public final ModelPart right_ear;
@@ -62,7 +62,7 @@ public class ModelMickey<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, int rgb) {
 		head.render(poseStack, buffer, packedLight, packedOverlay);
 		left_ear.render(poseStack, buffer, packedLight, packedOverlay);
 		right_ear.render(poseStack, buffer, packedLight, packedOverlay);

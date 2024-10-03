@@ -1,9 +1,9 @@
 {
   "parent": "kraftmine:custom/empty_can",
   "textures": {
-    "all": "kraftmine:blocks/cherry_log_top",
-    "particle": "kraftmine:blocks/cherry_log_top",
-    "0": "kraftmine:blocks/can_empty"
+    "all": "kraftmine:block/cherry_log_top",
+    "particle": "kraftmine:block/cherry_log_top",
+    "0": "kraftmine:block/can_empty"
   },
   "render_type": "solid"
 }

@@ -1,7 +1,8 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
-    "texture": "kraftmine:blocks/palmwood_planks"
+    "particle": "kraftmine:block/palmwood_planks",
+    "texture": "kraftmine:block/palmwood_planks"
   },
   "render_type": "solid"
 }

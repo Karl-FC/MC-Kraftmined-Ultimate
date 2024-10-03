@@ -1,9 +1,10 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
-    "bottom": "kraftmine:blocks/palmwood_planks",
-    "top": "kraftmine:blocks/palmwood_planks",
-    "side": "kraftmine:blocks/palmwood_planks"
+    "particle": "kraftmine:block/palmwood_planks",
+    "bottom": "kraftmine:block/palmwood_planks",
+    "top": "kraftmine:block/palmwood_planks",
+    "side": "kraftmine:block/palmwood_planks"
   },
   "render_type": "solid"
 }

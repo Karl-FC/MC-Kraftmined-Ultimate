@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -13,20 +13,30 @@
     "onHelmetTick": {
       "name": "EyepatchHelmetTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "eyepatch_",
     "helmetName": "Eyepatch",
     "bodyName": "Eyepatch Body",
     "leggingsName": "Eyepatch Leggings",
     "bootsName": "Eyepatch Boots",
-    "helmetSpecialInfo": [
-      "Provides vision in dark areas"
-    ],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Provides vision in dark areas"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

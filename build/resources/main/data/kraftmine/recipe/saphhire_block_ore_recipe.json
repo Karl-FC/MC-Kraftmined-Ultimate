@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kraftmine:saphhire_block"
+    }
+  ],
+  "result": {
+    "id": "kraftmine:saphhire",
+    "count": 9
+  }
+}

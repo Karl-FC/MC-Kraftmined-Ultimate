@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "kraftmine:blocks/tungstenore",
-    "particle": "kraftmine:blocks/tungstenore"
+    "all": "kraftmine:block/tungstenore",
+    "particle": "kraftmine:block/tungstenore"
   },
   "render_type": "solid"
 }

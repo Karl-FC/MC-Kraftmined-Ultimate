@@ -15,6 +15,6 @@ public class GiantAIRenderer extends MobRenderer<GiantAIEntity, Modelgiant_ai<Gi
 
 	@Override
 	public ResourceLocation getTextureLocation(GiantAIEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/giant_2.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/giant_2.png");
 	}
 }

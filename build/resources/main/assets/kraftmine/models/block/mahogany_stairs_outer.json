@@ -1,9 +1,10 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "kraftmine:blocks/mahogany_planks",
-    "top": "kraftmine:blocks/mahogany_planks",
-    "side": "kraftmine:blocks/mahogany_planks"
+    "particle": "kraftmine:block/mahogany_planks",
+    "bottom": "kraftmine:block/mahogany_planks",
+    "top": "kraftmine:block/mahogany_planks",
+    "side": "kraftmine:block/mahogany_planks"
   },
   "render_type": "solid"
 }

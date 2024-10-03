@@ -1,16 +1,15 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Replenishment",
-    "type": "VANISHABLE",
-    "rarity": "COMMON",
-    "minLevel": 1,
+    "supportedSlots": "any",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 2,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "CUSTOM:InfinitePotionRevitalization"
       },
@@ -51,10 +50,8 @@
         "value": "CUSTOM:InfinitePotionWaterBreathing"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

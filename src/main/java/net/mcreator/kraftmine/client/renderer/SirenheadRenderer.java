@@ -15,6 +15,6 @@ public class SirenheadRenderer extends MobRenderer<SirenheadEntity, Modelsirenhe
 
 	@Override
 	public ResourceLocation getTextureLocation(SirenheadEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/sirenhead.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/sirenhead.png");
 	}
 }

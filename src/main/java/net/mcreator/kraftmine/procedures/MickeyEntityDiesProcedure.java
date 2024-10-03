@@ -1,10 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -28,7 +27,8 @@ import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -39,12 +39,12 @@ import net.mcreator.kraftmine.entity.MickeyEntity;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class MickeyEntityDiesProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		if (event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -58,12 +58,12 @@ public class MickeyEntityDiesProcedure {
 		double mickeyCD = 0;
 		Entity mickey = null;
 		if (entity instanceof MickeyEntity) {
-			if ((entity.level.dimension()) == (Level.OVERWORLD) && !(KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0)) {
+			if ((entity.level().dimension()) == Level.OVERWORLD && !(KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0)) {
 				KraftmineModVariables.WorldVariables.get(world).MickeyCD = KraftmineModVariables.WorldVariables.get(world).MickeyCD + 1;
 				KraftmineModVariables.WorldVariables.get(world).syncData(world);
-				if (sourceentity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-					ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:domain_expansion"));
-					if (_player.level.dimension() == destinationType)
+				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+					ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:domain_expansion"));
+					if (_player.level().dimension() == destinationType)
 						return;
 					ServerLevel nextLevel = _player.server.getLevel(destinationType);
 					if (nextLevel != null) {
@@ -71,54 +71,52 @@ public class MickeyEntityDiesProcedure {
 						_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 						_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 						for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				if (world instanceof Level _level)
-					_level.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set((true), _level.getServer());
+				world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, world.getServer());
 				DomainExpansionPlayerEntersDimensionProcedure.execute(world, x, y, z, entity);
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"stopsound @a music kraftmine:theme.aot");
-			} else if (KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0 && (entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:domain_expansion")))) {
+			} else if (KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0 && (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:domain_expansion"))) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ender_dragon.death")), SoundSource.MUSIC, 5, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.ender_dragon.death")), SoundSource.MUSIC, 5, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ender_dragon.death")), SoundSource.MUSIC, 5, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.ender_dragon.death")), SoundSource.MUSIC, 5, 1, false);
 					}
 				}
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"stopsound @a music kraftmine:theme.aot");
-				if (world instanceof Level _level)
-					_level.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set((false), _level.getServer());
+				world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(false, world.getServer());
 				KraftmineModVariables.WorldVariables.get(world).MickeyCD = 0;
 				KraftmineModVariables.WorldVariables.get(world).syncData(world);
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(KraftmineModItems.WARP_STAR.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
 				}
-				if (world instanceof Level _level && !_level.isClientSide())
+				if (world instanceof ServerLevel _level)
 					_level.addFreshEntity(new ExperienceOrb(_level, x, y, z, 10000));
 			}
 		} else if (entity instanceof Player && !world.getEntitiesOfClass(MickeyEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).isEmpty() == true && sourceentity instanceof MickeyEntity
-				&& KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0 && ((sourceentity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:domain_expansion")))
-						|| (entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:domain_expansion"))))) {
+				&& KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0 && ((sourceentity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:domain_expansion"))
+						|| (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:domain_expansion")))) {
 			KraftmineModVariables.WorldVariables.get(world).MickeyCD = 0;
 			KraftmineModVariables.WorldVariables.get(world).syncData(world);
 			{
 				Entity _ent = sourceentity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "kill @e[type=kraftmine:mickey]");
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "kill @e[type=kraftmine:mickey]");
 				}
 			}
-			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 				ResourceKey<Level> destinationType = Level.OVERWORLD;
-				if (_player.level.dimension() == destinationType)
+				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);
 				if (nextLevel != null) {
@@ -126,15 +124,15 @@ public class MickeyEntityDiesProcedure {
 					_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 					_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 					for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
 			{
 				Entity _ent = sourceentity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "say yehey");
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "say yehey");
 				}
 			}
 		}

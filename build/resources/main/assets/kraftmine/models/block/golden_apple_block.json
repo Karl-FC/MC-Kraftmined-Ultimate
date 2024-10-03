@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/golden_apple_side",
-    "up": "kraftmine:blocks/golden_apple_top",
-    "north": "kraftmine:blocks/golden_apple_side",
-    "east": "kraftmine:blocks/golden_apple_side",
-    "south": "kraftmine:blocks/golden_apple_side",
-    "west": "kraftmine:blocks/golden_apple_side",
-    "particle": "kraftmine:blocks/golden_apple_side"
+    "down": "kraftmine:block/golden_apple_side",
+    "up": "kraftmine:block/golden_apple_top",
+    "north": "kraftmine:block/golden_apple_side",
+    "east": "kraftmine:block/golden_apple_side",
+    "south": "kraftmine:block/golden_apple_side",
+    "west": "kraftmine:block/golden_apple_side",
+    "particle": "kraftmine:block/golden_apple_side"
   },
   "render_type": "solid"
 }

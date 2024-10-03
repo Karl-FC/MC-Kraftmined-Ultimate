@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Ghostly",
@@ -9,10 +9,12 @@
       "falpha": 0.0
     },
     "isInstant": false,
-    "isBad": false,
-    "isBenefitical": true,
+    "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "GhostlyEffectStartedapplied"
     },

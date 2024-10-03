@@ -1,30 +1,33 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.kraftmine.init.KraftmineModItems;
-import net.mcreator.kraftmine.init.KraftmineModEnchantments;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class BackstabbingProcedureProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getEntity(), event.getAmount());
+	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
+		if (event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
@@ -36,33 +39,34 @@ public class BackstabbingProcedureProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KraftmineModItems.DAGGER.get()
-				^ EnchantmentHelper.getItemEnchantmentLevel(KraftmineModEnchantments.BACKSTABBING.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KraftmineModItems.DAGGER.get() ^ (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+				.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("kraftmine:backstabbing")))) != 0) {
 			if ((sourceentity.getDirection()) == (entity.getDirection())) {
 				damage = amount;
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
+				if (event instanceof ICancellableEvent _cancellable) {
+					_cancellable.setCanceled(true);
 				}
-				entity.hurt(DamageSource.GENERIC, (float) (damage * 3));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), (float) (damage * 3));
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.DAMAGE_INDICATOR, (entity.getX()), (entity.getY()), (entity.getZ()), 10, 2, 2, 2, 0);
 			} else if (!((sourceentity.getDirection()) == (entity.getDirection()))) {
 				damage = amount;
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
+				if (event instanceof ICancellableEvent _cancellable) {
+					_cancellable.setCanceled(true);
 				}
-				entity.hurt(DamageSource.GENERIC, (float) (damage / 2));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), (float) (damage / 2));
 			}
 		} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KraftmineModItems.DAGGER.get()
-				&& EnchantmentHelper.getItemEnchantmentLevel(KraftmineModEnchantments.BACKSTABBING.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+				&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("kraftmine:backstabbing")))) != 0) {
 			if ((sourceentity.getDirection()) == (entity.getDirection())) {
 				damage = amount;
-				entity.hurt(DamageSource.GENERIC, (float) (damage * 3));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), (float) (damage * 3));
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.DAMAGE_INDICATOR, (entity.getX()), (entity.getY()), (entity.getZ()), 15, 2, 2, 2, 0);
 			} else if (!((sourceentity.getDirection()) == (entity.getDirection()))) {
 				damage = amount;
-				entity.hurt(DamageSource.GENERIC, (float) (damage / 2));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), (float) (damage / 2));
 			}
 		}
 	}

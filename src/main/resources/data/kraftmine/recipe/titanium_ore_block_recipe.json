@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:titanium_ingot"
+    }
+  },
+  "result": {
+    "id": "kraftmine:titanium_block",
+    "count": 1
+  }
+}

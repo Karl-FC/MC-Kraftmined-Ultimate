@@ -15,6 +15,6 @@ public class MobBigRenderer extends MobRenderer<MobBigEntity, Modelbig<MobBigEnt
 
 	@Override
 	public ResourceLocation getTextureLocation(MobBigEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/big.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/big.png");
 	}
 }

@@ -1,8 +1,7 @@
 
 package net.mcreator.kraftmine.block;
 
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -13,18 +12,14 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-
-import java.util.List;
-import java.util.Collections;
 
 public class DeadwoodLogBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
 	public DeadwoodLogBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.2f, 2.158460690597782f));
+		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2.2f, 2.1584606906f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 	}
 
@@ -35,12 +30,13 @@ public class DeadwoodLogBlock extends Block {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(AXIS);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis());
+		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis());
 	}
 
 	@Override
@@ -58,13 +54,5 @@ public class DeadwoodLogBlock extends Block {
 	@Override
 	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
 		return 6;
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 }

@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "kraftmine:blocks/portalaether",
-    "portal": "kraftmine:blocks/portalaether"
+    "particle": "kraftmine:block/portalaether",
+    "portal": "kraftmine:block/portalaether"
   },
   "elements": [
     {

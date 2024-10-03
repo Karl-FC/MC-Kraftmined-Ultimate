@@ -14,7 +14,7 @@ public class GiantAIOnInitialEntitySpawnProcedure {
 			return;
 		if (world instanceof ServerLevel _level) {
 			LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-			entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(entity.getX(), entity.getY(), entity.getZ())));
+			entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ())));
 			entityToSpawn.setVisualOnly(true);
 			_level.addFreshEntity(entityToSpawn);
 		}

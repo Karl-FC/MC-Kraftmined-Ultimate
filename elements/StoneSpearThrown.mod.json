@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Stone Spear Thrown",
     "mobLabel": "",
     "mobModelName": "Modelstonespeardropped",
     "mobModelTexture": "stonespear.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 0.5,
     "modelShadowSize": 0.30000000000000004,
@@ -20,9 +20,11 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "MISC"
-    },
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 5,
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "StoneSpearThrownOnEntityTickUpdate"
     },
@@ -115,6 +122,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

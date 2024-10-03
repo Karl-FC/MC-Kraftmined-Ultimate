@@ -11,7 +11,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.core.BlockPos;
 
-import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
 
@@ -19,15 +18,14 @@ public class GravityDisruptorRedstoneProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
 		if (entity == null)
 			return;
-		if (world instanceof Level _lvl_isPow ? _lvl_isPow.hasNeighborSignal(new BlockPos(x, y, z)) : false) {
+		if (world instanceof Level _level0 && _level0.hasNeighborSignal(BlockPos.containing(x, y, z))) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!((world.getBlockState(new BlockPos(entity.getX(), entityiterator.getY() - 1, entity.getZ()))).getBlock() == blockstate.getBlock())) {
-						if (entityiterator instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60, 5, (false), (false)));
+					if (!((world.getBlockState(BlockPos.containing(entity.getX(), entityiterator.getY() - 1, entity.getZ()))).getBlock() == blockstate.getBlock())) {
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60, 5, false, false));
 					}
 				}
 			}

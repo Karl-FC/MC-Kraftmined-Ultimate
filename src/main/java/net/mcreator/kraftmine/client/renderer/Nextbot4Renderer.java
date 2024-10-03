@@ -15,6 +15,6 @@ public class Nextbot4Renderer extends MobRenderer<Nextbot4Entity, Modelnextbot<N
 
 	@Override
 	public ResourceLocation getTextureLocation(Nextbot4Entity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/nextbot_yoshie.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/nextbot_yoshie.png");
 	}
 }

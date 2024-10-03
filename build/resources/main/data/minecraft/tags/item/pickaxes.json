@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:glass_pickaxe",
+    "kraftmine:prismarine_pickaxe",
+    "kraftmine:sandstone_pickaxe",
+    "kraftmine:ice_pickaxe",
+    "kraftmine:plastic_pickaxe",
+    "kraftmine:obsidian_pickaxe",
+    "kraftmine:bamboo_pickaxe",
+    "kraftmine:tungsten_pickaxe"
+  ]
+}

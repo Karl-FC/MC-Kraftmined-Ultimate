@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:eggshell"
+    }
+  },
+  "result": {
+    "id": "minecraft:bone_meal",
+    "count": 10
+  }
+}

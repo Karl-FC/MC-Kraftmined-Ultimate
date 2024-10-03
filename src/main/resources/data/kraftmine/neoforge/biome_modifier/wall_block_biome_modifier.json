@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "kraftmine:backroom_level_0",
+  "features": "kraftmine:wall_block",
+  "step": "underground_ores"
+}

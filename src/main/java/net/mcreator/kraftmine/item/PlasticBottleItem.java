@@ -9,11 +9,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 import net.mcreator.kraftmine.procedures.ClayBottleRightclickedOnBlockProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class PlasticBottleItem extends Item {
 	public PlasticBottleItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

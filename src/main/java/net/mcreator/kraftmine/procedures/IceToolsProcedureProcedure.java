@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,10 +15,10 @@ import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class IceToolsProcedureProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		execute(event, event.getEntity());
 	}
 
@@ -29,10 +29,10 @@ public class IceToolsProcedureProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("kraftmine:tools_ice")))
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("kraftmine:tools_ice")))) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 1, (false), (false)));
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("kraftmine:tools_ice")))
+				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("kraftmine:tools_ice")))) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 1, false, false));
 		}
 	}
 }

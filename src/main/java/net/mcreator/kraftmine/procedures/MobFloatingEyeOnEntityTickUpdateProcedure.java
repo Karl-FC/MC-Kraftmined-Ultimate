@@ -8,8 +8,8 @@ public class MobFloatingEyeOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z)) && world.dayTime() < 13000) {
-			entity.setSecondsOnFire(5);
+		if (world.canSeeSkyFromBelowWater(BlockPos.containing(x, y, z)) && world.dayTime() < 13000) {
+			entity.igniteForSeconds(5);
 			if (entity.isInWaterRainOrBubble()) {
 				entity.clearFire();
 			}

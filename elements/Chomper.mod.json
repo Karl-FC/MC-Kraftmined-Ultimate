@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Chomper",
     "mobLabel": "",
     "mobModelName": "Modelchomper",
     "mobModelTexture": "chomper.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -20,9 +20,11 @@
       "value": -6750106,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 10.0,
     "movementSpeed": 0.1,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.2,
     "trackingRange": 64,
     "followRange": 4,
     "health": 20,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "ChomperOnEntityTickUpdate"
     },
@@ -115,6 +122,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

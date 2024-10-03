@@ -20,9 +20,7 @@ import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class PlasticWaterBottle15Item extends Item {
 	public PlasticWaterBottle15Item() {
-		super(new Item.Properties().tab(null).durability(7).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).alwaysEat()
-
-				.build()));
+		super(new Item.Properties().durability(7).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -31,7 +29,7 @@ public class PlasticWaterBottle15Item extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 30;
 	}
 
@@ -42,7 +40,6 @@ public class PlasticWaterBottle15Item extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		ClayWaterBottlePlayerFinishesUsingItemProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;

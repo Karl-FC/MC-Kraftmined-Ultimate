@@ -1,28 +1,33 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Spade",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "dirtrod",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Dirt Rod",
-    "specialInfo": [
-      "\"Summons dirt in (almost)everything it touches\""
-    ],
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
+    "specialInformation": {
+      "fixedValue": [
+        "\"Summons dirt in (almost)everything it touches\""
+      ]
     },
-    "toolType": "Spade",
-    "harvestLevel": 1,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "efficiency": 4.0,
     "attackSpeed": 1.0,
     "enchantability": 10,
     "damageVsEntity": 1.0,
     "usageCount": 250,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedOnBlock": {

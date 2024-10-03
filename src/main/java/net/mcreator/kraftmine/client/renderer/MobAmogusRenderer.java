@@ -15,6 +15,6 @@ public class MobAmogusRenderer extends MobRenderer<MobAmogusEntity, ModelAmogus<
 
 	@Override
 	public ResourceLocation getTextureLocation(MobAmogusEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/amogus_red.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/amogus_red.png");
 	}
 }

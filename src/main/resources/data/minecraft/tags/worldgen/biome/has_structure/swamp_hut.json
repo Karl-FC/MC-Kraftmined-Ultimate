@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "kraftmine:wasteland",
+    "kraftmine:tropics",
     "kraftmine:eerie",
-    "kraftmine:tropics"
+    "kraftmine:wasteland"
   ]
 }

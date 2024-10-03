@@ -10,8 +10,8 @@ public class DripEffectStartedappliedProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.removeEffect(KraftmineModMobEffects.JUMPSCARE_EFFECT.get());
+			_entity.removeEffect(KraftmineModMobEffects.JUMPSCARE_EFFECT);
 		if (entity instanceof LivingEntity _entity)
-			_entity.removeEffect(KraftmineModMobEffects.SUS.get());
+			_entity.removeEffect(KraftmineModMobEffects.SUS);
 	}
 }

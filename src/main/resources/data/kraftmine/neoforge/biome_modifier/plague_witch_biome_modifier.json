@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "dark_forest",
+    "kraftmine:eerie"
+  ],
+  "spawners": {
+    "type": "kraftmine:plague_witch",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "minecraft:leather_leggings"
+  },
+  "addition": {
+    "item": "minecraft:chainmail_leggings"
+  },
+  "result": {
+    "id": "kraftmine:studded_armor_leggings"
+  }
+}

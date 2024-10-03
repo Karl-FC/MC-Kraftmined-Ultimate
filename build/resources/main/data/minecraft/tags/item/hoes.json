@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:glass_hoe",
+    "kraftmine:prismarine_hoe",
+    "kraftmine:sandstone_hoe",
+    "kraftmine:ice_hoe",
+    "kraftmine:plastic_hoe",
+    "kraftmine:obsidian_hoe",
+    "kraftmine:bamboo_hoe",
+    "kraftmine:tungsten_hoe"
+  ]
+}

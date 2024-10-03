@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "infinitepotionwaterbreathing",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Infinite Potion of Water Breathing",
     "rarity": "UNCOMMON",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 1,
     "useDuration": 40,
@@ -24,14 +28,22 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": true,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": true
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "InfinitePotionWaterBreathingRightclicked"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.0,

@@ -10,12 +10,11 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class SpriteCranberryItem extends Item {
 	public SpriteCranberryItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(1).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(1).saturationMod(2f).alwaysEat().meat().build()));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(2f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -24,7 +23,7 @@ public class SpriteCranberryItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 40;
 	}
 

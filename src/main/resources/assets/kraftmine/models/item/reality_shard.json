@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/shard_6"
+    "layer0": "kraftmine:item/shard_6"
   }
 }

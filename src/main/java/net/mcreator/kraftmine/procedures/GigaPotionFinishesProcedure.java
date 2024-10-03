@@ -11,13 +11,13 @@ public class GigaPotionFinishesProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.GIGA_EFFECT.get(), 2100, 0, (false), (true)));
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2400, 4, (false), (true)));
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 2400, 0, (false), (false)));
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.DRIP.get(), 2400, 0, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.GIGA_EFFECT, 2100, 0, false, true));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2400, 4, false, true));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 2400, 0, false, false));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.DRIP, 2400, 0, false, false));
 	}
 }

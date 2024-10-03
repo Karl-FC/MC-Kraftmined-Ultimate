@@ -1,0 +1,21 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.MELON_SEEDS"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "block.amethyst_block.place"
+    },
+    "igniteFire": false,
+    "power": 2.5,
+    "damage": 3.0,
+    "knockback": 0,
+    "entityModel": "Modelbullet_seed",
+    "customModelTexture": "bullet_seed.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

@@ -4,10 +4,10 @@
  */
 package net.mcreator.kraftmine.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.kraftmine.client.model.Modelwater;
 import net.mcreator.kraftmine.client.model.Modelwasp;
@@ -55,7 +55,7 @@ import net.mcreator.kraftmine.client.model.ModelGoose;
 import net.mcreator.kraftmine.client.model.ModelGhostSpider;
 import net.mcreator.kraftmine.client.model.ModelAmogus;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class KraftmineModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

@@ -1,0 +1,25 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "sunflower_plains",
+    "meadow",
+    "flower_forest",
+    "birch_forest",
+    "forest",
+    "old_growth_birch_forest",
+    "windswept_forest",
+    "grove",
+    "river",
+    "savanna",
+    "savanna_plateau",
+    "windswept_hills",
+    "windswept_gravelly_hills"
+  ],
+  "spawners": {
+    "type": "kraftmine:goose",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 10
+  }
+}

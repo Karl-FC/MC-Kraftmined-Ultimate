@@ -1,9 +1,7 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -17,8 +15,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -28,7 +25,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.TrollgeNaturalEntitySpawningConditionProcedure;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
@@ -38,19 +35,10 @@ import java.util.EnumSet;
 public class TrollgeLvl2Entity extends Monster {
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.RED, ServerBossEvent.BossBarOverlay.PROGRESS);
 
-	public TrollgeLvl2Entity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.TROLLGE_LVL_2.get(), world);
-	}
-
 	public TrollgeLvl2Entity(EntityType<TrollgeLvl2Entity> type, Level world) {
 		super(type, world);
 		xpReward = 50;
 		setNoAi(false);
-	}
-
-	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
@@ -111,28 +99,18 @@ public class TrollgeLvl2Entity extends Monster {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:mob.sans"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:mob.sans"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:mob.sans.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:mob.sans.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean canChangeDimensions() {
-		return false;
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -153,22 +131,23 @@ public class TrollgeLvl2Entity extends Monster {
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.TROLLGE_LVL_2.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.TROLLGE_LVL_2.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			return TrollgeNaturalEntitySpawningConditionProcedure.execute(world);
-		});
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.19999999999999998);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
 		builder = builder.add(Attributes.MAX_HEALTH, 700);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		return builder;
 	}
 }

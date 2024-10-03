@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "id": "kraftmine:lapis_lazuli_armor_helmet",
+    "count": 1
+  }
+}

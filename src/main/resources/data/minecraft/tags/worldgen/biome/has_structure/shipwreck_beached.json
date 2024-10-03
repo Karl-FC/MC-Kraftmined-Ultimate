@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "kraftmine:wasteland",
-    "kraftmine:glow_shroom_biome"
+    "kraftmine:glow_shroom_biome",
+    "kraftmine:wasteland"
   ]
 }

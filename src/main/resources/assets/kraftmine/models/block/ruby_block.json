@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "kraftmine:blocks/ruby_ore_block",
-    "particle": "kraftmine:blocks/ruby_ore_block"
+    "all": "kraftmine:block/ruby_ore_block",
+    "particle": "kraftmine:block/ruby_ore_block"
   },
   "render_type": "solid"
 }

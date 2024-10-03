@@ -1,28 +1,33 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Sword",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "nethers_wrath",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Nether's Wrath",
-    "specialInfo": [
-      "May activate certain enchantments"
-    ],
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
+    "specialInformation": {
+      "fixedValue": [
+        "May activate certain enchantments"
+      ]
     },
-    "toolType": "Sword",
-    "harvestLevel": 2,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "efficiency": 15.0,
     "attackSpeed": 0.9,
     "enchantability": 1,
     "damageVsEntity": 15.0,
     "usageCount": 2000,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": true,
+    "blockDropsTier": "IRON",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onEntityHitWith": {

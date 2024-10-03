@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "kraftmine:blocks/plastic_block",
-    "particle": "kraftmine:blocks/plastic_block"
+    "all": "kraftmine:block/plastic_block",
+    "particle": "kraftmine:block/plastic_block"
   },
   "render_type": "solid"
 }

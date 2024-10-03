@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Trollge {The Multiversal Devouring Incident}",
     "mobLabel": "",
     "mobModelName": "Modeltrollge3",
     "mobModelTexture": "trollge3.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 20.0,
     "modelHeight": 30.0,
     "modelShadowSize": 10.0,
@@ -20,9 +20,11 @@
       "value": -10066330,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": true,
     "bossBarColor": "WHITE",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.5,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 128,
     "followRange": 16,
     "health": 1000,
     "xpAmount": 200,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "TrollgeLvl3OnEntityTickUpdate"
     },
@@ -121,6 +128,15 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

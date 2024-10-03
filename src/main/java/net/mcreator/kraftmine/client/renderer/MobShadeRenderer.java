@@ -15,6 +15,6 @@ public class MobShadeRenderer extends MobRenderer<MobShadeEntity, Modelshade<Mob
 
 	@Override
 	public ResourceLocation getTextureLocation(MobShadeEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/shade.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/shade.png");
 	}
 }

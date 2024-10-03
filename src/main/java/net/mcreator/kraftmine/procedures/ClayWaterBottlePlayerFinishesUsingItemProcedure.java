@@ -1,25 +1,27 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.core.component.DataComponents;
 
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ClayWaterBottlePlayerFinishesUsingItemProcedure {
 	@SubscribeEvent
 	public static void onUseItemFinish(LivingEntityUseItemEvent.Finish event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}
 	}
@@ -35,11 +37,11 @@ public class ClayWaterBottlePlayerFinishesUsingItemProcedure {
 		ItemStack Bottle = ItemStack.EMPTY;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KraftmineModItems.CLAY_WATER_BOTTLE.get()) {
 			Bottle = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-			WaterContent = Bottle.getOrCreateTag().getDouble("content");
+			WaterContent = Bottle.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("content");
 			if (WaterContent == 5) {
 				CupDrinkProcedure.execute(entity);
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(KraftmineModItems.CLAY_BOTTLE.get());
+					ItemStack _setstack = new ItemStack(KraftmineModItems.CLAY_BOTTLE.get()).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -47,7 +49,11 @@ public class ClayWaterBottlePlayerFinishesUsingItemProcedure {
 				}
 			} else if (WaterContent < 5) {
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-					Bottle.getOrCreateTag().putDouble("content", (WaterContent + 1));
+					{
+						final String _tagName = "content";
+						final double _tagValue = (WaterContent + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, Bottle, tag -> tag.putDouble(_tagName, _tagValue));
+					}
 					CupDrinkProcedure.execute(entity);
 				} else {
 					CupDrinkProcedure.execute(entity);

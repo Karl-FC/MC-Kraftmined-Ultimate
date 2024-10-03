@@ -1,8 +1,8 @@
 
 package net.mcreator.kraftmine.client.particle;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.particle.TextureSheetParticle;
@@ -36,7 +36,6 @@ public class AcidbubbleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-
 		this.lifetime = 20;
 		this.gravity = 0.1f;
 		this.hasPhysics = true;

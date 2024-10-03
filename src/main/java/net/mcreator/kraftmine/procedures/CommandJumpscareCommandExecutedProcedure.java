@@ -1,7 +1,5 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -16,6 +14,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -61,267 +60,215 @@ public class CommandJumpscareCommandExecutedProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"tellraw @p {\"text\":\"/Jumpscare help\",\"color\":\"#FFFF00\"}");
 			} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("summon")) {
-				if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 0) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.JUMPSCARE_EFFECT.get(), 60, 1));
+				if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 0) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.JUMPSCARE_EFFECT, 60, 1));
 					{
-						double _setval = Mth.nextInt(RandomSource.create(), 1, 5);
-						entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.JumpscareVariant = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+						_vars.JumpscareVariant = Mth.nextInt(RandomSource.create(), 1, 5);
+						_vars.syncPlayerVariables(entity);
 					}
 					{
-						double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel - 5;
-						entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Thirstlevel = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+						_vars.Thirstlevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel - 5;
+						_vars.syncPlayerVariables(entity);
 					}
 					{
-						double _setval = 1;
-						entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Jumpscare_CD = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+						_vars.Jumpscare_CD = 1;
+						_vars.syncPlayerVariables(entity);
 					}
-					if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("1")
-							|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 1) {
+					if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("1") || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 1) {
 						Jump1ProcedureProcedure.execute(world, entity);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
 							}
 						}
 						if (KraftmineModVariables.WorldVariables.get(world).Jumpscare_Cooldown == true) {
 							KraftmineMod.queueServerWork(1200, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
 							KraftmineMod.queueServerWork(20, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						}
-					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("2")
-							|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 2) {
+					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("2") || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 2) {
 						Jump2ProcedureProcedure.execute(world, entity);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
 							}
 						}
 						if (KraftmineModVariables.WorldVariables.get(world).Jumpscare_Cooldown == true) {
 							KraftmineMod.queueServerWork(1200, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
 							KraftmineMod.queueServerWork(20, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						}
-					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("3")
-							|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 3) {
+					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("3") || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 3) {
 						Jump3ProcedureProcedure.execute(world, entity);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
 							}
 						}
 						if (KraftmineModVariables.WorldVariables.get(world).Jumpscare_Cooldown == true) {
 							KraftmineMod.queueServerWork(1200, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
 							KraftmineMod.queueServerWork(20, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						}
-					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("4")
-							|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 4) {
+					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("4") || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 4) {
 						Jump4ProcedureProcedure.execute(world, entity);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
 							}
 						}
 						if (KraftmineModVariables.WorldVariables.get(world).Jumpscare_Cooldown == true) {
 							KraftmineMod.queueServerWork(1200, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
 							KraftmineMod.queueServerWork(20, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						}
-					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("5")
-							|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 5) {
+					} else if ((cmdparams.containsKey("1") ? cmdparams.get("1").toString() : "").equals("5") || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 5) {
 						Jump5ProcedureProcedure.execute(world, entity);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.short")), SoundSource.HOSTILE, 5, 1, false);
 							}
 						}
 						if (KraftmineModVariables.WorldVariables.get(world).Jumpscare_Cooldown == true) {
 							KraftmineMod.queueServerWork(1200, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
 							KraftmineMod.queueServerWork(20, () -> {
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.JumpscareVariant = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.JumpscareVariant = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 								{
-									double _setval = 0;
-									entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.Jumpscare_CD = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+									_vars.Jumpscare_CD = 0;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						}
 					}
-				} else if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Jumpscare_CD != 0
-						|| (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant != 0) {
+				} else if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Jumpscare_CD != 0 || entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant != 0) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.criminal")), SoundSource.AMBIENT, 2, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.criminal")), SoundSource.AMBIENT, 2, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:horror.jumpscare.criminal")), SoundSource.AMBIENT, 2, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:horror.jumpscare.criminal")), SoundSource.AMBIENT, 2, 1, false);
 						}
 					}
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal(":)"), (true));
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(":)"), true);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"tellraw @p {\"text\":\"Unknown command. Type /jumpscare help for help\",\"color\":\"#F4FF00\"}");
