@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:acid",
+    "kraftmine:corn_crop_2",
+    "kraftmine:corn_crop_1",
+    "kraftmine:corn_crop_0",
+    "kraftmine:glow_shroom",
+    "kraftmine:milk_bucket",
+    "kraftmine:cloud"
+  ]
+}

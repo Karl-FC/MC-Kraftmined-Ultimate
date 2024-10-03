@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/golden_apple_side",
+    "up": "kraftmine:block/golden_apple_top",
+    "north": "kraftmine:block/golden_apple_side",
+    "east": "kraftmine:block/golden_apple_side",
+    "south": "kraftmine:block/golden_apple_side",
+    "west": "kraftmine:block/golden_apple_side",
+    "particle": "kraftmine:block/golden_apple_side"
+  },
+  "render_type": "solid"
+}

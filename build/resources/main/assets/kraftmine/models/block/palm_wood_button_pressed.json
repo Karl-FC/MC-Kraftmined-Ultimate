@@ -1,0 +1,8 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "particle": "kraftmine:block/palmwood_planks",
+    "texture": "kraftmine:block/palmwood_planks"
+  },
+  "render_type": "solid"
+}

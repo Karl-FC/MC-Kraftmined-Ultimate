@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:sandstone_sword",
+    "kraftmine:sandstone_axe",
+    "kraftmine:sandstone_hoe",
+    "kraftmine:sandstone_shovel",
+    "kraftmine:sandstone_pickaxe"
+  ]
+}

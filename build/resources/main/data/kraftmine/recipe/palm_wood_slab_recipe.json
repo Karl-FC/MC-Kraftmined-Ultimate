@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:palm_wood_planks"
+    }
+  },
+  "result": {
+    "id": "kraftmine:palm_wood_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/lucky_block",
+    "up": "kraftmine:block/lucky_block",
+    "north": "kraftmine:block/lucky_block",
+    "east": "kraftmine:block/lucky_block",
+    "south": "kraftmine:block/lucky_block",
+    "west": "kraftmine:block/lucky_block",
+    "particle": "kraftmine:block/lucky_block"
+  },
+  "render_type": "solid"
+}

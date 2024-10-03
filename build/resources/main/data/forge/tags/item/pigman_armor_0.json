@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:obsidian_armor_boots",
+    "minecraft:leather_boots",
+    "minecraft:chainmail_boots",
+    "minecraft:golden_boots",
+    "minecraft:diamond_boots",
+    "minecraft:netherite_boots",
+    "minecraft:air"
+  ]
+}

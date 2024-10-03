@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "kraftmine:wasteland",
+    "badlands"
+  ],
+  "features": "kraftmine:acid_feature",
+  "step": "lakes"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/cloudblock",
+    "up": "kraftmine:block/cloudblock",
+    "north": "kraftmine:block/cloudblock",
+    "east": "kraftmine:block/cloudblock",
+    "south": "kraftmine:block/cloudblock",
+    "west": "kraftmine:block/cloudblock",
+    "particle": "kraftmine:block/cloudblock"
+  },
+  "render_type": "solid"
+}

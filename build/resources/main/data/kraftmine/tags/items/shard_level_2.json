@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:initial_shard",
+    "kraftmine:reality_shard",
+    "kraftmine:shard_time",
+    "kraftmine:ascendance_shard",
+    "kraftmine:shard_possibilities",
+    "kraftmine:transcendence_shard",
+    "kraftmine:omnipotence_shard"
+  ]
+}

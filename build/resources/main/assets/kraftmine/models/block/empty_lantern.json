@@ -1,0 +1,9 @@
+{
+  "parent": "kraftmine:custom/emptylantern",
+  "textures": {
+    "all": "kraftmine:block/empty_lantern",
+    "particle": "kraftmine:block/empty_lantern",
+    "0": "kraftmine:block/empty_lantern"
+  },
+  "render_type": "cutout"
+}

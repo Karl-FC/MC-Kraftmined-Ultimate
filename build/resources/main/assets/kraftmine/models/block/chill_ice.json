@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/chill_ice",
+    "up": "kraftmine:block/chill_ice",
+    "north": "kraftmine:block/chill_ice",
+    "east": "kraftmine:block/chill_ice",
+    "south": "kraftmine:block/chill_ice",
+    "west": "kraftmine:block/chill_ice",
+    "particle": "kraftmine:block/chill_ice"
+  },
+  "render_type": "translucent"
+}

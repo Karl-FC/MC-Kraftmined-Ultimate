@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/molten_obsidian",
+    "up": "kraftmine:block/molten_obsidian",
+    "north": "kraftmine:block/molten_obsidian",
+    "east": "kraftmine:block/molten_obsidian",
+    "south": "kraftmine:block/molten_obsidian",
+    "west": "kraftmine:block/molten_obsidian",
+    "particle": "kraftmine:block/molten_obsidian"
+  },
+  "render_type": "solid"
+}

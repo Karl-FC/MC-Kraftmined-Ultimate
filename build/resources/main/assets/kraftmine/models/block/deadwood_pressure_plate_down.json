@@ -1,0 +1,8 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "particle": "kraftmine:block/deadwood_planks",
+    "texture": "kraftmine:block/deadwood_planks"
+  },
+  "render_type": "solid"
+}

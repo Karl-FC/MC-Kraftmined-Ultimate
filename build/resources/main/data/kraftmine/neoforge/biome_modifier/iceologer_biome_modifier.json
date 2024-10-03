@@ -1,0 +1,19 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "deep_frozen_ocean",
+    "frozen_ocean",
+    "frozen_peaks",
+    "frozen_river",
+    "snowy_slopes",
+    "plains",
+    "snowy_plains",
+    "ice_spikes"
+  ],
+  "spawners": {
+    "type": "kraftmine:iceologer",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

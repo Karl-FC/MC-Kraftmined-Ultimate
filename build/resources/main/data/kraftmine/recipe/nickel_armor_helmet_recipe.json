@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:nickel_ingot"
+    }
+  },
+  "result": {
+    "id": "kraftmine:nickel_armor_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kraftmine:block/beehive_side",
+    "up": "kraftmine:block/beehive_side",
+    "north": "kraftmine:block/beehive_side",
+    "east": "kraftmine:block/beehive_side",
+    "south": "kraftmine:block/beehive_side",
+    "west": "kraftmine:block/beehive_side",
+    "particle": "kraftmine:block/beehive_side"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:diamondsaber",
+    "kraftmine:saber_red",
+    "kraftmine:saber_green",
+    "kraftmine:saber_purple",
+    "kraftmine:saber_white",
+    "kraftmine:saber_yellow",
+    "kraftmine:saber_orange"
+  ]
+}

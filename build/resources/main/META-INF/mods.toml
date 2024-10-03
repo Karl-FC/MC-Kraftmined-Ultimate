@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="kraftmine"
+version="1.2.0"
+displayName="Kraftmine"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+authors="RealAwesomeSkeleton, MCreator"
+description='''
+Ginawa ko tong mod few years ago. Try niyo nga mag survival dito? HAHAHA
+'''
+
+[[dependencies.kraftmine]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

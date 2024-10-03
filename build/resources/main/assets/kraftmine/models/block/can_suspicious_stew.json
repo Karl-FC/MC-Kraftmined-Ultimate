@@ -1,0 +1,9 @@
+{
+  "parent": "kraftmine:custom/empty_can",
+  "textures": {
+    "all": "kraftmine:block/lucky_block",
+    "particle": "kraftmine:block/lucky_block",
+    "0": "kraftmine:block/can_empty"
+  },
+  "render_type": "solid"
+}

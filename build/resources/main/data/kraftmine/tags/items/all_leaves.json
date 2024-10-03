@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:acacia_leaves",
+    "minecraft:azalea_leaves",
+    "minecraft:spruce_leaves",
+    "minecraft:big_dripleaf",
+    "kraftmine:deadwood_leaves",
+    "kraftmine:mahogany_leaves",
+    "kraftmine:palm_wood_leaves",
+    "minecraft:birch_leaves",
+    "kraftmine:cherry_leaves",
+    "minecraft:small_dripleaf",
+    "minecraft:jungle_leaves",
+    "minecraft:dark_oak_leaves",
+    "minecraft:flowering_azalea_leaves",
+    "minecraft:oak_leaves"
+  ]
+}

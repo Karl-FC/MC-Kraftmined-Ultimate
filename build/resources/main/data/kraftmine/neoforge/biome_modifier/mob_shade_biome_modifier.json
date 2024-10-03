@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "dripstone_caves",
+    "dark_forest"
+  ],
+  "spawners": {
+    "type": "kraftmine:mob_shade",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}
