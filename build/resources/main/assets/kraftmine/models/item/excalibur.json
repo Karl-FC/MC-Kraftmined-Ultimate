@@ -1,8 +1,0 @@
-{
-  "parent": "kraftmine:custom/excalibur",
-  "textures": {
-    "0": "kraftmine:blocks/iron_sword",
-    "1": "kraftmine:blocks/chiseled_stonebricks",
-    "particle": "kraftmine:items/titanium_ingot"
-  }
-}

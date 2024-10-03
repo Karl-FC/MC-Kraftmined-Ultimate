@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "experience": 1,
-  "cookingtime": 100,
-  "ingredient": {
-    "tag": "minecraft:saplings"
-  },
-  "result": "minecraft:dead_bush"
-}

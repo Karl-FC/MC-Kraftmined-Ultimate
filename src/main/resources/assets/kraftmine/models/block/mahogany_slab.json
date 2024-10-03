@@ -1,9 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "kraftmine:blocks/mahogany_planks",
-    "top": "kraftmine:blocks/mahogany_planks",
-    "side": "kraftmine:blocks/mahogany_planks"
-  },
-  "render_type": "solid"
-}

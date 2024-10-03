@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmine:blocks/aluminum_ore_block",
-    "particle": "kraftmine:blocks/aluminum_ore_block"
-  },
-  "render_type": "solid"
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "kraftmine:blocks/palmwood_planks",
-    "top": "kraftmine:blocks/palmwood_planks",
-    "side": "kraftmine:blocks/palmwood_planks"
-  },
-  "render_type": "solid"
-}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "kraftmine:eerie",
-  "features": "kraftmine:graveyard",
-  "step": "surface_structures"
-}

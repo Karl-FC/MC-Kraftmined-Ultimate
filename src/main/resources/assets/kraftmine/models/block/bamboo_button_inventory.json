@@ -1,7 +1,0 @@
-{
-  "parent": "block/button_inventory",
-  "textures": {
-    "texture": "kraftmine:blocks/bamboo_planks"
-  },
-  "render_type": "solid"
-}

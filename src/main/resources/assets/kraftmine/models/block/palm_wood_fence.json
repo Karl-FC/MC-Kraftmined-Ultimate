@@ -1,8 +1,0 @@
-{
-  "parent": "block/fence_side",
-  "textures": {
-    "texture": "kraftmine:blocks/palmwood_planks",
-    "particle": "kraftmine:blocks/palmwood_planks"
-  },
-  "render_type": "cutout"
-}

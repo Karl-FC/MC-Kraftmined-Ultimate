@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmine:blocks/palmwood_log_side",
-    "particle": "kraftmine:blocks/palmwood_log_side"
-  },
-  "render_type": "solid"
-}

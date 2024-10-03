@@ -1,9 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "kraftmine:blocks/cherry_planks",
-    "top": "kraftmine:blocks/cherry_planks",
-    "side": "kraftmine:blocks/cherry_planks"
-  },
-  "render_type": "solid"
-}

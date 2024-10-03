@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmine:blocks/bamboo_planks",
-    "particle": "kraftmine:blocks/bamboo_planks"
-  },
-  "render_type": "solid"
-}

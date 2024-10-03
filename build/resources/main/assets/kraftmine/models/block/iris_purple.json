@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "kraftmine:blocks/flower_iris",
-    "particle": "kraftmine:blocks/flower_iris"
-  },
-  "render_type": "cutout"
-}
