@@ -5,8 +5,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.component.DataComponents;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class ClayWaterBottleItemIsCraftedsmeltedProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)

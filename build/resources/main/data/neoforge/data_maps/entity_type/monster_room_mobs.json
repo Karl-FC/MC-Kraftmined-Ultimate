@@ -41,6 +41,9 @@
     },
     "kraftmine:creep": {
       "weight": 100
+    },
+    "kraftmine:beanie": {
+      "weight": 100
     }
   }
 }

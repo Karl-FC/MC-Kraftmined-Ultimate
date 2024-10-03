@@ -17,8 +17,6 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

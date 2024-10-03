@@ -13,8 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

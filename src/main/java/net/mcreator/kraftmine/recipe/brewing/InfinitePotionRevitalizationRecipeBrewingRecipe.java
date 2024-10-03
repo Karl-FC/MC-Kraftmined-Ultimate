@@ -16,8 +16,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.Holder;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import java.util.Optional;
 
 @EventBusSubscriber

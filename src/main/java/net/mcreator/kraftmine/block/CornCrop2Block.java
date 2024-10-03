@@ -29,7 +29,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.kraftmine.procedures.CornUpdateTickProcedure;
 import net.mcreator.kraftmine.procedures.CornStage0BlockValidPlacementConditionProcedure;
 import net.mcreator.kraftmine.procedures.CornBoneMealProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.block.entity.CornCrop2BlockEntity;
 
 public class CornCrop2Block extends FlowerBlock implements EntityBlock {

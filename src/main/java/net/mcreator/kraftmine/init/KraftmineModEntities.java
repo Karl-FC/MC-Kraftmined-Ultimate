@@ -93,6 +93,7 @@ import net.mcreator.kraftmine.entity.BladeRazorProjectileEntity;
 import net.mcreator.kraftmine.entity.BladeOfDespairProjectileEntity;
 import net.mcreator.kraftmine.entity.BeetzookaProjectileEntity;
 import net.mcreator.kraftmine.entity.BeetsniperProjectileEntity;
+import net.mcreator.kraftmine.entity.BeanieEntity;
 import net.mcreator.kraftmine.entity.AnomalyEntity;
 import net.mcreator.kraftmine.entity.AmongamiteEntity;
 import net.mcreator.kraftmine.KraftmineMod;
@@ -331,6 +332,10 @@ public class KraftmineModEntities {
 			EntityType.Builder.<FireScepterProjectileEntity>of(FireScepterProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TheSwitcherProjectileEntity>> THE_SWITCHER_PROJECTILE = register("the_switcher_projectile",
 			EntityType.Builder.<TheSwitcherProjectileEntity>of(TheSwitcherProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BeanieEntity>> BEANIE = register("beanie",
+			EntityType.Builder.<BeanieEntity>of(BeanieEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -399,6 +404,7 @@ public class KraftmineModEntities {
 		StoneSpearThrownEntity.init(event);
 		IronSpearEntityEntity.init(event);
 		JockeyTowerEntity.init(event);
+		BeanieEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -464,5 +470,6 @@ public class KraftmineModEntities {
 		event.put(STONE_SPEAR_THROWN.get(), StoneSpearThrownEntity.createAttributes().build());
 		event.put(IRON_SPEAR_ENTITY.get(), IronSpearEntityEntity.createAttributes().build());
 		event.put(JOCKEY_TOWER.get(), JockeyTowerEntity.createAttributes().build());
+		event.put(BEANIE.get(), BeanieEntity.createAttributes().build());
 	}
 }

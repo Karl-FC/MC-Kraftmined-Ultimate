@@ -12,7 +12,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.CupDrinkGlassProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WaterCupGlassItem extends Item {
 	public WaterCupGlassItem() {

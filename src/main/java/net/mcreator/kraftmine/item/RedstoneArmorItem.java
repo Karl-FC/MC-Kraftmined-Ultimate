@@ -21,7 +21,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.Util;
 
 import net.mcreator.kraftmine.procedures.RedstoneArmorHelmetTickEventProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 import java.util.List;
 import java.util.EnumMap;

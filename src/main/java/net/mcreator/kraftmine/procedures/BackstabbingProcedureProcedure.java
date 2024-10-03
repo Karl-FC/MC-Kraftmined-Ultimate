@@ -18,8 +18,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

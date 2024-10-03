@@ -25,7 +25,6 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.Util;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.client.model.Modelcone;
 
 import java.util.Map;

@@ -13,8 +13,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class StickOfDeathLivingEntityIsHitWithToolProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, ItemStack itemstack) {
 		if (entity == null || sourceentity == null)

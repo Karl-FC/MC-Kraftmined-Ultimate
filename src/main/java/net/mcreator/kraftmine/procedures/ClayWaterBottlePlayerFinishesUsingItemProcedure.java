@@ -13,8 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.component.DataComponents;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

@@ -20,7 +20,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.BladeRazorProjectileHitsBlockProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 import javax.annotation.Nullable;

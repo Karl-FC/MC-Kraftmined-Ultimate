@@ -17,8 +17,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class QuiverArmorProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)

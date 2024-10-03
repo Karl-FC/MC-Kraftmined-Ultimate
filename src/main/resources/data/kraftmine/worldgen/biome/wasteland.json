@@ -48,7 +48,7 @@
         "maxCount": 1
       },
       {
-        "type": "kraftmine:mob_amogus",
+        "type": "kraftmine:beanie",
         "weight": 8,
         "minCount": 4,
         "maxCount": 8

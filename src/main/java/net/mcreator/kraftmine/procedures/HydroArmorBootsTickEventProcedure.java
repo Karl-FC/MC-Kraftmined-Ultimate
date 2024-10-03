@@ -11,7 +11,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class HydroArmorBootsTickEventProcedure {

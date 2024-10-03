@@ -15,7 +15,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
 import net.mcreator.kraftmine.procedures.SaberOffhandProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class SaberYellowItem extends SwordItem {
 	private static final Tier TOOL_TIER = new Tier() {

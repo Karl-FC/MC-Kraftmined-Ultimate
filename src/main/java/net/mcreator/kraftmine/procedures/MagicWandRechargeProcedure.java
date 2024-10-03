@@ -16,8 +16,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

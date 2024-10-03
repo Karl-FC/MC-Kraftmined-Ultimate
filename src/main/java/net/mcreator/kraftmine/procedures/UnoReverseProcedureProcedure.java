@@ -23,8 +23,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

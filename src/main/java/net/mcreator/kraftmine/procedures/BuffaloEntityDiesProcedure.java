@@ -6,7 +6,6 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.entity.BuffaloEntity;
 
 public class BuffaloEntityDiesProcedure {

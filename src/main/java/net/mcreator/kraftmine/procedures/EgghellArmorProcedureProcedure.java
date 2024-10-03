@@ -7,8 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class EgghellArmorProcedureProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)

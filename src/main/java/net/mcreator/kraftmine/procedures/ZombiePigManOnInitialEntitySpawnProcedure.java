@@ -13,7 +13,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.entity.ZombiePigManEntity;
 
 public class ZombiePigManOnInitialEntitySpawnProcedure {

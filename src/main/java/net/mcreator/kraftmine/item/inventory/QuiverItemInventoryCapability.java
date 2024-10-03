@@ -12,7 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.client.gui.QuiverguiScreen;
 
 import javax.annotation.Nonnull;

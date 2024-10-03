@@ -33,7 +33,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.Util;
 
 import net.mcreator.kraftmine.procedures.QuiverArmorProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.client.model.Modelquiver;
 
 import java.util.Map;

@@ -16,7 +16,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class InfinitePotionRevitalizationPlayerFinishesUsingItemProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {

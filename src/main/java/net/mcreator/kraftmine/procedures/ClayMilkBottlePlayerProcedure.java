@@ -14,8 +14,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class ClayMilkBottlePlayerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)

@@ -26,26 +26,8 @@
   "spawners": {
     "monster": [
       {
-        "type": "kraftmine:mob_amogus_blue",
-        "weight": 20,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "kraftmine:mob_amogus_green",
-        "weight": 20,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "kraftmine:mob_amogus_grey",
-        "weight": 20,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "kraftmine:mob_amogus",
-        "weight": 20,
+        "type": "kraftmine:beanie",
+        "weight": 3,
         "minCount": 1,
         "maxCount": 1
       },

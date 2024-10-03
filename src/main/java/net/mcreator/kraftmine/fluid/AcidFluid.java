@@ -11,7 +11,6 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleOptions;
 
 import net.mcreator.kraftmine.init.KraftmineModParticleTypes;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModFluids;
 import net.mcreator.kraftmine.init.KraftmineModFluidTypes;
 import net.mcreator.kraftmine.init.KraftmineModBlocks;

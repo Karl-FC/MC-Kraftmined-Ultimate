@@ -1,16 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Crtab",
-      "type": "tab",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crtab",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
       "name": "MobAmogus",
       "type": "livingentity",
       "compiles": true,
@@ -4783,53 +4773,6 @@
       }
     },
     {
-      "name": "AmogusSpawnEggRightclickedOnBlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amogus_spawn_egg_rightclicked_on_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmine/procedures/AmogusSpawnEggRightclickedOnBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "AmogusSpawnEgg",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amogus_spawn_egg",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmine/item/AmogusSpawnEggItem.java",
-          "src/main/resources/assets/kraftmine/models/item/amogus_spawn_egg.json"
-        ]
-      }
-    },
-    {
       "name": "Refreshed",
       "type": "potioneffect",
       "compiles": true,
@@ -5173,7 +5116,7 @@
     {
       "name": "MobBig",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "mob_big",
       "metadata": {
@@ -9285,7 +9228,7 @@
     {
       "name": "CoconutBlock",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "coconut_block",
       "metadata": {
@@ -9740,8 +9683,14 @@
       "name": "Herobrine",
       "type": "livingentity",
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "herobrine"
+      "locked_code": false,
+      "registry_name": "herobrine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmine/entity/HerobrineEntity.java",
+          "src/main/java/net/mcreator/kraftmine/client/renderer/HerobrineRenderer.java"
+        ]
+      }
     },
     {
       "name": "HerobrineOnEntityTickUpdate",
@@ -11554,7 +11503,7 @@
     {
       "name": "CornCrop0",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_0",
       "metadata": {
@@ -11575,7 +11524,7 @@
     {
       "name": "CornCrop1",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_1",
       "metadata": {
@@ -11627,7 +11576,7 @@
     {
       "name": "CornCrop2",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_2",
       "metadata": {
@@ -11673,7 +11622,7 @@
     {
       "name": "TomatoBush",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush",
       "metadata": {
@@ -11725,7 +11674,7 @@
     {
       "name": "TomatoBush1",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_1",
       "metadata": {
@@ -11746,7 +11695,7 @@
     {
       "name": "TomatoBush2",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_2",
       "metadata": {
@@ -11767,7 +11716,7 @@
     {
       "name": "TomatoBush3",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_3",
       "metadata": {
@@ -13311,16 +13260,6 @@
         "files": [
           "src/main/resources/data/kraftmine/recipe/egghell_armor_boots_recipe.json"
         ]
-      }
-    },
-    {
-      "name": "Crtabcombat",
-      "type": "tab",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crtabcombat",
-      "metadata": {
-        "files": []
       }
     },
     {
@@ -15834,7 +15773,7 @@
     {
       "name": "Skeleturtle",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "skeleturtle",
       "metadata": {
@@ -18664,7 +18603,7 @@
     {
       "name": "Acid",
       "type": "fluid",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "acid",
       "metadata": {
@@ -20743,7 +20682,7 @@
     {
       "name": "RangedTomatoProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ranged_tomato_projectile",
       "metadata": {
@@ -20768,7 +20707,7 @@
     {
       "name": "BladeRazorProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blade_razor_projectile",
       "metadata": {
@@ -20794,7 +20733,7 @@
     {
       "name": "BladeOfDespairProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blade_of_despair_projectile",
       "metadata": {
@@ -20836,7 +20775,7 @@
     {
       "name": "PopCornProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pop_corn_projectile",
       "metadata": {
@@ -21049,7 +20988,7 @@
     {
       "name": "StonespearProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "stonespear_projectile",
       "metadata": {
@@ -21106,7 +21045,7 @@
     {
       "name": "CocaColaGrenadeProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "coca_cola_grenade_projectile",
       "metadata": {
@@ -21131,7 +21070,7 @@
     {
       "name": "IronSpearProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "iron_spear_projectile",
       "metadata": {
@@ -21182,7 +21121,7 @@
     {
       "name": "BeetzookaProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "beetzooka_projectile",
       "metadata": {
@@ -21208,7 +21147,7 @@
     {
       "name": "TomatoShurikenProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_shuriken_projectile",
       "metadata": {
@@ -21258,7 +21197,7 @@
     {
       "name": "IceWandProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ice_wand_projectile",
       "metadata": {
@@ -21283,7 +21222,7 @@
     {
       "name": "LightningRodProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lightning_rod_projectile",
       "metadata": {
@@ -21308,7 +21247,7 @@
     {
       "name": "FireScepterProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "fire_scepter_projectile",
       "metadata": {
@@ -21333,7 +21272,7 @@
     {
       "name": "TheSwitcherProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "the_switcher_projectile",
       "metadata": {
@@ -21352,6 +21291,20 @@
         "files": [
           "src/main/resources/assets/kraftmine/models/item/the_switcher.json",
           "src/main/java/net/mcreator/kraftmine/item/TheSwitcherItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Beanie",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beanie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmine/neoforge/biome_modifier/beanie_biome_modifier.json",
+          "src/main/java/net/mcreator/kraftmine/client/renderer/BeanieRenderer.java",
+          "src/main/java/net/mcreator/kraftmine/entity/BeanieEntity.java"
         ]
       }
     }
@@ -22396,8 +22349,20 @@
   ],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Acid",
+      "~CUSTOM:CornCrop2",
+      "~CUSTOM:CornCrop1",
+      "~CUSTOM:CornCrop0",
+      "~CUSTOM:GlowShroom",
       "~CUSTOM:MilkBucket",
       "~CUSTOM:Cloud"
+    ],
+    "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:Swiftfooted",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:STAB",
+      "~CUSTOM:Lifesteal"
     ],
     "ITEMS:forge:pigman_main_hand": [
       "Items.GOLDEN_SWORD",
@@ -22436,6 +22401,9 @@
       "~CUSTOM:Wasteland"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:DriedLeaves",
+      "~CUSTOM:Wallnut",
+      "~CUSTOM:Aetherancientdebris",
       "~CUSTOM:LegoBlock"
     ],
     "ITEMS:forge:hydrated": [
@@ -22463,6 +22431,7 @@
       "CUSTOM:CrystalDark"
     ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:DeadwoodStairs",
       "~CUSTOM:PalmWoodStairs",
       "~CUSTOM:BambooStairs",
       "~CUSTOM:CherryStairs",
@@ -22553,8 +22522,26 @@
       "Blocks.ROOTED_DIRT"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:DeepslateTitaniumOre",
+      "~CUSTOM:TitaniumBlock",
+      "~CUSTOM:TitaniumOre",
+      "~CUSTOM:DeepslateTungstenOre",
       "~CUSTOM:TungstenBlock",
       "~CUSTOM:TungstenOre"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:PlasticBlock",
+      "~CUSTOM:PlasticOre",
+      "~CUSTOM:CloudRubyOre",
+      "~CUSTOM:CloudSapphireOre",
+      "~CUSTOM:SaphhireBlock",
+      "~CUSTOM:SaphhireOre",
+      "~CUSTOM:RubyBlock",
+      "~CUSTOM:RubyOre",
+      "~CUSTOM:AluminumBlock",
+      "~CUSTOM:AluminumOre",
+      "~CUSTOM:NickelBlock",
+      "~CUSTOM:NickelOre"
     ],
     "BLOCKS:forge:bug_lights": [
       "Blocks.TORCH",
@@ -22581,12 +22568,14 @@
       "CUSTOM:ObsidianArmor.boots"
     ],
     "BIOMES:minecraft:has_structure/shipwreck_beached": [
+      "~CUSTOM:GlowShroomBiome",
       "~CUSTOM:Wasteland"
     ],
     "BIOMES:minecraft:has_structure/village_taiga": [
       "~CUSTOM:Sakura"
     ],
     "BLOCKS:minecraft:fences": [
+      "~CUSTOM:DeadwoodFence",
       "CUSTOM:MahoganyFence",
       "CUSTOM:CherryFence",
       "CUSTOM:BambooFence",
@@ -22733,6 +22722,7 @@
       "Items.NETHERITE_BOOTS"
     ],
     "BIOMES:minecraft:has_structure/stronghold": [
+      "~CUSTOM:GlowShroomBiome",
       "~CUSTOM:Sakura",
       "~CUSTOM:Eerie"
     ],
@@ -22805,7 +22795,13 @@
       "CUSTOM:DripArmor.legs",
       "CUSTOM:DripArmor.boots"
     ],
+    "ENTITIES:minecraft:aquatic": [
+      "~CUSTOM:Skeleturtle",
+      "~CUSTOM:Catfish",
+      "~CUSTOM:GiantSquid"
+    ],
     "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:DeadwoodSlab",
       "~CUSTOM:PalmWoodSlab",
       "~CUSTOM:BambooSlab",
       "~CUSTOM:CherrySlab",
@@ -22820,6 +22816,9 @@
     "ITEMS:forge:palmwood_log": [
       "CUSTOM:PalmWoodWood",
       "CUSTOM:PalmWoodLog"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:GlowShroomBiome"
     ],
     "ITEMS:minecraft:planks": [
       "CUSTOM:MahoganyPlanks",
@@ -22866,6 +22865,12 @@
       "CUSTOM:MobShade"
     ],
     "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:GlassPickaxe",
+      "~CUSTOM:PrismarinePickaxe",
+      "~CUSTOM:SandstonePickaxe",
+      "~CUSTOM:IcePickaxe",
+      "~CUSTOM:PlasticPickaxe",
+      "~CUSTOM:ObsidiantoolsPickaxe",
       "~CUSTOM:BambooPickaxe",
       "~CUSTOM:TungstenPickaxe"
     ],
@@ -22896,6 +22901,13 @@
       "Items.ARROW"
     ],
     "ITEMS:minecraft:shovels": [
+      "~CUSTOM:GlassShovel",
+      "~CUSTOM:PrismarineShovel",
+      "~CUSTOM:SandstoneShovel",
+      "~CUSTOM:IceShovel",
+      "~CUSTOM:PlasticShovel",
+      "~CUSTOM:ObsidiantoolsShovel",
+      "~CUSTOM:Dirtrod",
       "~CUSTOM:BambooShovel",
       "~CUSTOM:TungstenShovel"
     ],
@@ -22908,6 +22920,27 @@
       "CUSTOM:MobAmogus"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:GigaArmor.body",
+      "~CUSTOM:LavaArmor.body",
+      "~CUSTOM:HydroArmor.body",
+      "~CUSTOM:PrismarineArmor.body",
+      "~CUSTOM:GhillieSuit.body",
+      "~CUSTOM:PlasticArmor.body",
+      "~CUSTOM:PlateArmor.body",
+      "~CUSTOM:StuddedArmor.body",
+      "~CUSTOM:CondensedArmor.body",
+      "~CUSTOM:EgghellArmor.body",
+      "~CUSTOM:EggArmor.body",
+      "~CUSTOM:WoodArmor.body",
+      "~CUSTOM:TNTArmor.body",
+      "~CUSTOM:CactusArmor.body",
+      "~CUSTOM:Quiver.body",
+      "~CUSTOM:CursedIronArmor.body",
+      "~CUSTOM:RedstoneArmor.body",
+      "~CUSTOM:LapisLazuliArmor.body",
+      "~CUSTOM:CarbonArmor.body",
+      "~CUSTOM:TitaniumArmor.body",
+      "~CUSTOM:NickelArmor.body",
       "~CUSTOM:DripArmor.body",
       "~CUSTOM:ObsidianArmor.body",
       "~CUSTOM:TungstenArmor.body"
@@ -22918,6 +22951,34 @@
       "CUSTOM:ClayMilkBottle",
       "CUSTOM:ClayWaterBottle23",
       "CUSTOM:ClayWaterBottle13"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:DriedLeaves",
+      "~CUSTOM:DeadwoodLeaves"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:TheSwitcher",
+      "~CUSTOM:LightningRod",
+      "~CUSTOM:Beetsniper",
+      "~CUSTOM:Beetzooka",
+      "~CUSTOM:MPPotato",
+      "~CUSTOM:Meteorite",
+      "~CUSTOM:SeedMachineGun",
+      "~CUSTOM:PopCorn",
+      "~CUSTOM:BladeOfDespair",
+      "~CUSTOM:PlasticWaterBottle15",
+      "~CUSTOM:PlasticWaterBottle25",
+      "~CUSTOM:PlasticWaterBottle35",
+      "~CUSTOM:PlasticWaterBottle45",
+      "~CUSTOM:PlasticWaterBottle",
+      "~CUSTOM:ClayWaterBottle13",
+      "~CUSTOM:ClayWaterBottle23",
+      "~CUSTOM:CookedDrumstick",
+      "~CUSTOM:Drumstick",
+      "~CUSTOM:ClayMilkBottle",
+      "~CUSTOM:ClayWaterBottle",
+      "~CUSTOM:TimeShard",
+      "~CUSTOM:WarpStar"
     ],
     "BIOMES:minecraft:has_structure/woodland_mansion": [
       "~CUSTOM:Sakura",
@@ -22938,6 +22999,7 @@
       "CUSTOM:DeadwoodLeaves"
     ],
     "BIOMES:minecraft:has_structure/mineshaft_mesa": [
+      "~CUSTOM:GlowShroomBiome",
       "~CUSTOM:Eerie",
       "~CUSTOM:Wasteland"
     ],
@@ -22961,7 +23023,17 @@
       "Blocks.STRIPPED_ACACIA_WOOD",
       "Blocks.STRIPPED_DARK_OAK_WOOD"
     ],
+    "BIOMES:minecraft:has_structure/shipwreck": [
+      "~CUSTOM:GlowShroomBiome"
+    ],
     "ITEMS:minecraft:axes": [
+      "~CUSTOM:GlassAxe",
+      "~CUSTOM:PrismarineAxe",
+      "~CUSTOM:SandstoneAxe",
+      "~CUSTOM:IceAxe",
+      "~CUSTOM:PlasticAxe",
+      "~CUSTOM:NetheriteBattleAxe",
+      "~CUSTOM:ObsidiantoolsAxe",
       "~CUSTOM:BambooAxe",
       "~CUSTOM:TungstenAxe"
     ],
@@ -23008,11 +23080,41 @@
       "Blocks.FARMLAND"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:GigaArmor.helmet",
+      "~CUSTOM:LavaArmor.helmet",
+      "~CUSTOM:HydroArmor.helmet",
+      "~CUSTOM:PrismarineArmor.helmet",
+      "~CUSTOM:GhillieSuit.helmet",
+      "~CUSTOM:PlasticArmor.helmet",
+      "~CUSTOM:RoadCone.helmet",
+      "~CUSTOM:PlateArmor.helmet",
+      "~CUSTOM:StuddedArmor.helmet",
+      "~CUSTOM:CondensedArmor.helmet",
+      "~CUSTOM:EgghellArmor.helmet",
+      "~CUSTOM:EggArmor.helmet",
+      "~CUSTOM:WoodArmor.helmet",
+      "~CUSTOM:TNTArmor.helmet",
+      "~CUSTOM:CactusArmor.helmet",
+      "~CUSTOM:CursedIronArmor.helmet",
+      "~CUSTOM:DepressureHelmet.helmet",
+      "~CUSTOM:RedstoneArmor.helmet",
+      "~CUSTOM:LapisLazuliArmor.helmet",
+      "~CUSTOM:CarbonArmor.helmet",
+      "~CUSTOM:TitaniumArmor.helmet",
+      "~CUSTOM:NickelArmor.helmet",
+      "~CUSTOM:Eyepatch.helmet",
       "~CUSTOM:DripArmor.helmet",
       "~CUSTOM:ObsidianArmor.helmet",
       "~CUSTOM:TungstenArmor.helmet"
     ],
     "ENTITIES:minecraft:undead": [
+      "~CUSTOM:Creepest",
+      "~CUSTOM:Iceologer",
+      "~CUSTOM:Sleuth",
+      "~CUSTOM:Anomaly",
+      "~CUSTOM:ZombiePigMan",
+      "~CUSTOM:MobShade",
+      "~CUSTOM:MobFloatingEye",
       "~CUSTOM:GiantAI",
       "~CUSTOM:Sirenhead"
     ],
@@ -23048,6 +23150,24 @@
       "CUSTOM:CondensedArmor.boots",
       "CUSTOM:StuddedArmor.boots"
     ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:BonusStrike",
+      "~CUSTOM:MagicianSecret",
+      "~CUSTOM:Superstitious",
+      "~CUSTOM:Antibac",
+      "~CUSTOM:Committed",
+      "~CUSTOM:Holdup",
+      "~CUSTOM:Slicing",
+      "~CUSTOM:Stunning",
+      "~CUSTOM:BleedingEdge",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Conjuring",
+      "~CUSTOM:Reconstruction",
+      "~CUSTOM:DyingPan",
+      "~CUSTOM:BaneofMetapod",
+      "~CUSTOM:SaberSwing"
+    ],
     "ENTITIES:forge:nextbot_tags": [
       "CUSTOM:Nextbot1",
       "CUSTOM:Nextbot10",
@@ -23062,6 +23182,8 @@
       "CUSTOM:Nextbot9"
     ],
     "ENTITIES:minecraft:arthropod": [
+      "~CUSTOM:Wasp",
+      "~CUSTOM:GhostSpiderMutant",
       "~CUSTOM:GhostSpider"
     ],
     "ITEMS:forge:pigman_armor_0": [
@@ -23074,6 +23196,7 @@
       "Blocks.AIR"
     ],
     "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:GlowShroomBiome",
       "~CUSTOM:Wasteland"
     ],
     "ITEMS:forge:pigman_armor_1": [
@@ -23086,6 +23209,12 @@
       "Blocks.AIR"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:CoarseGrassBlock",
+      "~Blocks.DIRT#1",
+      "~Blocks.STONE#0",
+      "~CUSTOM:CloudBlockRain",
+      "~CUSTOM:Cloud",
+      "~CUSTOM:WallBlock",
       "~Blocks.AIR"
     ],
     "ITEMS:forge:pigman_armor_2": [
@@ -23096,6 +23225,28 @@
       "Items.NETHERITE_CHESTPLATE",
       "CUSTOM:ObsidianArmor.body",
       "Blocks.AIR"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:BonusStrike",
+      "~CUSTOM:MagicianSecret",
+      "~CUSTOM:Superstitious",
+      "~CUSTOM:Swiftfooted",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:Antibac",
+      "~CUSTOM:Committed",
+      "~CUSTOM:Holdup",
+      "~CUSTOM:STAB",
+      "~CUSTOM:Slicing",
+      "~CUSTOM:Stunning",
+      "~CUSTOM:BleedingEdge",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Conjuring",
+      "~CUSTOM:Reconstruction",
+      "~CUSTOM:DyingPan",
+      "~CUSTOM:BaneofMetapod",
+      "~CUSTOM:SaberSwing"
     ],
     "ITEMS:forge:pigman_armor_3": [
       "CUSTOM:ObsidianArmor.helmet",
@@ -23113,6 +23264,23 @@
       "CUSTOM:TheSwitcher"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:PlasticBlock",
+      "~CUSTOM:PlasticOre",
+      "~CUSTOM:CloudRubyOre",
+      "~CUSTOM:CloudSapphireOre",
+      "~CUSTOM:Aetherancientdebris",
+      "~CUSTOM:SaphhireBlock",
+      "~CUSTOM:SaphhireOre",
+      "~CUSTOM:RubyBlock",
+      "~CUSTOM:RubyOre",
+      "~CUSTOM:DeepslateTitaniumOre",
+      "~CUSTOM:TitaniumBlock",
+      "~CUSTOM:TitaniumOre",
+      "~CUSTOM:DeepslateTungstenOre",
+      "~CUSTOM:AluminumBlock",
+      "~CUSTOM:AluminumOre",
+      "~CUSTOM:NickelBlock",
+      "~CUSTOM:NickelOre",
       "~CUSTOM:LegoBlock",
       "~CUSTOM:TungstenBlock",
       "~CUSTOM:TungstenOre"
@@ -23125,14 +23293,40 @@
       "CUSTOM:SandstoneHoe"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:GigaArmor.boots",
+      "~CUSTOM:LavaArmor.boots",
+      "~CUSTOM:HydroArmor.boots",
+      "~CUSTOM:PrismarineArmor.boots",
+      "~CUSTOM:GhillieSuit.boots",
+      "~CUSTOM:PlasticArmor.boots",
+      "~CUSTOM:StuddedArmor.boots",
+      "~CUSTOM:CondensedArmor.boots",
+      "~CUSTOM:EgghellArmor.boots",
+      "~CUSTOM:EggArmor.boots",
+      "~CUSTOM:WoodArmor.boots",
+      "~CUSTOM:TNTArmor.boots",
+      "~CUSTOM:CactusArmor.boots",
+      "~CUSTOM:CursedIronArmor.boots",
+      "~CUSTOM:RedstoneArmor.boots",
+      "~CUSTOM:LapisLazuliArmor.boots",
+      "~CUSTOM:CarbonArmor.boots",
+      "~CUSTOM:TitaniumArmor.boots",
+      "~CUSTOM:NickelArmor.boots",
       "~CUSTOM:DripArmor.boots",
       "~CUSTOM:ObsidianArmor.boots",
       "~CUSTOM:TungstenArmor.boots"
     ],
+    "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:Backstabbing"
+    ],
     "BIOMES:minecraft:has_structure/buried_treasure": [
+      "~CUSTOM:GlowShroomBiome",
       "~CUSTOM:Sakura",
       "~CUSTOM:Wasteland",
       "~CUSTOM:AetherBiome"
+    ],
+    "BIOMES:minecraft:has_structure/ruined_portal_mountain": [
+      "~CUSTOM:GlowShroomBiome"
     ],
     "ITEMS:mod:shards": [
       "CUSTOM:PositioningShard",
@@ -23152,6 +23346,12 @@
       "CUSTOM:NethersWrath"
     ],
     "ITEMS:minecraft:hoes": [
+      "~CUSTOM:GlassHoe",
+      "~CUSTOM:PrismarineHoe",
+      "~CUSTOM:SandstoneHoe",
+      "~CUSTOM:IceHoe",
+      "~CUSTOM:PlasticHoe",
+      "~CUSTOM:ObsidiantoolsHoe",
       "~CUSTOM:BambooHoe",
       "~CUSTOM:TungstenHoe"
     ],
@@ -23171,6 +23371,27 @@
       "CUSTOM:DeadwoodPlanks"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Excalibur",
+      "~CUSTOM:WoodenBat",
+      "~CUSTOM:Dagger",
+      "~CUSTOM:PlasticGlaive",
+      "~CUSTOM:PlasticCutlass",
+      "~CUSTOM:PlasticKatana",
+      "~CUSTOM:PlasticBroadsword",
+      "~CUSTOM:PlasticClaymore",
+      "~CUSTOM:StickOfDeath",
+      "~CUSTOM:GlassSword",
+      "~CUSTOM:PrismarineSword",
+      "~CUSTOM:SandstoneSword",
+      "~CUSTOM:IceSword",
+      "~CUSTOM:PlasticSword",
+      "~CUSTOM:NethersWrath",
+      "~CUSTOM:TungstenSword",
+      "~CUSTOM:TungstenClaymore",
+      "~CUSTOM:GolemsArm",
+      "~CUSTOM:FireBrand",
+      "~CUSTOM:ObsidiantoolsSword",
+      "~CUSTOM:SaberDark",
       "~CUSTOM:SaberOrange",
       "~CUSTOM:SaberYellow",
       "~CUSTOM:SaberWhite",
@@ -23181,6 +23402,41 @@
       "~CUSTOM:Diamondsaber",
       "~CUSTOM:BambooSword",
       "~CUSTOM:HuskClaw"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:BonusStrike",
+      "~CUSTOM:MagicianSecret",
+      "~CUSTOM:Superstitious",
+      "~CUSTOM:Swiftfooted",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:Antibac",
+      "~CUSTOM:Committed",
+      "~CUSTOM:Holdup",
+      "~CUSTOM:STAB",
+      "~CUSTOM:Slicing",
+      "~CUSTOM:Stunning",
+      "~CUSTOM:BleedingEdge",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Conjuring",
+      "~CUSTOM:Reconstruction",
+      "~CUSTOM:DyingPan",
+      "~CUSTOM:Lifesteal",
+      "~CUSTOM:BaneofMetapod",
+      "~CUSTOM:SaberSwing"
+    ],
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:CookedDrumstick",
+      "~CUSTOM:Drumstick",
+      "~CUSTOM:SpriteCranberry",
+      "~CUSTOM:CookedCarabeef",
+      "~CUSTOM:Carabeef"
+    ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:DiscPvZ",
+      "~CUSTOM:DiscToreadors",
+      "~CUSTOM:MusicDisc0"
     ],
     "BLOCKS:forge:impenetrable": [
       "Blocks.COMMAND_BLOCK",
@@ -23224,6 +23480,11 @@
       "CUSTOM:OmnipotenceShard"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:DeadwoodPlanks",
+      "~CUSTOM:DeadwoodLog",
+      "~CUSTOM:DeadwoodWood",
+      "~CUSTOM:Wallnut",
+      "~CUSTOM:SupplyCrate",
       "~CUSTOM:BambooPlanks",
       "~CUSTOM:CherryPlanks",
       "~CUSTOM:CherryLog",
@@ -23309,9 +23570,33 @@
       "Blocks.AMETHYST_BLOCK"
     ],
     "ENTITIES:minecraft:illager": [
+      "~CUSTOM:Beanie",
+      "~CUSTOM:PlagueWitch",
+      "~CUSTOM:MobAmogusGreen",
+      "~CUSTOM:MobAmogusGrey",
+      "~CUSTOM:MobAmogusBlue",
       "~CUSTOM:MobAmogus"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:GigaArmor.legs",
+      "~CUSTOM:LavaArmor.legs",
+      "~CUSTOM:HydroArmor.legs",
+      "~CUSTOM:PrismarineArmor.legs",
+      "~CUSTOM:GhillieSuit.legs",
+      "~CUSTOM:PlasticArmor.legs",
+      "~CUSTOM:StuddedArmor.legs",
+      "~CUSTOM:CondensedArmor.legs",
+      "~CUSTOM:EgghellArmor.legs",
+      "~CUSTOM:EggArmor.legs",
+      "~CUSTOM:WoodArmor.legs",
+      "~CUSTOM:TNTArmor.legs",
+      "~CUSTOM:CactusArmor.legs",
+      "~CUSTOM:CursedIronArmor.legs",
+      "~CUSTOM:RedstoneArmor.legs",
+      "~CUSTOM:LapisLazuliArmor.legs",
+      "~CUSTOM:CarbonArmor.legs",
+      "~CUSTOM:TitaniumArmor.legs",
+      "~CUSTOM:NickelArmor.legs",
       "~CUSTOM:DripArmor.legs",
       "~CUSTOM:ObsidianArmor.legs",
       "~CUSTOM:TungstenArmor.legs"
@@ -23385,6 +23670,7 @@
       "item.kraftmine.drip_armor_boots": "Drip Shoes",
       "item.minecraft.tipped_arrow.effect.potionof_kung_fu": "Arrow of Kung Fu Master",
       "item.kraftmine.wasp_spawn_egg": "Wasp Spawn Egg",
+      "entity.kraftmine.beanie": "Imposter",
       "fluid.kraftmine.acid": "Acid",
       "item.kraftmine.crystal_blue": "Light Crystal",
       "item.kraftmine.water_cup_mug": "Mug of Water",
@@ -23640,7 +23926,6 @@
       "subtitles.pingu.idle": "NootNoot",
       "item.kraftmine.soul_sight": "Soul of Sight",
       "painting.kraftmine.painting_tall_2.title": "Painting Tall 2",
-      "item.kraftmine.amogus_spawn_egg": "Spawn Amogus",
       "item.kraftmine.glass_shovel": "Glass Shovel",
       "item.kraftmine.clay_bottle": "Clay Bottle",
       "block.kraftmine.tungsten_block": "Block of Tungsten",
@@ -23823,7 +24108,6 @@
       "block.kraftmine.backroom_trigger": "Backroom Trigger",
       "item.kraftmine.obsidian_armor_leggings": "Obsidian Leggings",
       "item.kraftmine.coca_cola_grenade": "Coca-Cola Hand Grenade",
-      "item_group.kraftmine.crtab": "Kraftmined",
       "item.kraftmine.frying_pan": "Frying Pan",
       "item.kraftmine.lightning_rod": "Lightning Rod",
       "subtitles.mob.nextbot.quandale": "",
@@ -23991,7 +24275,6 @@
       "subtitles.music.eerie": "",
       "subtitles.music.classical": "",
       "item.kraftmine.plastic_cutlass": "Plastic Sword",
-      "item.kraftmine.herobrine_spawn_egg": "Herobrine Spawn Egg",
       "effect.kraftmine.helicopter": "Helicopter Helicopter",
       "item.kraftmine.nextbot_spawn_egg": "Spawn Nextbot",
       "item.kraftmine.food_materwelon": "Materwelon",
@@ -24194,7 +24477,6 @@
       "item.kraftmine.condensed_armor_chestplate": "Condensed Chestplate",
       "item.kraftmine.lapis_lazuli_armor_chestplate": "LapisLazuli Chestplate",
       "subtitles.attack.saber": "Saber slashes",
-      "item_group.kraftmine.crtabcombat": "KM: Combat",
       "item.minecraft.lingering_potion.effect.potionof_kung_fu": "Lingering Potion of Kung Fu Master",
       "advancements.mickey_defeat.title": "We\u0027re in the Endgame Now",
       "item.minecraft.tipped_arrow.effect.potion_roasting": "Arrow of Roasting",

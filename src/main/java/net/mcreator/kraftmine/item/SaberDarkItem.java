@@ -17,7 +17,6 @@ import net.minecraft.tags.BlockTags;
 
 import net.mcreator.kraftmine.procedures.SaberhitProcedure;
 import net.mcreator.kraftmine.procedures.SaberOffhandProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class SaberDarkItem extends SwordItem {
 	private static final Tier TOOL_TIER = new Tier() {

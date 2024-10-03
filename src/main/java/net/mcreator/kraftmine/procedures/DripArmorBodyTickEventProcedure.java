@@ -9,7 +9,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class DripArmorBodyTickEventProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {

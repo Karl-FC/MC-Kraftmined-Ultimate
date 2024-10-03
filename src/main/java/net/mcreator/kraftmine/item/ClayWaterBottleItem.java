@@ -16,7 +16,6 @@ import net.minecraft.world.InteractionResult;
 import net.mcreator.kraftmine.procedures.ClaybottleContentProcedure;
 import net.mcreator.kraftmine.procedures.ClayWaterBottleRightclickedOnBlockProcedure;
 import net.mcreator.kraftmine.procedures.ClayWaterBottlePlayerFinishesUsingItemProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class ClayWaterBottleItem extends Item {
 	public ClayWaterBottleItem() {

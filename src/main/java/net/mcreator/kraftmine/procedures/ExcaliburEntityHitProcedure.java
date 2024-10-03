@@ -16,7 +16,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class ExcaliburEntityHitProcedure {

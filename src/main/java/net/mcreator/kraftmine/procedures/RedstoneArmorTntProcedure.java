@@ -17,7 +17,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.KraftmineMod;
 
 import javax.annotation.Nullable;

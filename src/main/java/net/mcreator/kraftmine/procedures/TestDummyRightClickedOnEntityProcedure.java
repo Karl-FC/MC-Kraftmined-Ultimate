@@ -16,8 +16,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class TestDummyRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)

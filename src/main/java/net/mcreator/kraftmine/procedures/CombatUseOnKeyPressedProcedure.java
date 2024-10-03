@@ -15,7 +15,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.world.inventory.QuiverguiMenu;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 import io.netty.buffer.Unpooled;
 

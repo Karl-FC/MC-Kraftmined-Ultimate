@@ -7,8 +7,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class CondensedArmorProcedureTickProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)

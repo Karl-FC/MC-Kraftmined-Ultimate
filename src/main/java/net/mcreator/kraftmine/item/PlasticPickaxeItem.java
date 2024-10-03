@@ -11,8 +11,6 @@ import net.minecraft.world.item.DiggerItem;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class PlasticPickaxeItem extends PickaxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

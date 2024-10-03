@@ -17,7 +17,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.network.KraftmineModVariables;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WarpStarRightclickedProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {

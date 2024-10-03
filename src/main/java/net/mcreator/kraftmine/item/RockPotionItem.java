@@ -11,7 +11,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.RockPotionPlayerFinishesProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class RockPotionItem extends Item {
 	public RockPotionItem() {

@@ -7,8 +7,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.component.DataComponents;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class EyepatchrightDisplayOverlayProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)

@@ -4,8 +4,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class FireBrandLivingEntityIsHitWithToolProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)

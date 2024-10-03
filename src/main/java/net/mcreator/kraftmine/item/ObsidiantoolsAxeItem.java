@@ -11,8 +11,6 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 public class ObsidiantoolsAxeItem extends AxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

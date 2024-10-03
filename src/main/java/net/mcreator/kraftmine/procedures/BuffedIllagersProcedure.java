@@ -26,7 +26,6 @@ import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModGameRules;
 
 import javax.annotation.Nullable;

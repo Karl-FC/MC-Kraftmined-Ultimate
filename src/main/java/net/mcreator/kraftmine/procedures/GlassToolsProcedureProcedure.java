@@ -11,8 +11,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import javax.annotation.Nullable;
 
 @EventBusSubscriber

@@ -32,7 +32,6 @@ import net.minecraft.Util;
 
 import net.mcreator.kraftmine.procedures.LavaArmorHelmetTickEventProcedure;
 import net.mcreator.kraftmine.procedures.HydroArmorBootsTickEventProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.client.model.Modellava;
 
 import java.util.Map;

@@ -13,7 +13,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.network.KraftmineModVariables;
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class EyepatchHelmetTickEventProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

@@ -10,7 +10,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class WoodArmorProcedureProcedure {
 	public static void execute(Entity entity) {

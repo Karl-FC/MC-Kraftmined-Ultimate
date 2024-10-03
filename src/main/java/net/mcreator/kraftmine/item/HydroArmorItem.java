@@ -32,7 +32,6 @@ import net.minecraft.Util;
 import net.mcreator.kraftmine.procedures.HydroArmorHelmetTickEventProcedure;
 import net.mcreator.kraftmine.procedures.HydroArmorBootsTickEventProcedure;
 import net.mcreator.kraftmine.procedures.HydroArmorBodyTickEventProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.client.model.Modelwater;
 
 import java.util.Map;

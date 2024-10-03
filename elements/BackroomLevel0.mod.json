@@ -115,38 +115,11 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "CUSTOM:MobAmogusBlue"
+          "value": "CUSTOM:Beanie"
         },
         "minGroup": 1,
         "maxGroup": 1,
-        "weight": 20,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:MobAmogusGreen"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 20,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:MobAmogusGrey"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 20,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:MobAmogus"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 20,
+        "weight": 3,
         "spawnType": "monster"
       },
       {

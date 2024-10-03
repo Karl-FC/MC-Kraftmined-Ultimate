@@ -16,8 +16,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 import java.util.Comparator;
 
 public class StoneSpearThrownOnEntityTickUpdateProcedure {

@@ -20,7 +20,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.KraftmineMod;
 
 import javax.annotation.Nullable;

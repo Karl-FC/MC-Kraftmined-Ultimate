@@ -30,7 +30,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.kraftmine.procedures.TomatoUpdateTickProcedure;
 import net.mcreator.kraftmine.procedures.TomatoHarvestProcedure;
 import net.mcreator.kraftmine.procedures.TomatoBushPlantAddedProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.block.entity.TomatoBush3BlockEntity;
 
 public class TomatoBush3Block extends FlowerBlock implements EntityBlock {

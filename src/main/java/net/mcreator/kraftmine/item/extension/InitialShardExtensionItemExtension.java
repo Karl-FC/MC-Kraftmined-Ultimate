@@ -13,7 +13,6 @@ import net.minecraft.core.dispenser.BlockSource;
 import net.minecraft.core.Direction;
 
 import net.mcreator.kraftmine.procedures.PositioningShardOnDispenseAttemptWithResultProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class InitialShardExtensionItemExtension {

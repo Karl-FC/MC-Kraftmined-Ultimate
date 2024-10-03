@@ -11,8 +11,6 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
-
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class SkeleturtleEntityProjectile extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(KraftmineModItems.WATER_CHARGE.get());

@@ -12,7 +12,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
 import net.mcreator.kraftmine.procedures.SaberhitProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class SaberWhiteItem extends SwordItem {
 	private static final Tier TOOL_TIER = new Tier() {

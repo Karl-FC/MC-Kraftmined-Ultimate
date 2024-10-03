@@ -34,7 +34,6 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.kraftmine.network.KraftmineModVariables;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.entity.MickeyEntity;
 
 import javax.annotation.Nullable;

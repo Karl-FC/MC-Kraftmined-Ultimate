@@ -17,7 +17,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.procedures.CoconutBlockOnBlockRightClickedProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class CoconutBlockBlock extends Block {
 	public CoconutBlockBlock() {

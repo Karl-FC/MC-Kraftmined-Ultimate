@@ -22,7 +22,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.TheSwitcherProjectileHitsLivingEntityProcedure;
 import net.mcreator.kraftmine.procedures.TheSwitcherProjectileHitsBlockProcedure;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 import javax.annotation.Nullable;

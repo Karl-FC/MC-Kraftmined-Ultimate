@@ -29,7 +29,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.kraftmine.world.inventory.PossibilityShardGUIMenu;
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 
 import java.util.List;
 import java.util.Comparator;

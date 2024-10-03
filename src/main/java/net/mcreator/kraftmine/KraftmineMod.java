@@ -20,13 +20,11 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.kraftmine.world.features.StructureFeature;
 import net.mcreator.kraftmine.network.KraftmineModVariables;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModSounds;
 import net.mcreator.kraftmine.init.KraftmineModPotions;
 import net.mcreator.kraftmine.init.KraftmineModParticleTypes;
 import net.mcreator.kraftmine.init.KraftmineModMobEffects;
 import net.mcreator.kraftmine.init.KraftmineModMenus;
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModFluids;
 import net.mcreator.kraftmine.init.KraftmineModFluidTypes;
 import net.mcreator.kraftmine.init.KraftmineModFeatures;

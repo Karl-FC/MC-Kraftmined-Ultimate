@@ -15,7 +15,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.init.KraftmineModBlocks;
 
 public class CornSeedsRightclickedOnBlockProcedure {
