@@ -2,7 +2,6 @@
   "type": "kraftmine:barrens",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 7081145464904897321,
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
@@ -10,24 +9,78 @@
           "biome": "kraftmine:wasteland",
           "parameters": {
             "temperature": [
-              -1.1102230246251565E-16,
-              1.1999999999999997
+              -0,
+              1.2
             ],
             "humidity": [
               -0.6,
               0.6
             ],
             "continentalness": [
-              -0.07999999999999996,
+              -0.08,
               1.12
             ],
             "weirdness": [
-              -1.4139816399985157,
-              -0.2139816399985156
+              -1.41398164,
+              -0.21398164
             ],
             "erosion": [
               0.4,
               1.6
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "eroded_badlands",
+          "parameters": {
+            "temperature": [
+              0.55,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.35
+            ],
+            "continentalness": [
+              -0.11,
+              0.3
+            ],
+            "erosion": [
+              -0.7799,
+              -0.375
+            ],
+            "weirdness": [
+              -1,
+              -0.9333
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "wooded_badlands",
+          "parameters": {
+            "temperature": [
+              0.55,
+              1
+            ],
+            "humidity": [
+              0.1,
+              0.3
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              -1,
+              -0.7799
+            ],
+            "weirdness": [
+              -1,
+              -0.9333
             ],
             "depth": 0,
             "offset": 0
@@ -62,60 +115,6 @@
             ],
             "offset": 0
           }
-        },
-        {
-          "biome": "wooded_badlands",
-          "parameters": {
-            "temperature": [
-              0.55,
-              1
-            ],
-            "humidity": [
-              0.1,
-              0.3
-            ],
-            "continentalness": [
-              -0.11,
-              1
-            ],
-            "erosion": [
-              -1,
-              -0.7799
-            ],
-            "weirdness": [
-              -1,
-              -0.9333
-            ],
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "eroded_badlands",
-          "parameters": {
-            "temperature": [
-              0.55,
-              1
-            ],
-            "humidity": [
-              -1,
-              -0.35
-            ],
-            "continentalness": [
-              -0.11,
-              0.3
-            ],
-            "erosion": [
-              -0.7799,
-              -0.375
-            ],
-            "weirdness": [
-              -1,
-              -0.9333
-            ],
-            "depth": 0,
-            "offset": 0
-          }
         }
       ]
     },
@@ -124,10 +123,7 @@
       "sea_level": 63,
       "legacy_random_source": false,
       "disable_mob_generation": false,
-      "noodle_caves_enabled": true,
-      "noise_caves_enabled": true,
       "aquifers_enabled": true,
-      "deepslate_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
         "Name": "minecraft:coarse_dirt"
@@ -558,7 +554,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "dripstone_caves"
+                "eroded_badlands"
               ]
             },
             "then_run": {
@@ -592,10 +588,7 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "minecraft:red_sand"
                             }
                           }
                         },
@@ -620,7 +613,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "minecraft:terracotta"
                       }
                     }
                   }
@@ -692,7 +685,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:white_terracotta"
+                        "Name": "minecraft:terracotta"
                       }
                     }
                   }
@@ -705,7 +698,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "eroded_badlands"
+                "dripstone_caves"
               ]
             },
             "then_run": {
@@ -739,7 +732,10 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:red_sand"
+                              "Name": "minecraft:grass_block",
+                              "Properties": {
+                                "snowy": "false"
+                              }
                             }
                           }
                         },
@@ -764,7 +760,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:white_terracotta"
+                        "Name": "minecraft:dirt"
                       }
                     }
                   }
@@ -773,100 +769,6 @@
             }
           }
         ]
-      },
-      "structures": {
-        "structures": {
-          "minecraft:bastion_remnant": {
-            "spacing": 27,
-            "separation": 4,
-            "salt": 30084232
-          },
-          "minecraft:buried_treasure": {
-            "spacing": 1,
-            "separation": 0,
-            "salt": 0
-          },
-          "minecraft:desert_pyramid": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 14357617
-          },
-          "minecraft:endcity": {
-            "spacing": 20,
-            "separation": 11,
-            "salt": 10387313
-          },
-          "minecraft:fortress": {
-            "spacing": 27,
-            "separation": 4,
-            "salt": 30084232
-          },
-          "minecraft:igloo": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 14357618
-          },
-          "minecraft:jungle_pyramid": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 14357619
-          },
-          "minecraft:mansion": {
-            "spacing": 80,
-            "separation": 20,
-            "salt": 10387319
-          },
-          "minecraft:mineshaft": {
-            "spacing": 1,
-            "separation": 0,
-            "salt": 0
-          },
-          "minecraft:monument": {
-            "spacing": 32,
-            "separation": 5,
-            "salt": 10387313
-          },
-          "minecraft:nether_fossil": {
-            "spacing": 2,
-            "separation": 1,
-            "salt": 14357921
-          },
-          "minecraft:ocean_ruin": {
-            "spacing": 20,
-            "separation": 8,
-            "salt": 14357621
-          },
-          "minecraft:pillager_outpost": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 165745296
-          },
-          "minecraft:ruined_portal": {
-            "spacing": 40,
-            "separation": 15,
-            "salt": 34222645
-          },
-          "minecraft:shipwreck": {
-            "spacing": 24,
-            "separation": 4,
-            "salt": 165745295
-          },
-          "minecraft:stronghold": {
-            "spacing": 1,
-            "separation": 0,
-            "salt": 0
-          },
-          "minecraft:swamp_hut": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 14357620
-          },
-          "minecraft:village": {
-            "spacing": 34,
-            "separation": 8,
-            "salt": 10387312
-          }
-        }
       }
     }
   }

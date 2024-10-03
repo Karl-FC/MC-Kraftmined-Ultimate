@@ -1,38 +1,32 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.entity.monster.ZombieVillager;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.init.KraftmineModEntities;
-import net.mcreator.kraftmine.entity.PlagueWitchEntity;
-import net.mcreator.kraftmine.entity.IronDroidEntity;
-import net.mcreator.kraftmine.entity.GhostSpiderMutantEntity;
 import net.mcreator.kraftmine.entity.GhostSpiderEntity;
-import net.mcreator.kraftmine.entity.AmongamiteEntity;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class BarrensSpawnProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
@@ -46,121 +40,110 @@ public class BarrensSpawnProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!((entity.level.dimension()) == (Level.OVERWORLD))) {
-			if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:barrens")))) {
+		if (!((entity.level().dimension()) == Level.OVERWORLD)) {
+			if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:barrens"))) {
 				if (entity instanceof Witch && Math.random() <= 0.8) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new PlagueWitchEntity(KraftmineModEntities.PLAGUE_WITCH.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.PLAGUE_WITCH.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof IronGolem && Math.random() <= 0.8) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new IronDroidEntity(KraftmineModEntities.IRON_DROID.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.IRON_DROID.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof Zombie && Math.random() <= 0.3) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new Husk(EntityType.HUSK, _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = EntityType.HUSK.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof GhostSpiderEntity && Math.random() <= 0.8) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new GhostSpiderMutantEntity(KraftmineModEntities.GHOST_SPIDER_MUTANT.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.GHOST_SPIDER_MUTANT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof Endermite && Math.random() <= 0.8) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new AmongamiteEntity(KraftmineModEntities.AMONGAMITE.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.AMONGAMITE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof Villager) {
 					if (Math.random() <= 0.7) {
-						if (!entity.level.isClientSide())
+						if (!entity.level().isClientSide())
 							entity.discard();
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = new PlagueWitchEntity(KraftmineModEntities.PLAGUE_WITCH.get(), _level);
-							entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-							if (entityToSpawn instanceof Mob _mobToSpawn)
-								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-							world.addFreshEntity(entityToSpawn);
+							Entity entityToSpawn = KraftmineModEntities.PLAGUE_WITCH.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
+								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+							}
 						}
 					} else if (Math.random() > 0.7) {
-						if (!entity.level.isClientSide())
+						if (!entity.level().isClientSide())
 							entity.discard();
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = new ZombieVillager(EntityType.ZOMBIE_VILLAGER, _level);
-							entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-							if (entityToSpawn instanceof Mob _mobToSpawn)
-								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-							world.addFreshEntity(entityToSpawn);
+							Entity entityToSpawn = EntityType.ZOMBIE_VILLAGER.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
+								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+							}
 						}
 					}
 				}
-			} else if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:backrooms")))) {
+			} else if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:backrooms"))) {
 				if (entity instanceof Witch && Math.random() <= 0.9) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new PlagueWitchEntity(KraftmineModEntities.PLAGUE_WITCH.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.PLAGUE_WITCH.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof IronGolem && Math.random() <= 0.3) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new IronDroidEntity(KraftmineModEntities.IRON_DROID.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.IRON_DROID.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof Zombie && Math.random() <= 0.5) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new Husk(EntityType.HUSK, _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = EntityType.HUSK.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				} else if (entity instanceof GhostSpiderEntity && Math.random() <= 0.6) {
-					if (!entity.level.isClientSide())
+					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new GhostSpiderMutantEntity(KraftmineModEntities.GHOST_SPIDER_MUTANT.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+						Entity entityToSpawn = KraftmineModEntities.GHOST_SPIDER_MUTANT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
 					}
 				}
 			}

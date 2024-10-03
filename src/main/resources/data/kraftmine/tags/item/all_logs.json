@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:mahogany_log",
+    "kraftmine:cherry_log",
+    "kraftmine:palm_wood_log",
+    "#minecraft:logs",
+    "minecraft:spruce_log",
+    "minecraft:birch_log",
+    "minecraft:jungle_log",
+    "#minecraft:logs",
+    "minecraft:dark_oak_log",
+    "minecraft:stripped_oak_log",
+    "minecraft:stripped_spruce_log",
+    "minecraft:stripped_birch_log",
+    "minecraft:stripped_jungle_log",
+    "minecraft:stripped_acacia_log",
+    "minecraft:stripped_dark_oak_log",
+    "kraftmine:deadwood_wood",
+    "kraftmine:deadwood_log"
+  ]
+}

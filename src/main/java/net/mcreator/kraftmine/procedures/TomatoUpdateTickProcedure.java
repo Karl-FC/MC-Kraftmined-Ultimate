@@ -27,15 +27,15 @@ public class TomatoUpdateTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "GrowthTime") >= 20400) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, new BlockPos(x, y, z))) {
+		}.getValue(world, BlockPos.containing(x, y, z), "GrowthTime") >= 20400) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage0.getBlock() && stage1.canSurvive(world, BlockPos.containing(x, y, z))) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = stage1;
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata();
+						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -43,20 +43,20 @@ public class TomatoUpdateTickProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.load(_bnbt);
+								_be.loadWithComponents(_bnbt, world.registryAccess());
 							} catch (Exception ignored) {
 							}
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, new BlockPos(x, y, z))) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage1.getBlock() && stage2.canSurvive(world, BlockPos.containing(x, y, z))) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = stage2;
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata();
+						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -64,20 +64,20 @@ public class TomatoUpdateTickProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.load(_bnbt);
+								_be.loadWithComponents(_bnbt, world.registryAccess());
 							} catch (Exception ignored) {
 							}
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == stage2.getBlock() && stage3.canSurvive(world, new BlockPos(x, y, z))) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == stage2.getBlock() && stage3.canSurvive(world, BlockPos.containing(x, y, z))) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = stage3;
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata();
+						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -85,7 +85,7 @@ public class TomatoUpdateTickProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.load(_bnbt);
+								_be.loadWithComponents(_bnbt, world.registryAccess());
 							} catch (Exception ignored) {
 							}
 						}
@@ -93,7 +93,7 @@ public class TomatoUpdateTickProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -103,7 +103,7 @@ public class TomatoUpdateTickProcedure {
 			}
 		} else {
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -114,7 +114,7 @@ public class TomatoUpdateTickProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(x, y, z), "GrowthTime") + 1));
+					}.getValue(world, BlockPos.containing(x, y, z), "GrowthTime") + 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

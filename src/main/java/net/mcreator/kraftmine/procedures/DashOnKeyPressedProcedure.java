@@ -2,17 +2,18 @@ package net.mcreator.kraftmine.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 
 import net.mcreator.kraftmine.network.KraftmineModVariables;
-import net.mcreator.kraftmine.init.KraftmineModEnchantments;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class DashOnKeyPressedProcedure {
@@ -21,11 +22,9 @@ public class DashOnKeyPressedProcedure {
 			return;
 		if (DashConditionsProcedure.execute(entity)) {
 			{
-				boolean _setval = true;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.IsDashing = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.IsDashing = true;
+				_vars.syncPlayerVariables(entity);
 			}
 			if ((entity.getDirection()) == Direction.NORTH) {
 				entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y()), (-1)));
@@ -38,17 +37,15 @@ public class DashOnKeyPressedProcedure {
 			}
 			KraftmineMod.queueServerWork(20, () -> {
 				{
-					boolean _setval = false;
-					entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.IsDashing = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+					_vars.IsDashing = false;
+					_vars.syncPlayerVariables(entity);
 				}
 			});
-			if (SwiftfootedProcedureProcedure.execute(entity)) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20,
-							EnchantmentHelper.getItemEnchantmentLevel(KraftmineModEnchantments.SWIFTFOOTED.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)), (false), (false)));
+			if (SwiftfootedProcedureProcedure.execute(world, entity)) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("kraftmine:swiftfooted")))), false, false));
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/mppotato"
+    "layer0": "kraftmine:item/mppotato"
   },
   "display": {
     "thirdperson_righthand": {

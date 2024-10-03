@@ -1,8 +1,9 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "command",
   "definition": {
     "commandName": "explode",
+    "type": "STANDARD",
     "permissionLevel": "2",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">help</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">ExplodeCommandHelp</field></block></statement><next><block type=\"string\"><field name=\"type\">string</field><field name=\"name\">Location</field><statement name=\"args\"><block type=\"number_min_max\"><field name=\"name\">ExplosionPower</field><field name=\"min\">0</field><field name=\"max\">30</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">x</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">y</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">z</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">ExplodeCommandCommandExecuted</field></block></statement></block></statement></block></statement></block></statement></block></statement><next><block type=\"string\"><field name=\"type\">string</field><field name=\"name\">here</field><statement name=\"args\"><block type=\"number_min_max\"><field name=\"name\">ExplosionPower</field><field name=\"min\">0</field><field name=\"max\">30</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">ExplodeCommandCommandExecuted</field></block></statement></block></statement></block></next></block></next></block></next></block></xml>"
   }

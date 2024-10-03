@@ -26,10 +26,10 @@ public class XPButtonDepositAllProcedure {
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "XPStored");
+			}.getValue(world, BlockPos.containing(x, y, z), "XPStored");
 			XPStored = XPCount + PlayerXPLevel;
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)

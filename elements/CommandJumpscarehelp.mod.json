@@ -1,8 +1,9 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "command",
   "definition": {
     "commandName": "help jumpscare",
+    "type": "STANDARD",
     "permissionLevel": "1",
     "argsxml": "<xml><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"old_command\"><field name=\"procedure\">CommandJumpscarehelpCommandExecuted</field></block></next></block></xml>"
   }

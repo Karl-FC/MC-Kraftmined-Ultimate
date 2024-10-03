@@ -1,6 +1,7 @@
 
 package net.mcreator.kraftmine.item;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
@@ -10,38 +11,47 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
 
 import net.mcreator.kraftmine.procedures.SaberOffhandProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 public class SaberYellowItem extends SwordItem {
+	private static final Tier TOOL_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return 2150;
+		}
+
+		@Override
+		public float getSpeed() {
+			return 15f;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 0;
+		}
+
+		@Override
+		public TagKey<Block> getIncorrectBlocksForDrops() {
+			return BlockTags.INCORRECT_FOR_IRON_TOOL;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 2;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.of(new ItemStack(KraftmineModItems.REACTOR_CORE.get()));
+		}
+	};
+
 	public SaberYellowItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2150;
-			}
-
-			public float getSpeed() {
-				return 15f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 10f;
-			}
-
-			public int getLevel() {
-				return 2;
-			}
-
-			public int getEnchantmentValue() {
-				return 2;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(KraftmineModItems.REACTOR_CORE.get()));
-			}
-		}, 3, -1.5f, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT).fireResistant());
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 11f, -1.5f)).fireResistant());
 	}
 
 	@Override

@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": {
-    "type": "forge:any"
-  },
-  "features": "kraftmine:iris_purple",
-  "step": "vegetal_decoration"
-}

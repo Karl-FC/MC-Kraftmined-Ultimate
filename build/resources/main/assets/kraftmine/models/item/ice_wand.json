@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/ice_wand"
+    "layer0": "kraftmine:item/ice_wand"
   },
   "display": {
     "thirdperson_righthand": {

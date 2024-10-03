@@ -1,0 +1,403 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 1,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:tungsten_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:nickel_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:aluminum_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:deepslate_tungsten_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:titanium_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:deepslate_titanium_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:ruby_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:saphhire_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud_sapphire_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud_ruby_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:coal_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:iron_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:redstone_ore",
+            "Properties": {
+              "lit": "false"
+            }
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:redstone_ore",
+            "Properties": {
+              "lit": "false"
+            }
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:gold_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:lapis_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:diamond_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:emerald_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:copper_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_coal_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_iron_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_redstone_ore",
+            "Properties": {
+              "lit": "false"
+            }
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_gold_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_lapis_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_diamond_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_emerald_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_copper_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:nether_quartz_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:nether_gold_ore"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "kraftmine:cloud_block_rain"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:stone"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:granite"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:diorite"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:andesite"
+          }
+        },
+        "state": {
+          "Name": "kraftmine:lucky_block"
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "kraftmine:glow_shroom_biome",
-  "features": "kraftmine:glow_shroom",
-  "step": "vegetal_decoration"
-}

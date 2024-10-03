@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/coconut_block",
-    "up": "kraftmine:blocks/coconut_block",
-    "north": "kraftmine:blocks/coconut_block",
-    "east": "kraftmine:blocks/coconut_block",
-    "south": "kraftmine:blocks/coconut_block",
-    "west": "kraftmine:blocks/coconut_block",
-    "particle": "kraftmine:blocks/coconut_block"
+    "down": "kraftmine:block/coconut_block",
+    "up": "kraftmine:block/coconut_block",
+    "north": "kraftmine:block/coconut_block",
+    "east": "kraftmine:block/coconut_block",
+    "south": "kraftmine:block/coconut_block",
+    "west": "kraftmine:block/coconut_block",
+    "particle": "kraftmine:block/coconut_block"
   },
   "render_type": "solid"
 }

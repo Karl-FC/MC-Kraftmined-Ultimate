@@ -2,20 +2,15 @@
   "type": "minecraft:netherrack_replace_blobs",
   "config": {
     "target": {
-      "Name": "kraftmine:palm_wood_wood",
-      "Properties": {
-        "axis": "y"
-      }
+      "Name": "kraftmine:palm_wood_wood"
     },
     "state": {
       "Name": "kraftmine:coconut_block"
     },
     "radius": {
       "type": "uniform",
-      "value": {
-        "min_inclusive": 3,
-        "max_inclusive": 7
-      }
+      "min_inclusive": 3,
+      "max_inclusive": 7
     }
   }
 }

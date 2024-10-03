@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
@@ -22,13 +22,11 @@ import net.mcreator.kraftmine.init.KraftmineModGameRules;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ThirstMainProcedureProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -39,31 +37,25 @@ public class ThirstMainProcedureProcedure {
 		if (entity == null)
 			return;
 		double seconds = 0;
-		if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel < (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new KraftmineModVariables.PlayerVariables())).PlayerMaxThirst) {
+		if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel < entity.getData(KraftmineModVariables.PLAYER_VARIABLES).PlayerMaxThirst) {
 			{
-				boolean _setval = true;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.AllowDrink = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.AllowDrink = true;
+				_vars.syncPlayerVariables(entity);
 			}
-		} else if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel >= (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new KraftmineModVariables.PlayerVariables())).PlayerMaxThirst) {
+		} else if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel >= entity.getData(KraftmineModVariables.PLAYER_VARIABLES).PlayerMaxThirst) {
 			{
-				boolean _setval = false;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.AllowDrink = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.AllowDrink = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
-		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.HYDRATION) == true && (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel > 0
-				&& !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.HYDRATED.get()) : false) && new Object() {
+		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.HYDRATION) == true && entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel > 0
+				&& !(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(KraftmineModMobEffects.HYDRATED)) && new Object() {
 					public boolean checkGamemode(Entity _ent) {
 						if (_ent instanceof ServerPlayer _serverPlayer) {
 							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 						}
@@ -71,67 +63,50 @@ public class ThirstMainProcedureProcedure {
 					}
 				}.checkGamemode(entity) && !(world.getDifficulty() == Difficulty.PEACEFUL)) {
 			{
-				double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel + 0.001;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ThirstExhaustionLevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + 0.001;
+				_vars.syncPlayerVariables(entity);
 			}
-			if (entity.isOnFire() || (entity instanceof LivingEntity _livEnt ? _livEnt.isFallFlying() : false)) {
+			if (entity.isOnFire() || entity instanceof LivingEntity _livEnt5 && _livEnt5.isFallFlying()) {
 				{
-					double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel + 0.2;
-					entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ThirstExhaustionLevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+					_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + 0.2;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 			if (entity.isSprinting()) {
 				{
-					double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel + 0.025;
-					entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ThirstExhaustionLevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+					_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + 0.025;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
-			if (world.getBiome(new BlockPos(x, y, z)).value().getBaseTemperature() * 100f >= 1) {
+			if (world.getBiome(BlockPos.containing(x, y, z)).value().getBaseTemperature() * 100f >= 1) {
 				{
-					double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel
-							+ world.getBiome(new BlockPos(x, y, z)).value().getBaseTemperature() * 100f * 0.0001;
-					entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ThirstExhaustionLevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+					_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + world.getBiome(BlockPos.containing(x, y, z)).value().getBaseTemperature() * 100f * 0.0001;
+					_vars.syncPlayerVariables(entity);
 				}
-				if (world.getBiome(new BlockPos(x, y, z)).is(new ResourceLocation("desert"))) {
+				if (world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("desert"))) {
 					{
-						double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel
-								+ world.getBiome(new BlockPos(x, y, z)).value().getBaseTemperature() * 100f * 0.0001;
-						entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.ThirstExhaustionLevel = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+						_vars.ThirstExhaustionLevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel + world.getBiome(BlockPos.containing(x, y, z)).value().getBaseTemperature() * 100f * 0.0001;
+						_vars.syncPlayerVariables(entity);
 					}
 				}
 			}
 		}
 		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.HYDRATION) == true
-				&& (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).ThirstExhaustionLevel >= (entity
-						.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).PlayerMaxThirstExhaustion) {
+				&& entity.getData(KraftmineModVariables.PLAYER_VARIABLES).ThirstExhaustionLevel >= entity.getData(KraftmineModVariables.PLAYER_VARIABLES).PlayerMaxThirstExhaustion) {
 			{
-				double _setval = 0;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ThirstExhaustionLevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.ThirstExhaustionLevel = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel - 1;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Thirstlevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.Thirstlevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel - 1;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

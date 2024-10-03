@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:plastic"
+    }
+  },
+  "result": {
+    "id": "kraftmine:plastic_armor_boots",
+    "count": 1
+  }
+}

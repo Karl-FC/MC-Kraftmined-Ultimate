@@ -9,6 +9,8 @@ import net.minecraft.client.player.LocalPlayer;
 
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
+import java.util.Collections;
+
 public class TungstenRecipebookProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
@@ -17,34 +19,34 @@ public class TungstenRecipebookProcedure {
 			public boolean hasRecipe(Entity _ent, ResourceLocation recipe) {
 				if (_ent instanceof ServerPlayer _player)
 					return _player.getRecipeBook().contains(recipe);
-				else if (_ent.level.isClientSide() && _ent instanceof LocalPlayer _player)
+				else if (_ent.level().isClientSide() && _ent instanceof LocalPlayer _player)
 					return _player.getRecipeBook().contains(recipe);
 				return false;
 			}
-		}.hasRecipe(entity, new ResourceLocation("kraftmine:tungsten_block")) == false) {
+		}.hasRecipe(entity, ResourceLocation.parse("kraftmine:tungsten_block")) == false) {
 			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KraftmineModItems.TUNGSTEN_INGOT.get())) : false) {
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_blade")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_blade")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_sword")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_sword")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_shovel")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_shovel")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_axe")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_axe")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_hoe")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_hoe")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_pickaxe")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_pickaxe")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_block")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_block")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_armor_helmet")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_armor_helmet")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_armor_chestplate")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_armor_chestplate")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_armor_leggings")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_armor_leggings")));
 				if (entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("kraftmine:tungsten_armor_boots")});
+					_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("kraftmine:tungsten_armor_boots")));
 			}
 		}
 	}

@@ -22,9 +22,9 @@ public class CondensedArmorProcedureTickProcedure {
 			if (entity.isOnFire()) {
 				entity.clearFire();
 			}
-			if (entity instanceof LivingEntity _livEnt ? _livEnt.isFallFlying() : false) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 1, (false), (false)));
+			if (entity instanceof LivingEntity _livEnt10 && _livEnt10.isFallFlying()) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 1, false, false));
 			}
 		}
 	}

@@ -12,9 +12,8 @@ public class Jump1ProcedureProcedure {
 	public static boolean execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return false;
-		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.JUMPSCARES) == true
-				&& (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).JumpscareVariant == 1
-				&& (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.JUMPSCARE_EFFECT.get()) : false)) {
+		if (world.getLevelData().getGameRules().getBoolean(KraftmineModGameRules.JUMPSCARES) == true && entity.getData(KraftmineModVariables.PLAYER_VARIABLES).JumpscareVariant == 1 && entity instanceof LivingEntity _livEnt1
+				&& _livEnt1.hasEffect(KraftmineModMobEffects.JUMPSCARE_EFFECT)) {
 			return true;
 		}
 		return false;

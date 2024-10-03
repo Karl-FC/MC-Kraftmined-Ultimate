@@ -1,13 +1,14 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,12 +17,12 @@ import net.mcreator.kraftmine.init.KraftmineModMobEffects;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class NoUAttackProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getEntity(), event.getAmount());
+	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
+		if (event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
@@ -33,11 +34,11 @@ public class NoUAttackProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.NO_U.get()) : false) && !(sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.NO_U.get()) : false)) {
-			damage = amount * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.NO_U.get()) ? _livEnt.getEffect(KraftmineModMobEffects.NO_U.get()).getAmplifier() : 0) * 0.25;
-			sourceentity.hurt(DamageSource.MAGIC, (float) damage);
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KraftmineModMobEffects.NO_U) && !(sourceentity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(KraftmineModMobEffects.NO_U))) {
+			damage = amount * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.NO_U) ? _livEnt.getEffect(KraftmineModMobEffects.NO_U).getAmplifier() : 0) * 0.25;
+			sourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), (float) damage);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.MYCELIUM, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 1, 2, 3, 3, 1);
+				_level.sendParticles(ParticleTypes.CRIT, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 1, 2, 3, 3, 1);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.WITCH, (entity.getX()), (entity.getY()), (entity.getZ()), 2, 2, 3, 3, 1);
 		}

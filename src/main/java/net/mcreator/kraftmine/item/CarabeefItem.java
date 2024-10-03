@@ -9,13 +9,10 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.kraftmine.procedures.CarabeefPlayerFinishesUsingItemProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class CarabeefItem extends Item {
 	public CarabeefItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(1.8f)
-
-				.meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationModifier(1.8f).build()));
 	}
 
 	@Override
@@ -24,7 +21,6 @@ public class CarabeefItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		CarabeefPlayerFinishesUsingItemProcedure.execute(entity);
 		return retval;
 	}

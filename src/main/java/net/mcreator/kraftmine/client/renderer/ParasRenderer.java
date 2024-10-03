@@ -15,6 +15,6 @@ public class ParasRenderer extends MobRenderer<ParasEntity, Modelparas<ParasEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(ParasEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/paras.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/paras.png");
 	}
 }

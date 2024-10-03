@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "fluid",
   "definition": {
     "name": "Acid",
@@ -23,14 +23,18 @@
     "type": "WATER",
     "generateBucket": true,
     "textureBucket": "bucket_acid",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "emptySound": {
       "value": "block.slime.place"
     },
     "rarity": "RARE",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "resistance": 100.0,
     "luminance": 0,
     "lightOpacity": 5,

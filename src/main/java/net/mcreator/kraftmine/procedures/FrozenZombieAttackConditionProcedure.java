@@ -19,7 +19,7 @@ public class FrozenZombieAttackConditionProcedure {
 				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 			}
 		}.compareDistOf(x, y, z)).findFirst().orElse(null);
-		if ((target instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false) && !(target instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+		if (target instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && !(target instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			return false;
 		}
 		return true;

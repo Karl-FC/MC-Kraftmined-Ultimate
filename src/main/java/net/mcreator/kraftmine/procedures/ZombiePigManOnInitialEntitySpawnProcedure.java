@@ -1,7 +1,5 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -13,6 +11,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.entity.ZombiePigManEntity;
@@ -24,7 +23,9 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 		if (entity instanceof ZombiePigManEntity) {
 			if (Math.random() <= 0.9) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_main_hand"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+					ItemStack _setstack = new ItemStack(
+							(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_main_hand"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value()))
+							.copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -32,7 +33,7 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 				}
 			} else {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(KraftmineModItems.NETHERS_WRATH.get());
+					ItemStack _setstack = new ItemStack(KraftmineModItems.NETHERS_WRATH.get()).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -43,10 +44,12 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(3, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_3"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_player.getInventory().armor.set(3, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_3"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_3"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_3"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 					}
 				}
 			} else if (Math.random() < 0.2) {
@@ -84,10 +87,12 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(2, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_2"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_player.getInventory().armor.set(2, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_2"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_2"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_2"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 					}
 				}
 			} else if (Math.random() < 0.2) {
@@ -105,10 +110,12 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(1, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_1"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_player.getInventory().armor.set(1, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_1"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_1"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_1"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 					}
 				}
 			} else if (Math.random() < 0.2) {
@@ -126,10 +133,12 @@ public class ZombiePigManOnInitialEntitySpawnProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(0, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_0"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_player.getInventory().armor.set(0, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_0"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.FEET, new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("forge:pigman_armor_0"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
+						_living.setItemSlot(EquipmentSlot.FEET, new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("forge:pigman_armor_0"))).getRandomElement(RandomSource.create())
+								.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
 					}
 				}
 			} else if (Math.random() < 0.2) {

@@ -16,6 +16,6 @@ public class DuckRenderer extends MobRenderer<DuckEntity, ChickenModel<DuckEntit
 
 	@Override
 	public ResourceLocation getTextureLocation(DuckEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/pato.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/pato.png");
 	}
 }

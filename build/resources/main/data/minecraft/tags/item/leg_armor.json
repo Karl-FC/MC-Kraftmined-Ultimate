@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:giga_armor_leggings",
+    "kraftmine:lava_armor_leggings",
+    "kraftmine:hydro_armor_leggings",
+    "kraftmine:prismarine_armor_leggings",
+    "kraftmine:ghillie_suit_leggings",
+    "kraftmine:plastic_armor_leggings",
+    "kraftmine:studded_armor_leggings",
+    "kraftmine:condensed_armor_leggings",
+    "kraftmine:egghell_armor_leggings",
+    "kraftmine:egg_armor_leggings",
+    "kraftmine:wood_armor_leggings",
+    "kraftmine:tnt_armor_leggings",
+    "kraftmine:cactus_armor_leggings",
+    "kraftmine:cursed_iron_armor_leggings",
+    "kraftmine:redstone_armor_leggings",
+    "kraftmine:lapis_lazuli_armor_leggings",
+    "kraftmine:carbon_armor_leggings",
+    "kraftmine:titanium_armor_leggings",
+    "kraftmine:nickel_armor_leggings",
+    "kraftmine:drip_armor_leggings",
+    "kraftmine:obsidian_armor_leggings",
+    "kraftmine:tungsten_armor_leggings"
+  ]
+}

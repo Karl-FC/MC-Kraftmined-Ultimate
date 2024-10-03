@@ -10,11 +10,11 @@ import net.mcreator.kraftmine.client.model.Modelstonespeardropped;
 
 public class IronSpearEntityRenderer extends MobRenderer<IronSpearEntityEntity, Modelstonespeardropped<IronSpearEntityEntity>> {
 	public IronSpearEntityRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelstonespeardropped(context.bakeLayer(Modelstonespeardropped.LAYER_LOCATION)), 0.30000000000000004f);
+		super(context, new Modelstonespeardropped(context.bakeLayer(Modelstonespeardropped.LAYER_LOCATION)), 0.3f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(IronSpearEntityEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/stonespear.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/stonespear.png");
 	}
 }

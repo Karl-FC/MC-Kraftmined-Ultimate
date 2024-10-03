@@ -1,0 +1,90 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "effects": {
+    "ambient_sound": "kraftmine:ambient.backrooms",
+    "mood_sound": {
+      "sound": "kraftmine:mood.backrooms",
+      "tick_delay": 12000,
+      "offset": 8,
+      "block_search_extent": 2
+    },
+    "music": {
+      "sound": "kraftmine:music.backrooms",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
+    },
+    "foliage_color": -10066432,
+    "grass_color": -10066432,
+    "sky_color": -16777216,
+    "fog_color": -16777216,
+    "water_color": -16777114,
+    "water_fog_color": -13369447
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "kraftmine:mob_amogus_blue",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "kraftmine:mob_amogus_green",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "kraftmine:mob_amogus_grey",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "kraftmine:mob_amogus",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "kraftmine:mob_shade",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "kraftmine:sirenhead",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "kraftmine:backroom_level_0_tree"
+    ],
+    []
+  ]
+}

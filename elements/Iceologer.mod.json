@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Iceologer",
     "mobLabel": "",
     "mobModelName": "Modeliceologer",
     "mobModelTexture": "t_chillager.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.7,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -20,9 +20,11 @@
       "value": -13011823,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
+    "stepHeight": 0.6,
     "armorBaseValue": 20.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 30,
     "xpAmount": 25,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onInitialSpawn": {
       "name": "MobDespawnAether"
     },
@@ -105,7 +112,7 @@
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "IceWand",
+    "rangedItemType": "IceWandProjectile",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
@@ -143,6 +150,15 @@
         "value": "mutated_ice_flats"
       }
     ],
-    "spawnInDungeons": true
+    "spawnInDungeons": true,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,26 +22,36 @@
     "onBootsTick": {
       "name": "EgghellArmorProcedure"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "egghell",
     "helmetName": "Egg-hell Helmet",
     "bodyName": "Egg-hell Chestplate",
     "leggingsName": "Egg-hell Leggings",
     "bootsName": "Egg-hell Boots",
-    "helmetSpecialInfo": [
-      "Burns attackers upon contact"
-    ],
-    "bodySpecialInfo": [
-      "Burns attackers upon contact"
-    ],
-    "leggingsSpecialInfo": [
-      "Burns attackers upon contact"
-    ],
-    "bootsSpecialInfo": [
-      "Burns attackers upon contact"
-    ],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Burns attackers upon contact"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Burns attackers upon contact"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Burns attackers upon contact"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Burns attackers upon contact"
+      ]
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

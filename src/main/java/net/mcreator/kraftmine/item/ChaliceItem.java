@@ -9,11 +9,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 import net.mcreator.kraftmine.procedures.ChaliceCupRightClickProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class ChaliceItem extends Item {
 	public ChaliceItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override

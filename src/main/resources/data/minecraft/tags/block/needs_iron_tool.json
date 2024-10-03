@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:plastic_block",
+    "kraftmine:plastic_ore",
+    "kraftmine:cloud_ruby_ore",
+    "kraftmine:cloud_sapphire_ore",
+    "kraftmine:saphhire_block",
+    "kraftmine:saphhire_ore",
+    "kraftmine:ruby_block",
+    "kraftmine:ruby_ore",
+    "kraftmine:aluminum_block",
+    "kraftmine:aluminum_ore",
+    "kraftmine:nickel_block",
+    "kraftmine:nickel_ore"
+  ]
+}

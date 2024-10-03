@@ -13,7 +13,7 @@ public class ChillIceUpdateTickProcedure {
 		if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty())) {
 			count = count + 1;
 			if (count == 200) {
-				world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			}
 		}
 	}

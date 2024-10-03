@@ -15,6 +15,6 @@ public class ShrooMooRenderer extends MobRenderer<ShrooMooEntity, Modelshroomoo<
 
 	@Override
 	public ResourceLocation getTextureLocation(ShrooMooEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/shroomoo.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/shroomoo.png");
 	}
 }

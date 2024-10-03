@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/empty_lantern"
+    "layer0": "kraftmine:item/empty_lantern"
   },
   "render_type": "translucent"
 }

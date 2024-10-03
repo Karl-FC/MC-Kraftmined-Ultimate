@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:glass_shovel",
+    "kraftmine:prismarine_shovel",
+    "kraftmine:sandstone_shovel",
+    "kraftmine:ice_shovel",
+    "kraftmine:plastic_shovel",
+    "kraftmine:obsidian_shovel",
+    "kraftmine:dirtrod",
+    "kraftmine:bamboo_shovel",
+    "kraftmine:tungsten_shovel"
+  ]
+}

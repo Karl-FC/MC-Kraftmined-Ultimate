@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "spider",
+    "kraftmine:ghost_spider",
+    "bee",
+    "cave_spider",
+    "endermite",
+    "silverfish",
+    "kraftmine:mob_big"
+  ]
+}

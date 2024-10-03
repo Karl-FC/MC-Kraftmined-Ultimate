@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#is_overworld",
+  "features": "kraftmine:tomato_bush_3",
+  "step": "vegetal_decoration"
+}

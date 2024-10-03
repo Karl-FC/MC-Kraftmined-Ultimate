@@ -11,8 +11,8 @@ public class BlockeatProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		world.destroyBlock(new BlockPos(x, y, z), false);
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 1200, 2, (false), (false)));
+		world.destroyBlock(BlockPos.containing(x, y, z), false);
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 1200, 2, false, false));
 	}
 }

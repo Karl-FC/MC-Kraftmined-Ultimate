@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "kraftmine:tropics",
+    "beach"
+  ],
+  "features": "kraftmine:palmmid_feature",
+  "step": "surface_structures"
+}

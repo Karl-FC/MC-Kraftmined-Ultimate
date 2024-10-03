@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,26 +10,36 @@
     "textureLeggings": "tnt_leggings",
     "enableBoots": true,
     "textureBoots": "tnt_boots",
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "tnt",
     "helmetName": "TNT Helmet",
     "bodyName": "TNT Chestplate",
     "leggingsName": "TNT Leggings",
     "bootsName": "TNT Boots",
-    "helmetSpecialInfo": [
-      "Has a chance to explode upon damage"
-    ],
-    "bodySpecialInfo": [
-      "Has a chance to explode upon damage"
-    ],
-    "leggingsSpecialInfo": [
-      "Has a chance to explode upon damage"
-    ],
-    "bootsSpecialInfo": [
-      "Has a chance to explode upon damage"
-    ],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Has a chance to explode upon damage"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Has a chance to explode upon damage"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Has a chance to explode upon damage"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Has a chance to explode upon damage"
+      ]
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

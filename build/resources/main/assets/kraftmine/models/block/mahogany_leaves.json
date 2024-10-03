@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "kraftmine:blocks/mahoganyleaves2",
-    "particle": "kraftmine:blocks/mahoganyleaves2"
+    "all": "kraftmine:block/mahoganyleaves2",
+    "particle": "kraftmine:block/mahoganyleaves2"
   }
 }

@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,7 +14,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.kraftmine.entity.Nextbot9Entity;
 import net.mcreator.kraftmine.entity.Nextbot8Entity;
@@ -31,9 +31,7 @@ import net.mcreator.kraftmine.KraftmineMod;
 
 import javax.annotation.Nullable;
 
-import java.lang.reflect.Type;
-
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class NextbotOnInitialEntitySpawnProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
@@ -49,7 +47,7 @@ public class NextbotOnInitialEntitySpawnProcedure {
 			return;
 		double Type = 0;
 		double Variance = 0;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:nextbot_tags")))) {
+		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("forge:nextbot_tags")))) {
 			if (entity instanceof Nextbot1Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 1);
 			} else if (entity instanceof Nextbot2Entity) {
@@ -60,20 +58,20 @@ public class NextbotOnInitialEntitySpawnProcedure {
 				entity.getPersistentData().putDouble("BotVariant", 4);
 			} else if (entity instanceof Nextbot5Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 5);
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 9999, 1, (false), (false)));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 9999, 1, false, false));
 			} else if (entity instanceof Nextbot6Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 6);
 			} else if (entity instanceof Nextbot7Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 7);
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 9999, 0, (false), (false)));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 9999, 0, false, false));
 			} else if (entity instanceof Nextbot8Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 8);
 			} else if (entity instanceof Nextbot9Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 9);
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 9999, 1, (false), (false)));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 9999, 1, false, false));
 			} else if (entity instanceof Nextbot10Entity) {
 				entity.getPersistentData().putDouble("BotVariant", 10);
 			} else if (entity instanceof Nextbot11Entity) {
@@ -81,8 +79,8 @@ public class NextbotOnInitialEntitySpawnProcedure {
 			}
 			KraftmineMod.queueServerWork(5, () -> {
 				if (Math.random() >= 0.7 && !(entity.getPersistentData().getDouble("BotVariant") == 8)) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 9999, Mth.nextInt(RandomSource.create(), 1, 5), (false), (false)));
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 9999, Mth.nextInt(RandomSource.create(), 1, 5), false, false));
 				}
 			});
 		}

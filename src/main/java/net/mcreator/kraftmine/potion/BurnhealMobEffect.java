@@ -14,17 +14,13 @@ public class BurnhealMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.kraftmine.burnheal";
-	}
-
-	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BurnhealOnEffectActiveTickProcedure.execute(entity);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
 		return BurnhealActiveTickConditionProcedure.execute(amplifier, duration);
+	}
+
+	@Override
+	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+		BurnhealOnEffectActiveTickProcedure.execute(entity);
+		return super.applyEffectTick(entity, amplifier);
 	}
 }

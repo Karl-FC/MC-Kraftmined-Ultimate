@@ -15,7 +15,7 @@ public class WoodenBatLivingEntityIsHitWithToolProcedure {
 		if (entity == null)
 			return;
 		double chance = 0;
-		if (itemstack.is(ItemTags.create(new ResourceLocation("kraftmine:bashing_weapons")))) {
+		if (itemstack.is(ItemTags.create(ResourceLocation.parse("kraftmine:bashing_weapons")))) {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				chance = chance + 15;
 			}
@@ -23,8 +23,8 @@ public class WoodenBatLivingEntityIsHitWithToolProcedure {
 				chance = chance + 15;
 			}
 			if (Math.random() <= chance) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10, 200, (false), (true)));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10, 200, false, true));
 			}
 		}
 	}

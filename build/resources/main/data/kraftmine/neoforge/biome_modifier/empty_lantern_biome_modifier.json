@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "features": "kraftmine:empty_lantern",
+  "step": "underground_ores"
+}

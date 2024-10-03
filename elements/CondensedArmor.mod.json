@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,26 +22,36 @@
     "onBootsTick": {
       "name": "CondensedArmorProcedureTick"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtabcombat"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtabcombat"
+      }
+    ],
     "armorTextureFile": "condensed",
     "helmetName": "Condensed Helmet",
     "bodyName": "Condensed Chestplate",
     "leggingsName": "Condensed Leggings",
     "bootsName": "Condensed Boots",
-    "helmetSpecialInfo": [
-      "Extinguishes flames and may block attacks"
-    ],
-    "bodySpecialInfo": [
-      "Extinguishes flames and may block attacks"
-    ],
-    "leggingsSpecialInfo": [
-      "Extinguishes flames and may block attacks"
-    ],
-    "bootsSpecialInfo": [
-      "Extinguishes flames and may block attacks"
-    ],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Extinguishes flames and may block attacks"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Extinguishes flames and may block attacks"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Extinguishes flames and may block attacks"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Extinguishes flames and may block attacks"
+      ]
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

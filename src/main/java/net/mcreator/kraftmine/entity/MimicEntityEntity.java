@@ -1,10 +1,8 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.DungeonHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -23,15 +21,15 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -40,8 +38,7 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.MimicmoveconditionProcedure;
 import net.mcreator.kraftmine.procedures.MimicEntityThisEntityKillsAnotherOneProcedure;
@@ -55,19 +52,10 @@ import javax.annotation.Nullable;
 import java.util.EnumSet;
 
 public class MimicEntityEntity extends Monster {
-	public MimicEntityEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.MIMIC_ENTITY.get(), world);
-	}
-
 	public MimicEntityEntity(EntityType<MimicEntityEntity> type, Level world) {
 		super(type, world);
 		xpReward = 15;
 		setNoAi(false);
-	}
-
-	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
@@ -84,6 +72,7 @@ public class MimicEntityEntity extends Monster {
 					double y = MimicEntityEntity.this.getY();
 					double z = MimicEntityEntity.this.getZ();
 					Entity entity = MimicEntityEntity.this;
+					Level world = MimicEntityEntity.this.level();
 					return MimicmoveconditionProcedure.execute(entity);
 				} else {
 					return false;
@@ -132,15 +121,15 @@ public class MimicEntityEntity extends Monster {
 				double y = MimicEntityEntity.this.getY();
 				double z = MimicEntityEntity.this.getZ();
 				Entity entity = MimicEntityEntity.this;
-				Level world = MimicEntityEntity.this.level;
+				Level world = MimicEntityEntity.this.level();
 				return super.canUse() && MimicmoveconditionProcedure.execute(entity);
 			}
 
 		});
 		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 
 			@Override
@@ -149,7 +138,7 @@ public class MimicEntityEntity extends Monster {
 				double y = MimicEntityEntity.this.getY();
 				double z = MimicEntityEntity.this.getZ();
 				Entity entity = MimicEntityEntity.this;
-				Level world = MimicEntityEntity.this.level;
+				Level world = MimicEntityEntity.this.level();
 				return super.canUse() && MimicmoveconditionProcedure.execute(entity);
 			}
 
@@ -162,7 +151,7 @@ public class MimicEntityEntity extends Monster {
 				double y = MimicEntityEntity.this.getY();
 				double z = MimicEntityEntity.this.getZ();
 				Entity entity = MimicEntityEntity.this;
-				Level world = MimicEntityEntity.this.level;
+				Level world = MimicEntityEntity.this.level();
 				return super.canUse() && MimicmoveconditionProcedure.execute(entity);
 			}
 		});
@@ -170,33 +159,43 @@ public class MimicEntityEntity extends Monster {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.ender_chest.open"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.ender_chest.open"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.ender_chest.close"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.ender_chest.close"));
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		MimicmoveconditionProcedure.execute(this);
-		if (source.getDirectEntity() instanceof AbstractArrow)
+	public boolean hurt(DamageSource damagesource, float amount) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		Entity sourceentity = damagesource.getEntity();
+		Entity immediatesourceentity = damagesource.getDirectEntity();
+		if (!MimicmoveconditionProcedure.execute(entity))
 			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		return super.hurt(source, amount);
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
+			return false;
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+	public boolean fireImmune() {
+		return true;
+	}
+
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
 		MimicEntityInitialSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
 	}
@@ -204,13 +203,13 @@ public class MimicEntityEntity extends Monster {
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 		super.mobInteract(sourceentity, hand);
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Entity entity = this;
-		Level world = this.level;
+		Level world = this.level();
 
 		MimicEntityRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
@@ -228,10 +227,10 @@ public class MimicEntityEntity extends Monster {
 		MimicEntityOnEntityTickUpdateProcedure.execute(this);
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.MIMIC_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(KraftmineModEntities.MIMIC_ENTITY.get(), 180);
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.MIMIC_ENTITY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -241,7 +240,8 @@ public class MimicEntityEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.30000000000000004);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.3);
 		return builder;
 	}
 }

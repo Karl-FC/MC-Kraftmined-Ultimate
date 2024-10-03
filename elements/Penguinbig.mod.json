@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Penguin",
     "mobLabel": "",
     "mobModelName": "Modelpenguin",
     "mobModelTexture": "penguin.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.8,
     "modelHeight": 0.9,
     "modelShadowSize": 0.7000000000000001,
@@ -20,9 +20,11 @@
       "value": -16777165,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
+    "stepHeight": 0.6,
     "armorBaseValue": 1.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 20,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">PenguinGunther,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">PenguinGunther,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Nootnoot</field><field name=\"condition\">PenguinGunther,PenguinGunther</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.7</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">0.8</field><field name=\"maxrange\">3</field><field name=\"followarea\">3</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">PenguinFloat,PenguinFloat</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">PenguinSwim,PenguinSwim</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
@@ -134,6 +141,15 @@
         "value": "taiga_cold"
       }
     ],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

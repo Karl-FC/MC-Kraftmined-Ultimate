@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/soul_sight"
+    "layer0": "kraftmine:item/soul_sight"
   }
 }

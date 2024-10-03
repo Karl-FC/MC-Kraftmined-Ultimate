@@ -15,6 +15,6 @@ public class IceologerRenderer extends MobRenderer<IceologerEntity, Modeliceolog
 
 	@Override
 	public ResourceLocation getTextureLocation(IceologerEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/t_chillager.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/t_chillager.png");
 	}
 }

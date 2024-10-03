@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "kraftmine:all_wood"
+    }
+  },
+  "result": {
+    "id": "kraftmine:wood_armor_chestplate",
+    "count": 1
+  }
+}

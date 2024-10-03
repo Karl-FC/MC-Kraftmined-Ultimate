@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/t_blade"
+    "layer0": "kraftmine:item/t_blade"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/titanium_body"
+    "layer0": "kraftmine:item/titanium_body"
   }
 }

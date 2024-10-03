@@ -17,10 +17,10 @@ public class GigaEffectEffectExpiresProcedure {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(3, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_3));
+					_player.getInventory().armor.set(3, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_3);
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_3));
+					_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_3);
 				}
 			}
 		}
@@ -28,10 +28,10 @@ public class GigaEffectEffectExpiresProcedure {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(2, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_2));
+					_player.getInventory().armor.set(2, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_2);
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_2));
+					_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_2);
 				}
 			}
 		}
@@ -39,10 +39,10 @@ public class GigaEffectEffectExpiresProcedure {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_1));
+					_player.getInventory().armor.set(1, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_1);
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_1));
+					_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_1);
 				}
 			}
 		}
@@ -50,10 +50,10 @@ public class GigaEffectEffectExpiresProcedure {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_0));
+					_player.getInventory().armor.set(0, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_0);
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).SavedArmor_0));
+					_living.setItemSlot(EquipmentSlot.FEET, entity.getData(KraftmineModVariables.PLAYER_VARIABLES).SavedArmor_0);
 				}
 			}
 		}

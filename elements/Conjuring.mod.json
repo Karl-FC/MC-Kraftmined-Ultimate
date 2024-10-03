@@ -1,28 +1,205 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Conjuring",
-    "type": "BREAKABLE",
-    "rarity": "UNCOMMON",
-    "minLevel": 1,
+    "supportedSlots": "any",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
-        "value": "UNBREAKING"
+        "value": "CUSTOM:SaberSwing"
+      },
+      {
+        "value": "CUSTOM:BaneofMetapod"
+      },
+      {
+        "value": "CUSTOM:Lifesteal"
+      },
+      {
+        "value": "CUSTOM:DyingPan"
+      },
+      {
+        "value": "CUSTOM:Reconstruction"
+      },
+      {
+        "value": "CUSTOM:Replenishment"
+      },
+      {
+        "value": "CUSTOM:Efficacy"
+      },
+      {
+        "value": "CUSTOM:BleedingEdge"
+      },
+      {
+        "value": "CUSTOM:Stunning"
+      },
+      {
+        "value": "CUSTOM:Slicing"
+      },
+      {
+        "value": "CUSTOM:STAB"
+      },
+      {
+        "value": "CUSTOM:Holdup"
+      },
+      {
+        "value": "CUSTOM:Committed"
+      },
+      {
+        "value": "CUSTOM:Antibac"
+      },
+      {
+        "value": "CUSTOM:Backstabbing"
+      },
+      {
+        "value": "CUSTOM:Swiftfooted"
+      },
+      {
+        "value": "CUSTOM:Superstitious"
+      },
+      {
+        "value": "CUSTOM:MagicianSecret"
+      },
+      {
+        "value": "CUSTOM:BonusStrike"
+      },
+      {
+        "value": "CUSTOM:GuardingStrike"
+      },
+      {
+        "value": "PROTECTION"
+      },
+      {
+        "value": "FIRE_PROTECTION"
+      },
+      {
+        "value": "FEATHER_FALLING"
+      },
+      {
+        "value": "BLAST_PROTECTION"
+      },
+      {
+        "value": "PROJECTILE_PROTECTION"
+      },
+      {
+        "value": "RESPIRATION"
+      },
+      {
+        "value": "AQUA_AFFINITY"
+      },
+      {
+        "value": "THORNS"
+      },
+      {
+        "value": "DEPTH_STRIDER"
+      },
+      {
+        "value": "FROST_WALKER"
+      },
+      {
+        "value": "BINDING_CURSE"
+      },
+      {
+        "value": "SHARPNESS"
+      },
+      {
+        "value": "SMITE"
+      },
+      {
+        "value": "BANE_OF_ARTHROPODS"
+      },
+      {
+        "value": "KNOCKBACK"
+      },
+      {
+        "value": "FIRE_ASPECT"
+      },
+      {
+        "value": "LOOTING"
+      },
+      {
+        "value": "SWEEPING"
+      },
+      {
+        "value": "EFFICIENCY"
+      },
+      {
+        "value": "SILK_TOUCH"
+      },
+      {
+        "value": "FORTUNE"
+      },
+      {
+        "value": "POWER"
+      },
+      {
+        "value": "PUNCH"
+      },
+      {
+        "value": "FLAME"
+      },
+      {
+        "value": "INFINITY"
+      },
+      {
+        "value": "LUCK_OF_THE_SEA"
+      },
+      {
+        "value": "LURE"
+      },
+      {
+        "value": "LOYALTY"
+      },
+      {
+        "value": "IMPALING"
+      },
+      {
+        "value": "RIPTIDE"
+      },
+      {
+        "value": "CHANNELING"
+      },
+      {
+        "value": "MULTISHOT"
+      },
+      {
+        "value": "QUICK_CHARGE"
+      },
+      {
+        "value": "PIERCING"
+      },
+      {
+        "value": "DENSITY"
+      },
+      {
+        "value": "BREACH"
+      },
+      {
+        "value": "WIND_BURST"
+      },
+      {
+        "value": "MENDING"
+      },
+      {
+        "value": "VANISHING_CURSE"
+      },
+      {
+        "value": "SOUL_SPEED"
+      },
+      {
+        "value": "SWIFT_SNEAK"
       }
     ],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "supportedItems": [
       {
         "value": "CUSTOM:Dirtrod"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

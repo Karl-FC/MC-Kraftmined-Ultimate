@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "warpstar",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Warp Star",
     "rarity": "RARE",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -24,16 +28,24 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "\"A mysterious star that holds the power to transverse between dimensions\""
-    ],
-    "hasGlow": true,
+    "specialInformation": {
+      "fixedValue": [
+        "\"A mysterious star that holds the power to transverse between dimensions\""
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": true
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "WarpStarRightclicked"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

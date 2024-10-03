@@ -1,30 +1,35 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
+    "toolType": "Hoe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "prismarine_hoe",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Prismarine Hoe",
-    "specialInfo": [],
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
+    "specialInformation": {
+      "fixedValue": []
     },
-    "toolType": "Hoe",
-    "harvestLevel": 2,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "efficiency": 6.0,
     "attackSpeed": 1.0,
     "enchantability": 14,
     "damageVsEntity": 2.0,
     "usageCount": 250,
-    "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "Items.PRISMARINE_SHARD"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "IRON",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

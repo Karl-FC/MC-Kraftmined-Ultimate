@@ -1,10 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -23,7 +22,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
 
 import java.util.Comparator;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class DomainExpansionPlayerEntersDimensionProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
@@ -50,22 +50,22 @@ public class DomainExpansionPlayerEntersDimensionProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:domain_expansion")))) {
-			world.setBlock(new BlockPos(x + 1, y + 1, z + 1), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x + 2, y + 2, z + 2), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x + 3, y + 3, z + 3), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x + 4, y + 4, z + 4), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x + 5, y + 5, z + 5), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x - 1, y + 6, z + 6), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x - 2, y + 7, z + 7), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x - 3, y + 8, z + 8), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x - 4, y + 9, z + 9), Blocks.AIR.defaultBlockState(), 3);
-			world.setBlock(new BlockPos(x - 5, y + 10, z + 10), Blocks.AIR.defaultBlockState(), 3);
+		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:domain_expansion"))) {
+			world.setBlock(BlockPos.containing(x + 1, y + 1, z + 1), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x + 2, y + 2, z + 2), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x + 3, y + 3, z + 3), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x + 4, y + 4, z + 4), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x + 5, y + 5, z + 5), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x - 1, y + 6, z + 6), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x - 2, y + 7, z + 7), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x - 3, y + 8, z + 8), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x - 4, y + 9, z + 9), Blocks.AIR.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x - 5, y + 10, z + 10), Blocks.AIR.defaultBlockState(), 3);
 			if (KraftmineModVariables.WorldVariables.get(world).MickeyCD > 0) {
 				KraftmineMod.queueServerWork(100, () -> {
 					if (world instanceof ServerLevel _level) {
 						LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-						entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y + 3, z + 5)));
+						entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y + 3, z + 5)));
 						entityToSpawn.setVisualOnly(true);
 						_level.addFreshEntity(entityToSpawn);
 					}
@@ -74,9 +74,9 @@ public class DomainExpansionPlayerEntersDimensionProcedure {
 								"summon kraftmine:mickey ~ ~3 ~5");
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:theme.aot")), SoundSource.MUSIC, 5, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:theme.aot")), SoundSource.MUSIC, 5, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:theme.aot")), SoundSource.MUSIC, 5, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:theme.aot")), SoundSource.MUSIC, 5, 1, false);
 						}
 					}
 					KraftmineMod.queueServerWork(20, () -> {
@@ -84,19 +84,19 @@ public class DomainExpansionPlayerEntersDimensionProcedure {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity)
+						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 9999, 2));
 						if (((Entity) world.getEntitiesOfClass(MickeyEntity.class, AABB.ofSize(new Vec3(x, y, z), 32, 32, 32), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity)
+						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 9999, 2));
 						if (((Entity) world.getEntitiesOfClass(MickeyEntity.class, AABB.ofSize(new Vec3(x, y, z), 32, 32, 32), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity)
+						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 9999, 2));
 					});
 				});

@@ -1,16 +1,15 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Umbrella Head",
-    "type": "ARMOR_HEAD",
-    "rarity": "COMMON",
-    "minLevel": 1,
+    "supportedSlots": "head",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "CUSTOM:TungstenArmor.helmet"
       },
@@ -99,10 +98,8 @@
         "value": "Items.NETHERITE_HELMET"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

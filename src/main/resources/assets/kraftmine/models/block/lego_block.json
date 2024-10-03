@@ -1,12 +1,12 @@
 {
   "parent": "kraftmine:custom/lego",
   "textures": {
-    "all": "kraftmine:blocks/legoside",
-    "particle": "kraftmine:blocks/legoside",
-    "0": "kraftmine:blocks/legoblock",
-    "1": "kraftmine:blocks/legoside",
-    "2": "kraftmine:blocks/legobottom",
-    "3": "kraftmine:blocks/legotop"
+    "all": "kraftmine:block/legoside",
+    "particle": "kraftmine:block/legoside",
+    "0": "kraftmine:block/legoblock",
+    "1": "kraftmine:block/legoside",
+    "2": "kraftmine:block/legobottom",
+    "3": "kraftmine:block/legotop"
   },
   "render_type": "translucent"
 }

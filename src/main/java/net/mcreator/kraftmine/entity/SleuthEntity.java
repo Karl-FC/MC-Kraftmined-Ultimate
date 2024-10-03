@@ -1,10 +1,7 @@
 
 package net.mcreator.kraftmine.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.DungeonHooks;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
@@ -18,8 +15,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -27,26 +23,17 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.kraftmine.procedures.GhostSpiderNightProcedure;
 import net.mcreator.kraftmine.procedures.BkEntitiesNaturalEntitySpawningConditionProcedure;
 import net.mcreator.kraftmine.init.KraftmineModEntities;
 
 public class SleuthEntity extends Monster {
-	public SleuthEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(KraftmineModEntities.SLEUTH.get(), world);
-	}
-
 	public SleuthEntity(EntityType<SleuthEntity> type, Level world) {
 		super(type, world);
 		xpReward = 25;
 		setNoAi(false);
-	}
-
-	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
@@ -59,14 +46,14 @@ public class SleuthEntity extends Monster {
 				double y = SleuthEntity.this.getY();
 				double z = SleuthEntity.this.getZ();
 				Entity entity = SleuthEntity.this;
-				Level world = SleuthEntity.this.level;
+				Level world = SleuthEntity.this.level();
 				return super.canUse() && GhostSpiderNightProcedure.execute(world, x, y, z);
 			}
 		});
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
@@ -76,33 +63,27 @@ public class SleuthEntity extends Monster {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEAD;
-	}
-
-	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:sleuth.idle"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:sleuth.idle"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:sleuth.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:sleuth.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("kraftmine:sleuth.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("kraftmine:sleuth.death"));
 	}
 
-	public static void init() {
-		SpawnPlacements.register(KraftmineModEntities.SLEUTH.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(KraftmineModEntities.SLEUTH.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			return BkEntitiesNaturalEntitySpawningConditionProcedure.execute(world);
-		});
-		DungeonHooks.addDungeonMob(KraftmineModEntities.SLEUTH.get(), 180);
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -112,6 +93,7 @@ public class SleuthEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.7);
 		return builder;

@@ -1,0 +1,35 @@
+{
+  "description": {
+    "translate": "enchantment.kraftmine.efficacy"
+  },
+  "supported_items": [
+    "kraftmine:infinite_potion_revitalization",
+    "kraftmine:infinite_potion_leaping",
+    "kraftmine:infinite_potion_strength",
+    "kraftmine:infinite_potion_resistance",
+    "kraftmine:infinite_potion_fire_resistance",
+    "kraftmine:infinite_potion_invisibility",
+    "kraftmine:infinite_potion_slow_falling",
+    "kraftmine:infinite_potion_drip",
+    "kraftmine:infinite_potion_hydration",
+    "kraftmine:infinite_potion_saturation",
+    "kraftmine:infinite_potion_swiftness",
+    "kraftmine:infinite_potion_night_vision",
+    "kraftmine:infinite_potion_water_breathing"
+  ],
+  "weight": 10,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

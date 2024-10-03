@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "kraftmine:eerie",
+  "features": "kraftmine:graveyard_feature",
+  "step": "surface_structures"
+}

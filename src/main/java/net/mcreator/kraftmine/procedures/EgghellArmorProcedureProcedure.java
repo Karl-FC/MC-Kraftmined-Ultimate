@@ -40,11 +40,11 @@ public class EgghellArmorProcedureProcedure {
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGGHELL_ARMOR_CHESTPLATE.get()
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGGHELL_ARMOR_LEGGINGS.get()
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGGHELL_ARMOR_BOOTS.get()) {
-						for (int index0 = 0; index0 < (int) (5); index0++) {
+						for (int index0 = 0; index0 < 5; index0++) {
 							entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 						}
 					} else {
-						for (int index1 = 0; index1 < (int) (2); index1++) {
+						for (int index1 = 0; index1 < 2; index1++) {
 							entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 						}
 					}

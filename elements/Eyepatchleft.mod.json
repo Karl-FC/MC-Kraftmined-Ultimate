@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
@@ -9,6 +9,7 @@
         "data": {
           "image": "eyepatch_left.png",
           "use1Xscale": false,
+          "anchorPoint": "CENTER",
           "x": -36,
           "y": -7
         }

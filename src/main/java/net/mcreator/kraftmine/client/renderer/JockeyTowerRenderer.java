@@ -16,6 +16,6 @@ public class JockeyTowerRenderer extends MobRenderer<JockeyTowerEntity, ChickenM
 
 	@Override
 	public ResourceLocation getTextureLocation(JockeyTowerEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/pato.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/pato.png");
 	}
 }

@@ -1,42 +1,24 @@
 {
-  "_fv": 39,
-  "_type": "item",
+  "_fv": 69,
+  "_type": "projectile",
   "definition": {
-    "renderType": 0,
-    "texture": "blank",
-    "customModelName": "Normal",
-    "name": "Icewand Projectile",
-    "rarity": "COMMON",
-    "creativeTab": {
-      "value": "No creative tab entry"
+    "projectileItem": {
+      "value": "CUSTOM:SoulFlight"
     },
-    "stackSize": 1,
-    "enchantability": 0,
-    "useDuration": 0,
-    "toolType": 1.0,
-    "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.snowman.shoot"
     },
-    "destroyAnyBlock": false,
-    "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "enableMeleeDamage": false,
-    "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": false,
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
-    "inventoryStackSize": 64,
-    "isFood": false,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
-    "eatResultItem": {
-      "value": ""
-    },
-    "isMeat": false,
-    "isAlwaysEdible": false,
-    "animation": "none"
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "IceologerAttackProjectileHitsLivingEntity"
+    }
   }
 }

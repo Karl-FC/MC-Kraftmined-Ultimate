@@ -1,34 +1,32 @@
 
 package net.mcreator.kraftmine.world.dimension;
 
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
 import net.mcreator.kraftmine.procedures.AetherDimensionPortalTriggerUsedProcedure;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AetherDimension {
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class Fixers {
+	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class AetherSpecialEffectsHandler {
 		@SubscribeEvent
-		@OnlyIn(Dist.CLIENT)
-		public static void registerDimensionSpecialEffects(FMLClientSetupEvent event) {
+		public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
 			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(Float.NaN, true, DimensionSpecialEffects.SkyType.NONE, false, false) {
 				@Override
 				public Vec3 getBrightnessDependentFogColor(Vec3 color, float sunHeight) {
-					return new Vec3(0.854901960784, 0.976470588235, 1);
+					return new Vec3(0.8549019608, 0.9764705882, 1);
 				}
 
 				@Override
@@ -36,19 +34,18 @@ public class AetherDimension {
 					return false;
 				}
 			};
-			event.enqueueWork(() -> DimensionSpecialEffects.EFFECTS.put(new ResourceLocation("kraftmine:aether"), customEffect));
+			event.register(ResourceLocation.parse("kraftmine:aether"), customEffect);
 		}
 	}
 
 	@SubscribeEvent
 	public static void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
 		Entity entity = event.getEntity();
-		Level world = entity.level;
+		Level world = entity.level();
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		if (event.getTo() == ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("kraftmine:aether"))) {
-
+		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("kraftmine:aether"))) {
 			AetherDimensionPortalTriggerUsedProcedure.execute(world, x, y, z);
 		}
 	}

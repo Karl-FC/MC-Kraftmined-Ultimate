@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "kraftmine:backroom_level_0",
-  "features": "kraftmine:bkbase",
-  "step": "surface_structures"
-}

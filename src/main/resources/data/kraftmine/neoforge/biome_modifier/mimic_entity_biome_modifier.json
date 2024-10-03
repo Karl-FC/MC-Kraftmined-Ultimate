@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "spawners": {
+    "type": "kraftmine:mimic_entity",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

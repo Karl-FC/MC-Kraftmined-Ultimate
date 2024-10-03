@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/saber_blue"
+    "layer0": "kraftmine:item/saber_blue"
   }
 }

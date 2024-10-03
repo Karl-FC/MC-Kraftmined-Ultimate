@@ -1,6 +1,5 @@
 {
   "goose.honk": {
-    "category": "hostile",
     "subtitle": "subtitles.goose.honk",
     "sounds": [
       {
@@ -10,7 +9,6 @@
     ]
   },
   "horror.jumpscare.short": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:ennard_jumpscare",
@@ -23,7 +21,6 @@
     ]
   },
   "horror.jumpscare.lol": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:defaultdance",
@@ -32,7 +29,6 @@
     ]
   },
   "horror.jumpscare.med": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:cassidy-cannon-fredbear-jumpscare",
@@ -45,7 +41,6 @@
     ]
   },
   "horror.jumpscare.long": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nightmare-jumpscare",
@@ -54,7 +49,6 @@
     ]
   },
   "mickey.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.mickey.idle",
     "sounds": [
       {
@@ -80,7 +74,6 @@
     ]
   },
   "mickey.death": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:mickeydeath",
@@ -89,7 +82,6 @@
     ]
   },
   "mickey.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:mickeyhurt1",
@@ -114,7 +106,6 @@
     ]
   },
   "travel.aether": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:travel_aether",
@@ -123,7 +114,6 @@
     ]
   },
   "theme.aot": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:aot",
@@ -132,7 +122,6 @@
     ]
   },
   "horror.jumpscare.criminal": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:criminal-criminal",
@@ -141,7 +130,6 @@
     ]
   },
   "potion.timefreeze": {
-    "category": "player",
     "subtitle": "subtitles.potion.timefreeze",
     "sounds": [
       {
@@ -151,7 +139,6 @@
     ]
   },
   "attack.saber": {
-    "category": "player",
     "subtitle": "subtitles.attack.saber",
     "sounds": [
       {
@@ -197,7 +184,6 @@
     ]
   },
   "music.classical": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:mozart_-_lacrimosa",
@@ -218,7 +204,6 @@
     ]
   },
   "music.terraria": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:terraria_music_-_alternate_day",
@@ -235,7 +220,6 @@
     ]
   },
   "music.sweden.remix": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:c418_-_sweden_caution__crisis_remix",
@@ -244,7 +228,6 @@
     ]
   },
   "music.underground": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:terraria_music_-_underground",
@@ -253,7 +236,6 @@
     ]
   },
   "music.dorime": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:dorime_final_boss_ver._full",
@@ -262,7 +244,6 @@
     ]
   },
   "ambient.backrooms": {
-    "category": "ambient",
     "sounds": [
       {
         "name": "kraftmine:ambience",
@@ -283,7 +264,6 @@
     ]
   },
   "music.backrooms": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:instupendo_-_six_forty_seven",
@@ -304,7 +284,6 @@
     ]
   },
   "effects.backrooms": {
-    "category": "ambient",
     "sounds": [
       {
         "name": "kraftmine:back_rooms_creatures_sound_effect___made_by_me",
@@ -329,7 +308,6 @@
     ]
   },
   "mob.sans": {
-    "category": "hostile",
     "subtitle": "subtitles.mob.sans",
     "sounds": [
       {
@@ -355,7 +333,6 @@
     ]
   },
   "mob.generalgrievous.ambience": {
-    "category": "hostile",
     "subtitle": "subtitles.mob.generalgrievous.ambience",
     "sounds": [
       {
@@ -373,7 +350,6 @@
     ]
   },
   "mob.sans.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:undertale_sound_effect_-_inflicting_damage",
@@ -386,7 +362,6 @@
     ]
   },
   "mob.senator.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:general1",
@@ -423,7 +398,6 @@
     ]
   },
   "mob.generalgrievous.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:g5",
@@ -448,7 +422,6 @@
     ]
   },
   "siren.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:siren.hurt1",
@@ -465,7 +438,6 @@
     ]
   },
   "siren.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.siren.idle",
     "sounds": [
       {
@@ -495,7 +467,6 @@
     ]
   },
   "siren.death": {
-    "category": "hostile",
     "subtitle": "subtitles.siren.death",
     "sounds": [
       {
@@ -505,7 +476,6 @@
     ]
   },
   "mob.senator.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.mob.senator.idle",
     "sounds": [
       {
@@ -535,7 +505,6 @@
     ]
   },
   "mob.senator.death": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:dgeneral",
@@ -544,7 +513,6 @@
     ]
   },
   "amogus.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.amogus.idle",
     "sounds": [
       {
@@ -570,7 +538,6 @@
     ]
   },
   "amogus.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:imposter.hurt",
@@ -587,7 +554,6 @@
     ]
   },
   "amogus.death": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:imposter.death",
@@ -596,7 +562,6 @@
     ]
   },
   "sleuth.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.sleuth.idle",
     "sounds": [
       {
@@ -618,7 +583,6 @@
     ]
   },
   "sleuth.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:sleuth.hurt1",
@@ -631,7 +595,6 @@
     ]
   },
   "sleuth.death": {
-    "category": "hostile",
     "subtitle": "subtitles.sleuth.death",
     "sounds": [
       {
@@ -641,7 +604,6 @@
     ]
   },
   "giant.ambient": {
-    "category": "hostile",
     "subtitle": "subtitles.giant.ambient",
     "sounds": [
       {
@@ -667,7 +629,6 @@
     ]
   },
   "giant.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:giant.hurt",
@@ -680,7 +641,6 @@
     ]
   },
   "giant.step": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:giant.step",
@@ -689,7 +649,6 @@
     ]
   },
   "giant.death": {
-    "category": "hostile",
     "subtitle": "subtitles.giant.death",
     "sounds": [
       {
@@ -699,7 +658,6 @@
     ]
   },
   "anomaly.ambient": {
-    "category": "hostile",
     "subtitle": "subtitles.anomaly.ambient",
     "sounds": [
       {
@@ -721,7 +679,6 @@
     ]
   },
   "anomaly.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:anomaly.hurt",
@@ -734,7 +691,6 @@
     ]
   },
   "anomaly.death": {
-    "category": "neutral",
     "subtitle": "subtitles.anomaly.death",
     "sounds": [
       {
@@ -744,7 +700,6 @@
     ]
   },
   "eye.ambient": {
-    "category": "hostile",
     "subtitle": "subtitles.eye.ambient",
     "sounds": [
       {
@@ -774,7 +729,6 @@
     ]
   },
   "eye.hurts": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:eye.hurt1",
@@ -791,7 +745,6 @@
     ]
   },
   "eye.death": {
-    "category": "hostile",
     "subtitle": "subtitles.eye.death",
     "sounds": [
       {
@@ -805,7 +758,6 @@
     ]
   },
   "music.disc.rushe": {
-    "category": "record",
     "subtitle": "subtitles.music.disc.rushe",
     "sounds": [
       {
@@ -815,7 +767,6 @@
     ]
   },
   "music.disc.rickroll": {
-    "category": "record",
     "subtitle": "subtitles.music.disc.rickroll",
     "sounds": [
       {
@@ -825,7 +776,6 @@
     ]
   },
   "shade.ambient": {
-    "category": "hostile",
     "subtitle": "subtitles.shade.ambient",
     "sounds": [
       {
@@ -855,7 +805,6 @@
     ]
   },
   "shade.death": {
-    "category": "hostile",
     "subtitle": "subtitles.shade.death",
     "sounds": [
       {
@@ -865,7 +814,6 @@
     ]
   },
   "nightmarrione": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nightmarione1",
@@ -886,7 +834,6 @@
     ]
   },
   "horror.jumpscare": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:cassidy-cannon-fredbear-jumpscare",
@@ -907,7 +854,6 @@
     ]
   },
   "theme.starwars": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:star_wars_-_duel_of_the_fates___epic_version_remastered_v2",
@@ -916,7 +862,6 @@
     ]
   },
   "theme.takemedown": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:take_me_down",
@@ -925,7 +870,6 @@
     ]
   },
   "mob.penguin": {
-    "category": "neutral",
     "subtitle": "subtitles.mob.penguin",
     "sounds": [
       {
@@ -955,7 +899,6 @@
     ]
   },
   "pingu.hurt": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:noo1",
@@ -976,7 +919,6 @@
     ]
   },
   "pingu.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.pingu.idle",
     "sounds": [
       {
@@ -1002,7 +944,6 @@
     ]
   },
   "pingu.die": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nootnoot1",
@@ -1011,7 +952,6 @@
     ]
   },
   "mob.stomping": {
-    "category": "neutral",
     "sounds": [
       {
         "name": "kraftmine:stomp1",
@@ -1032,7 +972,6 @@
     ]
   },
   "theme.24": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:24_oras_theme_2016-present_pinaka_stereo_version-corrected",
@@ -1041,7 +980,6 @@
     ]
   },
   "music.frostcaverns": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:dance_of_the_sugar_plum_fairy_-_kevin_macleod_no_copyright_music",
@@ -1058,7 +996,6 @@
     ]
   },
   "music.wasteland": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:undertale_-_fallen_down_-_orchestral_cover",
@@ -1083,7 +1020,6 @@
     ]
   },
   "mood.backrooms": {
-    "category": "ambient",
     "sounds": [
       {
         "name": "kraftmine:fnaf_2_hallway_ambience_meme_sound_effect",
@@ -1104,7 +1040,6 @@
     ]
   },
   "mood.wastelands": {
-    "category": "ambient",
     "sounds": [
       {
         "name": "kraftmine:phone_guy_-hello_hello",
@@ -1117,7 +1052,6 @@
     ]
   },
   "ad.rickroll": {
-    "category": "player",
     "subtitle": "subtitles.ad.rickroll",
     "sounds": [
       {
@@ -1127,7 +1061,6 @@
     ]
   },
   "ad.dog": {
-    "category": "player",
     "subtitle": "subtitles.ad.dog",
     "sounds": [
       {
@@ -1137,7 +1070,6 @@
     ]
   },
   "ad.yoasobi": {
-    "category": "player",
     "subtitle": "subtitles.ad.yoasobi",
     "sounds": [
       {
@@ -1147,7 +1079,6 @@
     ]
   },
   "ad.saul": {
-    "category": "player",
     "subtitle": "subtitles.ad.saul",
     "sounds": [
       {
@@ -1157,7 +1088,6 @@
     ]
   },
   "ad.crab": {
-    "category": "player",
     "subtitle": "subtitles.ad.crab",
     "sounds": [
       {
@@ -1167,7 +1097,6 @@
     ]
   },
   "ad.cat": {
-    "category": "player",
     "subtitle": "subtitles.ad.cat",
     "sounds": [
       {
@@ -1177,7 +1106,6 @@
     ]
   },
   "ad.sponge": {
-    "category": "player",
     "subtitle": "subtitles.ad.sponge",
     "sounds": [
       {
@@ -1187,7 +1115,6 @@
     ]
   },
   "ad.seashanty": {
-    "category": "player",
     "subtitle": "subtitles.ad.seashanty",
     "sounds": [
       {
@@ -1209,7 +1136,6 @@
     ]
   },
   "music.disc.toreador": {
-    "category": "record",
     "subtitle": "subtitles.music.disc.toreador",
     "sounds": [
       {
@@ -1219,7 +1145,6 @@
     ]
   },
   "player.oof": {
-    "category": "player",
     "subtitle": "subtitles.player.oof",
     "sounds": [
       {
@@ -1229,7 +1154,6 @@
     ]
   },
   "music.eerie": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:sweden_-_terrifying_remix",
@@ -1238,7 +1162,6 @@
     ]
   },
   "music.disc.pvz": {
-    "category": "record",
     "subtitle": "subtitles.music.disc.pvz",
     "sounds": [
       {
@@ -1248,7 +1171,6 @@
     ]
   },
   "ambient.eerie": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:kyomis_lullaby",
@@ -1269,7 +1191,6 @@
     ]
   },
   "mob.nextbot.target": {
-    "category": "hostile",
     "subtitle": "subtitles.mob.nextbot.target",
     "sounds": [
       {
@@ -1279,7 +1200,6 @@
     ]
   },
   "mob.nextbot.obunga": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:obunga_beatbox_meme",
@@ -1288,7 +1208,6 @@
     ]
   },
   "mob.nextbot.bong": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:bong1",
@@ -1301,7 +1220,6 @@
     ]
   },
   "mob.nextbot.quandale": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:quandale1",
@@ -1318,7 +1236,6 @@
     ]
   },
   "mob.nextbot.yoshie": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nextbot_uncanny2-high_pitched",
@@ -1327,7 +1244,6 @@
     ]
   },
   "mob.nextbot.entity": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nextbot_nightmarionne",
@@ -1336,7 +1252,6 @@
     ]
   },
   "mob.nextbot.pig": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nextbot_uncanny",
@@ -1345,7 +1260,6 @@
     ]
   },
   "mob.nextbot.incredible": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nextbot_uncanny4",
@@ -1354,7 +1268,6 @@
     ]
   },
   "mob.nextbot.smile": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:nextbot_uncanny2",
@@ -1363,7 +1276,6 @@
     ]
   },
   "mob.nextbot.teeth": {
-    "category": "hostile",
     "sounds": [
       {
         "name": "kraftmine:criminal-criminal",
@@ -1372,7 +1284,6 @@
     ]
   },
   "theme.gigachad": {
-    "category": "music",
     "sounds": [
       {
         "name": "kraftmine:gigachad_theme",

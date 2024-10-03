@@ -1,0 +1,72 @@
+{
+  "description": {
+    "translate": "enchantment.kraftmine.slicing"
+  },
+  "supported_items": "#enchantable/weapon",
+  "weight": 10,
+  "max_level": 4,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": [
+    "kraftmine:baneof_metapod",
+    "kraftmine:lifesteal",
+    "kraftmine:dying_pan",
+    "kraftmine:reconstruction",
+    "kraftmine:conjuring",
+    "kraftmine:replenishment",
+    "kraftmine:efficacy",
+    "kraftmine:stab",
+    "kraftmine:holdup",
+    "kraftmine:committed",
+    "kraftmine:antibac",
+    "kraftmine:backstabbing",
+    "kraftmine:swiftfooted",
+    "kraftmine:superstitious",
+    "kraftmine:magician_secret",
+    "kraftmine:bonus_strike",
+    "kraftmine:guarding_strike",
+    "protection",
+    "fire_protection",
+    "feather_falling",
+    "blast_protection",
+    "projectile_protection",
+    "respiration",
+    "aqua_affinity",
+    "thorns",
+    "depth_strider",
+    "frost_walker",
+    "binding_curse",
+    "efficiency",
+    "silk_touch",
+    "fortune",
+    "power",
+    "punch",
+    "flame",
+    "infinity",
+    "luck_of_the_sea",
+    "lure",
+    "loyalty",
+    "impaling",
+    "riptide",
+    "channeling",
+    "multishot",
+    "quick_charge",
+    "piercing",
+    "density",
+    "breach",
+    "wind_burst",
+    "vanishing_curse",
+    "soul_speed",
+    "swift_sneak"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:deadwood_planks"
+    }
+  },
+  "result": {
+    "id": "kraftmine:deadwood_slab",
+    "count": 6
+  }
+}

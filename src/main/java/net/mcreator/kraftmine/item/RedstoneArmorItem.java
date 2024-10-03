@@ -1,7 +1,9 @@
 
 package net.mcreator.kraftmine.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -10,106 +12,74 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Holder;
+import net.minecraft.Util;
 
 import net.mcreator.kraftmine.procedures.RedstoneArmorHelmetTickEventProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
+import java.util.List;
+import java.util.EnumMap;
+
+import com.google.common.collect.Iterables;
+
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class RedstoneArmorItem extends ArmorItem {
-	public RedstoneArmorItem(EquipmentSlot slot, Item.Properties properties) {
-		super(new ArmorMaterial() {
-			@Override
-			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 12;
-			}
+	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 
-			@Override
-			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 5, 4, 2}[slot.getIndex()];
-			}
+	@SubscribeEvent
+	public static void registerArmorMaterial(RegisterEvent event) {
+		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
+			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+				map.put(ArmorItem.Type.BOOTS, 2);
+				map.put(ArmorItem.Type.LEGGINGS, 5);
+				map.put(ArmorItem.Type.CHESTPLATE, 4);
+				map.put(ArmorItem.Type.HELMET, 2);
+				map.put(ArmorItem.Type.BODY, 4);
+			}), 7, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(KraftmineModItems.REDSTONE_INGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("kraftmine:redstone"))), 0f, 0f);
+			registerHelper.register(ResourceLocation.parse("kraftmine:redstone_armor"), armorMaterial);
+			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
+		});
+	}
 
-			@Override
-			public int getEnchantmentValue() {
-				return 7;
-			}
-
-			@Override
-			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-			}
-
-			@Override
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(KraftmineModItems.REDSTONE_INGOT.get()));
-			}
-
-			@Override
-			public String getName() {
-				return "redstone_armor";
-			}
-
-			@Override
-			public float getToughness() {
-				return 0f;
-			}
-
-			@Override
-			public float getKnockbackResistance() {
-				return 0f;
-			}
-		}, slot, properties);
+	public RedstoneArmorItem(ArmorItem.Type type, Item.Properties properties) {
+		super(ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Helmet extends RedstoneArmorItem {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(12)));
 		}
 
 		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "kraftmine:textures/models/armor/redstone_layer_1.png";
-		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			RedstoneArmorHelmetTickEventProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				RedstoneArmorHelmetTickEventProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+			}
 		}
 	}
 
 	public static class Chestplate extends RedstoneArmorItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "kraftmine:textures/models/armor/redstone_layer_1.png";
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(12)));
 		}
 	}
 
 	public static class Leggings extends RedstoneArmorItem {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "kraftmine:textures/models/armor/redstone_layer_2.png";
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(12)));
 		}
 	}
 
 	public static class Boots extends RedstoneArmorItem {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(KraftmineModTabs.TAB_CRTABCOMBAT));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "kraftmine:textures/models/armor/redstone_layer_1.png";
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(12)));
 		}
 	}
 }

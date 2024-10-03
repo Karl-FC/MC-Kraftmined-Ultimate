@@ -15,6 +15,6 @@ public class IronDroidRenderer extends MobRenderer<IronDroidEntity, Modeliron_dr
 
 	@Override
 	public ResourceLocation getTextureLocation(IronDroidEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/future_iron_golem.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/future_iron_golem.png");
 	}
 }

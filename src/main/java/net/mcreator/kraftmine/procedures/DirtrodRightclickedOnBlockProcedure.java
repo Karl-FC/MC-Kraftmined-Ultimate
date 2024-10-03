@@ -1,11 +1,8 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -14,11 +11,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.kraftmine.init.KraftmineModEnchantments;
 import net.mcreator.kraftmine.init.KraftmineModBlocks;
 
 public class DirtrodRightclickedOnBlockProcedure {
@@ -38,48 +38,48 @@ public class DirtrodRightclickedOnBlockProcedure {
 		double j = 0;
 		double k = 0;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShovelItem) {
-			if (EnchantmentHelper.getItemEnchantmentLevel(KraftmineModEnchantments.CONJURING.get(), itemstack) != 0 && !(world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("forge:impenetrable")))
-					&& !((world.getBlockState(new BlockPos(x, y + 1, z))).getMaterial() == net.minecraft.world.level.material.Material.AIR)) {
-				world.setBlock(new BlockPos(x, y + 1, z), (ForgeRegistries.BLOCKS.tags().getTag(BlockTags.create(new ResourceLocation("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> Blocks.AIR)).defaultBlockState(), 3);
+			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("kraftmine:conjuring")))) != 0
+					&& !(world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("forge:impenetrable"))) && true) {
+				world.setBlock(BlockPos.containing(x, y + 1, z),
+						(BuiltInRegistries.BLOCK.getOrCreateTag(BlockTags.create(ResourceLocation.parse("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.BLOCK.wrapAsHolder(Blocks.AIR)).value())
+								.defaultBlockState(),
+						3);
 				if (new Object() {
 					public boolean checkGamemode(Entity _ent) {
 						if (_ent instanceof ServerPlayer _serverPlayer) {
 							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 						}
 						return false;
 					}
 				}.checkGamemode(entity)) {
-					{
-						ItemStack _ist = itemstack;
-						if (_ist.hurt(1, RandomSource.create(), null)) {
-							_ist.shrink(1);
-							_ist.setDamageValue(0);
-						}
+					if (world instanceof ServerLevel _level) {
+						itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+						});
 					}
 				}
-			} else if (EnchantmentHelper.getItemEnchantmentLevel(KraftmineModEnchantments.RECONSTRUCTION.get(), itemstack) != 0) {
-				world.setBlock(new BlockPos(x, y, z), (ForgeRegistries.BLOCKS.tags().getTag(BlockTags.create(new ResourceLocation("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> Blocks.AIR)).defaultBlockState(), 3);
-				if (!((world.getBlockState(new BlockPos(x, y, z))).getBlock() == KraftmineModBlocks.WALL_BLOCK.get())) {
+			} else if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("kraftmine:reconstruction")))) != 0) {
+				world.setBlock(BlockPos.containing(x, y, z),
+						(BuiltInRegistries.BLOCK.getOrCreateTag(BlockTags.create(ResourceLocation.parse("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.BLOCK.wrapAsHolder(Blocks.AIR)).value())
+								.defaultBlockState(),
+						3);
+				if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == KraftmineModBlocks.WALL_BLOCK.get())) {
 					if (new Object() {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayer _serverPlayer) {
 								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 							}
 							return false;
 						}
 					}.checkGamemode(entity)) {
-						{
-							ItemStack _ist = itemstack;
-							if (_ist.hurt(1, RandomSource.create(), null)) {
-								_ist.shrink(1);
-								_ist.setDamageValue(0);
-							}
+						if (world instanceof ServerLevel _level) {
+							itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+							});
 						}
 					}
 				} else {
@@ -87,42 +87,39 @@ public class DirtrodRightclickedOnBlockProcedure {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayer _serverPlayer) {
 								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 							}
 							return false;
 						}
 					}.checkGamemode(entity)) {
-						{
-							ItemStack _ist = itemstack;
-							if (_ist.hurt(50, RandomSource.create(), null)) {
-								_ist.shrink(1);
-								_ist.setDamageValue(0);
-							}
+						if (world instanceof ServerLevel _level) {
+							itemstack.hurtAndBreak(50, _level, null, _stkprov -> {
+							});
 						}
 					}
 				}
 			} else {
-				if (!(world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("forge:impenetrable")))) {
-					world.setBlock(new BlockPos(x, y, z), (ForgeRegistries.BLOCKS.tags().getTag(BlockTags.create(new ResourceLocation("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> Blocks.AIR)).defaultBlockState(), 3);
+				if (!(world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("forge:impenetrable")))) {
+					world.setBlock(BlockPos.containing(x, y, z),
+							(BuiltInRegistries.BLOCK.getOrCreateTag(BlockTags.create(ResourceLocation.parse("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.BLOCK.wrapAsHolder(Blocks.AIR)).value())
+									.defaultBlockState(),
+							3);
 					if (new Object() {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayer _serverPlayer) {
 								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 							}
 							return false;
 						}
 					}.checkGamemode(entity)) {
-						{
-							ItemStack _ist = itemstack;
-							if (_ist.hurt(1, RandomSource.create(), null)) {
-								_ist.shrink(1);
-								_ist.setDamageValue(0);
-							}
+						if (world instanceof ServerLevel _level) {
+							itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+							});
 						}
 					}
 				}

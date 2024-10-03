@@ -11,7 +11,7 @@ public class PenguinFloatProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.WATER_BREATHING) : false)
+		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.WATER_BREATHING))
 				&& (entity instanceof PenguinEntity && entity.getPersistentData().getDouble("air") < 200 || entity instanceof PenguinbigEntity && entity.getPersistentData().getDouble("air") < 100)) {
 			return true;
 		}

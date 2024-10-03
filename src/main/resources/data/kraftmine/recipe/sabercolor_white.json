@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "tag": "lightsabers"
+  },
+  "addition": {
+    "item": "kraftmine:crystal_white"
+  },
+  "result": {
+    "id": "kraftmine:saber_white"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmine:guarding_strike",
+    "kraftmine:swiftfooted",
+    "kraftmine:backstabbing",
+    "kraftmine:stab",
+    "kraftmine:lifesteal"
+  ]
+}

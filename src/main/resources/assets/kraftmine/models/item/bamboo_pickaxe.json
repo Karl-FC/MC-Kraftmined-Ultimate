@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "kraftmine:items/bamboo_pickaxe"
+    "layer0": "kraftmine:item/bamboo_pickaxe"
   }
 }

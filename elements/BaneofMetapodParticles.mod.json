@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "particle",
   "definition": {
     "texture": "broken_armor.png",
@@ -7,7 +7,9 @@
     "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,
-    "scale": 3.0,
+    "scale": {
+      "fixedValue": 3.0
+    },
     "speedFactor": 0.6,
     "gravity": 0.5,
     "maxAge": 20,

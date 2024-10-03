@@ -40,7 +40,7 @@ public class EggArmorProcedureProcedure {
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGG_ARMOR_CHESTPLATE.get()
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGG_ARMOR_LEGGINGS.get()
 							&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == KraftmineModItems.EGG_ARMOR_BOOTS.get()) {
-						for (int index0 = 0; index0 < (int) (2); index0++) {
+						for (int index0 = 0; index0 < 2; index0++) {
 							entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 						}
 					} else {

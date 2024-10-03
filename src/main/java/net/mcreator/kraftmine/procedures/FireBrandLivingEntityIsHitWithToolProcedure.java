@@ -11,7 +11,7 @@ public class FireBrandLivingEntityIsHitWithToolProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KraftmineModItems.FIRE_BRAND.get()) {
-			entity.setSecondsOnFire(4);
+			entity.igniteForSeconds(4);
 		}
 	}
 }

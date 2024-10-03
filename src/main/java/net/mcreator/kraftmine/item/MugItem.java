@@ -9,11 +9,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 import net.mcreator.kraftmine.procedures.MugRightclickProcedure;
-import net.mcreator.kraftmine.init.KraftmineModTabs;
 
 public class MugItem extends Item {
 	public MugItem() {
-		super(new Item.Properties().tab(KraftmineModTabs.TAB_CRTAB).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

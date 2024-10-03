@@ -6,8 +6,7 @@ import net.minecraft.core.BlockPos;
 
 public class GlowShroomAdditionalGenerationConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		if (!world.canSeeSkyFromBelowWater(new BlockPos(x, y, z)) && (world.getBlockState(new BlockPos(x, y, z))).getMaterial() == net.minecraft.world.level.material.Material.AIR
-				&& world.getBiome(new BlockPos(x, y, z)).is(new ResourceLocation("kraftmine:glow_shroom_biome"))) {
+		if (!world.canSeeSkyFromBelowWater(BlockPos.containing(x, y, z)) && false && world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("kraftmine:glow_shroom_biome"))) {
 			return true;
 		}
 		return false;

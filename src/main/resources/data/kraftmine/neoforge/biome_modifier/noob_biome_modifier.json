@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "kraftmine:roblox",
+  "spawners": {
+    "type": "kraftmine:noob",
+    "weight": 8,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

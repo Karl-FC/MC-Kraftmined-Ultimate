@@ -1,0 +1,14 @@
+{
+  "type": "kraftmine:structure_feature",
+  "config": {
+    "structure": "kraftmine:graveyard",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      0,
+      -4,
+      0
+    ]
+  }
+}

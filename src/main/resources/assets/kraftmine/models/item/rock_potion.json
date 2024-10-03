@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/rock_potion"
+    "layer0": "kraftmine:item/rock_potion"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/music_disc_toreadors"
+    "layer0": "kraftmine:item/music_disc_toreadors"
   }
 }

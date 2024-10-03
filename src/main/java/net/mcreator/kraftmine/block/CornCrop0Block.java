@@ -1,12 +1,10 @@
 
 package net.mcreator.kraftmine.block;
 
-import net.minecraftforge.common.PlantType;
-
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.pathfinder.PathType;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,7 +15,6 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
@@ -33,22 +30,10 @@ import net.mcreator.kraftmine.procedures.CornStage0BlockAddedProcedure;
 import net.mcreator.kraftmine.init.KraftmineModItems;
 import net.mcreator.kraftmine.block.entity.CornCrop0BlockEntity;
 
-import java.util.List;
-import java.util.Collections;
-
 public class CornCrop0Block extends FlowerBlock implements EntityBlock {
 	public CornCrop0Block() {
-		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of(Material.PLANT).randomTicks().sound(SoundType.CROP).instabreak().noCollission());
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 100;
-	}
-
-	@Override
-	public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
-		return useContext.getItemInHand().getItem() != this.asItem();
+		super(MobEffects.MOVEMENT_SPEED, 100,
+				BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.CROP).instabreak().noCollission().replaceable().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -57,21 +42,13 @@ public class CornCrop0Block extends FlowerBlock implements EntityBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
-		return BlockPathTypes.WALKABLE;
+	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return PathType.WALKABLE;
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(KraftmineModItems.CORN_SEEDS.get());
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(KraftmineModItems.CORN_SEEDS.get()));
 	}
 
 	@Override
@@ -95,19 +72,13 @@ public class CornCrop0Block extends FlowerBlock implements EntityBlock {
 	}
 
 	@Override
-	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
-		return PlantType.CROP;
-	}
-
-	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		CornStage0BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
-		super.tick(blockstate, world, pos, random);
+	public void randomTick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		CornUpdateTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 

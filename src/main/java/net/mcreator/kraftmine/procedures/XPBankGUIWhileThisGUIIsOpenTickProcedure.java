@@ -18,7 +18,7 @@ public class XPBankGUIWhileThisGUIIsOpenTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "XPStored") < 1) {
+		}.getValue(world, BlockPos.containing(x, y, z), "XPStored") < 1) {
 			if (guistate.get("text:XPStoredCount") instanceof EditBox _tf)
 				_tf.setValue("Empty");
 		} else if (new Object() {
@@ -28,7 +28,7 @@ public class XPBankGUIWhileThisGUIIsOpenTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "XPStored") >= 1) {
+		}.getValue(world, BlockPos.containing(x, y, z), "XPStored") >= 1) {
 			if (guistate.get("text:XPStoredCount") instanceof EditBox _tf)
 				_tf.setValue(("" + (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -37,7 +37,7 @@ public class XPBankGUIWhileThisGUIIsOpenTickProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos(x, y, z), "XPStored"))));
+				}.getValue(world, BlockPos.containing(x, y, z), "XPStored"))));
 		}
 	}
 }

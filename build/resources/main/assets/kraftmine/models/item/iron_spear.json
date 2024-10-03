@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/spear"
+    "layer0": "kraftmine:item/spear"
   },
   "display": {
     "thirdperson_righthand": {

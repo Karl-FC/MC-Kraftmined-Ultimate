@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/cloudblock",
-    "up": "kraftmine:blocks/cloudblock",
-    "north": "kraftmine:blocks/cloudblock",
-    "east": "kraftmine:blocks/cloudblock",
-    "south": "kraftmine:blocks/cloudblock",
-    "west": "kraftmine:blocks/cloudblock",
-    "particle": "kraftmine:blocks/cloudblock"
+    "down": "kraftmine:block/cloudblock",
+    "up": "kraftmine:block/cloudblock",
+    "north": "kraftmine:block/cloudblock",
+    "east": "kraftmine:block/cloudblock",
+    "south": "kraftmine:block/cloudblock",
+    "west": "kraftmine:block/cloudblock",
+    "particle": "kraftmine:block/cloudblock"
   },
   "render_type": "solid"
 }

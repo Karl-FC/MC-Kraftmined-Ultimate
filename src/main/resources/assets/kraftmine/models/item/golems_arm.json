@@ -1,7 +1,7 @@
 {
   "parent": "kraftmine:custom/golemarm",
   "textures": {
-    "1": "kraftmine:blocks/golemarm",
-    "particle": "kraftmine:items/titanium_ingot"
+    "1": "kraftmine:block/golemarm",
+    "particle": "kraftmine:item/titanium_ingot"
   }
 }

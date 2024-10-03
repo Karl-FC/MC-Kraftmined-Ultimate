@@ -39,13 +39,13 @@ public class WoodArmorProcedureProcedure {
 					chancemultiplier = chancemultiplier + 1;
 				}
 				if (Math.random() <= 0.02 * chancemultiplier) {
-					for (int index0 = 0; index0 < (int) (2); index0++) {
+					for (int index0 = 0; index0 < 2; index0++) {
 						entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 					}
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 1, (false), (false)));
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.SPLINTERED.get(), 100, 1, (false), (false)));
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 1, false, false));
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(KraftmineModMobEffects.SPLINTERED, 100, 1, false, false));
 				}
 			}
 		}

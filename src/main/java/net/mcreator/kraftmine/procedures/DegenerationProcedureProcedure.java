@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHealEvent;
+import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -12,7 +12,9 @@ import net.mcreator.kraftmine.init.KraftmineModMobEffects;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+import com.mojang.math.Divisor;
+
+@EventBusSubscriber
 public class DegenerationProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityHealed(LivingHealEvent event) {
@@ -29,10 +31,10 @@ public class DegenerationProcedureProcedure {
 		double InitialHeal = 0;
 		double Divisor = 0;
 		double FinalHeal = 0;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.ANTI_HEAL.get()) : false) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KraftmineModMobEffects.ANTI_HEAL)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
-						- amount / ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.ANTI_HEAL.get()) ? _livEnt.getEffect(KraftmineModMobEffects.ANTI_HEAL.get()).getAmplifier() : 0) + 1)));
+						- amount / ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(KraftmineModMobEffects.ANTI_HEAL) ? _livEnt.getEffect(KraftmineModMobEffects.ANTI_HEAL).getAmplifier() : 0) + 1)));
 		}
 	}
 }

@@ -15,6 +15,6 @@ public class SkeleturtleRenderer extends MobRenderer<SkeleturtleEntity, Modelske
 
 	@Override
 	public ResourceLocation getTextureLocation(SkeleturtleEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/skeleturtle.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/skeleturtle.png");
 	}
 }

@@ -4,12 +4,12 @@
  */
 package net.mcreator.kraftmine.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.common.extensions.IForgeMenuType;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.kraftmine.world.inventory.XPBankGUIMenu;
 import net.mcreator.kraftmine.world.inventory.QuiverguiMenu;
@@ -18,9 +18,9 @@ import net.mcreator.kraftmine.world.inventory.PossibilityShardGUIMenu;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModMenus {
-	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, KraftmineMod.MODID);
-	public static final RegistryObject<MenuType<XPBankGUIMenu>> XP_BANK_GUI = REGISTRY.register("xp_bank_gui", () -> IForgeMenuType.create(XPBankGUIMenu::new));
-	public static final RegistryObject<MenuType<QuiverguiMenu>> QUIVERGUI = REGISTRY.register("quivergui", () -> IForgeMenuType.create(QuiverguiMenu::new));
-	public static final RegistryObject<MenuType<PossibilityShardGUIMenu>> POSSIBILITY_SHARD_GUI = REGISTRY.register("possibility_shard_gui", () -> IForgeMenuType.create(PossibilityShardGUIMenu::new));
-	public static final RegistryObject<MenuType<QuiverarmorGUIMenu>> QUIVERARMOR_GUI = REGISTRY.register("quiverarmor_gui", () -> IForgeMenuType.create(QuiverarmorGUIMenu::new));
+	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, KraftmineMod.MODID);
+	public static final DeferredHolder<MenuType<?>, MenuType<XPBankGUIMenu>> XP_BANK_GUI = REGISTRY.register("xp_bank_gui", () -> IMenuTypeExtension.create(XPBankGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<QuiverguiMenu>> QUIVERGUI = REGISTRY.register("quivergui", () -> IMenuTypeExtension.create(QuiverguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<PossibilityShardGUIMenu>> POSSIBILITY_SHARD_GUI = REGISTRY.register("possibility_shard_gui", () -> IMenuTypeExtension.create(PossibilityShardGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<QuiverarmorGUIMenu>> QUIVERARMOR_GUI = REGISTRY.register("quiverarmor_gui", () -> IMenuTypeExtension.create(QuiverarmorGUIMenu::new));
 }

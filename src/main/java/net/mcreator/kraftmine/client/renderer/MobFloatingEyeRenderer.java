@@ -15,6 +15,6 @@ public class MobFloatingEyeRenderer extends MobRenderer<MobFloatingEyeEntity, Mo
 
 	@Override
 	public ResourceLocation getTextureLocation(MobFloatingEyeEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/eyeball-on-planetminecraft-com.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/eyeball-on-planetminecraft-com.png");
 	}
 }

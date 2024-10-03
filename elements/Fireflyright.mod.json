@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "particle",
   "definition": {
     "texture": "firefly2.png",
@@ -7,7 +7,9 @@
     "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,
-    "scale": 1.0,
+    "scale": {
+      "fixedValue": 1.0
+    },
     "speedFactor": 0.7,
     "gravity": 0.0,
     "maxAge": 40,

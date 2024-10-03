@@ -1,9 +1,10 @@
 {
   "parent": "block/slab",
   "textures": {
-    "bottom": "kraftmine:blocks/bamboo_planks",
-    "top": "kraftmine:blocks/bamboo_planks",
-    "side": "kraftmine:blocks/bamboo_planks"
+    "particle": "kraftmine:block/bamboo_planks",
+    "bottom": "kraftmine:block/bamboo_planks",
+    "top": "kraftmine:block/bamboo_planks",
+    "side": "kraftmine:block/bamboo_planks"
   },
   "render_type": "solid"
 }

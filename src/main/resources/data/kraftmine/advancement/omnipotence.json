@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "kraftmine:omnipotence_shard"
+    },
+    "title": {
+      "translate": "advancements.omnipotence.title"
+    },
+    "description": {
+      "translate": "advancements.omnipotence.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "omnipotence_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kraftmine:omnipotence_shard"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 25000
+  },
+  "parent": "kraftmine:kraftmine_base_power"
+}

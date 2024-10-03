@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Iron Droid",
     "mobLabel": "",
     "mobModelName": "Modeliron_droid",
     "mobModelTexture": "future_iron_golem.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 1.4,
     "modelHeight": 2.3,
     "modelShadowSize": 0.5,
@@ -20,9 +20,11 @@
       "value": -6724096,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 1.5,
     "knockbackResistance": 0.30000000000000004,
     "movementSpeed": 0.4,
+    "stepHeight": 0.6,
     "armorBaseValue": 20.0,
     "trackingRange": 64,
     "followRange": 64,
     "health": 100,
     "xpAmount": 3,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "IronGolem",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
@@ -112,6 +119,15 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="kraftmine"
+version="1.2.0"
+displayName="Kraftmine"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="RealAwesomeSkeleton, MCreator"
+description="Ginawa ko tong mod few years ago. Try niyo nga mag survival dito? HAHAHA"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.kraftmine]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.12,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.kraftmine]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

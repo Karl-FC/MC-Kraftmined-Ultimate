@@ -1,10 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -15,6 +14,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.network.KraftmineModVariables;
@@ -25,13 +25,11 @@ import javax.annotation.Nullable;
 
 import java.util.ArrayList;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class SupplyDropsProcedure {
 	@SubscribeEvent
-	public static void onWorldTick(TickEvent.LevelTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.level);
-		}
+	public static void onWorldTick(LevelTickEvent.Post event) {
+		execute(event, event.getLevel());
 	}
 
 	public static void execute(LevelAccessor world) {
@@ -49,22 +47,22 @@ public class SupplyDropsProcedure {
 				KraftmineModVariables.WorldVariables.get(world).SupplyTImer = 0;
 				KraftmineModVariables.WorldVariables.get(world).syncData(world);
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					for (int index0 = 0; index0 < (int) (5); index0++) {
+					for (int index0 = 0; index0 < 5; index0++) {
 						PosX = entityiterator.getX() + Mth.nextInt(RandomSource.create(), -16, 16);
 						PosY = entityiterator.getY() + Mth.nextInt(RandomSource.create(), 5, 10);
 						PosZ = entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -16, 16);
-						if ((world.getBlockState(new BlockPos(PosX, PosY, PosZ))).getMaterial() == net.minecraft.world.level.material.Material.AIR) {
+						if (false) {
 							break;
 						}
 					}
-					if ((world.getBlockState(new BlockPos(PosX, PosY, PosZ))).getMaterial() == net.minecraft.world.level.material.Material.AIR) {
+					if (false) {
 						if (world instanceof ServerLevel _level)
-							FallingBlockEntity.fall(_level, new BlockPos(PosX, PosY, PosZ), KraftmineModBlocks.SUPPLY_CRATE.get().defaultBlockState());
+							FallingBlockEntity.fall(_level, BlockPos.containing(PosX, PosY, PosZ), KraftmineModBlocks.SUPPLY_CRATE.get().defaultBlockState());
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(PosX, PosY, PosZ), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.twinkle")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(PosX, PosY, PosZ), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.firework_rocket.twinkle")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound(PosX, PosY, PosZ, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.twinkle")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound(PosX, PosY, PosZ, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.firework_rocket.twinkle")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 					}

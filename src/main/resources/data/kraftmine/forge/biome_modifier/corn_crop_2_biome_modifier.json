@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": {
-    "type": "forge:any"
-  },
-  "features": "kraftmine:corn_crop_2",
-  "step": "vegetal_decoration"
-}

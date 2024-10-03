@@ -1,15 +1,19 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "shard_3",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Volumetric Shard",
     "rarity": "RARE",
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "stackSize": 16,
     "enchantability": 0,
     "useDuration": 0,
@@ -24,16 +28,22 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "Press Z to use"
-    ],
-    "hasGlow": true,
+    "specialInformation": {
+      "fixedValue": [
+        "Press Z to use"
+      ]
+    },
     "glowCondition": {
+      "fixedValue": true,
       "name": "ShardMakeItemGlow"
     },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

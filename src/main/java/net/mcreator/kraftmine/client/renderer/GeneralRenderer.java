@@ -15,6 +15,6 @@ public class GeneralRenderer extends MobRenderer<GeneralEntity, Modelgeneral<Gen
 
 	@Override
 	public ResourceLocation getTextureLocation(GeneralEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/general.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/general.png");
 	}
 }

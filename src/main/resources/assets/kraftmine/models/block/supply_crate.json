@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/beehive_side",
-    "up": "kraftmine:blocks/beehive_side",
-    "north": "kraftmine:blocks/beehive_side",
-    "east": "kraftmine:blocks/beehive_side",
-    "south": "kraftmine:blocks/beehive_side",
-    "west": "kraftmine:blocks/beehive_side",
-    "particle": "kraftmine:blocks/beehive_side"
+    "down": "kraftmine:block/beehive_side",
+    "up": "kraftmine:block/beehive_side",
+    "north": "kraftmine:block/beehive_side",
+    "east": "kraftmine:block/beehive_side",
+    "south": "kraftmine:block/beehive_side",
+    "west": "kraftmine:block/beehive_side",
+    "particle": "kraftmine:block/beehive_side"
   },
   "render_type": "solid"
 }

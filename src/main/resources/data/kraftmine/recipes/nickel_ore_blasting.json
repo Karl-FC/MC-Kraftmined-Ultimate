@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "experience": 0.63,
-  "cookingtime": 100,
-  "ingredient": {
-    "item": "kraftmine:nickel_ore"
-  },
-  "result": "kraftmine:nickel_ingot"
-}

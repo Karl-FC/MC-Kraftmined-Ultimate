@@ -1,15 +1,15 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Creepiest",
     "mobLabel": "",
     "mobModelName": "Creeper",
     "mobModelTexture": "creepest.png",
-    "mobModelGlowTexture": "",
     "isShakingCondition": {
       "name": "CreepestEntityShakingCondition"
     },
+    "modelLayers": [],
     "modelWidth": 0.6,
     "modelHeight": 1.7,
     "modelShadowSize": 0.5,
@@ -23,9 +23,11 @@
       "value": -16738048,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -53,12 +55,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.5,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 30.0,
     "trackingRange": 64,
     "followRange": 30,
     "health": 20,
     "xpAmount": 8,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -95,6 +101,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "Creeper",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
@@ -115,6 +122,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": true
+    "spawnInDungeons": true,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -15,6 +15,6 @@ public class NoobRenderer extends MobRenderer<NoobEntity, Modelnoob<NoobEntity>>
 
 	@Override
 	public ResourceLocation getTextureLocation(NoobEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/noob.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/noob.png");
 	}
 }

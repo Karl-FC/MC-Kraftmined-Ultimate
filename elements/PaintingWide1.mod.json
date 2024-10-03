@@ -1,9 +1,11 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "painting",
   "definition": {
     "texture": "painting1.png",
     "width": 32,
-    "height": 16
+    "height": 16,
+    "title": "Painting Wide 1",
+    "author": "Unknown"
   }
 }

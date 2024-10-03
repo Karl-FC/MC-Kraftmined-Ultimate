@@ -1,0 +1,21 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:BladeOfDespair"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "item.axe.wax_off"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 3.9999999999999996,
+    "knockback": 1,
+    "entityModel": "Modelbod",
+    "customModelTexture": "bod.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

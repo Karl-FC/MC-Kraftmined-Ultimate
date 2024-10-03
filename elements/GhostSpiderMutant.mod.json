@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Mutated Ghost Spider",
     "mobLabel": "",
     "mobModelName": "ModelMutantGhostSpider",
     "mobModelTexture": "ghostspider3.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 0.5,
     "modelShadowSize": 0.5,
@@ -20,9 +20,11 @@
       "value": -10092544,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.1,
     "movementSpeed": 0.4,
+    "stepHeight": 0.6,
     "armorBaseValue": 1.0,
     "trackingRange": 75,
     "followRange": 32,
     "health": 30,
     "xpAmount": 25,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onInitialSpawn": {
       "name": "MobDespawnAether"
     },
@@ -115,6 +122,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 5,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

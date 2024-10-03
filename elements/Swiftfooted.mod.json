@@ -1,20 +1,21 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Swiftfooted",
-    "type": "ARMOR_FEET",
-    "rarity": "UNCOMMON",
-    "minLevel": 1,
+    "supportedSlots": "feet",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 3,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/foot_armor"
+      }
+    ],
     "isTreasureEnchantment": true,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

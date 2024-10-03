@@ -13,7 +13,7 @@ public class HelicopterOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		Direction facingat = Direction.NORTH;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(KraftmineModMobEffects.HELICOPTER.get()) : false) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KraftmineModMobEffects.HELICOPTER)) {
 			{
 				Entity _ent = entity;
 				_ent.setYRot((float) (entity.getYRot() + 15));
@@ -27,8 +27,8 @@ public class HelicopterOnEffectActiveTickProcedure {
 					_entity.yHeadRotO = _entity.getYRot();
 				}
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1, (false), (false)));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1, false, false));
 		}
 	}
 }

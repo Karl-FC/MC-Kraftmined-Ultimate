@@ -15,6 +15,6 @@ public class GooseRenderer extends MobRenderer<GooseEntity, ModelGoose<GooseEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(GooseEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/goosetexture.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/goosetexture.png");
 	}
 }

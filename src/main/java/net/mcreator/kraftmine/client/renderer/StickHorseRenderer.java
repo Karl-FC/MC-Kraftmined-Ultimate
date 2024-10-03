@@ -15,6 +15,6 @@ public class StickHorseRenderer extends MobRenderer<StickHorseEntity, Modelstick
 
 	@Override
 	public ResourceLocation getTextureLocation(StickHorseEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/bufalo.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/bufalo.png");
 	}
 }

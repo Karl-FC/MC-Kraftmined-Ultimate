@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "biome",
   "definition": {
     "name": "Glow Biome",
@@ -71,15 +71,6 @@
       "min": -1.0712255037396847,
       "max": 2.0
     },
-    "grassPerChunk": 10,
-    "seagrassPerChunk": 3,
-    "flowersPerChunk": 10,
-    "mushroomsPerChunk": 1,
-    "bigMushroomsChunk": 0,
-    "sandPatchesPerChunk": 0,
-    "gravelPatchesPerChunk": 2,
-    "reedsPerChunk": 3,
-    "cactiPerChunk": 0,
     "treesPerChunk": 10,
     "vanillaTreeType": "Big trees",
     "treeType": 1,
@@ -96,6 +87,15 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
+    "defaultFeatures": [
+      "Ores",
+      "FrozenTopLayer",
+      "Caves",
+      "Lakes",
+      "ForestGrass",
+      "DefaultFlowers",
+      "DesertFeatures"
+    ],
     "spawnStronghold": true,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
@@ -116,12 +116,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "STANDARD",
-    "defaultFeatures": [
-      "Ores",
-      "FrozenTopLayer",
-      "Caves",
-      "Lakes"
-    ],
     "spawnEntries": [
       {
         "entity": {

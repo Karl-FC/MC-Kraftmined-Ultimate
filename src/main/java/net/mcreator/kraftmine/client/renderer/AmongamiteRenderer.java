@@ -16,6 +16,6 @@ public class AmongamiteRenderer extends MobRenderer<AmongamiteEntity, Silverfish
 
 	@Override
 	public ResourceLocation getTextureLocation(AmongamiteEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/amogus_silverfish.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/amogus_silverfish.png");
 	}
 }

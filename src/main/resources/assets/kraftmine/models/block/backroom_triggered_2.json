@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "kraftmine:blocks/melon_face",
-    "up": "kraftmine:blocks/melon_face",
-    "north": "kraftmine:blocks/melon_face",
-    "east": "kraftmine:blocks/melon_face",
-    "south": "kraftmine:blocks/melon_face",
-    "west": "kraftmine:blocks/melon_face",
-    "particle": "kraftmine:blocks/melon_face"
+    "down": "kraftmine:block/melon_face",
+    "up": "kraftmine:block/melon_face",
+    "north": "kraftmine:block/melon_face",
+    "east": "kraftmine:block/melon_face",
+    "south": "kraftmine:block/melon_face",
+    "west": "kraftmine:block/melon_face",
+    "particle": "kraftmine:block/melon_face"
   },
   "render_type": "solid"
 }

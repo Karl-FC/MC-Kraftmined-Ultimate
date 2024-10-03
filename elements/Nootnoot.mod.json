@@ -1,12 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Nootnoot, Requiem God of Destruction",
     "mobLabel": "",
     "mobModelName": "Modelnootnoot",
     "mobModelTexture": "noot.png",
-    "mobModelGlowTexture": "",
+    "modelLayers": [],
     "modelWidth": 2.5,
     "modelHeight": 3.0,
     "modelShadowSize": 2.0,
@@ -20,9 +20,11 @@
       "value": -6160384,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Crtab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Crtab"
+      }
+    ],
     "isBoss": true,
     "bossBarColor": "RED",
     "bossBarType": "PROGRESS",
@@ -50,12 +52,16 @@
     "attackKnockback": 1.0,
     "knockbackResistance": 0.30000000000000004,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 32,
     "health": 500,
     "xpAmount": 50,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -92,6 +98,7 @@
     "stepSound": {
       "value": "CUSTOM:mob.stomping"
     },
+    "entityDataEntries": [],
     "whenMobIsHurt": {
       "name": "NootnootEntityIsHurt"
     },
@@ -128,6 +135,15 @@
         "value": "mutated_ice_flats"
       }
     ],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

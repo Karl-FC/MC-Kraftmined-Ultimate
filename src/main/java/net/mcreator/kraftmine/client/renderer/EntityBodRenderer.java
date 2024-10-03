@@ -15,6 +15,6 @@ public class EntityBodRenderer extends MobRenderer<EntityBodEntity, Modelbod<Ent
 
 	@Override
 	public ResourceLocation getTextureLocation(EntityBodEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/bod.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/bod.png");
 	}
 }

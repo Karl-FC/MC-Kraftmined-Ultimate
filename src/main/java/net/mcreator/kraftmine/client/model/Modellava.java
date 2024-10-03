@@ -22,7 +22,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modellava<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("kraftmine", "modellava"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("kraftmine", "modellava"), "main");
 	public final ModelPart helmet;
 	public final ModelPart chestplate;
 	public final ModelPart RightArm;
@@ -66,15 +66,15 @@ public class Modellava<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		helmet.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		chestplate.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		RightArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		Leftarm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leggingsright.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leggingsleft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		LeftFoot.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		RightFoot.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
+		helmet.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		chestplate.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		RightArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		Leftarm.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		leggingsright.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		leggingsleft.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		LeftFoot.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		RightFoot.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

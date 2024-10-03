@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------------
+
+Command-Line:
+ - D:\Programs\Minecraft\MCreator\MCreatorEAP2024339215\jdk\bin\java.exe
+ - -jar
+ - C:\Users\Karl\.mcreator\gradle\caches\modules-2\files-2.1\codechicken\DiffPatch\1.5.0.29\da63995592cfbd64b5b33d3824a3c30946f0d1e1\DiffPatch-1.5.0.29-all.jar
+ - C:\Users\Karl\.mcreator\gradle\caches\neoformruntime\intermediate_results\patch_0803b98495fa0b19dc3e82064e3318420f92ef74_output.zip
+ - C:\Users\Karl\.mcreator\gradle\caches\modules-2\files-2.1\net.neoforged\neoforge\21.1.12\a57aaf12acbad18bce949c3aa7f15778d03e98c3\neoforge-21.1.12-userdev.jar
+ - --prefix
+ - patches/
+ - --patch
+ - --archive
+ - ZIP
+ - --output
+ - ./output.zip
+ - --log-level
+ - WARN
+ - --mode
+ - OFFSET
+ - --archive-rejects
+ - ZIP
+ - --reject
+ - ./outputRejects.zip
+--------------------------------------------------------------------------------
+

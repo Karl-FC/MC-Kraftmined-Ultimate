@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:mahogany_planks"
+    }
+  },
+  "result": {
+    "id": "kraftmine:mahogany_pressure_plate",
+    "count": 1
+  }
+}

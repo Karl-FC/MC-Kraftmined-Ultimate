@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/razor_bod"
+    "layer0": "kraftmine:item/razor_bod"
   },
   "display": {
     "thirdperson_righthand": {

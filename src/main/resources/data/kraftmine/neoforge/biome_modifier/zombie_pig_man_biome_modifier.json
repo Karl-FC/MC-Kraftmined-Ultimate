@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "nether_wastes",
+  "spawners": {
+    "type": "kraftmine:zombie_pig_man",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 6
+  }
+}

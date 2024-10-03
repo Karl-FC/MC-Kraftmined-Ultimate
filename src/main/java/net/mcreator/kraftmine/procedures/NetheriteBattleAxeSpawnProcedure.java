@@ -1,9 +1,9 @@
 package net.mcreator.kraftmine.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
@@ -16,13 +16,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.kraftmine.init.KraftmineModItems;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class NetheriteBattleAxeSpawnProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
@@ -36,25 +36,25 @@ public class NetheriteBattleAxeSpawnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:nethermob"))) && !(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).isEnchanted())) {
+		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("forge:nethermob"))) && !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted())) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(KraftmineModItems.NETHERITE_BATTLE_AXE.get());
+				ItemStack _setstack = new ItemStack(KraftmineModItems.NETHERITE_BATTLE_AXE.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
-		} else if (entity instanceof Skeleton && (entity.level.dimension()) == (Level.NETHER) && !(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).isEnchanted())) {
+		} else if (entity instanceof Skeleton && (entity.level().dimension()) == Level.NETHER && !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted())) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(Items.CROSSBOW);
+				ItemStack _setstack = new ItemStack(Items.CROSSBOW).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
-		} else if (entity instanceof Zombie && (entity.level.dimension()) == (Level.NETHER) && !(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).isEnchanted())) {
+		} else if (entity instanceof Zombie && (entity.level().dimension()) == Level.NETHER && !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).isEnchanted())) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(Items.NETHERITE_SWORD);
+				ItemStack _setstack = new ItemStack(Items.NETHERITE_SWORD).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)

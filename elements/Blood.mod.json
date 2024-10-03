@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "particle",
   "definition": {
     "texture": "blood.png",
@@ -7,7 +7,9 @@
     "frameDuration": 1,
     "width": 0.1,
     "height": 0.1,
-    "scale": 1.1,
+    "scale": {
+      "fixedValue": 1.1
+    },
     "speedFactor": 0.0,
     "gravity": 0.4,
     "maxAge": 5,

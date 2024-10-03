@@ -8,14 +8,11 @@ public class ChaliceDrinkCupProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).AllowDrink == true
-				&& (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel < 20) {
+		if (entity.getData(KraftmineModVariables.PLAYER_VARIABLES).AllowDrink == true && entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel < 20) {
 			{
-				double _setval = (entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KraftmineModVariables.PlayerVariables())).Thirstlevel + 10;
-				entity.getCapability(KraftmineModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Thirstlevel = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				KraftmineModVariables.PlayerVariables _vars = entity.getData(KraftmineModVariables.PLAYER_VARIABLES);
+				_vars.Thirstlevel = entity.getData(KraftmineModVariables.PLAYER_VARIABLES).Thirstlevel + 10;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kraftmine:items/diamond_coin"
+    "layer0": "kraftmine:item/diamond_coin"
   }
 }

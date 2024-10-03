@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "kraftmine:aether_biome",
+  "features": "kraftmine:aetherancientdebris",
+  "step": "underground_ores"
+}

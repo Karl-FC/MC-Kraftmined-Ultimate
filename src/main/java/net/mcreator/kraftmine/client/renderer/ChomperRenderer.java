@@ -15,6 +15,6 @@ public class ChomperRenderer extends MobRenderer<ChomperEntity, Modelchomper<Cho
 
 	@Override
 	public ResourceLocation getTextureLocation(ChomperEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/chomper.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/chomper.png");
 	}
 }

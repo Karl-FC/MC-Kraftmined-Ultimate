@@ -1,9 +1,9 @@
 {
   "parent": "kraftmine:custom/emptylantern",
   "textures": {
-    "all": "kraftmine:blocks/firefly_lantern",
-    "particle": "kraftmine:blocks/firefly_lantern",
-    "0": "kraftmine:blocks/empty_lantern"
+    "all": "kraftmine:block/firefly_lantern",
+    "particle": "kraftmine:block/firefly_lantern",
+    "0": "kraftmine:block/empty_lantern"
   },
   "render_type": "cutout"
 }

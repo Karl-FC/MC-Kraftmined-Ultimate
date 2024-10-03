@@ -22,7 +22,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modelwasp<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("kraftmine", "modelwasp"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("kraftmine", "modelwasp"), "main");
 	public final ModelPart body;
 	public final ModelPart left_wing;
 	public final ModelPart right_wing;
@@ -72,16 +72,16 @@ public class Modelwasp<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		front_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		middle_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		back_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		torso.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
+		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		right_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		front_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		middle_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		back_legs.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		left_antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		right_antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		torso.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

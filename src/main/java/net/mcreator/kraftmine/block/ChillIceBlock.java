@@ -2,8 +2,7 @@
 package net.mcreator.kraftmine.block;
 
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -15,9 +14,17 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.kraftmine.procedures.ChillIceUpdateTickProcedure;
 
+import com.mojang.serialization.MapCodec;
+
 public class ChillIceBlock extends FallingBlock {
+	public static final MapCodec<ChillIceBlock> CODEC = simpleCodec(properties -> new ChillIceBlock());
+
+	public MapCodec<ChillIceBlock> codec() {
+		return CODEC;
+	}
+
 	public ChillIceBlock() {
-		super(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE).sound(SoundType.GLASS).strength(0.8f, 1f).speedFactor(0.8f).jumpFactor(0.9f).randomTicks().noLootTable());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).sound(SoundType.GLASS).strength(0.8f, 1f).speedFactor(0.8f).jumpFactor(0.9f).randomTicks().pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -26,16 +33,8 @@ public class ChillIceBlock extends FallingBlock {
 	}
 
 	@Override
-	public PushReaction getPistonPushReaction(BlockState state) {
-		return PushReaction.DESTROY;
-	}
-
-	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
-		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		ChillIceUpdateTickProcedure.execute(world, x, y, z);
+	public void randomTick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.randomTick(blockstate, world, pos, random);
+		ChillIceUpdateTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 }

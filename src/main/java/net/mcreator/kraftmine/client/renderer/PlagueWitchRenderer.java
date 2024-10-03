@@ -16,6 +16,6 @@ public class PlagueWitchRenderer extends MobRenderer<PlagueWitchEntity, WitchMod
 
 	@Override
 	public ResourceLocation getTextureLocation(PlagueWitchEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/scp_049.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/scp_049.png");
 	}
 }

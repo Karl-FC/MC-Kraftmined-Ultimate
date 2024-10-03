@@ -15,6 +15,6 @@ public class BuffalobabyRenderer extends MobRenderer<BuffalobabyEntity, Modelbuf
 
 	@Override
 	public ResourceLocation getTextureLocation(BuffalobabyEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/bufalo.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/bufalo.png");
 	}
 }

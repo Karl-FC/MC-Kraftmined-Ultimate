@@ -1,49 +1,49 @@
 
 package net.mcreator.kraftmine.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 
 import net.mcreator.kraftmine.procedures.ExtraUseButtonOnKeyPressedProcedure;
 import net.mcreator.kraftmine.KraftmineMod;
 
-import java.util.function.Supplier;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ExtraUseButtonMessage {
-	int type, pressedms;
-
-	public ExtraUseButtonMessage(int type, int pressedms) {
-		this.type = type;
-		this.pressedms = pressedms;
-	}
-
-	public ExtraUseButtonMessage(FriendlyByteBuf buffer) {
-		this.type = buffer.readInt();
-		this.pressedms = buffer.readInt();
-	}
-
-	public static void buffer(ExtraUseButtonMessage message, FriendlyByteBuf buffer) {
-		buffer.writeInt(message.type);
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record ExtraUseButtonMessage(int eventType, int pressedms) implements CustomPacketPayload {
+	public static final Type<ExtraUseButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(KraftmineMod.MODID, "key_extra_use_button"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, ExtraUseButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, ExtraUseButtonMessage message) -> {
+		buffer.writeInt(message.eventType);
 		buffer.writeInt(message.pressedms);
+	}, (RegistryFriendlyByteBuf buffer) -> new ExtraUseButtonMessage(buffer.readInt(), buffer.readInt()));
+
+	@Override
+	public Type<ExtraUseButtonMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(ExtraUseButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			pressAction(context.getSender(), message.type, message.pressedms);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final ExtraUseButtonMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> {
+				pressAction(context.player(), message.eventType, message.pressedms);
+			}).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void pressAction(Player entity, int type, int pressedms) {
-		Level world = entity.level;
+		Level world = entity.level();
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
@@ -58,6 +58,6 @@ public class ExtraUseButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		KraftmineMod.addNetworkMessage(ExtraUseButtonMessage.class, ExtraUseButtonMessage::buffer, ExtraUseButtonMessage::new, ExtraUseButtonMessage::handler);
+		KraftmineMod.addNetworkMessage(ExtraUseButtonMessage.TYPE, ExtraUseButtonMessage.STREAM_CODEC, ExtraUseButtonMessage::handleData);
 	}
 }

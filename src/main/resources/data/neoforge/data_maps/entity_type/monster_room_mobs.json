@@ -1,0 +1,46 @@
+{
+  "values": {
+    "kraftmine:mob_amogus": {
+      "weight": 100
+    },
+    "kraftmine:mimic_entity": {
+      "weight": 100
+    },
+    "kraftmine:ghost_spider": {
+      "weight": 100
+    },
+    "kraftmine:mob_amogus_blue": {
+      "weight": 100
+    },
+    "kraftmine:mob_amogus_grey": {
+      "weight": 100
+    },
+    "kraftmine:mob_amogus_green": {
+      "weight": 100
+    },
+    "kraftmine:mob_shade": {
+      "weight": 100
+    },
+    "kraftmine:zombie_pig_man": {
+      "weight": 100
+    },
+    "kraftmine:troll": {
+      "weight": 100
+    },
+    "kraftmine:anomaly": {
+      "weight": 100
+    },
+    "kraftmine:sleuth": {
+      "weight": 100
+    },
+    "kraftmine:iceologer": {
+      "weight": 100
+    },
+    "kraftmine:creepiest": {
+      "weight": 100
+    },
+    "kraftmine:creep": {
+      "weight": 100
+    }
+  }
+}

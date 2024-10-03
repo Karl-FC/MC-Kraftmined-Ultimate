@@ -15,6 +15,6 @@ public class PenguinRenderer extends MobRenderer<PenguinEntity, Modelpenguinsmal
 
 	@Override
 	public ResourceLocation getTextureLocation(PenguinEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/penguin.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/penguin.png");
 	}
 }

@@ -1,9 +1,11 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "painting",
   "definition": {
     "texture": "p10.png",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "title": "Painting Nether 1",
+    "author": "Unknown"
   }
 }

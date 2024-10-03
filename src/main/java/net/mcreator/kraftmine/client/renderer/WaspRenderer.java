@@ -15,6 +15,6 @@ public class WaspRenderer extends MobRenderer<WaspEntity, Modelwasp<WaspEntity>>
 
 	@Override
 	public ResourceLocation getTextureLocation(WaspEntity entity) {
-		return new ResourceLocation("kraftmine:textures/entities/wasp.png");
+		return ResourceLocation.parse("kraftmine:textures/entities/wasp.png");
 	}
 }

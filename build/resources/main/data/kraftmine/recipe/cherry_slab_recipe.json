@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmine:cherry_planks"
+    }
+  },
+  "result": {
+    "id": "kraftmine:cherry_slab",
+    "count": 6
+  }
+}

@@ -1,9 +1,11 @@
 {
-  "_fv": 39,
+  "_fv": 69,
   "_type": "painting",
   "definition": {
     "texture": "p5.png",
     "width": 16,
-    "height": 32
+    "height": 32,
+    "title": "Painting Tall 4",
+    "author": "Unknown"
   }
 }
