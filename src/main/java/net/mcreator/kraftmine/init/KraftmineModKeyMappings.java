@@ -16,10 +16,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.kraftmine.network.ExtraUseButtonMessage;
-import net.mcreator.kraftmine.network.DashMessage;
-import net.mcreator.kraftmine.network.CombatUseMessage;
-
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class KraftmineModKeyMappings {
 	public static final KeyMapping EXTRA_USE_BUTTON = new KeyMapping("key.kraftmine.extra_use_button", GLFW.GLFW_KEY_R, "key.categories.kraftmine") {

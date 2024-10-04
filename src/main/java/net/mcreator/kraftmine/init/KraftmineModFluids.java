@@ -17,8 +17,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.kraftmine.fluid.MilkBucketFluid;
-import net.mcreator.kraftmine.fluid.AcidFluid;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModFluids {

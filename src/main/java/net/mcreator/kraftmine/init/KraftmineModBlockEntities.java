@@ -15,15 +15,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.kraftmine.block.entity.XPBankBlockEntity;
-import net.mcreator.kraftmine.block.entity.WallnutBlockEntity;
-import net.mcreator.kraftmine.block.entity.TomatoBushBlockEntity;
-import net.mcreator.kraftmine.block.entity.TomatoBush3BlockEntity;
-import net.mcreator.kraftmine.block.entity.TomatoBush2BlockEntity;
-import net.mcreator.kraftmine.block.entity.TomatoBush1BlockEntity;
-import net.mcreator.kraftmine.block.entity.CornCrop2BlockEntity;
-import net.mcreator.kraftmine.block.entity.CornCrop1BlockEntity;
-import net.mcreator.kraftmine.block.entity.CornCrop0BlockEntity;
 import net.mcreator.kraftmine.KraftmineMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)

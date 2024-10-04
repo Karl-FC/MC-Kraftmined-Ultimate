@@ -11,10 +11,6 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.kraftmine.world.inventory.XPBankGUIMenu;
-import net.mcreator.kraftmine.world.inventory.QuiverguiMenu;
-import net.mcreator.kraftmine.world.inventory.QuiverarmorGUIMenu;
-import net.mcreator.kraftmine.world.inventory.PossibilityShardGUIMenu;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModMenus {

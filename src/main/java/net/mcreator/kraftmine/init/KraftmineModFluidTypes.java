@@ -9,8 +9,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.fluids.FluidType;
 
-import net.mcreator.kraftmine.fluid.types.MilkBucketFluidType;
-import net.mcreator.kraftmine.fluid.types.AcidFluidType;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModFluidTypes {
