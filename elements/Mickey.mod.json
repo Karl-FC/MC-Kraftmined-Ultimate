@@ -2,10 +2,25 @@
   "_fv": 69,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Mickey",
+    "mobName": "The Collector",
     "mobLabel": "",
     "mobModelName": "ModelMickey",
     "mobModelTexture": "mickey.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
     "modelLayers": [],
     "modelWidth": 1.0,
     "modelHeight": 2.0,
@@ -20,11 +35,7 @@
       "value": -65536,
       "falpha": 0.0
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "isBoss": true,
     "bossBarColor": "RED",
     "bossBarType": "PROGRESS",
@@ -59,6 +70,9 @@
     "health": 500,
     "xpAmount": 50,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
     "pushedByFluids": {
       "fixedValue": true
     },
@@ -96,6 +110,9 @@
       "value": "CUSTOM:mickey.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [],

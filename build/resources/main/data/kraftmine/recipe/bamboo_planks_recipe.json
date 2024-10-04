@@ -6,32 +6,11 @@
       "item": "minecraft:bamboo"
     },
     {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "minecraft:bamboo"
+      "item": "minecraft:flower_pot"
     }
   ],
   "result": {
-    "id": "kraftmine:bamboo_planks",
+    "id": "minecraft:potted_bamboo",
     "count": 1
   }
 }

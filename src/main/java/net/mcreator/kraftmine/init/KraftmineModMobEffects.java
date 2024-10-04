@@ -15,6 +15,30 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.kraftmine.procedures.RemoveCryProcedure;
+import net.mcreator.kraftmine.procedures.MilkedEffectExpiresProcedure;
+import net.mcreator.kraftmine.procedures.GigaEffectEffectExpiresProcedure;
+import net.mcreator.kraftmine.procedures.GhostlyEffectExpiresProcedure;
+import net.mcreator.kraftmine.potion.TimeFreezeMobEffect;
+import net.mcreator.kraftmine.potion.ThirstyMobEffect;
+import net.mcreator.kraftmine.potion.SusMobEffect;
+import net.mcreator.kraftmine.potion.SplinteredMobEffect;
+import net.mcreator.kraftmine.potion.SanitationMobEffect;
+import net.mcreator.kraftmine.potion.RefreshedMobEffect;
+import net.mcreator.kraftmine.potion.PotionCryMobEffect;
+import net.mcreator.kraftmine.potion.NoUMobEffect;
+import net.mcreator.kraftmine.potion.MilkedMobEffect;
+import net.mcreator.kraftmine.potion.JumpscareEffectMobEffect;
+import net.mcreator.kraftmine.potion.HelicopterMobEffect;
+import net.mcreator.kraftmine.potion.GigaEffectMobEffect;
+import net.mcreator.kraftmine.potion.GhostlyMobEffect;
+import net.mcreator.kraftmine.potion.EyepatchOnEffectMobEffect;
+import net.mcreator.kraftmine.potion.DripMobEffect;
+import net.mcreator.kraftmine.potion.ConfusionMobEffect;
+import net.mcreator.kraftmine.potion.BurnhealMobEffect;
+import net.mcreator.kraftmine.potion.BleedEffectMobEffect;
+import net.mcreator.kraftmine.potion.BeastmodeMobEffect;
+import net.mcreator.kraftmine.potion.AntiHealMobEffect;
 import net.mcreator.kraftmine.KraftmineMod;
 
 @EventBusSubscriber

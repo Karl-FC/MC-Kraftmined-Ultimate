@@ -1,21 +1,9 @@
 {
   "values": {
-    "kraftmine:mob_amogus": {
-      "weight": 100
-    },
     "kraftmine:mimic_entity": {
       "weight": 100
     },
     "kraftmine:ghost_spider": {
-      "weight": 100
-    },
-    "kraftmine:mob_amogus_blue": {
-      "weight": 100
-    },
-    "kraftmine:mob_amogus_grey": {
-      "weight": 100
-    },
-    "kraftmine:mob_amogus_green": {
       "weight": 100
     },
     "kraftmine:mob_shade": {

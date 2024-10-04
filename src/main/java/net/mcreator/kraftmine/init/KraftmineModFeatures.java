@@ -10,6 +10,15 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.kraftmine.world.features.SupplyCrateFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmtinyFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmtallFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmsmallFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmminiFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmmidFeatureFeature;
+import net.mcreator.kraftmine.world.features.PalmbentFeatureFeature;
+import net.mcreator.kraftmine.world.features.GlowShroomFeatureFeature;
+import net.mcreator.kraftmine.world.features.BkbaseFeatureFeature;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModFeatures {

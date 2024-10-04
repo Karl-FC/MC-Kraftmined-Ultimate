@@ -2,10 +2,25 @@
   "_fv": 69,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Floating Eye",
+    "mobName": "Floating Squid",
     "mobLabel": "",
     "mobModelName": "Modelfloating_eye",
     "mobModelTexture": "eyeball-on-planetminecraft-com.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
     "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 0.5,
@@ -20,11 +35,7 @@
       "value": -3407770,
       "falpha": 0.0
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -59,6 +70,9 @@
     "health": 20,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
     "pushedByFluids": {
       "fixedValue": true
     },
@@ -96,6 +110,9 @@
       "value": "CUSTOM:eye.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [],

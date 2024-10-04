@@ -1,20 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "MobAmogus",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mob_amogus",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmine/entity/MobAmogusEntity.java",
-          "src/main/java/net/mcreator/kraftmine/client/renderer/MobAmogusRenderer.java",
-          "src/main/resources/data/kraftmine/neoforge/biome_modifier/mob_amogus_biome_modifier.json"
-        ]
-      }
-    },
-    {
       "name": "Blockeat",
       "type": "procedure",
       "compiles": true,
@@ -4745,34 +4731,6 @@
       "path": "~/MoreGameplay"
     },
     {
-      "name": "MobAmogusBlue",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mob_amogus_blue",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/kraftmine/neoforge/biome_modifier/mob_amogus_blue_biome_modifier.json",
-          "src/main/java/net/mcreator/kraftmine/entity/MobAmogusBlueEntity.java",
-          "src/main/java/net/mcreator/kraftmine/client/renderer/MobAmogusBlueRenderer.java"
-        ]
-      }
-    },
-    {
-      "name": "MobAmogusGrey",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mob_amogus_grey",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmine/client/renderer/MobAmogusGreyRenderer.java",
-          "src/main/java/net/mcreator/kraftmine/entity/MobAmogusGreyEntity.java",
-          "src/main/resources/data/kraftmine/neoforge/biome_modifier/mob_amogus_grey_biome_modifier.json"
-        ]
-      }
-    },
-    {
       "name": "Refreshed",
       "type": "potioneffect",
       "compiles": true,
@@ -5060,20 +5018,6 @@
       "path": "~/Enchantments"
     },
     {
-      "name": "MobAmogusGreen",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mob_amogus_green",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmine/entity/MobAmogusGreenEntity.java",
-          "src/main/java/net/mcreator/kraftmine/client/renderer/MobAmogusGreenRenderer.java",
-          "src/main/resources/data/kraftmine/neoforge/biome_modifier/mob_amogus_green_biome_modifier.json"
-        ]
-      }
-    },
-    {
       "name": "DripEffectStartedapplied",
       "type": "procedure",
       "compiles": true,
@@ -5116,7 +5060,7 @@
     {
       "name": "MobBig",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "mob_big",
       "metadata": {
@@ -9228,7 +9172,7 @@
     {
       "name": "CoconutBlock",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "coconut_block",
       "metadata": {
@@ -11503,7 +11447,7 @@
     {
       "name": "CornCrop0",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_0",
       "metadata": {
@@ -11524,7 +11468,7 @@
     {
       "name": "CornCrop1",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_1",
       "metadata": {
@@ -11576,7 +11520,7 @@
     {
       "name": "CornCrop2",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "corn_crop_2",
       "metadata": {
@@ -11622,7 +11566,7 @@
     {
       "name": "TomatoBush",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush",
       "metadata": {
@@ -11674,7 +11618,7 @@
     {
       "name": "TomatoBush1",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_1",
       "metadata": {
@@ -11695,7 +11639,7 @@
     {
       "name": "TomatoBush2",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_2",
       "metadata": {
@@ -11716,7 +11660,7 @@
     {
       "name": "TomatoBush3",
       "type": "plant",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_bush_3",
       "metadata": {
@@ -15773,7 +15717,7 @@
     {
       "name": "Skeleturtle",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "skeleturtle",
       "metadata": {
@@ -18603,7 +18547,7 @@
     {
       "name": "Acid",
       "type": "fluid",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "acid",
       "metadata": {
@@ -20682,7 +20626,7 @@
     {
       "name": "RangedTomatoProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ranged_tomato_projectile",
       "metadata": {
@@ -20707,7 +20651,7 @@
     {
       "name": "BladeRazorProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blade_razor_projectile",
       "metadata": {
@@ -20733,7 +20677,7 @@
     {
       "name": "BladeOfDespairProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blade_of_despair_projectile",
       "metadata": {
@@ -20775,7 +20719,7 @@
     {
       "name": "PopCornProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pop_corn_projectile",
       "metadata": {
@@ -20988,7 +20932,7 @@
     {
       "name": "StonespearProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "stonespear_projectile",
       "metadata": {
@@ -21045,7 +20989,7 @@
     {
       "name": "CocaColaGrenadeProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "coca_cola_grenade_projectile",
       "metadata": {
@@ -21070,7 +21014,7 @@
     {
       "name": "IronSpearProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "iron_spear_projectile",
       "metadata": {
@@ -21121,7 +21065,7 @@
     {
       "name": "BeetzookaProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "beetzooka_projectile",
       "metadata": {
@@ -21147,7 +21091,7 @@
     {
       "name": "TomatoShurikenProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tomato_shuriken_projectile",
       "metadata": {
@@ -21197,7 +21141,7 @@
     {
       "name": "IceWandProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ice_wand_projectile",
       "metadata": {
@@ -21222,7 +21166,7 @@
     {
       "name": "LightningRodProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lightning_rod_projectile",
       "metadata": {
@@ -21247,7 +21191,7 @@
     {
       "name": "FireScepterProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "fire_scepter_projectile",
       "metadata": {
@@ -21272,7 +21216,7 @@
     {
       "name": "TheSwitcherProjectile",
       "type": "projectile",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "the_switcher_projectile",
       "metadata": {
@@ -22681,6 +22625,22 @@
       "CUSTOM:StuddedArmor.body",
       "CUSTOM:PlateArmor.body"
     ],
+    "ITEMS:minecraft:armor_2": [
+      "Items.LEATHER_CHESTPLATE",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE",
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.NETHERITE_CHESTPLATE",
+      "CUSTOM:TungstenArmor.body",
+      "CUSTOM:ObsidianArmor.body",
+      "CUSTOM:NickelArmor.body",
+      "CUSTOM:TitaniumArmor.body",
+      "CUSTOM:CarbonArmor.body",
+      "CUSTOM:LapisLazuliArmor.body",
+      "CUSTOM:RedstoneArmor.body",
+      "CUSTOM:DripArmor.body"
+    ],
     "ITEMS:forge:more_helmet": [
       "CUSTOM:DripArmor.helmet",
       "CUSTOM:Eyepatch.helmet",
@@ -22697,22 +22657,6 @@
       "CUSTOM:CondensedArmor.helmet",
       "CUSTOM:StuddedArmor.helmet",
       "CUSTOM:PlateArmor.helmet"
-    ],
-    "ITEMS:minecraft:armor_2": [
-      "Items.LEATHER_CHESTPLATE",
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE",
-      "Items.DIAMOND_CHESTPLATE",
-      "Items.NETHERITE_CHESTPLATE",
-      "CUSTOM:TungstenArmor.body",
-      "CUSTOM:ObsidianArmor.body",
-      "CUSTOM:NickelArmor.body",
-      "CUSTOM:TitaniumArmor.body",
-      "CUSTOM:CarbonArmor.body",
-      "CUSTOM:LapisLazuliArmor.body",
-      "CUSTOM:RedstoneArmor.body",
-      "CUSTOM:DripArmor.body"
     ],
     "BIOMES:minecraft:has_structure/village_plains": [
       "~CUSTOM:Wasteland"
@@ -22773,6 +22717,10 @@
       "CUSTOM:Stonespear",
       "CUSTOM:FryingPan"
     ],
+    "ITEMS:forge:cherry_log": [
+      "CUSTOM:CherryWood",
+      "CUSTOM:CherryLog"
+    ],
     "ITEMS:forge:more_leggings": [
       "CUSTOM:DripArmor.legs",
       "CUSTOM:NickelArmor.legs",
@@ -22787,10 +22735,6 @@
       "CUSTOM:EgghellArmor.legs",
       "CUSTOM:CondensedArmor.legs",
       "CUSTOM:StuddedArmor.legs"
-    ],
-    "ITEMS:forge:cherry_log": [
-      "CUSTOM:CherryWood",
-      "CUSTOM:CherryLog"
     ],
     "ENTITIES:forge:arthropod": [
       "EntitySpider",
@@ -23594,11 +23538,7 @@
     ],
     "ENTITIES:minecraft:illager": [
       "~CUSTOM:Beanie",
-      "~CUSTOM:PlagueWitch",
-      "~CUSTOM:MobAmogusGreen",
-      "~CUSTOM:MobAmogusGrey",
-      "~CUSTOM:MobAmogusBlue",
-      "~CUSTOM:MobAmogus"
+      "~CUSTOM:PlagueWitch"
     ],
     "ITEMS:minecraft:leg_armor": [
       "~CUSTOM:GigaArmor.legs",
@@ -23644,11 +23584,11 @@
       "item.kraftmine.saber_dark": "Diamond Saber",
       "subtitles.horror.jumpscare.short": "",
       "enchantment.kraftmine.lifesteal": "Lifesteal",
-      "biome.kraftmine.backroom_level_0": "Backroom Level 0",
       "block.kraftmine.corn_crop_2": "Corn Crops Stage 2",
-      "painting.kraftmine.painting_nether_4.title": "Painting Nether 4",
-      "block.kraftmine.corn_crop_1": "Corn Crops Stage 1",
+      "biome.kraftmine.backroom_level_0": "Backroom Level 0",
       "item.kraftmine.sandstone_axe": "Sandstone Axe",
+      "block.kraftmine.corn_crop_1": "Corn Crops Stage 1",
+      "painting.kraftmine.painting_nether_4.title": "Painting Nether 4",
       "block.kraftmine.corn_crop_0": "Corn Crops Stage 0",
       "gui.kraftmine.xp_bank_gui.label_xp_bank": "XP Bank",
       "advancements.mastery_time.title": "Mastery of Time",
@@ -23661,10 +23601,10 @@
       "advancements.wisdom_trancendence.title": "Wisdom to Transcend Multiverses",
       "item.kraftmine.plastic_sword": "Plastic Sword",
       "block.kraftmine.palm_wood_button": "PalmWood Button",
-      "item.kraftmine.ruby_coin": "Ruby Coin",
       "item.kraftmine.titanium_armor_chestplate": "Titanium Chestplate",
-      "subtitles.mob.generalgrievous.hurt": "",
+      "item.kraftmine.ruby_coin": "Ruby Coin",
       "item.minecraft.lingering_potion.effect.shine_potion": "Lingering Potion of Shining",
+      "subtitles.mob.generalgrievous.hurt": "",
       "block.kraftmine.tungsten_ore": "Tungsten Ore",
       "block.kraftmine.wallnut": "Wallnut",
       "painting.kraftmine.painting_small_4.title": "Painting Small 4",
@@ -23690,46 +23630,46 @@
       "item.kraftmine.bamboo_sword": "Bamboo Sword",
       "item.kraftmine.infinite_potion_resistance": "Infinite Potion of Resistance",
       "item.minecraft.splash_potion.effect.time_freeze_potion": "Splash Potion of Za Warudo",
-      "item.minecraft.tipped_arrow.effect.potionof_kung_fu": "Arrow of Kung Fu Master",
       "item.kraftmine.drip_armor_boots": "Drip Shoes",
+      "item.minecraft.tipped_arrow.effect.potionof_kung_fu": "Arrow of Kung Fu Master",
       "item.kraftmine.wasp_spawn_egg": "Wasp Spawn Egg",
-      "fluid.kraftmine.acid": "Acid",
       "entity.kraftmine.beanie": "Imposter",
+      "fluid.kraftmine.acid": "Acid",
       "item.kraftmine.crystal_blue": "Light Crystal",
       "item.kraftmine.water_cup_mug": "Mug of Water",
       "painting.kraftmine.painting_wide_3.author": "Unknown",
       "item.kraftmine.corn": "Corn",
       "death.attack.chomper.3": "WAS THAT THE BITE OF 87?!",
       "death.attack.chomper.2": "%1$s was eather by %2$s",
-      "painting.kraftmine.painting_tall_4.author": "Unknown",
-      "death.attack.chomper.1": "Apparently, %1$s looked like a zombie",
       "subtitles.music.disc.toreador": "Music disc plays",
+      "death.attack.chomper.1": "Apparently, %1$s looked like a zombie",
+      "painting.kraftmine.painting_tall_4.author": "Unknown",
       "item.minecraft.potion.effect.spin": "Potion of Helicopter",
       "advancements.talent_life.title": "Healthy Living",
       "block.kraftmine.palm_wood_fence": "PalmWood Fence",
       "item.kraftmine.condensed_armor_leggings": "Condensed Leggings",
-      "painting.kraftmine.painting_wide_2.title": "Painting Wide 2",
       "entity.kraftmine.zombie_pig_man": "Zombie Pigman",
+      "painting.kraftmine.painting_wide_2.title": "Painting Wide 2",
       "item.kraftmine.plastic_axe": "Plastic Axe",
       "painting.kraftmine.painting_golem_iron.author": "Unknown",
       "death.attack.confused": "%1$s hurt itself in its confusion",
-      "item.kraftmine.infinite_potion_night_vision": "Infinite Potion of Night Vision",
       "gamerule.supplies.description": "Random Supply drops spawns every hour (in real-time)",
+      "item.kraftmine.infinite_potion_night_vision": "Infinite Potion of Night Vision",
       "block.kraftmine.cloud_sapphire_ore": "Cloud Sapphire Ore",
       "item.kraftmine.cursed_iron_armor_chestplate": "Iron Chestplate",
       "subtitles.music.terraria": "",
       "item.kraftmine.cactus_armor_boots": "Cactus Boots",
       "item.kraftmine.redstone_ingot": "Redstone Ingot",
       "effect.kraftmine.sanitation": "Sanitation",
-      "gui.kraftmine.possibility_shard_gui.button_overworld": "Overworld",
       "advancements.volumetric.descr": "Combine the Shards of Positioning and Altitude",
+      "gui.kraftmine.possibility_shard_gui.button_overworld": "Overworld",
       "item.kraftmine.netherite_battle_axe": "Netherite Battleaxe",
       "item.kraftmine.tomato": "Tomato",
       "item.kraftmine.cooked_drumstick": "Cooked Drumstick",
       "subtitles.mickey.death": "",
       "item.kraftmine.anomaly_spawn_egg": "Anomaly Spawn Egg",
-      "block.kraftmine.mahogany_planks": "Redwood Planks",
       "block.kraftmine.xp_bank": "XP Bank",
+      "block.kraftmine.mahogany_planks": "Redwood Planks",
       "item.kraftmine.quiver_item": "Quiver",
       "item.kraftmine.trollge_lvl_3_spawn_egg": "Trollge {The Multiversal Devouring Incident} Spawn Egg",
       "gamerule.jumpscares": "Jumpscares",
@@ -23756,15 +23696,15 @@
       "death.attack.herobrine.2": "%1$s was vanquished by Herobrine",
       "death.attack.herobrine.3": "%1$s was slain by Herobrine",
       "item.kraftmine.sandstone_pickaxe": "Sandstone Pickaxe",
-      "item.kraftmine.saber_purple": "Diamond Saber",
       "item.kraftmine.clay_water_bottle_13": "Filled Bottle of Watter",
+      "item.kraftmine.saber_purple": "Diamond Saber",
       "subtitles.horror.jumpscare.med": "",
       "subtitles.mob.senator.idle": "Speech Sounds",
       "gamerule.timeSpeed": "Time Speed",
       "item.kraftmine.drumstick": "Raw Drumstick",
       "subtitles.ad.saul": "Press BACKSPACE to close ad",
-      "painting.kraftmine.painting_tall_1.author": "Unknown",
       "gui.kraftmine.xp_bank_gui.button_20": "20",
+      "painting.kraftmine.painting_tall_1.author": "Unknown",
       "entity.kraftmine.nextbot_9": "Nextbot",
       "subtitles.mood.backrooms": "",
       "block.kraftmine.palm_wood_fence_gate": "PalmWood Fence Gate",
@@ -23776,30 +23716,30 @@
       "death.attack.amongusblue": "Blue was the Impostor",
       "entity.kraftmine.nextbot_7": "Nextbot",
       "entity.kraftmine.nextbot_2": "Nextbot",
-      "subtitles.mob.stomping": "",
       "entity.kraftmine.nextbot_1": "Nextbot",
+      "subtitles.mob.stomping": "",
       "item.kraftmine.goose_spawn_egg": "Goose Spawn Egg",
       "entity.kraftmine.nextbot_4": "Nextbot",
       "entity.kraftmine.nextbot_3": "Nextbot",
       "item.minecraft.potion.effect.drip_potion": "Potion of Drip",
-      "item.kraftmine.sandstone_hoe": "Sandstone Hoe",
       "item.kraftmine.redstone_armor_chestplate": "Redstone Chestplate",
+      "item.kraftmine.sandstone_hoe": "Sandstone Hoe",
       "item.kraftmine.giant_ai_spawn_egg": "Giant Spawn Egg",
       "block.kraftmine.golden_apple_block": "Block of Apple",
       "itemGroup.tabcrtabcombat": "KM: Combat",
       "item.minecraft.lingering_potion.effect.potion_roasting": "Lingering Potion of Roasting",
       "gui.kraftmine.xp_bank_gui.button_10": "10",
       "gui.kraftmine.xp_bank_gui.button_11": "1",
-      "item.kraftmine.road_cone_helmet": "Traffic Cone",
       "entity.kraftmine.troll": "Troll",
+      "item.kraftmine.road_cone_helmet": "Traffic Cone",
       "item.kraftmine.plastic_armor_chestplate": "Plastic Chestplate",
       "gamerule.timeSpeed.description": "Controls the world time. This number is added to the world time each time the world ticks. You can set it to -1 to stop time, or lesser to make time run backwards.",
       "entity.kraftmine.stick_horse": "Stick Horse",
       "item.kraftmine.creep_spawn_egg": "Creep Spawn Egg",
       "key.kraftmine.extra_use_button": "Extra Use Button",
-      "subtitles.sirenheadsound": "Eerie siren sounds",
-      "subtitles.siren.idle": "Siren noises",
       "block.kraftmine.iris_purple": "Purple Iris",
+      "subtitles.siren.idle": "Siren noises",
+      "subtitles.sirenheadsound": "Eerie siren sounds",
       "item.kraftmine.plastic_armor_helmet": "Plastic Helmet",
       "subtitles.mob.nextbot.yoshie": "",
       "item.kraftmine.lapis_lazuli_armor_helmet": "LapisLazuli Helmet",
@@ -23808,11 +23748,11 @@
       "item.kraftmine.wood_armor_boots": "Wooden Boots",
       "subtitles.sleuth.hurt": "",
       "painting.kraftmine.painting_nether.title": "Painting Nether",
-      "block.kraftmine.milk_bucket": "Milk",
       "item.kraftmine.crystal_dark": "Dark Crystal",
+      "block.kraftmine.milk_bucket": "Milk",
       "item.kraftmine.jockey_tower_spawn_egg": "Chicken Jockey Tower Spawn Egg",
-      "subtitles.record.0": "NEVER GONNA GIVE YOU UP",
       "subtitles.giant.step": "",
+      "subtitles.record.0": "NEVER GONNA GIVE YOU UP",
       "block.kraftmine.cherry_fence": "Charrwood Fence",
       "item.kraftmine.giga_potion_x": "Giga Potion X",
       "advancements.omnipotence.descr": "Become a Beyond-Omniversal Being",
@@ -23823,22 +23763,22 @@
       "subtitles.eye.hurts": "",
       "advancements.knowledge_initial.title": "Knowledge from the Origin of the Universe",
       "item.kraftmine.wine_glass": "Wine Glass",
-      "death.attack.acidrain.1": "%1$s died as a result of Global Warming",
       "item.kraftmine.nickel_armor_helmet": "Nickel Helmet",
+      "death.attack.acidrain.1": "%1$s died as a result of Global Warming",
       "item.kraftmine.tungsten_axe": "Tungsten Axe",
       "item.kraftmine.titanium_armor_leggings": "Titanium Leggings",
       "block.kraftmine.bamboo_fence": "Sapling Fence",
       "subtitles.amogus.hurt": "",
       "item.kraftmine.titanium_ingot": "Titanium",
-      "item.kraftmine.blueprints": "Blueprints",
-      "subtitles.music.disc.rickroll": "Music disc plays",
-      "entity.kraftmine.mob_floating_eye": "Floating Eye",
       "subtitles.player.oof": "Player hurt",
+      "entity.kraftmine.mob_floating_eye": "Floating Squid",
+      "subtitles.music.disc.rickroll": "Music disc plays",
+      "item.kraftmine.blueprints": "Blueprints",
       "item.kraftmine.plastic_water_bottle_15": "Filled Bottle of Watter",
       "item.kraftmine.tungsten_sword": "Tungsten Sword",
       "item.kraftmine.plastic_armor_boots": "Plastic Boots",
       "subtitles.music.aether": "",
-      "entity.kraftmine.mickey": "Mickey",
+      "entity.kraftmine.mickey": "The Collector",
       "item.kraftmine.plastic_glaive": "Plastic Glaive",
       "painting.kraftmine.painting_skeleton_2.author": "Unknown",
       "advancements.animepowers.descr": "Become a fidget spinner",
@@ -23857,25 +23797,24 @@
       "item.kraftmine.dirtrod": "Dirt Rod",
       "advancements.talent_thirst.descr": "Prolongs the player\u0027s thirst by 1 point",
       "advancements.transcendence.title": "To infinity and beyond!",
-      "painting.kraftmine.painting_small_4.author": "Unknown",
       "item.kraftmine.prismarine_armor_boots": "Prismarine Boots",
+      "painting.kraftmine.painting_small_4.author": "Unknown",
       "item.kraftmine.ice_wand": "Ice wand",
-      "entity.kraftmine.mob_amogus_grey": "Imposter",
       "painting.kraftmine.painting_small_3.author": "Unknown",
       "advancements.mastery_air.descr": "Learned the power of the Shard of Altitude",
       "item.kraftmine.eyepatch_helmet": "Eyepatch",
-      "item.minecraft.potion.effect.potion_milk": "Bottle of Milk",
-      "block.kraftmine.cloud_block_rain": "Cloud Block Rain",
       "subtitles.goose.honk": "Goose honks",
+      "block.kraftmine.cloud_block_rain": "Cloud Block Rain",
+      "item.minecraft.potion.effect.potion_milk": "Bottle of Milk",
       "item.minecraft.potion.effect.potion_freshness": "Potion of Freshness",
       "advancements.positioning.title": "What\u0027s this?",
       "item.kraftmine.coconut": "Coconut",
-      "entity.kraftmine.creepiest": "Creepiest",
       "biome.kraftmine.glow_shroom_biome": "Glow Biome",
+      "entity.kraftmine.creepiest": "Creepiest",
       "subtitles.eye.ambient": "Floating Eye Screeches",
       "entity.kraftmine.stone_spear_thrown": "Stone Spear Thrown",
-      "item.kraftmine.ghost_spider_spawn_egg": "Ghost Spider Spawn Egg",
       "item.minecraft.splash_potion.effect.hydration_potion": "Splash Potion of Hydration",
+      "item.kraftmine.ghost_spider_spawn_egg": "Ghost Spider Spawn Egg",
       "entity.kraftmine.shroo_moo": "ShrooMoo",
       "item.kraftmine.tungsten_ingot": "Tungsten",
       "advancements.initial.descr": "Craft an Initial Shard",
@@ -23927,8 +23866,8 @@
       "painting.kraftmine.painting_tall_4.title": "Painting Tall 4",
       "item.kraftmine.fire_brand": "Fire Brand",
       "item.kraftmine.troll_spawn_egg": "Troll Spawn Egg",
-      "item.kraftmine.water_charge": "Water Charge",
       "item.minecraft.lingering_potion.effect.potion_butterfly": "Lingering Potion of Fly High Butterfly",
+      "item.kraftmine.water_charge": "Water Charge",
       "item.kraftmine.hydro_armor_helmet": "Water Helmet",
       "painting.kraftmine.painting_small_5.title": "Painting Small 5",
       "item.kraftmine.quiver_armor_chestplate": "Quiver Body",
@@ -24162,9 +24101,8 @@
       "gamerule.buffedMobs.description": "Hostile mobs be buffed. Difficulty must be in hard in order to work",
       "painting.kraftmine.painting_wide_4.author": "Unknown",
       "subtitles.music.wasteland": "",
-      "entity.kraftmine.mob_amogus_blue": "Imposter",
       "enchantment.kraftmine.efficacy": "Efficacy",
-      "item.kraftmine.mickey_spawn_egg": "Mickey Spawn Egg",
+      "item.kraftmine.mickey_spawn_egg": "The Collector Spawn Egg",
       "item.kraftmine.eggshell": "Eggshell",
       "item.kraftmine.catfish_spawn_egg": "Cat fish Spawn Egg",
       "item.kraftmine.ranged_tomato": "Tomato",
@@ -24314,7 +24252,6 @@
       "subtitles.theme.takemedown": "",
       "item.kraftmine.studded_armor_chestplate": "Studded Chestplate",
       "biome.kraftmine.tropics": "Tropics",
-      "entity.kraftmine.mob_amogus": "Imposter",
       "item.kraftmine.obsidian_armor_helmet": "Obsidian Helmet",
       "advancements.talent_life.descr": "Increases player\u0027s Max HP by 10",
       "subtitles.ad.seashanty": "Press BACKSPACE to close ad",
@@ -24383,7 +24320,7 @@
       "subtitles.mob.sans.hurt": "",
       "item.kraftmine.ascendance_shard": "Shard of Ascendance",
       "item.kraftmine.disc_pv_z.desc": "Plants vs. Zombies - \"Cerebrawl\"",
-      "item.kraftmine.mob_floating_eye_spawn_egg": "Floating Eye Spawn Egg",
+      "item.kraftmine.mob_floating_eye_spawn_egg": "Floating Squid Spawn Egg",
       "item.kraftmine.music_disc_0": "Music Disc",
       "item.kraftmine.egg_armor_helmet": "Eggshell Helmet",
       "item.kraftmine.plastic_scrap": "Plastic Scrap",
@@ -24530,7 +24467,6 @@
       "item.kraftmine.plastic_bottle": "Clay Bottle",
       "item.kraftmine.nethers_wrath": "Nether\u0027s Wrath",
       "item.kraftmine.wood_ingot": "Wood Ingot",
-      "entity.kraftmine.mob_amogus_green": "Imposter",
       "gui.kraftmine.xp_bank_gui.button_deposit_all": "Deposit All",
       "painting.kraftmine.painting_amongus.title": "Painting Amongus",
       "subtitles.mob.penguin": "Penguin sounds?",

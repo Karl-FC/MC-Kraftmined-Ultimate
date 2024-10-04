@@ -16,15 +16,87 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.kraftmine.entity.ZombiePigManEntity;
+import net.mcreator.kraftmine.entity.WaspEntity;
+import net.mcreator.kraftmine.entity.TrollgeLvl3Entity;
+import net.mcreator.kraftmine.entity.TrollgeLvl2Entity;
+import net.mcreator.kraftmine.entity.TrollEntity;
+import net.mcreator.kraftmine.entity.TomatoShurikenProjectileEntity;
+import net.mcreator.kraftmine.entity.TheSwitcherProjectileEntity;
+import net.mcreator.kraftmine.entity.TestDummyEntity;
+import net.mcreator.kraftmine.entity.StonespearProjectileEntity;
+import net.mcreator.kraftmine.entity.StoneSpearThrownEntity;
+import net.mcreator.kraftmine.entity.StickHorseEntity;
+import net.mcreator.kraftmine.entity.SleuthEntity;
+import net.mcreator.kraftmine.entity.SkeleturtleEntityProjectile;
+import net.mcreator.kraftmine.entity.SkeleturtleEntity;
+import net.mcreator.kraftmine.entity.SirenheadEntity;
+import net.mcreator.kraftmine.entity.ShrooMooEntity;
+import net.mcreator.kraftmine.entity.SeedMachineGunProjectileEntity;
+import net.mcreator.kraftmine.entity.RangedTomatoProjectileEntity;
+import net.mcreator.kraftmine.entity.PrimalDragonEntity;
+import net.mcreator.kraftmine.entity.PopCornProjectileEntity;
+import net.mcreator.kraftmine.entity.PlagueWitchEntity;
+import net.mcreator.kraftmine.entity.PenguinbigEntity;
+import net.mcreator.kraftmine.entity.PenguinEntity;
+import net.mcreator.kraftmine.entity.ParasEntity;
+import net.mcreator.kraftmine.entity.NootnootEntity;
+import net.mcreator.kraftmine.entity.NoobEntity;
+import net.mcreator.kraftmine.entity.Nextbot9Entity;
+import net.mcreator.kraftmine.entity.Nextbot8Entity;
+import net.mcreator.kraftmine.entity.Nextbot7Entity;
+import net.mcreator.kraftmine.entity.Nextbot6Entity;
+import net.mcreator.kraftmine.entity.Nextbot5Entity;
+import net.mcreator.kraftmine.entity.Nextbot4Entity;
+import net.mcreator.kraftmine.entity.Nextbot3Entity;
+import net.mcreator.kraftmine.entity.Nextbot2Entity;
+import net.mcreator.kraftmine.entity.Nextbot1Entity;
+import net.mcreator.kraftmine.entity.Nextbot11Entity;
+import net.mcreator.kraftmine.entity.Nextbot10Entity;
+import net.mcreator.kraftmine.entity.MobShadeEntity;
+import net.mcreator.kraftmine.entity.MobFloatingEyeEntity;
+import net.mcreator.kraftmine.entity.MobBigEntity;
+import net.mcreator.kraftmine.entity.MimicEntityEntity;
+import net.mcreator.kraftmine.entity.MickeyEntity;
+import net.mcreator.kraftmine.entity.MeteoriteProjectileEntity;
+import net.mcreator.kraftmine.entity.MPPotatoProjectileEntity;
+import net.mcreator.kraftmine.entity.LightningRodProjectileEntity;
+import net.mcreator.kraftmine.entity.JockeyTowerEntity;
+import net.mcreator.kraftmine.entity.IronSpearProjectileEntity;
+import net.mcreator.kraftmine.entity.IronSpearEntityEntity;
+import net.mcreator.kraftmine.entity.IronDroidEntity;
+import net.mcreator.kraftmine.entity.IceologerEntity;
+import net.mcreator.kraftmine.entity.IceWandProjectileEntity;
+import net.mcreator.kraftmine.entity.HerobrineEntity;
+import net.mcreator.kraftmine.entity.GooseEntity;
+import net.mcreator.kraftmine.entity.GiantSquidEntity;
+import net.mcreator.kraftmine.entity.GiantAIEntity;
+import net.mcreator.kraftmine.entity.GhostSpiderMutantEntity;
+import net.mcreator.kraftmine.entity.GhostSpiderEntity;
+import net.mcreator.kraftmine.entity.GeneralEntity;
+import net.mcreator.kraftmine.entity.FrozenZombieEntity;
+import net.mcreator.kraftmine.entity.FireScepterProjectileEntity;
+import net.mcreator.kraftmine.entity.EntityBodEntity;
+import net.mcreator.kraftmine.entity.DuckEntity;
+import net.mcreator.kraftmine.entity.CreepestEntity;
+import net.mcreator.kraftmine.entity.CreepEntity;
+import net.mcreator.kraftmine.entity.CocaColaGrenadeProjectileEntity;
+import net.mcreator.kraftmine.entity.ChomperEntity;
+import net.mcreator.kraftmine.entity.CatfishEntity;
+import net.mcreator.kraftmine.entity.BuffalobabyEntity;
+import net.mcreator.kraftmine.entity.BuffaloEntity;
+import net.mcreator.kraftmine.entity.BladeRazorProjectileEntity;
+import net.mcreator.kraftmine.entity.BladeOfDespairProjectileEntity;
+import net.mcreator.kraftmine.entity.BeetzookaProjectileEntity;
+import net.mcreator.kraftmine.entity.BeetsniperProjectileEntity;
+import net.mcreator.kraftmine.entity.BeanieEntity;
+import net.mcreator.kraftmine.entity.AnomalyEntity;
+import net.mcreator.kraftmine.entity.AmongamiteEntity;
 import net.mcreator.kraftmine.KraftmineMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class KraftmineModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, KraftmineMod.MODID);
-	public static final DeferredHolder<EntityType<?>, EntityType<MobAmogusEntity>> MOB_AMOGUS = register("mob_amogus",
-			EntityType.Builder.<MobAmogusEntity>of(MobAmogusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SirenheadEntity>> SIRENHEAD = register("sirenhead",
 			EntityType.Builder.<SirenheadEntity>of(SirenheadEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -47,18 +119,6 @@ public class KraftmineModEntities {
 			EntityType.Builder.<EntityBodEntity>of(EntityBodEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
 
 					.sized(0.5f, 1f));
-	public static final DeferredHolder<EntityType<?>, EntityType<MobAmogusBlueEntity>> MOB_AMOGUS_BLUE = register("mob_amogus_blue",
-			EntityType.Builder.<MobAmogusBlueEntity>of(MobAmogusBlueEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<MobAmogusGreyEntity>> MOB_AMOGUS_GREY = register("mob_amogus_grey",
-			EntityType.Builder.<MobAmogusGreyEntity>of(MobAmogusGreyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<MobAmogusGreenEntity>> MOB_AMOGUS_GREEN = register("mob_amogus_green",
-			EntityType.Builder.<MobAmogusGreenEntity>of(MobAmogusGreenEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MobBigEntity>> MOB_BIG = register("mob_big",
 			EntityType.Builder.<MobBigEntity>of(MobBigEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -263,7 +323,6 @@ public class KraftmineModEntities {
 
 	@SubscribeEvent
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		MobAmogusEntity.init(event);
 		SirenheadEntity.init(event);
 		GooseEntity.init(event);
 		MimicEntityEntity.init(event);
@@ -271,9 +330,6 @@ public class KraftmineModEntities {
 		MickeyEntity.init(event);
 		GiantAIEntity.init(event);
 		EntityBodEntity.init(event);
-		MobAmogusBlueEntity.init(event);
-		MobAmogusGreyEntity.init(event);
-		MobAmogusGreenEntity.init(event);
 		MobBigEntity.init(event);
 		MobFloatingEyeEntity.init(event);
 		MobShadeEntity.init(event);
@@ -329,7 +385,6 @@ public class KraftmineModEntities {
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(MOB_AMOGUS.get(), MobAmogusEntity.createAttributes().build());
 		event.put(SIRENHEAD.get(), SirenheadEntity.createAttributes().build());
 		event.put(GOOSE.get(), GooseEntity.createAttributes().build());
 		event.put(MIMIC_ENTITY.get(), MimicEntityEntity.createAttributes().build());
@@ -337,9 +392,6 @@ public class KraftmineModEntities {
 		event.put(MICKEY.get(), MickeyEntity.createAttributes().build());
 		event.put(GIANT_AI.get(), GiantAIEntity.createAttributes().build());
 		event.put(ENTITY_BOD.get(), EntityBodEntity.createAttributes().build());
-		event.put(MOB_AMOGUS_BLUE.get(), MobAmogusBlueEntity.createAttributes().build());
-		event.put(MOB_AMOGUS_GREY.get(), MobAmogusGreyEntity.createAttributes().build());
-		event.put(MOB_AMOGUS_GREEN.get(), MobAmogusGreenEntity.createAttributes().build());
 		event.put(MOB_BIG.get(), MobBigEntity.createAttributes().build());
 		event.put(MOB_FLOATING_EYE.get(), MobFloatingEyeEntity.createAttributes().build());
 		event.put(MOB_SHADE.get(), MobShadeEntity.createAttributes().build());
