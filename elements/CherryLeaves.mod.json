@@ -12,7 +12,7 @@
     "customModelName": "Normal",
     "rotationMode": 0,
     "enablePitch": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -35,7 +35,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Cherry Blossoms",
+    "name": "Charrwood Blossoms",
     "specialInformation": {
       "fixedValue": []
     },
@@ -43,11 +43,7 @@
     "resistance": 0.22000000000000003,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -76,7 +72,7 @@
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
     "flammability": 33,
-    "fireSpreadSpeed": 0,
+    "fireSpreadSpeed": 1,
     "isLadder": false,
     "slipperiness": 0.6,
     "speedFactor": 1.0,
@@ -102,7 +98,7 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 1,
     "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,

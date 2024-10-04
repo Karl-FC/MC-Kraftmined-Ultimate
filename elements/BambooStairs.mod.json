@@ -35,7 +35,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Bamboo Stairs",
+    "name": "Sapling Stairs",
     "specialInformation": {
       "fixedValue": []
     },
@@ -43,11 +43,7 @@
     "resistance": 2.2,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""

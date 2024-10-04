@@ -1,16 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Crtab",
-      "type": "tab",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crtab",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
       "name": "MobAmogus",
       "type": "livingentity",
       "compiles": true,
@@ -5126,7 +5116,7 @@
     {
       "name": "MobBig",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mob_big",
       "metadata": {
@@ -9238,7 +9228,7 @@
     {
       "name": "CoconutBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "coconut_block",
       "metadata": {
@@ -11513,7 +11503,7 @@
     {
       "name": "CornCrop0",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "corn_crop_0",
       "metadata": {
@@ -11534,7 +11524,7 @@
     {
       "name": "CornCrop1",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "corn_crop_1",
       "metadata": {
@@ -11586,7 +11576,7 @@
     {
       "name": "CornCrop2",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "corn_crop_2",
       "metadata": {
@@ -11632,7 +11622,7 @@
     {
       "name": "TomatoBush",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tomato_bush",
       "metadata": {
@@ -11684,7 +11674,7 @@
     {
       "name": "TomatoBush1",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tomato_bush_1",
       "metadata": {
@@ -11705,7 +11695,7 @@
     {
       "name": "TomatoBush2",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tomato_bush_2",
       "metadata": {
@@ -11726,7 +11716,7 @@
     {
       "name": "TomatoBush3",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tomato_bush_3",
       "metadata": {
@@ -13270,16 +13260,6 @@
         "files": [
           "src/main/resources/data/kraftmine/recipe/egghell_armor_boots_recipe.json"
         ]
-      }
-    },
-    {
-      "name": "Crtabcombat",
-      "type": "tab",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crtabcombat",
-      "metadata": {
-        "files": []
       }
     },
     {
@@ -15793,7 +15773,7 @@
     {
       "name": "Skeleturtle",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "skeleturtle",
       "metadata": {
@@ -18623,7 +18603,7 @@
     {
       "name": "Acid",
       "type": "fluid",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "acid",
       "metadata": {
@@ -20702,7 +20682,7 @@
     {
       "name": "RangedTomatoProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ranged_tomato_projectile",
       "metadata": {
@@ -20727,7 +20707,7 @@
     {
       "name": "BladeRazorProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blade_razor_projectile",
       "metadata": {
@@ -20753,7 +20733,7 @@
     {
       "name": "BladeOfDespairProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blade_of_despair_projectile",
       "metadata": {
@@ -20795,7 +20775,7 @@
     {
       "name": "PopCornProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "pop_corn_projectile",
       "metadata": {
@@ -21008,7 +20988,7 @@
     {
       "name": "StonespearProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "stonespear_projectile",
       "metadata": {
@@ -21065,7 +21045,7 @@
     {
       "name": "CocaColaGrenadeProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "coca_cola_grenade_projectile",
       "metadata": {
@@ -21090,7 +21070,7 @@
     {
       "name": "IronSpearProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "iron_spear_projectile",
       "metadata": {
@@ -21141,7 +21121,7 @@
     {
       "name": "BeetzookaProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "beetzooka_projectile",
       "metadata": {
@@ -21167,7 +21147,7 @@
     {
       "name": "TomatoShurikenProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "tomato_shuriken_projectile",
       "metadata": {
@@ -21217,7 +21197,7 @@
     {
       "name": "IceWandProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_wand_projectile",
       "metadata": {
@@ -21242,7 +21222,7 @@
     {
       "name": "LightningRodProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_rod_projectile",
       "metadata": {
@@ -21267,7 +21247,7 @@
     {
       "name": "FireScepterProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_scepter_projectile",
       "metadata": {
@@ -21292,7 +21272,7 @@
     {
       "name": "TheSwitcherProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "the_switcher_projectile",
       "metadata": {
@@ -22689,22 +22669,6 @@
       "CUSTOM:StuddedArmor.body",
       "CUSTOM:PlateArmor.body"
     ],
-    "ITEMS:minecraft:armor_2": [
-      "Items.LEATHER_CHESTPLATE",
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE",
-      "Items.DIAMOND_CHESTPLATE",
-      "Items.NETHERITE_CHESTPLATE",
-      "CUSTOM:TungstenArmor.body",
-      "CUSTOM:ObsidianArmor.body",
-      "CUSTOM:NickelArmor.body",
-      "CUSTOM:TitaniumArmor.body",
-      "CUSTOM:CarbonArmor.body",
-      "CUSTOM:LapisLazuliArmor.body",
-      "CUSTOM:RedstoneArmor.body",
-      "CUSTOM:DripArmor.body"
-    ],
     "ITEMS:forge:more_helmet": [
       "CUSTOM:DripArmor.helmet",
       "CUSTOM:Eyepatch.helmet",
@@ -22721,6 +22685,22 @@
       "CUSTOM:CondensedArmor.helmet",
       "CUSTOM:StuddedArmor.helmet",
       "CUSTOM:PlateArmor.helmet"
+    ],
+    "ITEMS:minecraft:armor_2": [
+      "Items.LEATHER_CHESTPLATE",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE",
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.NETHERITE_CHESTPLATE",
+      "CUSTOM:TungstenArmor.body",
+      "CUSTOM:ObsidianArmor.body",
+      "CUSTOM:NickelArmor.body",
+      "CUSTOM:TitaniumArmor.body",
+      "CUSTOM:CarbonArmor.body",
+      "CUSTOM:LapisLazuliArmor.body",
+      "CUSTOM:RedstoneArmor.body",
+      "CUSTOM:DripArmor.body"
     ],
     "BIOMES:minecraft:has_structure/village_plains": [
       "~CUSTOM:Wasteland"
@@ -22781,10 +22761,6 @@
       "CUSTOM:Stonespear",
       "CUSTOM:FryingPan"
     ],
-    "ITEMS:forge:cherry_log": [
-      "CUSTOM:CherryWood",
-      "CUSTOM:CherryLog"
-    ],
     "ITEMS:forge:more_leggings": [
       "CUSTOM:DripArmor.legs",
       "CUSTOM:NickelArmor.legs",
@@ -22799,6 +22775,10 @@
       "CUSTOM:EgghellArmor.legs",
       "CUSTOM:CondensedArmor.legs",
       "CUSTOM:StuddedArmor.legs"
+    ],
+    "ITEMS:forge:cherry_log": [
+      "CUSTOM:CherryWood",
+      "CUSTOM:CherryLog"
     ],
     "ENTITIES:forge:arthropod": [
       "EntitySpider",
@@ -23725,7 +23705,7 @@
       "item.kraftmine.cooked_drumstick": "Cooked Drumstick",
       "subtitles.mickey.death": "",
       "item.kraftmine.anomaly_spawn_egg": "Anomaly Spawn Egg",
-      "block.kraftmine.mahogany_planks": "Mahogany Planks",
+      "block.kraftmine.mahogany_planks": "Redwood Planks",
       "block.kraftmine.xp_bank": "XP Bank",
       "item.kraftmine.quiver_item": "Quiver",
       "item.kraftmine.trollge_lvl_3_spawn_egg": "Trollge {The Multiversal Devouring Incident} Spawn Egg",
@@ -23824,7 +23804,7 @@
       "item.kraftmine.nickel_armor_helmet": "Nickel Helmet",
       "item.kraftmine.tungsten_axe": "Tungsten Axe",
       "item.kraftmine.titanium_armor_leggings": "Titanium Leggings",
-      "block.kraftmine.bamboo_fence": "Bamboo Fence",
+      "block.kraftmine.bamboo_fence": "Sapling Fence",
       "subtitles.amogus.hurt": "",
       "item.kraftmine.titanium_ingot": "Titanium",
       "item.kraftmine.blueprints": "Blueprints",
@@ -23953,7 +23933,7 @@
       "item.kraftmine.shard_ascendance": "Ascendance Shard",
       "fluid.kraftmine.milk_bucket": "Milk",
       "advancements.knowledge_alternates.title": "Knowledge of Alternate Worlds",
-      "block.kraftmine.mahogany_pressure_plate": "Mahogany Pressure Plate",
+      "block.kraftmine.mahogany_pressure_plate": "Redwood Pressure Plate",
       "painting.kraftmine.painting_skeleton.title": "Painting Skeleton",
       "item.kraftmine.pop_corn": "POP Corn",
       "enchantment.kraftmine.backstabbing": "Curse of Backstabbing",
@@ -24021,7 +24001,7 @@
       "entity.kraftmine.buffalo": "Buffalo",
       "item.kraftmine.rock_potion": "Rock Potion",
       "item.kraftmine.crystal_yellow": "Light Crystal",
-      "block.kraftmine.mahogany_slab": "Mahogany Slab",
+      "block.kraftmine.mahogany_slab": "Redwood Slab",
       "item.kraftmine.egg_armor_leggings": "Eggshell Leggings",
       "item.minecraft.tipped_arrow.effect.potion_terrify": "Arrow of Terrifying Screams",
       "item.kraftmine.condensed_armor_boots": "Condensed Boots",
@@ -24032,7 +24012,7 @@
       "death.attack.golem.2": "%1$s was bonked by %2$s",
       "death.attack.golem.3": "%1$s got snapped back to reality by %2$s",
       "advancements.altitudes.descr": "Obtain  a Shard of Altitudes",
-      "block.kraftmine.bamboo_button": "Bamboo Button",
+      "block.kraftmine.bamboo_button": "Sapling Button",
       "entity.kraftmine.penguin": "Penguin",
       "item.kraftmine.iceologer_spawn_egg": "Iceologer Spawn Egg",
       "gui.kraftmine.xp_bank_gui.label_deposit": "Deposit:",
@@ -24117,7 +24097,7 @@
       "gui.kraftmine.xp_bank_gui.label_claim": "Claim:",
       "painting.kraftmine.painting_nether_1.author": "Unknown",
       "item.kraftmine.carbon_armor_boots": "Carbon Fiber Boots",
-      "block.kraftmine.bamboo_planks": "Bamboo Planks",
+      "block.kraftmine.bamboo_planks": "SapPlanks",
       "effect.kraftmine.burnheal": "Burn heal",
       "advancements.talents.title": "Talents",
       "item.kraftmine.ghost_spider_mutant_spawn_egg": "Mutated Ghost Spider Spawn Egg",
@@ -24128,7 +24108,6 @@
       "block.kraftmine.backroom_trigger": "Backroom Trigger",
       "item.kraftmine.obsidian_armor_leggings": "Obsidian Leggings",
       "item.kraftmine.coca_cola_grenade": "Coca-Cola Hand Grenade",
-      "item_group.kraftmine.crtab": "Kraftmined",
       "item.kraftmine.frying_pan": "Frying Pan",
       "item.kraftmine.lightning_rod": "Lightning Rod",
       "subtitles.mob.nextbot.quandale": "",
@@ -24145,12 +24124,12 @@
       "block.kraftmine.deadwood_log": "Deadwood Log",
       "entity.kraftmine.trollge_lvl_3": "Trollge {The Multiversal Devouring Incident}",
       "item.kraftmine.omnipotence_shard": "Thing of Omnipotence",
-      "block.kraftmine.mahogany_button": "Mahogany Button",
+      "block.kraftmine.mahogany_button": "Redwood Button",
       "item.kraftmine.cursed_iron_armor_leggings": "Iron Leggings",
       "block.kraftmine.chill_ice": "Chill Ice",
-      "block.kraftmine.mahogany_log": "Mahogany Log",
+      "block.kraftmine.mahogany_log": "Redwood Log",
       "item.kraftmine.lava_armor_leggings": "Lava Leggings",
-      "block.kraftmine.bamboo_pressure_plate": "Bamboo Pressure Plate",
+      "block.kraftmine.bamboo_pressure_plate": "Sapling Pressure Plate",
       "gui.kraftmine.xp_bank_gui.button_claim_all": "Claim All",
       "item.kraftmine.shard_initial": "Initial Shard",
       "item.kraftmine.paras_spawn_egg": "Paras Spawn Egg",
@@ -24227,7 +24206,7 @@
       "subtitles.siren.hurt": "",
       "item.kraftmine.blueprints_cutlass": "Blueprints",
       "item.kraftmine.iron_spear": "Spear",
-      "block.kraftmine.mahogany_fence": "Mahogany Fence",
+      "block.kraftmine.mahogany_fence": "Redwood Fence",
       "entity.kraftmine.duck": "Duck",
       "effect.kraftmine.bleed_effect": "Bleeding",
       "subtitles.eye.death": "Eye dies",
@@ -24255,7 +24234,7 @@
       "item.kraftmine.soul_calcite": "Soul of Calcite",
       "item.kraftmine.infinite_potion_fire_resistance": "Infinite Potion of Fire Resistance",
       "item.kraftmine.reactor_core_low": "Reactor Core",
-      "block.kraftmine.mahogany_wood": "Mahogany Wood",
+      "block.kraftmine.mahogany_wood": "Redwood Wood",
       "item.kraftmine.plastic_armor_leggings": "Plastic Leggings",
       "subtitles.shade.death": "Shade disappears",
       "subtitles.effects.backrooms": "",
@@ -24302,7 +24281,7 @@
       "item.minecraft.tipped_arrow.effect.potion_confusion": "Arrow of Confusion",
       "subtitles.travel.aether": "",
       "enchantment.kraftmine.holdup": "Holdup",
-      "block.kraftmine.mahogany_leaves": "Mahogany Leaves",
+      "block.kraftmine.mahogany_leaves": "Redwood Leaves",
       "subtitles.sleuth.idle": "Hostile sounds",
       "item.minecraft.potion.effect.potion_confusion": "Potion of Confusion",
       "item.kraftmine.crystal_white": "Light Crystal",
@@ -24340,7 +24319,7 @@
       "item.kraftmine.plastic_water_bottle_25": "Filled Bottle of Watter",
       "item.kraftmine.trollge_lvl_2_spawn_egg": "Trollge [End of Worlds Incident] Spawn Egg",
       "painting.kraftmine.painting_wide_3.title": "Painting Wide 3",
-      "block.kraftmine.mahogany_fence_gate": "Mahogany Fence Gate",
+      "block.kraftmine.mahogany_fence_gate": "Redwood Fence Gate",
       "item.kraftmine.egghell_armor_helmet": "Egg-hell Helmet",
       "item.kraftmine.blade_of_despair": "Blade Of Despair",
       "entity.kraftmine.sleuth": "Sleuth",
@@ -24398,7 +24377,7 @@
       "block.kraftmine.aluminum_block": "Block of Aluminum",
       "item.kraftmine.tungsten_blade": "Tungsten Blade",
       "item.kraftmine.crystal_purple": "Light Crystal",
-      "block.kraftmine.bamboo_fence_gate": "Bamboo Fence Gate",
+      "block.kraftmine.bamboo_fence_gate": "Sapling Fence Gate",
       "item.kraftmine.lapis_lazuli_armor_boots": "LapisLazuli Boots",
       "subtitles.music.underground": "",
       "item.kraftmine.blueprints_shortsword": "Blueprints",
@@ -24436,7 +24415,7 @@
       "painting.kraftmine.painting_small_2.author": "Unknown",
       "painting.kraftmine.painting_alex.author": "Unknown",
       "entity.kraftmine.ghost_spider": "Ghost Spider",
-      "block.kraftmine.bamboo_slab": "Bamboo Slab",
+      "block.kraftmine.bamboo_slab": "Sapling Slab",
       "item.kraftmine.tnt_armor_leggings": "TNT Leggings",
       "subtitles.giant.death": "Giant dies",
       "item.kraftmine.lava_armor_boots": "Lava Boots",
@@ -24476,7 +24455,7 @@
       "subtitles.mob.nextbot.incredible": "",
       "item.kraftmine.the_switcher": "The Switcher",
       "block.kraftmine.ruby_ore": "Ruby Ore",
-      "block.kraftmine.mahogany_stairs": "Mahogany Stairs",
+      "block.kraftmine.mahogany_stairs": "Redwood Stairs",
       "item.kraftmine.stick_of_death": "Stick Of Death",
       "advancements.mickey_defeat.descr": "Defeat the Collector",
       "item.kraftmine.music_disc_0.desc": "Zero",
@@ -24498,7 +24477,6 @@
       "item.kraftmine.condensed_armor_chestplate": "Condensed Chestplate",
       "item.kraftmine.lapis_lazuli_armor_chestplate": "LapisLazuli Chestplate",
       "subtitles.attack.saber": "Saber slashes",
-      "item_group.kraftmine.crtabcombat": "KM: Combat",
       "item.minecraft.lingering_potion.effect.potionof_kung_fu": "Lingering Potion of Kung Fu Master",
       "advancements.mickey_defeat.title": "We\u0027re in the Endgame Now",
       "item.minecraft.tipped_arrow.effect.potion_roasting": "Arrow of Roasting",
@@ -24521,7 +24499,7 @@
       "item.kraftmine.obsidian_armor_boots": "Obsidian Boots",
       "death.attack.amongusred": "Red was the Impostor",
       "item.minecraft.tipped_arrow.effect.anti_potionof_healing": "Arrow of Anti-Potion of Healing",
-      "block.kraftmine.bamboo_stairs": "Bamboo Stairs",
+      "block.kraftmine.bamboo_stairs": "Sapling Stairs",
       "gui.kraftmine.quiverarmor_gui.label_quiverarmor": "QuiverArmor",
       "item.kraftmine.tungsten_armor_chestplate": "Tungsten Chestplate",
       "item.kraftmine.ice_axe": "Ice Axe",

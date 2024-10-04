@@ -22669,22 +22669,6 @@
       "CUSTOM:StuddedArmor.body",
       "CUSTOM:PlateArmor.body"
     ],
-    "ITEMS:minecraft:armor_2": [
-      "Items.LEATHER_CHESTPLATE",
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE",
-      "Items.DIAMOND_CHESTPLATE",
-      "Items.NETHERITE_CHESTPLATE",
-      "CUSTOM:TungstenArmor.body",
-      "CUSTOM:ObsidianArmor.body",
-      "CUSTOM:NickelArmor.body",
-      "CUSTOM:TitaniumArmor.body",
-      "CUSTOM:CarbonArmor.body",
-      "CUSTOM:LapisLazuliArmor.body",
-      "CUSTOM:RedstoneArmor.body",
-      "CUSTOM:DripArmor.body"
-    ],
     "ITEMS:forge:more_helmet": [
       "CUSTOM:DripArmor.helmet",
       "CUSTOM:Eyepatch.helmet",
@@ -22701,6 +22685,22 @@
       "CUSTOM:CondensedArmor.helmet",
       "CUSTOM:StuddedArmor.helmet",
       "CUSTOM:PlateArmor.helmet"
+    ],
+    "ITEMS:minecraft:armor_2": [
+      "Items.LEATHER_CHESTPLATE",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE",
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.NETHERITE_CHESTPLATE",
+      "CUSTOM:TungstenArmor.body",
+      "CUSTOM:ObsidianArmor.body",
+      "CUSTOM:NickelArmor.body",
+      "CUSTOM:TitaniumArmor.body",
+      "CUSTOM:CarbonArmor.body",
+      "CUSTOM:LapisLazuliArmor.body",
+      "CUSTOM:RedstoneArmor.body",
+      "CUSTOM:DripArmor.body"
     ],
     "BIOMES:minecraft:has_structure/village_plains": [
       "~CUSTOM:Wasteland"
@@ -22761,10 +22761,6 @@
       "CUSTOM:Stonespear",
       "CUSTOM:FryingPan"
     ],
-    "ITEMS:forge:cherry_log": [
-      "CUSTOM:CherryWood",
-      "CUSTOM:CherryLog"
-    ],
     "ITEMS:forge:more_leggings": [
       "CUSTOM:DripArmor.legs",
       "CUSTOM:NickelArmor.legs",
@@ -22779,6 +22775,10 @@
       "CUSTOM:EgghellArmor.legs",
       "CUSTOM:CondensedArmor.legs",
       "CUSTOM:StuddedArmor.legs"
+    ],
+    "ITEMS:forge:cherry_log": [
+      "CUSTOM:CherryWood",
+      "CUSTOM:CherryLog"
     ],
     "ENTITIES:forge:arthropod": [
       "EntitySpider",
@@ -24124,7 +24124,7 @@
       "block.kraftmine.deadwood_log": "Deadwood Log",
       "entity.kraftmine.trollge_lvl_3": "Trollge {The Multiversal Devouring Incident}",
       "item.kraftmine.omnipotence_shard": "Thing of Omnipotence",
-      "block.kraftmine.mahogany_button": "Mahogany Button",
+      "block.kraftmine.mahogany_button": "Redwood Button",
       "item.kraftmine.cursed_iron_armor_leggings": "Iron Leggings",
       "block.kraftmine.chill_ice": "Chill Ice",
       "block.kraftmine.mahogany_log": "Mahogany Log",
@@ -24206,7 +24206,7 @@
       "subtitles.siren.hurt": "",
       "item.kraftmine.blueprints_cutlass": "Blueprints",
       "item.kraftmine.iron_spear": "Spear",
-      "block.kraftmine.mahogany_fence": "Mahogany Fence",
+      "block.kraftmine.mahogany_fence": "Redwood Fence",
       "entity.kraftmine.duck": "Duck",
       "effect.kraftmine.bleed_effect": "Bleeding",
       "subtitles.eye.death": "Eye dies",
@@ -24281,7 +24281,7 @@
       "item.minecraft.tipped_arrow.effect.potion_confusion": "Arrow of Confusion",
       "subtitles.travel.aether": "",
       "enchantment.kraftmine.holdup": "Holdup",
-      "block.kraftmine.mahogany_leaves": "Mahogany Leaves",
+      "block.kraftmine.mahogany_leaves": "Redwood Leaves",
       "subtitles.sleuth.idle": "Hostile sounds",
       "item.minecraft.potion.effect.potion_confusion": "Potion of Confusion",
       "item.kraftmine.crystal_white": "Light Crystal",
@@ -24319,7 +24319,7 @@
       "item.kraftmine.plastic_water_bottle_25": "Filled Bottle of Watter",
       "item.kraftmine.trollge_lvl_2_spawn_egg": "Trollge [End of Worlds Incident] Spawn Egg",
       "painting.kraftmine.painting_wide_3.title": "Painting Wide 3",
-      "block.kraftmine.mahogany_fence_gate": "Mahogany Fence Gate",
+      "block.kraftmine.mahogany_fence_gate": "Redwood Fence Gate",
       "item.kraftmine.egghell_armor_helmet": "Egg-hell Helmet",
       "item.kraftmine.blade_of_despair": "Blade Of Despair",
       "entity.kraftmine.sleuth": "Sleuth",

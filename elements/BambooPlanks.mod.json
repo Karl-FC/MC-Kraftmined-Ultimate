@@ -34,7 +34,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Bamboo Planks",
+    "name": "SapPlanks",
     "specialInformation": {
       "fixedValue": []
     },
@@ -42,11 +42,7 @@
     "resistance": 3.237691035896673,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "axe",
     "customDrop": {
       "value": ""

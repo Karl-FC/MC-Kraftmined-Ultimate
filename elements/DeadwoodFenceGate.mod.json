@@ -43,11 +43,7 @@
     "resistance": 3.3000000000000003,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -75,7 +71,7 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 6,
+    "flammability": 35,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,

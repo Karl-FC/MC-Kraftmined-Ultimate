@@ -35,7 +35,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Bamboo Slab",
+    "name": "Sapling Slab",
     "specialInformation": {
       "fixedValue": []
     },
@@ -43,11 +43,7 @@
     "resistance": 3.3000000000000003,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""

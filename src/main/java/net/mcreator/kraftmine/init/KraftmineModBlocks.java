@@ -11,9 +11,45 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.CherryLeavesBlock;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.kraftmine.block.MahoganyWoodBlock;
+import net.mcreator.kraftmine.block.MahoganyStairsBlock;
+import net.mcreator.kraftmine.block.MahoganySlabBlock;
+import net.mcreator.kraftmine.block.MahoganyPressurePlateBlock;
+import net.mcreator.kraftmine.block.MahoganyPlanksBlock;
+import net.mcreator.kraftmine.block.MahoganyLogBlock;
+import net.mcreator.kraftmine.block.MahoganyLeavesBlock;
+import net.mcreator.kraftmine.block.MahoganyFenceGateBlock;
+import net.mcreator.kraftmine.block.MahoganyFenceBlock;
+import net.mcreator.kraftmine.block.MahoganyButtonBlock;
+import net.mcreator.kraftmine.block.DeadwoodWoodBlock;
+import net.mcreator.kraftmine.block.DeadwoodStairsBlock;
+import net.mcreator.kraftmine.block.DeadwoodSlabBlock;
+import net.mcreator.kraftmine.block.DeadwoodPressurePlateBlock;
+import net.mcreator.kraftmine.block.DeadwoodPlanksBlock;
+import net.mcreator.kraftmine.block.DeadwoodLogBlock;
+import net.mcreator.kraftmine.block.DeadwoodLeavesBlock;
+import net.mcreator.kraftmine.block.DeadwoodFenceGateBlock;
+import net.mcreator.kraftmine.block.DeadwoodFenceBlock;
+import net.mcreator.kraftmine.block.DeadwoodButtonBlock;
+import net.mcreator.kraftmine.block.CherryWoodBlock;
+import net.mcreator.kraftmine.block.CherryStairsBlock;
+import net.mcreator.kraftmine.block.CherrySlabBlock;
+import net.mcreator.kraftmine.block.CherryPressurePlateBlock;
+import net.mcreator.kraftmine.block.CherryPlanksBlock;
+import net.mcreator.kraftmine.block.CherryLogBlock;
+import net.mcreator.kraftmine.block.CherryLeavesBlock;
+import net.mcreator.kraftmine.block.CherryFenceGateBlock;
+import net.mcreator.kraftmine.block.CherryFenceBlock;
+import net.mcreator.kraftmine.block.CherryButtonBlock;
+import net.mcreator.kraftmine.block.BambooStairsBlock;
+import net.mcreator.kraftmine.block.BambooSlabBlock;
+import net.mcreator.kraftmine.block.BambooPressurePlateBlock;
+import net.mcreator.kraftmine.block.BambooPlanksBlock;
+import net.mcreator.kraftmine.block.BambooFenceGateBlock;
+import net.mcreator.kraftmine.block.BambooFenceBlock;
+import net.mcreator.kraftmine.block.BambooButtonBlock;
 import net.mcreator.kraftmine.KraftmineMod;
 
 public class KraftmineModBlocks {

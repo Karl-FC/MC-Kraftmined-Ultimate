@@ -1,0 +1,48 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "TAG:mod:saplings"
+      },
+      {
+        "value": "TAG:mod:saplings"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:mod:saplings"
+      },
+      {
+        "value": "TAG:mod:saplings"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BambooPlanks"
+    },
+    "name": "saplanks_recipe",
+    "namespace": "mod"
+  }
+}

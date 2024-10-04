@@ -12,10 +12,10 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:BambooPlanks"
+        "value": "Blocks.BAMBOO_PLANKS"
       },
       {
-        "value": "CUSTOM:BambooPlanks"
+        "value": "Blocks.BAMBOO_PLANKS"
       },
       {
         "value": ""

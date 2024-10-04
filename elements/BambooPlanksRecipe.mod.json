@@ -12,35 +12,35 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Blocks.BAMBOO"
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
       },
       {
         "value": "Blocks.BAMBOO"
       },
       {
-        "value": "Blocks.BAMBOO"
+        "value": ""
       },
       {
-        "value": "Blocks.BAMBOO"
+        "value": ""
       },
       {
-        "value": "Blocks.BAMBOO"
+        "value": "Items.FLOWER_POT"
       },
       {
-        "value": "Blocks.BAMBOO"
-      },
-      {
-        "value": "Blocks.BAMBOO"
-      },
-      {
-        "value": "Blocks.BAMBOO"
-      },
-      {
-        "value": "Blocks.BAMBOO"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BambooPlanks"
+      "value": "Blocks.POTTED_BAMBOO"
     },
     "name": "bamboo_planks_recipe",
     "namespace": "mod"

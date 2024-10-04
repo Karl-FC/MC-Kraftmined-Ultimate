@@ -35,7 +35,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Mahogany Slab",
+    "name": "Redwood Slab",
     "specialInformation": {
       "fixedValue": []
     },
@@ -43,11 +43,7 @@
     "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""

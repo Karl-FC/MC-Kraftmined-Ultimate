@@ -34,7 +34,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Mahogany Planks",
+    "name": "Redwood Planks",
     "specialInformation": {
       "fixedValue": []
     },
@@ -42,11 +42,7 @@
     "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "axe",
     "customDrop": {
       "value": ""

@@ -12,7 +12,7 @@
     "customModelName": "Normal",
     "rotationMode": 5,
     "enablePitch": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -34,7 +34,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Cherry Log",
+    "name": "Charrwood Log",
     "specialInformation": {
       "fixedValue": []
     },
@@ -42,11 +42,7 @@
     "resistance": 2.158460690597782,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "axe",
     "customDrop": {
       "value": ""
@@ -74,8 +70,8 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 6,
-    "fireSpreadSpeed": 0,
+    "flammability": 20,
+    "fireSpreadSpeed": 1,
     "isLadder": false,
     "slipperiness": 0.6,
     "speedFactor": 1.0,

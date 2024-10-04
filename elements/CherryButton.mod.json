@@ -12,7 +12,7 @@
     "customModelName": "Normal",
     "rotationMode": 0,
     "enablePitch": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -35,7 +35,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Cherry Button",
+    "name": "Charwood Button",
     "specialInformation": {
       "fixedValue": []
     },
@@ -43,11 +43,7 @@
     "resistance": 3.3000000000000003,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Crtab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -102,7 +98,7 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 1,
     "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
