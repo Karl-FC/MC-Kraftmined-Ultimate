@@ -1,0 +1,26 @@
+{
+  "_fv": 69,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Racism",
+    "supportedSlots": "any",
+    "weight": 1,
+    "anvilCost": 1,
+    "maxLevel": 10,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [
+      {
+        "value": "CUSTOM:Unblood"
+      }
+    ],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:melee_weapons"
+      }
+    ],
+    "isTreasureEnchantment": true,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

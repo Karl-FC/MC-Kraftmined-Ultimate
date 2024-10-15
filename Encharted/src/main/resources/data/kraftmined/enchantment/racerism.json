@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.kraftmined.racerism"
+  },
+  "supported_items": "#minecraft:melee_weapons",
+  "weight": 1,
+  "max_level": 10,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": "kraftmined:unblood"
+}

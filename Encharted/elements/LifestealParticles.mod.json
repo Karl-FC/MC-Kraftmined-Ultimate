@@ -1,0 +1,23 @@
+{
+  "_fv": 69,
+  "_type": "particle",
+  "definition": {
+    "texture": "lifesteal",
+    "animate": true,
+    "frameDuration": 1,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": {
+      "fixedValue": 1.0
+    },
+    "speedFactor": 1.0,
+    "gravity": -0.1,
+    "maxAge": 7,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.1,
+    "angularAcceleration": 0.01,
+    "canCollide": false,
+    "alwaysShow": false,
+    "renderType": "OPAQUE"
+  }
+}

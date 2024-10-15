@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Curse Of Metal Mass",
+    "supportedSlots": "any",
+    "weight": 10,
+    "anvilCost": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:melee_weapons"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

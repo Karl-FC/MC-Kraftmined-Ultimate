@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmined:frost_aspect",
+    "kraftmined:curse_of_metal_mass",
+    "kraftmined:guarding_strike",
+    "kraftmined:unblood",
+    "kraftmined:backstabbing",
+    "kraftmined:baneof_metapods"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "_fv": 69,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Bane of Metapods",
+    "supportedSlots": "any",
+    "weight": 6,
+    "anvilCost": 3,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [
+      {
+        "value": "FIRE_ASPECT"
+      },
+      {
+        "value": "LOOTING"
+      }
+    ],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:melee_weapons"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}
