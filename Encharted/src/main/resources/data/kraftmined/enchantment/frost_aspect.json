@@ -17,5 +17,8 @@
   "slots": [
     "any"
   ],
-  "exclusive_set": []
+  "exclusive_set": [
+    "kraftmined:fear_aspect",
+    "fire_aspect"
+  ]
 }

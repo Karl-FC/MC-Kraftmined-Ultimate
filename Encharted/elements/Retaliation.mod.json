@@ -1,0 +1,32 @@
+{
+  "_fv": 69,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Retaliation",
+    "supportedSlots": "any",
+    "weight": 10,
+    "anvilCost": 1,
+    "maxLevel": 5,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [
+      {
+        "value": "BANE_OF_ARTHROPODS"
+      },
+      {
+        "value": "SMITE"
+      },
+      {
+        "value": "SHARPNESS"
+      }
+    ],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:enchantable/sharp_weapon"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Curse Of Interchanging",
+    "supportedSlots": "any",
+    "weight": 12,
+    "anvilCost": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:enchantable/weapon"
+      }
+    ],
+    "isTreasureEnchantment": true,
+    "isCurse": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

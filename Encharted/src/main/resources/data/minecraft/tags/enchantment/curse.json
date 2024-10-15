@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:curse_of_creeping",
+    "kraftmined:curse_of_interchanging",
     "kraftmined:curse_of_metal_mass"
   ]
 }

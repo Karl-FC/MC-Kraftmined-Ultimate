@@ -8,7 +8,14 @@
     "anvilCost": 1,
     "maxLevel": 2,
     "damageModifier": 0,
-    "incompatibleEnchantments": [],
+    "incompatibleEnchantments": [
+      {
+        "value": "CUSTOM:FearAspect"
+      },
+      {
+        "value": "FIRE_ASPECT"
+      }
+    ],
     "supportedItems": [
       {
         "value": "TAG:minecraft:pointy_weapons"

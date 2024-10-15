@@ -235,19 +235,200 @@
           }
         ]
       }
+    },
+    {
+      "name": "CurseOfMetalMass",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_metal_mass",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/curse_of_metal_mass.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseOfMetalMassProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_metal_mass_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/CurseOfMetalMassProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Committed",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/committed.json"
+        ]
+      }
+    },
+    {
+      "name": "Committment",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committment",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "CommittedProcedrue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committed_procedrue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/CommittedProcedrueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FrostAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/frost_aspect.json"
+        ]
+      }
+    },
+    {
+      "name": "FrostAspectProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_aspect_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/FrostAspectProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yeeting",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeeting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/yeeting.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "entity.attack.metalpipe",
+      "files": [
+        "youtube_euq7uteycp0_audio",
+        "youtube_idlmyz5hqgm_audio",
+        "youtube_f8ml0_4gev0_audio"
+      ],
+      "category": "hostile",
+      "subtitle": "METAL FALLING"
+    }
+  ],
   "tag_elements": {
-    "ENCHANTMENTS:minecraft:curse": [],
+    "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:CurseOfMetalMass"
+    ],
     "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:CurseOfMetalMass",
       "~CUSTOM:GuardingStrike",
       "~CUSTOM:Unblood",
       "~CUSTOM:Backstabbing",
       "~CUSTOM:BaneofMetapods"
     ],
     "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:Committed",
       "~CUSTOM:Racerism",
       "~CUSTOM:Lifesteal"
     ],
@@ -270,6 +451,10 @@
     "BIOMES:minecraft:is_overworld": [],
     "BLOCKS:minecraft:logs": [],
     "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:Committed",
+      "~CUSTOM:CurseOfMetalMass",
       "~CUSTOM:GuardingStrike",
       "~CUSTOM:Racerism",
       "~CUSTOM:Unblood",
@@ -291,6 +476,10 @@
     "ITEMS:minecraft:enchantable/weapon": [],
     "ITEMS:kraftmined:weapons": [],
     "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:Committed",
+      "~CUSTOM:CurseOfMetalMass",
       "~CUSTOM:GuardingStrike",
       "~CUSTOM:Racerism",
       "~CUSTOM:Unblood",
@@ -303,11 +492,17 @@
   "language_map": {
     "en_us": {
       "enchantment.kraftmined.backstabbing": "Backstabbing",
-      "enchantment.kraftmined.unblood": "Unblood",
       "enchantment.kraftmined.guarding_strike": "Guarding Strike",
+      "enchantment.kraftmined.unblood": "Unblood",
+      "subtitles.entity.attack.metalpipe": "METAL FALLING",
+      "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
+      "enchantment.kraftmined.frost_aspect": "Frost Aspect",
+      "enchantment.kraftmined.committed": "Commitment",
+      "enchantment.kraftmined.yeeting": "Yeeting",
+      "attribute.kraftmined.committment": "Committment",
       "enchantment.kraftmined.racerism": "Racism",
       "enchantment.kraftmined.lifesteal": "Lifesteal",
-      "enchantment.kraftmined.baneof_metapods": "Bane of Metapods"
+      "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass"
     }
   },
   "foldersRoot": {

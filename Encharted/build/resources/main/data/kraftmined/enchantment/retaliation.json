@@ -1,0 +1,25 @@
+{
+  "description": {
+    "translate": "enchantment.kraftmined.retaliation"
+  },
+  "supported_items": "#minecraft:enchantable/sharp_weapon",
+  "weight": 10,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": [
+    "bane_of_arthropods",
+    "smite",
+    "sharpness"
+  ]
+}

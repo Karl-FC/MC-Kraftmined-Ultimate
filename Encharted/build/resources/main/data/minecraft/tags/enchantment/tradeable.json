@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:fear_aspect",
+    "kraftmined:bluntness",
+    "kraftmined:retaliation",
+    "kraftmined:curse_of_creeping",
+    "kraftmined:curse_of_interchanging",
+    "kraftmined:yeeting",
     "kraftmined:frost_aspect",
     "kraftmined:committed",
     "kraftmined:curse_of_metal_mass",

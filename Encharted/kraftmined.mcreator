@@ -387,6 +387,254 @@
           }
         ]
       }
+    },
+    {
+      "name": "Yeeting",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeeting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/yeeting.json"
+        ]
+      }
+    },
+    {
+      "name": "YeetingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeeting_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/YeetingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CurseOfInterchanging",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_interchanging",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/curse_of_interchanging.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseofInterchangingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curseof_interchanging_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/CurseofInterchangingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CurseOfCreeping",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_creeping",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/curse_of_creeping.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseOfCreepingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_creeping_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/CurseOfCreepingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Retaliation",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retaliation",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/retaliation.json"
+        ]
+      }
+    },
+    {
+      "name": "RetaliationProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retaliation_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/RetaliationProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bluntness",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/bluntness.json"
+        ]
+      }
+    },
+    {
+      "name": "BluntnessProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BluntnessProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FearAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/fear_aspect.json"
+        ]
+      }
+    },
+    {
+      "name": "FearAspectProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/FearAspectProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -404,9 +652,16 @@
   ],
   "tag_elements": {
     "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
       "~CUSTOM:CurseOfMetalMass"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:Yeeting",
       "~CUSTOM:FrostAspect",
       "~CUSTOM:CurseOfMetalMass",
       "~CUSTOM:GuardingStrike",
@@ -415,6 +670,7 @@
       "~CUSTOM:BaneofMetapods"
     ],
     "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:CurseOfInterchanging",
       "~CUSTOM:Committed",
       "~CUSTOM:Racerism",
       "~CUSTOM:Lifesteal"
@@ -438,6 +694,12 @@
     "BIOMES:minecraft:is_overworld": [],
     "BLOCKS:minecraft:logs": [],
     "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:Yeeting",
       "~CUSTOM:FrostAspect",
       "~CUSTOM:Committed",
       "~CUSTOM:CurseOfMetalMass",
@@ -462,6 +724,12 @@
     "ITEMS:minecraft:enchantable/weapon": [],
     "ITEMS:kraftmined:weapons": [],
     "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:Yeeting",
       "~CUSTOM:FrostAspect",
       "~CUSTOM:Committed",
       "~CUSTOM:CurseOfMetalMass",
@@ -476,16 +744,22 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "enchantment.kraftmined.frost_aspect": "Frost Aspect",
-      "enchantment.kraftmined.committed": "Commitment",
+      "enchantment.kraftmined.retaliation": "Retaliation",
       "enchantment.kraftmined.backstabbing": "Backstabbing",
+      "enchantment.kraftmined.curse_of_creeping": "Curse Of Creeping",
       "enchantment.kraftmined.unblood": "Unblood",
       "enchantment.kraftmined.guarding_strike": "Guarding Strike",
+      "enchantment.kraftmined.bluntness": "Bluntness",
+      "subtitles.entity.attack.metalpipe": "METAL FALLING",
+      "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
+      "enchantment.kraftmined.fear_aspect": "Fear Aspect",
+      "enchantment.kraftmined.frost_aspect": "Frost Aspect",
+      "enchantment.kraftmined.committed": "Commitment",
+      "enchantment.kraftmined.yeeting": "Yeeting",
+      "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
       "attribute.kraftmined.committment": "Committment",
       "enchantment.kraftmined.racerism": "Racism",
-      "subtitles.entity.attack.metalpipe": "METAL FALLING",
       "enchantment.kraftmined.lifesteal": "Lifesteal",
-      "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
       "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass"
     }
   },
