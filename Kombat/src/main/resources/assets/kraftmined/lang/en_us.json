@@ -1,0 +1,10 @@
+{
+  "gamerule.buffedPassives": "Mob Passives",
+  "attribute.kraftmined.enhanced": "Potion_enhanced",
+  "gamerule.buffedMobs": "Buffed Mobs",
+  "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
+  "attribute.kraftmined.buffed": "Buffed",
+  "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
+  "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
+  "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons"
+}

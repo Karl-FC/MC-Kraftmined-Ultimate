@@ -1,0 +1,11 @@
+{
+  "_fv": 69,
+  "_type": "tab",
+  "definition": {
+    "name": "Kraftmine Combat",
+    "icon": {
+      "value": "CUSTOM:NetheriteBattleaxe"
+    },
+    "showSearch": true
+  }
+}

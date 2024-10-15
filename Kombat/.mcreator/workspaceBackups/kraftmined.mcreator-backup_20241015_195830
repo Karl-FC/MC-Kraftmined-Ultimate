@@ -1,0 +1,119 @@
+{
+  "mod_elements": [
+    {
+      "name": "NetheriteBattleaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_battleaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/netherite_battleaxe.json",
+          "src/main/java/net/mcreator/kraftmined/item/NetheriteBattleaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KraftmineKombat",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_kombat",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BuffedMobs",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_mobs",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedPassives",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_passives",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "Buffed",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "Enhanced",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enhanced",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:NetheriteBattleaxe"
+    ],
+    "ITEMS:kraftmine:helmet1": []
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gamerule.buffedPassives": "Mob Passives",
+      "attribute.kraftmined.enhanced": "Potion_enhanced",
+      "gamerule.buffedMobs": "Buffed Mobs",
+      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
+      "attribute.kraftmined.buffed": "Buffed",
+      "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
+      "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
+      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Quality of Life",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "kraftmined",
+    "modName": "Kraftmine Kombat Updates",
+    "version": "1.0.0",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.mcreator.kraftmined"
+  },
+  "mcreatorVersion": 202400340615
+}

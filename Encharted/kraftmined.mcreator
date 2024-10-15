@@ -635,6 +635,16 @@
           }
         ]
       }
+    },
+    {
+      "name": "KraftmineEnchantments",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_enchantments",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -757,6 +767,7 @@
       "enchantment.kraftmined.committed": "Commitment",
       "enchantment.kraftmined.yeeting": "Yeeting",
       "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
+      "item_group.kraftmined.kraftmine_enchantments": "Kraftmine Enchantments",
       "attribute.kraftmined.committment": "Committment",
       "enchantment.kraftmined.racerism": "Racism",
       "enchantment.kraftmined.lifesteal": "Lifesteal",
@@ -780,6 +791,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.kraftmined"
   },
   "mcreatorVersion": 202400340615

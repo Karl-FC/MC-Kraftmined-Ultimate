@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:carved_pumpkin",
+    "minecraft:turtle_helmet",
+    "minecraft:leather_helmet",
+    "minecraft:golden_helmet"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:leather_chestplate",
+    "minecraft:golden_chestplate",
+    "minecraft:elytra"
+  ]
+}
