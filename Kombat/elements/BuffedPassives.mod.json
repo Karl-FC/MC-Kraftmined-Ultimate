@@ -4,7 +4,7 @@
   "definition": {
     "type": "Number",
     "displayName": "Mob Passives",
-    "description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
+    "description": "Mobs spawn with a random potion effect",
     "category": "MOBS",
     "defaultValueLogic": true,
     "defaultValueNumber": 0

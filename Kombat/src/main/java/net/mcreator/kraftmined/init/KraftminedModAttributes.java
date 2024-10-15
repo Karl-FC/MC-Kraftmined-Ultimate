@@ -21,10 +21,12 @@ public class KraftminedModAttributes {
 	public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, KraftminedMod.MODID);
 	public static final DeferredHolder<Attribute, Attribute> BUFFED = REGISTRY.register("buffed", () -> new RangedAttribute("attribute.kraftmined.buffed", 0, 0, 1).setSyncable(true));
 	public static final DeferredHolder<Attribute, Attribute> ENHANCED = REGISTRY.register("enhanced", () -> new RangedAttribute("attribute.kraftmined.enhanced", 0, 0, 1).setSyncable(true));
+	public static final DeferredHolder<Attribute, Attribute> BUFF_LEVEL = REGISTRY.register("buff_level", () -> new RangedAttribute("attribute.kraftmined.buff_level", 0, 0, 1).setSyncable(true));
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {
 		event.getTypes().forEach(entity -> event.add(entity, BUFFED));
 		event.getTypes().forEach(entity -> event.add(entity, ENHANCED));
+		event.getTypes().forEach(entity -> event.add(entity, BUFF_LEVEL));
 	}
 }

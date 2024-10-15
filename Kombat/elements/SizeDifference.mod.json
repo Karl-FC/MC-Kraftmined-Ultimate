@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Mob Size",
+    "description": "Randomizes Mob Sizing",
+    "category": "MOBS",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

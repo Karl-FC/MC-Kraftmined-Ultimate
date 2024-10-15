@@ -1,10 +1,14 @@
 {
-  "gamerule.buffedPassives": "Mob Passives",
   "attribute.kraftmined.enhanced": "Potion_enhanced",
+  "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
+  "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
+  "gamerule.buffedPassives": "Mob Passives",
+  "attribute.kraftmined.buff_level": "Buff Level",
   "gamerule.buffedMobs": "Buffed Mobs",
-  "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
   "attribute.kraftmined.buffed": "Buffed",
   "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
-  "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
-  "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons"
+  "gamerule.sizeDifference": "Mob Size",
+  "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
+  "gamerule.sizeDifference.description": "Randomizes Mob Sizing",
+  "item.kraftmined.quiver_chestplate": "Quiver"
 }

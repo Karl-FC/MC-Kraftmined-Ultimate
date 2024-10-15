@@ -1,0 +1,408 @@
+{
+  "mod_elements": [
+    {
+      "name": "NetheriteBattleaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_battleaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/netherite_battleaxe.json",
+          "src/main/java/net/mcreator/kraftmined/item/NetheriteBattleaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KraftmineKombat",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_kombat",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BuffedMobs",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_mobs",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedPassives",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_passives",
+      "metadata": {
+        "type": "number",
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "Buffed",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "Enhanced",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enhanced",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "Quiver",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quiver",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/QuiverItem.java",
+          "src/main/resources/assets/kraftmined/models/item/quiver_chestplate.json"
+        ]
+      }
+    },
+    {
+      "name": "BuffLevel",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buff_level",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedWeapons",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_weapons",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BuffedWeaponsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "SwitchHands",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_hands",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/SwitchHandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedArmor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BuffedArmorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "SizeDifference",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "size_difference",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "SizeDifferenceProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "size_difference_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/SizeDifferenceProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedSpawning",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "buffed_spawning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BuffedSpawningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:kraftmined:chestplate1": [
+      "Items.LEATHER_CHESTPLATE",
+      "Items.ELYTRA"
+    ],
+    "ITEMS:kraftmined:armor1": [
+      "Items.LEATHER_HELMET",
+      "Items.LEATHER_CHESTPLATE",
+      "Items.LEATHER_LEGGINGS",
+      "Items.LEATHER_BOOTS",
+      "Items.GOLDEN_HELMET",
+      "Items.GOLDEN_CHESTPLATE",
+      "Items.GOLDEN_LEGGINGS",
+      "Items.GOLDEN_BOOTS"
+    ],
+    "ITEMS:kraftmined:armor2": [
+      "Items.IRON_HELMET",
+      "Items.IRON_CHESTPLATE",
+      "Items.IRON_LEGGINGS",
+      "Items.IRON_BOOTS",
+      "Items.CHAINMAIL_HELMET",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.CHAINMAIL_BOOTS"
+    ],
+    "ITEMS:kraftmined:chestplate2": [
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE"
+    ],
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:Quiver.body"
+    ],
+    "ITEMS:kraftmined:armor3": [
+      "Items.DIAMOND_HELMET",
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.DIAMOND_LEGGINGS",
+      "Items.DIAMOND_BOOTS",
+      "Items.NETHERITE_HELMET",
+      "Items.NETHERITE_CHESTPLATE",
+      "Items.NETHERITE_LEGGINGS",
+      "Items.NETHERITE_BOOTS"
+    ],
+    "ITEMS:kraftmined:chestplate3": [
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.NETHERITE_CHESTPLATE"
+    ],
+    "ITEMS:kraftmined:weapon2": [
+      "Items.IRON_SWORD",
+      "Items.IRON_SHOVEL",
+      "Items.IRON_PICKAXE",
+      "Items.IRON_AXE",
+      "Items.IRON_HOE",
+      "Items.DIAMOND_SHOVEL",
+      "Items.DIAMOND_PICKAXE",
+      "Items.DIAMOND_HOE",
+      "Items.TRIDENT",
+      "Items.MACE",
+      "Items.SHIELD",
+      "Items.GOLDEN_SWORD",
+      "Items.GOLDEN_AXE"
+    ],
+    "ITEMS:kraftmined:weapon1": [
+      "Items.WOODEN_SWORD",
+      "Items.WOODEN_SHOVEL",
+      "Items.WOODEN_PICKAXE",
+      "Items.WOODEN_AXE",
+      "Items.WOODEN_HOE",
+      "Items.FISHING_ROD",
+      "Items.BOW",
+      "Items.CROSSBOW",
+      "Items.GOLDEN_SHOVEL",
+      "Items.GOLDEN_PICKAXE",
+      "Items.GOLDEN_HOE"
+    ],
+    "ITEMS:kraftmined:leggings2": [
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.IRON_LEGGINGS"
+    ],
+    "ITEMS:kraftmined:leggings1": [
+      "Items.LEATHER_LEGGINGS",
+      "Items.GOLDEN_LEGGINGS"
+    ],
+    "ITEMS:kraftmined:leggings3": [
+      "Items.DIAMOND_LEGGINGS",
+      "Items.NETHERITE_LEGGINGS"
+    ],
+    "ITEMS:kraftmined:boots1": [
+      "Items.LEATHER_BOOTS",
+      "Items.GOLDEN_BOOTS"
+    ],
+    "ITEMS:kraftmined:helmet2": [
+      "Items.CHAINMAIL_HELMET",
+      "Items.IRON_HELMET",
+      "Items.GOLDEN_HELMET"
+    ],
+    "ITEMS:kraftmined:helmet3": [
+      "Items.DIAMOND_HELMET",
+      "Items.NETHERITE_HELMET"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:NetheriteBattleaxe"
+    ],
+    "ITEMS:kraftmined:helmet1": [
+      "Blocks.CARVED_PUMPKIN",
+      "Items.TURTLE_HELMET",
+      "Items.LEATHER_HELMET",
+      "Items.SKULL#0",
+      "Items.SKULL#1",
+      "Items.SKULL#2",
+      "Items.SKULL#3",
+      "Items.PIGLIN_HEAD"
+    ],
+    "ITEMS:kraftmined:boots2": [
+      "Items.CHAINMAIL_BOOTS",
+      "Items.IRON_BOOTS"
+    ],
+    "ITEMS:kraftmined:boots3": [
+      "Items.DIAMOND_BOOTS",
+      "Items.NETHERITE_BOOTS"
+    ],
+    "ITEMS:kraftmined:ranged": [
+      "Items.BOW",
+      "Items.CROSSBOW",
+      "Items.TRIDENT"
+    ],
+    "ITEMS:kraftmined:heads": [
+      "Items.SKULL#0",
+      "Items.SKULL#1",
+      "Items.SKULL#2",
+      "Items.SKULL#3",
+      "Items.PIGLIN_HEAD"
+    ],
+    "ITEMS:kraftmined:leggings": [
+      "Items.LEATHER_LEGGINGS",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.IRON_LEGGINGS",
+      "Items.GOLDEN_LEGGINGS",
+      "Items.DIAMOND_LEGGINGS",
+      "Items.NETHERITE_LEGGINGS"
+    ],
+    "ITEMS:kraftmined:weapon3": [
+      "Items.DIAMOND_SWORD",
+      "Items.DIAMOND_AXE",
+      "Items.NETHERITE_SWORD",
+      "Items.NETHERITE_AXE",
+      "Items.NETHERITE_SHOVEL",
+      "Items.NETHERITE_PICKAXE",
+      "Items.NETHERITE_HOE"
+    ],
+    "ITEMS:kraftmined:nobow": [
+      "Items.CROSSBOW",
+      "Items.EGG",
+      "Items.SNOWBALL"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "attribute.kraftmined.enhanced": "Potion_enhanced",
+      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
+      "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
+      "gamerule.buffedPassives": "Mob Passives",
+      "attribute.kraftmined.buff_level": "Buff Level",
+      "gamerule.buffedMobs": "Buffed Mobs",
+      "attribute.kraftmined.buffed": "Buffed",
+      "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
+      "gamerule.sizeDifference": "Mob Size",
+      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
+      "gamerule.sizeDifference.description": "Randomizes Mob Sizing",
+      "item.kraftmined.quiver_chestplate": "Quiver"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Quality of Life",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "kraftmined",
+    "modName": "Kraftmine Kombat Updates",
+    "version": "1.0.0",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.mcreator.kraftmined"
+  },
+  "mcreatorVersion": 202400340615
+}
