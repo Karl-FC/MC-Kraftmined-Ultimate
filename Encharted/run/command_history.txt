@@ -1,0 +1,25 @@
+/time set midnight
+/summon minecraft:wither
+/kill @e
+/tp @e[type=item] ~ ~-2 ~
+/clear
+/gamerule keepInventory true
+/gamemode s
+/gamemode survival
+/gamemode creative
+/tp @e ~ ~ ~
+/summon minecraft:warden
+/enchant @e kraftmined:curse_of_metal_mass
+/enchant @s kraftmined:curse_of_metal_mass
+/enchant @s kraftmined:fear_aspect 2
+/effect give @s minecraft:resistance infinite 255 true
+/gamemode survival
+/tp @e[type=zombie] ~ ~ ~
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/tp @e ~ ~ ~
+/kill @e[type=minecraft:creeper]
+/gamemode survival
+/tp @e ~ ~ ~
+/gamemode creative
