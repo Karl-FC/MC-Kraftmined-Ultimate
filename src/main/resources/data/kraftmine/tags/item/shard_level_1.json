@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "kraftmine:shard_positioning",
-    "kraftmine:shard_altitude",
-    "kraftmine:shard_volumetric"
-  ]
-}

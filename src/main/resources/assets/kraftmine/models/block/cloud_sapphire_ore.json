@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmine:block/cloud_sapphire_ore",
-    "particle": "kraftmine:block/cloud_sapphire_ore"
-  },
-  "render_type": "solid"
-}

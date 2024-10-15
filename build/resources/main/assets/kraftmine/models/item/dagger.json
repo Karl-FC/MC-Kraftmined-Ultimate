@@ -1,8 +1,0 @@
-{
-  "parent": "kraftmine:custom/dagger",
-  "textures": {
-    "0": "kraftmine:block/dagger",
-    "missing": "kraftmine:block/dagger",
-    "particle": "kraftmine:item/dagger"
-  }
-}

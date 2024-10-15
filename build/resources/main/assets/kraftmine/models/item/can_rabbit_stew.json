@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "kraftmine:item/can_rabbit"
-  },
-  "render_type": "translucent"
-}

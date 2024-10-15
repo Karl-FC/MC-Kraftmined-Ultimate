@@ -1,8 +1,0 @@
-{
-  "parent": "block/button_pressed",
-  "textures": {
-    "particle": "kraftmine:block/deadwood_planks",
-    "texture": "kraftmine:block/deadwood_planks"
-  },
-  "render_type": "solid"
-}

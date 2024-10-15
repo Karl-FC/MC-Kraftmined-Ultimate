@@ -1,8 +1,0 @@
-{
-  "parent": "block/fence_side",
-  "textures": {
-    "texture": "kraftmine:block/bamboo_planks",
-    "particle": "kraftmine:block/bamboo_planks"
-  },
-  "render_type": "solid"
-}

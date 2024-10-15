@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "kraftmine:block/glowing_mushroom",
-    "particle": "kraftmine:block/glowing_mushroom"
-  },
-  "render_type": "cutout"
-}

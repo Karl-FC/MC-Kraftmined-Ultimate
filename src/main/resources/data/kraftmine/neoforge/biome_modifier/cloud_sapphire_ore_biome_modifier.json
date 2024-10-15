@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "kraftmine:aether_biome",
-  "features": "kraftmine:cloud_sapphire_ore",
-  "step": "underground_ores"
-}

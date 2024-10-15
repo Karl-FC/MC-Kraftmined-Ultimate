@@ -1,8 +1,0 @@
-{
-  "parent": "block/pressure_plate_down",
-  "textures": {
-    "particle": "kraftmine:block/bamboo_planks",
-    "texture": "kraftmine:block/bamboo_planks"
-  },
-  "render_type": "solid"
-}

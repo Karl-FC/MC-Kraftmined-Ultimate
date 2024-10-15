@@ -1,8 +1,0 @@
-{
-  "parent": "block/button",
-  "textures": {
-    "particle": "kraftmine:block/mahogany_planks",
-    "texture": "kraftmine:block/mahogany_planks"
-  },
-  "render_type": "solid"
-}
