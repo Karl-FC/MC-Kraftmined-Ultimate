@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:golem_arm",
     "kraftmined:frying_pan",
     "kraftmined:dident",
     "kraftmined:monodent"

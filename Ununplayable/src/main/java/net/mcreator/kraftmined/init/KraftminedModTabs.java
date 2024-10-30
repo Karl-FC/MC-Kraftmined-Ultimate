@@ -27,6 +27,7 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.MONODENT.get());
 				tabData.accept(KraftminedModItems.DIDENT.get());
 				tabData.accept(KraftminedModItems.FRYING_PAN.get());
+				tabData.accept(KraftminedModItems.GOLEM_ARM.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

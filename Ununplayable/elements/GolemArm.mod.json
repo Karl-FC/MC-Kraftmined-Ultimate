@@ -5,38 +5,38 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "monodent",
-    "customModelName": "monodent:default",
+    "texture": "minecraft:empty_slot_ingot",
+    "customModelName": "golemarm:default",
     "blockingModelName": "Normal blocking",
-    "name": "Monodent",
+    "name": "Golem Arm",
     "specialInformation": {
       "fixedValue": []
     },
     "creativeTabs": [
       {
         "value": "CUSTOM:KraftmineUnplayable"
-      },
-      {
-        "value": "COMBAT"
       }
     ],
     "efficiency": 4.0,
-    "attackSpeed": 3.3,
-    "enchantability": 15,
-    "damageVsEntity": 3.0,
-    "usageCount": 85,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 250,
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [
       {
-        "value": "CUSTOM:Dent"
+        "value": "Items.IRON_INGOT"
       }
     ],
     "immuneToFire": false,
-    "blockDropsTier": "WOOD",
+    "blockDropsTier": "STONE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "GolemArmLivingEntityIsHitWithTool"
+    }
   }
 }

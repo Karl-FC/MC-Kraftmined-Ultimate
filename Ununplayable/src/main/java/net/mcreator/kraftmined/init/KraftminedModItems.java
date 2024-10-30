@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.mcreator.kraftmined.item.PebbleItem;
 import net.mcreator.kraftmined.item.MonodentItem;
 import net.mcreator.kraftmined.item.MaterwelonItem;
+import net.mcreator.kraftmined.item.GolemArmItem;
 import net.mcreator.kraftmined.item.FryingPanItem;
 import net.mcreator.kraftmined.item.DidentItem;
 import net.mcreator.kraftmined.item.DentItem;
@@ -25,6 +26,7 @@ public class KraftminedModItems {
 	public static final DeferredItem<Item> MONODENT = REGISTRY.register("monodent", MonodentItem::new);
 	public static final DeferredItem<Item> DIDENT = REGISTRY.register("dident", DidentItem::new);
 	public static final DeferredItem<Item> FRYING_PAN = REGISTRY.register("frying_pan", FryingPanItem::new);
+	public static final DeferredItem<Item> GOLEM_ARM = REGISTRY.register("golem_arm", GolemArmItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

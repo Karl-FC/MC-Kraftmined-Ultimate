@@ -1,6 +1,7 @@
 {
-  "parent": "item/handheld",
+  "parent": "kraftmined:custom/monodent",
   "textures": {
-    "layer0": "kraftmined:item/monodent"
+    "0": "kraftmined:block/trident",
+    "particle": "kraftmined:item/monodent"
   }
 }

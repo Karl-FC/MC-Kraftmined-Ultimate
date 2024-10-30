@@ -3,10 +3,10 @@
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
-    "renderType": 0,
+    "renderType": 1,
     "blockingRenderType": 0,
     "texture": "dident",
-    "customModelName": "Normal",
+    "customModelName": "dident:default",
     "blockingModelName": "Normal blocking",
     "name": "Dident",
     "specialInformation": {

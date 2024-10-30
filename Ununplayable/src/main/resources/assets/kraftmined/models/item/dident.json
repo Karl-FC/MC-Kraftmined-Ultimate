@@ -1,6 +1,7 @@
 {
-  "parent": "item/handheld",
+  "parent": "kraftmined:custom/dident",
   "textures": {
-    "layer0": "kraftmined:item/dident"
+    "0": "kraftmined:block/trident",
+    "particle": "kraftmined:item/dident"
   }
 }

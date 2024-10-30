@@ -1,0 +1,291 @@
+{
+  "mod_elements": [
+    {
+      "name": "Pebble",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/pebble.json",
+          "src/main/java/net/mcreator/kraftmined/item/PebbleItem.java"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleDrop",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/loot_table/blocks/stone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleCobblestone",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_cobblestone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/pebble_cobblestone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "Dent",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dent",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/dent.json",
+          "src/main/java/net/mcreator/kraftmined/item/DentItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "TridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/trident_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Materwelon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "materwelon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/materwelon.json",
+          "src/main/java/net/mcreator/kraftmined/item/MaterwelonItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KraftmineUnplayable",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_unplayable",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Monodent",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monodent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/MonodentItem.java",
+          "src/main/resources/assets/kraftmined/models/item/monodent.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Dident",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dident",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/dident.json",
+          "src/main/java/net/mcreator/kraftmined/item/DidentItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "DidentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/dident_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "MonodentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monodent_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/monodent_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPan",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/FryingPanItem.java",
+          "src/main/resources/assets/kraftmined/models/item/frying_pan.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPanRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/frying_pan_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "DyingPan",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dying_pan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/dying_pan.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPanProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/FryingPanProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Things"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:DyingPan"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:FryingPan",
+      "~CUSTOM:Dident",
+      "~CUSTOM:Monodent"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:DyingPan"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:DyingPan"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.kraftmined.pebble": "Pebble",
+      "item.kraftmined.materwelon": "Materwelon",
+      "item.kraftmined.frying_pan": "Frying Pan",
+      "item.kraftmined.monodent": "Monodent",
+      "enchantment.kraftmined.dying_pan": "Dying Pan",
+      "item.kraftmined.dent": "Dent",
+      "item_group.kraftmined.kraftmine_unplayable": "K Cursed",
+      "item.kraftmined.dident": "Dident"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Nature",
+        "children": []
+      },
+      {
+        "name": "Things",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "kraftmined",
+    "modName": "Un-Unplayable",
+    "version": "1.0.0",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.mcreator.kraftmined"
+  },
+  "mcreatorVersion": 202400342716
+}
