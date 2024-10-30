@@ -555,7 +555,8 @@
           "src/main/java/net/mcreator/kraftmined/item/NickelIngotItem.java",
           "src/main/resources/assets/kraftmined/models/item/nickel_ingot.json"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "NickelOre",
@@ -574,7 +575,8 @@
           "src/main/resources/assets/kraftmined/blockstates/nickel_ore.json",
           "src/main/resources/data/kraftmined/loot_table/blocks/nickel_ore.json"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "NickelBlock",
@@ -590,7 +592,8 @@
           "src/main/java/net/mcreator/kraftmined/block/NickelBlockBlock.java",
           "src/main/resources/assets/kraftmined/blockstates/nickel_block.json"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "NickelOreBlockRecipe",
@@ -602,7 +605,8 @@
         "files": [
           "src/main/resources/data/kraftmined/recipe/nickel_ore_block_recipe.json"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "NickelBlockOreRecipe",
@@ -614,7 +618,8 @@
         "files": [
           "src/main/resources/data/kraftmined/recipe/nickel_block_ore_recipe.json"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "NickelOreSmelting",
@@ -626,7 +631,358 @@
         "files": [
           "src/main/resources/data/kraftmined/recipe/nickel_ore_smelting.json"
         ]
-      }
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/TungstenIngotItem.java",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_ingot.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/worldgen/placed_feature/tungsten_ore.json",
+          "src/main/java/net/mcreator/kraftmined/block/TungstenOreBlock.java",
+          "src/main/resources/data/kraftmined/worldgen/configured_feature/tungsten_ore.json",
+          "src/main/resources/data/kraftmined/loot_table/blocks/tungsten_ore.json",
+          "src/main/resources/assets/kraftmined/blockstates/tungsten_ore.json",
+          "src/main/resources/assets/kraftmined/models/block/tungsten_ore.json",
+          "src/main/resources/data/kraftmined/neoforge/biome_modifier/tungsten_ore_biome_modifier.json",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_ore.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/loot_table/blocks/tungsten_block.json",
+          "src/main/resources/assets/kraftmined/models/block/tungsten_block.json",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_block.json",
+          "src/main/resources/assets/kraftmined/blockstates/tungsten_block.json",
+          "src/main/java/net/mcreator/kraftmined/block/TungstenBlockBlock.java"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenOreBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ore_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/tungsten_ore_block_recipe.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenBlockOreRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_block_ore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/tungsten_block_ore_recipe.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenOreSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ore_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/tungsten_ore_smelting.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/titanium_ingot.json",
+          "src/main/java/net/mcreator/kraftmined/item/TitaniumIngotItem.java"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/neoforge/biome_modifier/titanium_ore_biome_modifier.json",
+          "src/main/resources/assets/kraftmined/models/item/titanium_ore.json",
+          "src/main/java/net/mcreator/kraftmined/block/TitaniumOreBlock.java",
+          "src/main/resources/assets/kraftmined/models/block/titanium_ore.json",
+          "src/main/resources/data/kraftmined/loot_table/blocks/titanium_ore.json",
+          "src/main/resources/data/kraftmined/worldgen/configured_feature/titanium_ore.json",
+          "src/main/resources/assets/kraftmined/blockstates/titanium_ore.json",
+          "src/main/resources/data/kraftmined/worldgen/placed_feature/titanium_ore.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/titanium_block.json",
+          "src/main/resources/assets/kraftmined/blockstates/titanium_block.json",
+          "src/main/resources/assets/kraftmined/models/block/titanium_block.json",
+          "src/main/java/net/mcreator/kraftmined/block/TitaniumBlockBlock.java",
+          "src/main/resources/data/kraftmined/loot_table/blocks/titanium_block.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumOreBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_ore_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/titanium_ore_block_recipe.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumBlockOreRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_block_ore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/titanium_block_ore_recipe.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumOreSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_ore_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/titanium_ore_smelting.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "RawNickel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_nickel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/RawNickelItem.java",
+          "src/main/resources/assets/kraftmined/models/item/raw_nickel.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "RawTitanium",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_titanium",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/raw_titanium.json",
+          "src/main/java/net/mcreator/kraftmined/item/RawTitaniumItem.java"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "NickelRawSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nickel_raw_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/nickel_raw_smelting.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TitaniumRawSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_raw_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/titanium_raw_smelting.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "RawTungsten",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_tungsten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/RawTungstenItem.java",
+          "src/main/resources/assets/kraftmined/models/item/raw_tungsten.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "TungstenRawSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_raw_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/tungsten_raw_smelting.json"
+        ]
+      },
+      "path": "~/Materials"
+    },
+    {
+      "name": "NickelArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nickel_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/nickel_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/item/NickelArmorItem.java",
+          "src/main/resources/assets/kraftmined/models/item/nickel_armor_helmet.json",
+          "src/main/resources/assets/kraftmined/models/item/nickel_armor_leggings.json",
+          "src/main/resources/assets/kraftmined/models/item/nickel_armor_chestplate.json"
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "TungstenArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_helmet.json",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_leggings.json",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_chestplate.json",
+          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/item/TungstenArmorItem.java"
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "TitaniumArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanium_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/titanium_armor_chestplate.json",
+          "src/main/resources/assets/kraftmined/models/item/titanium_armor_helmet.json",
+          "src/main/resources/assets/kraftmined/models/item/titanium_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/item/TitaniumArmorItem.java",
+          "src/main/resources/assets/kraftmined/models/item/titanium_armor_leggings.json"
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "ArmorReflectDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_reflect_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/ArmorReflectDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "Toughness",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toughness",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/SpecialArmor"
     }
   ],
   "variable_elements": [
@@ -669,6 +1025,9 @@
       "Items.GOLDEN_CHESTPLATE"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:TitaniumArmor.body",
+      "~CUSTOM:TungstenArmor.body",
+      "~CUSTOM:NickelArmor.body",
       "~CUSTOM:TntArmor.body",
       "~CUSTOM:CactusArmor.body",
       "~CUSTOM:LapisArmor.body",
@@ -766,6 +1125,9 @@
       "Items.NETHERITE_BOOTS"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:TitaniumArmor.helmet",
+      "~CUSTOM:TungstenArmor.helmet",
+      "~CUSTOM:NickelArmor.helmet",
       "~CUSTOM:TntArmor.helmet",
       "~CUSTOM:CactusArmor.helmet",
       "~CUSTOM:LapisArmor.helmet",
@@ -777,6 +1139,12 @@
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:NickelBlock",
       "~CUSTOM:NickelOre"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:TitaniumBlock",
+      "~CUSTOM:TitaniumOre",
+      "~CUSTOM:TungstenBlock",
+      "~CUSTOM:TungstenOre"
     ],
     "ITEMS:kraftmined:ranged": [
       "Items.BOW",
@@ -791,6 +1159,10 @@
       "Items.PIGLIN_HEAD"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:TitaniumBlock",
+      "~CUSTOM:TitaniumOre",
+      "~CUSTOM:TungstenBlock",
+      "~CUSTOM:TungstenOre",
       "~CUSTOM:NickelBlock",
       "~CUSTOM:NickelOre"
     ],
@@ -812,6 +1184,9 @@
       "Items.NETHERITE_HOE"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:TitaniumArmor.boots",
+      "~CUSTOM:TungstenArmor.boots",
+      "~CUSTOM:NickelArmor.boots",
       "~CUSTOM:TntArmor.boots",
       "~CUSTOM:CactusArmor.boots",
       "~CUSTOM:LapisArmor.boots",
@@ -820,6 +1195,9 @@
       "~CUSTOM:ObsidianArmor.boots"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:TitaniumArmor.legs",
+      "~CUSTOM:TungstenArmor.legs",
+      "~CUSTOM:NickelArmor.legs",
       "~CUSTOM:TntArmor.legs",
       "~CUSTOM:CactusArmor.legs",
       "~CUSTOM:LapisArmor.legs",
@@ -831,48 +1209,70 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.kraftmined.eyepatch_helmet": "Eyepatch",
+      "item.kraftmined.tungsten_armor_helmet": "Tungsten Helmet",
+      "item.kraftmined.tungsten_armor_chestplate": "Tungsten Chestplate",
       "item.kraftmined.tnt_armor_boots": "TNT Boots",
+      "item.kraftmined.raw_nickel": "Raw Nickel",
       "attribute.kraftmined.enhanced": "Potion_enhanced",
       "item.kraftmined.obsidian_armor_leggings": "Obsidian Leggings",
-      "item.kraftmined.stone_armor_helmet": "Stone Helmet",
       "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
       "item.kraftmined.stone_armor_boots": "Stone Boots",
       "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
       "item.kraftmined.wood_armor_leggings": "Wooden Leggings",
       "item.kraftmined.lapis_armor_leggings": "Lapiz Lazuli Leggings",
-      "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
       "item.kraftmined.wood_armor_helmet": "Wooden Helmet",
+      "item.kraftmined.titanium_armor_helmet": "Titanium Helmet",
+      "block.kraftmined.titanium_block": "Block of Titanium",
+      "item.kraftmined.obsidian_armor_helmet": "Obsidian Helmet",
+      "item.kraftmined.tnt_armor_leggings": "TNT Leggings",
+      "item.kraftmined.nickel_armor_chestplate": "Nickel Chestplate",
+      "item.kraftmined.cactus_armor_leggings": "Cactus Leggings",
+      "item.kraftmined.quiver_chestplate": "Quiver",
+      "item.kraftmined.cactus_armor_chestplate": "Cactus Chestplate",
+      "item.kraftmined.titanium_ingot": "Titanium",
+      "block.kraftmined.nickel_block": "Block of Nickel",
+      "item.kraftmined.nickel_armor_leggings": "Nickel Leggings",
+      "item.kraftmined.titanium_armor_boots": "Titanium Boots",
+      "item.kraftmined.nickel_armor_boots": "Nickel Boots",
+      "item.kraftmined.obsidian_armor_boots": "Obsidian Boots",
+      "item.kraftmined.titanium_armor_leggings": "Titanium Leggings",
+      "block.kraftmined.tungsten_ore": "Tungsten Ore",
+      "item.kraftmined.tungsten_armor_boots": "Tungsten Boots",
+      "item.kraftmined.lapis_armor_boots": "Lapiz Lazuli Boots",
+      "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
+      "item.kraftmined.tungsten_armor_leggings": "Tungsten Leggings",
+      "block.kraftmined.nickel_ore": "Nickel Ore",
+      "effect.kraftmined.eyepatch_effect": "Patched Vision",
+      "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
+      "item.kraftmined.stone_armor_chestplate": "Stone Chestplate",
+      "item.kraftmined.cactus_armor_boots": "Cactus Boots",
+      "item.kraftmined.eyepatch_helmet": "Eyepatch",
+      "item.kraftmined.nickel_armor_helmet": "Nickel Helmet",
+      "item.kraftmined.stone_armor_helmet": "Stone Helmet",
+      "block.kraftmined.tungsten_block": "Block of Tungsten",
+      "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
+      "attribute.kraftmined.toughness": "Toughness",
       "item.kraftmined.lapis_armor_chestplate": "Lapiz Lazuli Chestplate",
       "attribute.kraftmined.buff_level": "Buff Level",
       "item.kraftmined.wood_armor_boots": "Wooden Boots",
       "gamerule.buffedMobs": "Buffed Mobs",
-      "item.kraftmined.obsidian_armor_helmet": "Obsidian Helmet",
-      "item.kraftmined.tnt_armor_leggings": "TNT Leggings",
       "item.kraftmined.lapis_armor_helmet": "Lapiz Lazuli Helmet",
       "attribute.kraftmined.buffed": "Buffed",
       "gamerule.sizeDifference.description": "Randomizes Mob Sizing",
-      "item.kraftmined.quiver_chestplate": "Quiver",
-      "item.kraftmined.cactus_armor_leggings": "Cactus Leggings",
       "item.kraftmined.nickel_ingot": "Nickel",
       "item.kraftmined.tnt_armor_chestplate": "TNT Chestplate",
-      "item.kraftmined.cactus_armor_chestplate": "Cactus Chestplate",
-      "block.kraftmined.nickel_block": "Block of Nickel",
-      "item.kraftmined.obsidian_armor_boots": "Obsidian Boots",
+      "item.kraftmined.titanium_armor_chestplate": "Titanium Chestplate",
       "item.kraftmined.obsidian_armor_chestplate": "Obsidian Chestplate",
+      "block.kraftmined.titanium_ore": "Titanium Ore",
+      "item.kraftmined.raw_tungsten": "Raw Tungsten",
       "gamerule.buffedPassives": "Mob Passives",
-      "item.kraftmined.lapis_armor_boots": "Lapiz Lazuli Boots",
       "item.kraftmined.cactus_armor_helmet": "Cactus Helmet",
-      "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
       "item.kraftmined.stone_armor_leggings": "Stone Leggings",
-      "block.kraftmined.nickel_ore": "Nickel Ore",
-      "effect.kraftmined.eyepatch_effect": "Patched Vision",
-      "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
+      "item.kraftmined.tungsten_ingot": "Tungsten",
+      "item.kraftmined.raw_titanium": "Raw Titanium",
       "gamerule.sizeDifference": "Mob Size",
       "item.kraftmined.tnt_armor_helmet": "TNT Helmet",
-      "item.kraftmined.stone_armor_chestplate": "Stone Chestplate",
-      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
-      "item.kraftmined.cactus_armor_boots": "Cactus Boots"
+      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons"
     }
   },
   "foldersRoot": {
@@ -884,6 +1284,10 @@
       },
       {
         "name": "SpecialArmor",
+        "children": []
+      },
+      {
+        "name": "Materials",
         "children": []
       }
     ]

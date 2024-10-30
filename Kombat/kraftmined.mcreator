@@ -972,6 +972,25 @@
         ]
       },
       "path": "~/SpecialArmor"
+    },
+    {
+      "name": "ArmorWeight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_weight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/ArmorWeightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
     }
   ],
   "variable_elements": [

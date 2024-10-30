@@ -24,7 +24,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.Util;
 
-import net.mcreator.kraftmined.procedures.StoneArmorHelmetTickEventProcedure;
+import net.mcreator.kraftmined.procedures.ArmorWeightProcedure;
 
 import java.util.List;
 import java.util.EnumMap;
@@ -73,7 +73,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				StoneArmorHelmetTickEventProcedure.execute(entity);
+				ArmorWeightProcedure.execute(entity);
 			}
 		}
 	}
@@ -97,7 +97,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				StoneArmorHelmetTickEventProcedure.execute(entity);
+				ArmorWeightProcedure.execute(entity);
 			}
 		}
 	}
@@ -121,7 +121,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				StoneArmorHelmetTickEventProcedure.execute(entity);
+				ArmorWeightProcedure.execute(entity);
 			}
 		}
 	}
@@ -145,7 +145,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				StoneArmorHelmetTickEventProcedure.execute(entity);
+				ArmorWeightProcedure.execute(entity);
 			}
 		}
 	}

@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "steel_boots",
     "onHelmetTick": {
-      "name": "StoneArmorHelmetTickEvent"
+      "name": "ArmorWeight"
     },
     "onBodyTick": {
-      "name": "StoneArmorHelmetTickEvent"
+      "name": "ArmorWeight"
     },
     "onLeggingsTick": {
-      "name": "StoneArmorHelmetTickEvent"
+      "name": "ArmorWeight"
     },
     "onBootsTick": {
-      "name": "StoneArmorHelmetTickEvent"
+      "name": "ArmorWeight"
     },
     "creativeTabs": [
       {
