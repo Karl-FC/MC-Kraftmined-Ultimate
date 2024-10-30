@@ -39,28 +39,32 @@
       "fixedValue": [
         "Enchantibility: Non-existent",
         "Protection: Low",
-        "Durability: Okay"
+        "Durability: Okay",
+        "Special: May slow the wearer down"
       ]
     },
     "bodySpecialInformation": {
       "fixedValue": [
         "Enchantibility: Non-existent",
         "Protection: Low",
-        "Durability: Okay"
+        "Durability: Okay",
+        "Special: May slow the wearer down"
       ]
     },
     "leggingsSpecialInformation": {
       "fixedValue": [
         "Enchantibility: Non-existent",
         "Protection: Low",
-        "Durability: Okay"
+        "Durability: Okay",
+        "Special: May slow the wearer down"
       ]
     },
     "bootsSpecialInformation": {
       "fixedValue": [
         "Enchantibility: Non-existent",
         "Protection: Low",
-        "Durability: Okay"
+        "Durability: Okay",
+        "Special: May slow the wearer down"
       ]
     },
     "helmetModelName": "Default",

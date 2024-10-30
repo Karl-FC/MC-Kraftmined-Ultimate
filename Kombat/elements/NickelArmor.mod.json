@@ -1,0 +1,123 @@
+{
+  "_fv": 69,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "nickel_head",
+    "enableBody": true,
+    "textureBody": "nickel_body",
+    "enableLeggings": true,
+    "textureLeggings": "nickel_leggings",
+    "enableBoots": true,
+    "textureBoots": "nickel_boots",
+    "creativeTabs": [
+      {
+        "value": "COMBAT"
+      },
+      {
+        "value": "CUSTOM:KraftmineKombat"
+      }
+    ],
+    "armorTextureFile": "nickel",
+    "helmetName": "Nickel Helmet",
+    "bodyName": "Nickel Chestplate",
+    "leggingsName": "Nickel Leggings",
+    "bootsName": "Nickel Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Protection: Medium",
+        "Durability: High",
+        "Special: Pulls nearby items"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Protection: Medium",
+        "Durability: High",
+        "Special: Pulls nearby items"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Protection: Medium",
+        "Durability: High",
+        "Special: Pulls nearby items"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Protection: Medium",
+        "Durability: High",
+        "Special: Pulls nearby items"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 13,
+    "damageValueHelmet": 2,
+    "damageValueBody": 5,
+    "damageValueLeggings": 4,
+    "damageValueBoots": 2,
+    "enchantability": 1,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_turtle"
+    },
+    "repairItems": []
+  }
+}

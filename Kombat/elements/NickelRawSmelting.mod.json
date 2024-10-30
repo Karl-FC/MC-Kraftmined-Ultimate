@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.7,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:RawNickel"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:NickelIngot"
+    },
+    "name": "nickel_raw_smelting",
+    "namespace": "mod"
+  }
+}

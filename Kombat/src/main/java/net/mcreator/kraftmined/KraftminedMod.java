@@ -22,6 +22,7 @@ import net.mcreator.kraftmined.network.KraftminedModVariables;
 import net.mcreator.kraftmined.init.KraftminedModTabs;
 import net.mcreator.kraftmined.init.KraftminedModMobEffects;
 import net.mcreator.kraftmined.init.KraftminedModItems;
+import net.mcreator.kraftmined.init.KraftminedModBlocks;
 import net.mcreator.kraftmined.init.KraftminedModAttributes;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -41,6 +42,8 @@ public class KraftminedMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+
+		KraftminedModBlocks.REGISTRY.register(modEventBus);
 
 		KraftminedModItems.REGISTRY.register(modEventBus);
 

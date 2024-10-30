@@ -66,6 +66,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 			list.add(Component.literal("Enchantibility: Non-existent"));
 			list.add(Component.literal("Protection: Low"));
 			list.add(Component.literal("Durability: Okay"));
+			list.add(Component.literal("Special: May slow the wearer down"));
 		}
 
 		@Override
@@ -89,6 +90,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 			list.add(Component.literal("Enchantibility: Non-existent"));
 			list.add(Component.literal("Protection: Low"));
 			list.add(Component.literal("Durability: Okay"));
+			list.add(Component.literal("Special: May slow the wearer down"));
 		}
 
 		@Override
@@ -112,6 +114,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 			list.add(Component.literal("Enchantibility: Non-existent"));
 			list.add(Component.literal("Protection: Low"));
 			list.add(Component.literal("Durability: Okay"));
+			list.add(Component.literal("Special: May slow the wearer down"));
 		}
 
 		@Override
@@ -135,6 +138,7 @@ public abstract class StoneArmorItem extends ArmorItem {
 			list.add(Component.literal("Enchantibility: Non-existent"));
 			list.add(Component.literal("Protection: Low"));
 			list.add(Component.literal("Durability: Okay"));
+			list.add(Component.literal("Special: May slow the wearer down"));
 		}
 
 		@Override

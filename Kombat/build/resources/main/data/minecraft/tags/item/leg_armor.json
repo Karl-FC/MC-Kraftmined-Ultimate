@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:titanium_armor_leggings",
+    "kraftmined:tungsten_armor_leggings",
+    "kraftmined:nickel_armor_leggings",
     "kraftmined:tnt_armor_leggings",
     "kraftmined:cactus_armor_leggings",
     "kraftmined:lapis_armor_leggings",

@@ -51,11 +51,32 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.TNT_ARMOR_CHESTPLATE.get());
 				tabData.accept(KraftminedModItems.TNT_ARMOR_LEGGINGS.get());
 				tabData.accept(KraftminedModItems.TNT_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.NICKEL_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.NICKEL_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.NICKEL_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.NICKEL_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_BOOTS.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+
+			tabData.accept(KraftminedModBlocks.NICKEL_ORE.get().asItem());
+			tabData.accept(KraftminedModBlocks.NICKEL_BLOCK.get().asItem());
+			tabData.accept(KraftminedModBlocks.TUNGSTEN_ORE.get().asItem());
+			tabData.accept(KraftminedModBlocks.TUNGSTEN_BLOCK.get().asItem());
+			tabData.accept(KraftminedModBlocks.TITANIUM_ORE.get().asItem());
+			tabData.accept(KraftminedModBlocks.TITANIUM_BLOCK.get().asItem());
+
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 
 			tabData.accept(KraftminedModItems.EYEPATCH_HELMET.get());
 			tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_HELMET.get());
@@ -82,6 +103,24 @@ public class KraftminedModTabs {
 			tabData.accept(KraftminedModItems.TNT_ARMOR_CHESTPLATE.get());
 			tabData.accept(KraftminedModItems.TNT_ARMOR_LEGGINGS.get());
 			tabData.accept(KraftminedModItems.TNT_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.NICKEL_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.NICKEL_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.NICKEL_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.NICKEL_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.TUNGSTEN_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.TITANIUM_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.TITANIUM_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.TITANIUM_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.TITANIUM_ARMOR_BOOTS.get());
+
+		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+
+			tabData.accept(KraftminedModItems.NICKEL_INGOT.get());
+			tabData.accept(KraftminedModItems.TUNGSTEN_INGOT.get());
+			tabData.accept(KraftminedModItems.TITANIUM_INGOT.get());
 
 		}
 	}

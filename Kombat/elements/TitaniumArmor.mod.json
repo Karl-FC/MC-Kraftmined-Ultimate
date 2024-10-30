@@ -1,0 +1,127 @@
+{
+  "_fv": 69,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "titanium_head",
+    "enableBody": true,
+    "textureBody": "titanium_body",
+    "enableLeggings": true,
+    "textureLeggings": "titanium_leggings",
+    "enableBoots": true,
+    "textureBoots": "titanium_boots",
+    "creativeTabs": [
+      {
+        "value": "COMBAT"
+      },
+      {
+        "value": "CUSTOM:KraftmineKombat"
+      }
+    ],
+    "armorTextureFile": "titanium",
+    "helmetName": "Titanium Helmet",
+    "bodyName": "Titanium Chestplate",
+    "leggingsName": "Titanium Leggings",
+    "bootsName": "Titanium Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Durability: Extremely high",
+        "Protection: Extremely high",
+        "Special: Deals damage back to attackers"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Durability: Extremely high",
+        "Protection: Extremely high",
+        "Special: Deals damage back to attackers"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Durability: Extremely high",
+        "Protection: Extremely high",
+        "Special: Deals damage back to attackers"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Enchantibility: Medium",
+        "Durability: Extremely high",
+        "Protection: Extremely high",
+        "Special: Deals damage back to attackers"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": true,
+    "bodyImmuneToFire": true,
+    "leggingsImmuneToFire": true,
+    "bootsImmuneToFire": true,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 30,
+    "damageValueHelmet": 3,
+    "damageValueBody": 7,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 3,
+    "enchantability": 12,
+    "toughness": 0.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": "item.armor.equip_netherite"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:TungstenIngot"
+      }
+    ]
+  }
+}

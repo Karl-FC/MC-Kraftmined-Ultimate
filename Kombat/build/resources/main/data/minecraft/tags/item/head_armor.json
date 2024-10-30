@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:titanium_armor_helmet",
+    "kraftmined:tungsten_armor_helmet",
+    "kraftmined:nickel_armor_helmet",
     "kraftmined:tnt_armor_helmet",
     "kraftmined:cactus_armor_helmet",
     "kraftmined:lapis_armor_helmet",

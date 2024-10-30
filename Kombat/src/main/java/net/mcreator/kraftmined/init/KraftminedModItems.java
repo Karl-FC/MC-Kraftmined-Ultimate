@@ -6,15 +6,27 @@ package net.mcreator.kraftmined.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.kraftmined.item.WoodArmorItem;
+import net.mcreator.kraftmined.item.TungstenIngotItem;
+import net.mcreator.kraftmined.item.TungstenArmorItem;
 import net.mcreator.kraftmined.item.TntArmorItem;
+import net.mcreator.kraftmined.item.TitaniumIngotItem;
+import net.mcreator.kraftmined.item.TitaniumArmorItem;
 import net.mcreator.kraftmined.item.StoneArmorItem;
+import net.mcreator.kraftmined.item.RawTungstenItem;
+import net.mcreator.kraftmined.item.RawTitaniumItem;
+import net.mcreator.kraftmined.item.RawNickelItem;
 import net.mcreator.kraftmined.item.QuiverItem;
 import net.mcreator.kraftmined.item.ObsidianScrapItem;
 import net.mcreator.kraftmined.item.ObsidianArmorItem;
+import net.mcreator.kraftmined.item.NickelIngotItem;
+import net.mcreator.kraftmined.item.NickelArmorItem;
 import net.mcreator.kraftmined.item.NetheriteBattleaxeItem;
 import net.mcreator.kraftmined.item.LapisArmorItem;
 import net.mcreator.kraftmined.item.EyepatchItem;
@@ -51,6 +63,34 @@ public class KraftminedModItems {
 	public static final DeferredItem<Item> TNT_ARMOR_CHESTPLATE = REGISTRY.register("tnt_armor_chestplate", TntArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> TNT_ARMOR_LEGGINGS = REGISTRY.register("tnt_armor_leggings", TntArmorItem.Leggings::new);
 	public static final DeferredItem<Item> TNT_ARMOR_BOOTS = REGISTRY.register("tnt_armor_boots", TntArmorItem.Boots::new);
+	public static final DeferredItem<Item> NICKEL_INGOT = REGISTRY.register("nickel_ingot", NickelIngotItem::new);
+	public static final DeferredItem<Item> NICKEL_ORE = block(KraftminedModBlocks.NICKEL_ORE);
+	public static final DeferredItem<Item> NICKEL_BLOCK = block(KraftminedModBlocks.NICKEL_BLOCK);
+	public static final DeferredItem<Item> TUNGSTEN_INGOT = REGISTRY.register("tungsten_ingot", TungstenIngotItem::new);
+	public static final DeferredItem<Item> TUNGSTEN_ORE = block(KraftminedModBlocks.TUNGSTEN_ORE);
+	public static final DeferredItem<Item> TUNGSTEN_BLOCK = block(KraftminedModBlocks.TUNGSTEN_BLOCK);
+	public static final DeferredItem<Item> TITANIUM_INGOT = REGISTRY.register("titanium_ingot", TitaniumIngotItem::new);
+	public static final DeferredItem<Item> TITANIUM_ORE = block(KraftminedModBlocks.TITANIUM_ORE);
+	public static final DeferredItem<Item> TITANIUM_BLOCK = block(KraftminedModBlocks.TITANIUM_BLOCK);
+	public static final DeferredItem<Item> RAW_NICKEL = REGISTRY.register("raw_nickel", RawNickelItem::new);
+	public static final DeferredItem<Item> RAW_TITANIUM = REGISTRY.register("raw_titanium", RawTitaniumItem::new);
+	public static final DeferredItem<Item> RAW_TUNGSTEN = REGISTRY.register("raw_tungsten", RawTungstenItem::new);
+	public static final DeferredItem<Item> NICKEL_ARMOR_HELMET = REGISTRY.register("nickel_armor_helmet", NickelArmorItem.Helmet::new);
+	public static final DeferredItem<Item> NICKEL_ARMOR_CHESTPLATE = REGISTRY.register("nickel_armor_chestplate", NickelArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> NICKEL_ARMOR_LEGGINGS = REGISTRY.register("nickel_armor_leggings", NickelArmorItem.Leggings::new);
+	public static final DeferredItem<Item> NICKEL_ARMOR_BOOTS = REGISTRY.register("nickel_armor_boots", NickelArmorItem.Boots::new);
+	public static final DeferredItem<Item> TUNGSTEN_ARMOR_HELMET = REGISTRY.register("tungsten_armor_helmet", TungstenArmorItem.Helmet::new);
+	public static final DeferredItem<Item> TUNGSTEN_ARMOR_CHESTPLATE = REGISTRY.register("tungsten_armor_chestplate", TungstenArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> TUNGSTEN_ARMOR_LEGGINGS = REGISTRY.register("tungsten_armor_leggings", TungstenArmorItem.Leggings::new);
+	public static final DeferredItem<Item> TUNGSTEN_ARMOR_BOOTS = REGISTRY.register("tungsten_armor_boots", TungstenArmorItem.Boots::new);
+	public static final DeferredItem<Item> TITANIUM_ARMOR_HELMET = REGISTRY.register("titanium_armor_helmet", TitaniumArmorItem.Helmet::new);
+	public static final DeferredItem<Item> TITANIUM_ARMOR_CHESTPLATE = REGISTRY.register("titanium_armor_chestplate", TitaniumArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> TITANIUM_ARMOR_LEGGINGS = REGISTRY.register("titanium_armor_leggings", TitaniumArmorItem.Leggings::new);
+	public static final DeferredItem<Item> TITANIUM_ARMOR_BOOTS = REGISTRY.register("titanium_armor_boots", TitaniumArmorItem.Boots::new);
+
 	// Start of user code block custom items
 	// End of user code block custom items
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 }

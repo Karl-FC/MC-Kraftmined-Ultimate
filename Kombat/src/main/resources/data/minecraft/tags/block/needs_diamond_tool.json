@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmined:titanium_block",
+    "kraftmined:titanium_ore",
+    "kraftmined:tungsten_block",
+    "kraftmined:tungsten_ore"
+  ]
+}
