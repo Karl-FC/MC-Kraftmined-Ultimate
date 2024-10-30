@@ -3,6 +3,7 @@
   "attribute.kraftmined.enhanced": "Potion_enhanced",
   "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
   "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
+  "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
   "gamerule.buffedPassives": "Mob Passives",
   "attribute.kraftmined.buff_level": "Buff Level",
   "gamerule.buffedMobs": "Buffed Mobs",

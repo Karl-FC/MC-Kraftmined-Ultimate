@@ -26,6 +26,7 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.NETHERITE_BATTLEAXE.get());
 				tabData.accept(KraftminedModItems.QUIVER_CHESTPLATE.get());
 				tabData.accept(KraftminedModItems.EYEPATCH_HELMET.get());
+				tabData.accept(KraftminedModItems.OBSIDIAN_SCRAP.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
