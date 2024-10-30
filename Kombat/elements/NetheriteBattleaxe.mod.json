@@ -12,7 +12,11 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:KraftmineKombat"
+      }
+    ],
     "efficiency": 9.0,
     "attackSpeed": 0.8,
     "enchantability": 28,

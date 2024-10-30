@@ -10,7 +10,11 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:KraftmineKombat"
+      }
+    ],
     "armorTextureFile": "blank_",
     "helmetName": "Quiver Helmet",
     "bodyName": "Quiver",

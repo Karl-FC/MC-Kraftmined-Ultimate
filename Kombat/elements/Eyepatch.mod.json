@@ -16,6 +16,9 @@
     "creativeTabs": [
       {
         "value": "COMBAT"
+      },
+      {
+        "value": "CUSTOM:KraftmineKombat"
       }
     ],
     "armorTextureFile": "eyepatch_",

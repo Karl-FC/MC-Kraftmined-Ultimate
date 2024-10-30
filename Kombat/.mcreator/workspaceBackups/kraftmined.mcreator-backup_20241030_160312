@@ -226,9 +226,137 @@
         ]
       },
       "path": "~/Quality of Life"
+    },
+    {
+      "name": "Eyepatch",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/item/EyepatchItem.java",
+          "src/main/resources/assets/kraftmined/models/item/eyepatch_helmet.json"
+        ]
+      }
+    },
+    {
+      "name": "EyepatchEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/potion/EyepatchEffectMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "EyepatchLeftDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_left_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchLeftDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EyepatchLeft",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/client/screens/EyepatchLeftOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "EyepatchRightDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_right_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchRightDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EyepatchRight",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/client/screens/EyepatchRightOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "EyepatchHelmetTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eyepatch_helmet_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchHelmetTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Eyepatch_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {
     "ITEMS:kraftmined:chestplate1": [
@@ -330,9 +458,6 @@
       "Items.DIAMOND_HELMET",
       "Items.NETHERITE_HELMET"
     ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:NetheriteBattleaxe"
-    ],
     "ITEMS:kraftmined:helmet1": [
       "Blocks.CARVED_PUMPKIN",
       "Items.TURTLE_HELMET",
@@ -343,6 +468,9 @@
       "Items.SKULL#3",
       "Items.PIGLIN_HEAD"
     ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:NetheriteBattleaxe"
+    ],
     "ITEMS:kraftmined:boots2": [
       "Items.CHAINMAIL_BOOTS",
       "Items.IRON_BOOTS"
@@ -350,6 +478,9 @@
     "ITEMS:kraftmined:boots3": [
       "Items.DIAMOND_BOOTS",
       "Items.NETHERITE_BOOTS"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Eyepatch.helmet"
     ],
     "ITEMS:kraftmined:ranged": [
       "Items.BOW",
@@ -379,16 +510,12 @@
       "Items.NETHERITE_SHOVEL",
       "Items.NETHERITE_PICKAXE",
       "Items.NETHERITE_HOE"
-    ],
-    "ITEMS:kraftmined:nobow": [
-      "Items.CROSSBOW",
-      "Items.EGG",
-      "Items.SNOWBALL"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.kraftmined.eyepatch_helmet": "Eyepatch",
       "attribute.kraftmined.enhanced": "Potion_enhanced",
       "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
       "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
@@ -396,6 +523,7 @@
       "attribute.kraftmined.buff_level": "Buff Level",
       "gamerule.buffedMobs": "Buffed Mobs",
       "attribute.kraftmined.buffed": "Buffed",
+      "effect.kraftmined.eyepatch_effect": "Patched Vision",
       "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
       "gamerule.sizeDifference": "Mob Size",
       "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
@@ -427,5 +555,5 @@
     "currentGenerator": "neoforge-1.21.1",
     "modElementsPackage": "net.mcreator.kraftmined"
   },
-  "mcreatorVersion": 202400340615
+  "mcreatorVersion": 202400342716
 }
