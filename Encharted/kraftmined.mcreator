@@ -776,7 +776,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Nautre",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "kraftmined",

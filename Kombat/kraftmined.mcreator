@@ -277,6 +277,11 @@
       "Items.DIAMOND_CHESTPLATE",
       "Items.NETHERITE_CHESTPLATE"
     ],
+    "ITEMS:kraftmined:ranged": [
+      "Items.BOW",
+      "Items.CROSSBOW",
+      "Items.TRIDENT"
+    ],
     "ITEMS:kraftmined:weapon2": [
       "Items.IRON_SWORD",
       "Items.IRON_SHOVEL",
@@ -309,6 +314,13 @@
       "Items.CHAINMAIL_LEGGINGS",
       "Items.IRON_LEGGINGS"
     ],
+    "ITEMS:kraftmined:heads": [
+      "Items.SKULL#0",
+      "Items.SKULL#1",
+      "Items.SKULL#2",
+      "Items.SKULL#3",
+      "Items.PIGLIN_HEAD"
+    ],
     "ITEMS:kraftmined:leggings1": [
       "Items.LEATHER_LEGGINGS",
       "Items.GOLDEN_LEGGINGS"
@@ -321,6 +333,14 @@
       "Items.LEATHER_BOOTS",
       "Items.GOLDEN_BOOTS"
     ],
+    "ITEMS:kraftmined:leggings": [
+      "Items.LEATHER_LEGGINGS",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.IRON_LEGGINGS",
+      "Items.GOLDEN_LEGGINGS",
+      "Items.DIAMOND_LEGGINGS",
+      "Items.NETHERITE_LEGGINGS"
+    ],
     "ITEMS:kraftmined:helmet2": [
       "Items.CHAINMAIL_HELMET",
       "Items.IRON_HELMET",
@@ -330,8 +350,14 @@
       "Items.DIAMOND_HELMET",
       "Items.NETHERITE_HELMET"
     ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:NetheriteBattleaxe"
+    "ITEMS:kraftmined:weapon3": [
+      "Items.DIAMOND_SWORD",
+      "Items.DIAMOND_AXE",
+      "Items.NETHERITE_SWORD",
+      "Items.NETHERITE_AXE",
+      "Items.NETHERITE_SHOVEL",
+      "Items.NETHERITE_PICKAXE",
+      "Items.NETHERITE_HOE"
     ],
     "ITEMS:kraftmined:helmet1": [
       "Blocks.CARVED_PUMPKIN",
@@ -343,6 +369,9 @@
       "Items.SKULL#3",
       "Items.PIGLIN_HEAD"
     ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:NetheriteBattleaxe"
+    ],
     "ITEMS:kraftmined:boots2": [
       "Items.CHAINMAIL_BOOTS",
       "Items.IRON_BOOTS"
@@ -350,35 +379,6 @@
     "ITEMS:kraftmined:boots3": [
       "Items.DIAMOND_BOOTS",
       "Items.NETHERITE_BOOTS"
-    ],
-    "ITEMS:kraftmined:ranged": [
-      "Items.BOW",
-      "Items.CROSSBOW",
-      "Items.TRIDENT"
-    ],
-    "ITEMS:kraftmined:heads": [
-      "Items.SKULL#0",
-      "Items.SKULL#1",
-      "Items.SKULL#2",
-      "Items.SKULL#3",
-      "Items.PIGLIN_HEAD"
-    ],
-    "ITEMS:kraftmined:leggings": [
-      "Items.LEATHER_LEGGINGS",
-      "Items.CHAINMAIL_LEGGINGS",
-      "Items.IRON_LEGGINGS",
-      "Items.GOLDEN_LEGGINGS",
-      "Items.DIAMOND_LEGGINGS",
-      "Items.NETHERITE_LEGGINGS"
-    ],
-    "ITEMS:kraftmined:weapon3": [
-      "Items.DIAMOND_SWORD",
-      "Items.DIAMOND_AXE",
-      "Items.NETHERITE_SWORD",
-      "Items.NETHERITE_AXE",
-      "Items.NETHERITE_SHOVEL",
-      "Items.NETHERITE_PICKAXE",
-      "Items.NETHERITE_HOE"
     ]
   },
   "tab_element_order": {},
@@ -422,5 +422,5 @@
     "currentGenerator": "neoforge-1.21.1",
     "modElementsPackage": "net.mcreator.kraftmined"
   },
-  "mcreatorVersion": 202400340615
+  "mcreatorVersion": 202400342716
 }

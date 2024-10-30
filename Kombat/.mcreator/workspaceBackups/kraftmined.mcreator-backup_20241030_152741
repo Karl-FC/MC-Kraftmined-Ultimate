@@ -31,7 +31,7 @@
       "registry_name": "buffed_mobs",
       "metadata": {
         "files": [],
-        "type": "logic"
+        "type": "number"
       },
       "path": "~/Quality of Life"
     },
@@ -188,7 +188,7 @@
     {
       "name": "BuffedSpawning",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "buffed_spawning",
       "metadata": {
@@ -197,8 +197,31 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
+    },
+    {
+      "name": "BuffedSpawnEffects",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_spawn_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BuffedSpawnEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -254,6 +277,11 @@
       "Items.DIAMOND_CHESTPLATE",
       "Items.NETHERITE_CHESTPLATE"
     ],
+    "ITEMS:kraftmined:ranged": [
+      "Items.BOW",
+      "Items.CROSSBOW",
+      "Items.TRIDENT"
+    ],
     "ITEMS:kraftmined:weapon2": [
       "Items.IRON_SWORD",
       "Items.IRON_SHOVEL",
@@ -286,6 +314,13 @@
       "Items.CHAINMAIL_LEGGINGS",
       "Items.IRON_LEGGINGS"
     ],
+    "ITEMS:kraftmined:heads": [
+      "Items.SKULL#0",
+      "Items.SKULL#1",
+      "Items.SKULL#2",
+      "Items.SKULL#3",
+      "Items.PIGLIN_HEAD"
+    ],
     "ITEMS:kraftmined:leggings1": [
       "Items.LEATHER_LEGGINGS",
       "Items.GOLDEN_LEGGINGS"
@@ -298,6 +333,14 @@
       "Items.LEATHER_BOOTS",
       "Items.GOLDEN_BOOTS"
     ],
+    "ITEMS:kraftmined:leggings": [
+      "Items.LEATHER_LEGGINGS",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.IRON_LEGGINGS",
+      "Items.GOLDEN_LEGGINGS",
+      "Items.DIAMOND_LEGGINGS",
+      "Items.NETHERITE_LEGGINGS"
+    ],
     "ITEMS:kraftmined:helmet2": [
       "Items.CHAINMAIL_HELMET",
       "Items.IRON_HELMET",
@@ -306,6 +349,15 @@
     "ITEMS:kraftmined:helmet3": [
       "Items.DIAMOND_HELMET",
       "Items.NETHERITE_HELMET"
+    ],
+    "ITEMS:kraftmined:weapon3": [
+      "Items.DIAMOND_SWORD",
+      "Items.DIAMOND_AXE",
+      "Items.NETHERITE_SWORD",
+      "Items.NETHERITE_AXE",
+      "Items.NETHERITE_SHOVEL",
+      "Items.NETHERITE_PICKAXE",
+      "Items.NETHERITE_HOE"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:NetheriteBattleaxe"
@@ -327,47 +379,13 @@
     "ITEMS:kraftmined:boots3": [
       "Items.DIAMOND_BOOTS",
       "Items.NETHERITE_BOOTS"
-    ],
-    "ITEMS:kraftmined:ranged": [
-      "Items.BOW",
-      "Items.CROSSBOW",
-      "Items.TRIDENT"
-    ],
-    "ITEMS:kraftmined:heads": [
-      "Items.SKULL#0",
-      "Items.SKULL#1",
-      "Items.SKULL#2",
-      "Items.SKULL#3",
-      "Items.PIGLIN_HEAD"
-    ],
-    "ITEMS:kraftmined:leggings": [
-      "Items.LEATHER_LEGGINGS",
-      "Items.CHAINMAIL_LEGGINGS",
-      "Items.IRON_LEGGINGS",
-      "Items.GOLDEN_LEGGINGS",
-      "Items.DIAMOND_LEGGINGS",
-      "Items.NETHERITE_LEGGINGS"
-    ],
-    "ITEMS:kraftmined:weapon3": [
-      "Items.DIAMOND_SWORD",
-      "Items.DIAMOND_AXE",
-      "Items.NETHERITE_SWORD",
-      "Items.NETHERITE_AXE",
-      "Items.NETHERITE_SHOVEL",
-      "Items.NETHERITE_PICKAXE",
-      "Items.NETHERITE_HOE"
-    ],
-    "ITEMS:kraftmined:nobow": [
-      "Items.CROSSBOW",
-      "Items.EGG",
-      "Items.SNOWBALL"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "attribute.kraftmined.enhanced": "Potion_enhanced",
-      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect. Grants more exp compared to regular mobs",
+      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
       "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
       "gamerule.buffedPassives": "Mob Passives",
       "attribute.kraftmined.buff_level": "Buff Level",

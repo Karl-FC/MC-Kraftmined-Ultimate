@@ -547,6 +547,104 @@
           }
         ]
       }
+    },
+    {
+      "name": "Bluntness",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/bluntness.json"
+        ]
+      }
+    },
+    {
+      "name": "BluntnessProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BluntnessProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FearAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/enchantment/fear_aspect.json"
+        ]
+      }
+    },
+    {
+      "name": "FearAspectProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/FearAspectProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KraftmineEnchantments",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_enchantments",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -569,6 +667,8 @@
       "~CUSTOM:CurseOfMetalMass"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
       "~CUSTOM:Retaliation",
       "~CUSTOM:CurseOfCreeping",
       "~CUSTOM:Yeeting",
@@ -604,6 +704,8 @@
     "BIOMES:minecraft:is_overworld": [],
     "BLOCKS:minecraft:logs": [],
     "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
       "~CUSTOM:Retaliation",
       "~CUSTOM:CurseOfCreeping",
       "~CUSTOM:CurseOfInterchanging",
@@ -632,6 +734,8 @@
     "ITEMS:minecraft:enchantable/weapon": [],
     "ITEMS:kraftmined:weapons": [],
     "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
       "~CUSTOM:Retaliation",
       "~CUSTOM:CurseOfCreeping",
       "~CUSTOM:CurseOfInterchanging",
@@ -655,12 +759,15 @@
       "enchantment.kraftmined.curse_of_creeping": "Curse Of Creeping",
       "enchantment.kraftmined.unblood": "Unblood",
       "enchantment.kraftmined.guarding_strike": "Guarding Strike",
+      "enchantment.kraftmined.bluntness": "Bluntness",
       "subtitles.entity.attack.metalpipe": "METAL FALLING",
       "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
+      "enchantment.kraftmined.fear_aspect": "Fear Aspect",
       "enchantment.kraftmined.frost_aspect": "Frost Aspect",
       "enchantment.kraftmined.committed": "Commitment",
       "enchantment.kraftmined.yeeting": "Yeeting",
       "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
+      "item_group.kraftmined.kraftmine_enchantments": "Kraftmine Enchantments",
       "attribute.kraftmined.committment": "Committment",
       "enchantment.kraftmined.racerism": "Racism",
       "enchantment.kraftmined.lifesteal": "Lifesteal",
@@ -684,6 +791,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.kraftmined"
   },
   "mcreatorVersion": 202400340615
