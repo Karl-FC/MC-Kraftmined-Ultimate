@@ -18,6 +18,9 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.kraftmined.network.KraftminedModVariables;
+import net.mcreator.kraftmined.init.KraftminedModTabs;
+import net.mcreator.kraftmined.init.KraftminedModMobEffects;
 import net.mcreator.kraftmined.init.KraftminedModItems;
 import net.mcreator.kraftmined.init.KraftminedModAttributes;
 
@@ -40,6 +43,11 @@ public class KraftminedMod {
 		modEventBus.addListener(this::registerNetworking);
 
 		KraftminedModItems.REGISTRY.register(modEventBus);
+
+		KraftminedModTabs.REGISTRY.register(modEventBus);
+		KraftminedModVariables.ATTACHMENT_TYPES.register(modEventBus);
+
+		KraftminedModMobEffects.REGISTRY.register(modEventBus);
 
 		KraftminedModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init

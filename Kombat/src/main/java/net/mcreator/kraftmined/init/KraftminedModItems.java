@@ -11,12 +11,14 @@ import net.minecraft.world.item.Item;
 
 import net.mcreator.kraftmined.item.QuiverItem;
 import net.mcreator.kraftmined.item.NetheriteBattleaxeItem;
+import net.mcreator.kraftmined.item.EyepatchItem;
 import net.mcreator.kraftmined.KraftminedMod;
 
 public class KraftminedModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(KraftminedMod.MODID);
 	public static final DeferredItem<Item> NETHERITE_BATTLEAXE = REGISTRY.register("netherite_battleaxe", NetheriteBattleaxeItem::new);
 	public static final DeferredItem<Item> QUIVER_CHESTPLATE = REGISTRY.register("quiver_chestplate", QuiverItem.Chestplate::new);
+	public static final DeferredItem<Item> EYEPATCH_HELMET = REGISTRY.register("eyepatch_helmet", EyepatchItem.Helmet::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }
