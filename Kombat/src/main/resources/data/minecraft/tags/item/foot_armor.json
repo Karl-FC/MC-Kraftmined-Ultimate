@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmined:tnt_armor_boots",
+    "kraftmined:cactus_armor_boots",
+    "kraftmined:lapis_armor_boots",
+    "kraftmined:stone_armor_boots",
+    "kraftmined:wood_armor_boots",
+    "kraftmined:obsidian_armor_boots"
+  ]
+}

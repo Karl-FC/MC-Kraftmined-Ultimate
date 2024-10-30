@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kraftmined:nickel_ingot"
+    }
+  },
+  "result": {
+    "id": "kraftmined:nickel_block",
+    "count": 1
+  }
+}

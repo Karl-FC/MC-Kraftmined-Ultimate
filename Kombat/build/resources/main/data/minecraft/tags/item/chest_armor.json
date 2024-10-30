@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:tnt_armor_chestplate",
+    "kraftmined:cactus_armor_chestplate",
+    "kraftmined:lapis_armor_chestplate",
+    "kraftmined:stone_armor_chestplate",
+    "kraftmined:wood_armor_chestplate",
+    "kraftmined:obsidian_armor_chestplate",
     "kraftmined:quiver_chestplate"
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmined:tnt_armor_leggings",
+    "kraftmined:cactus_armor_leggings",
+    "kraftmined:lapis_armor_leggings",
+    "kraftmined:stone_armor_leggings",
+    "kraftmined:wood_armor_leggings",
+    "kraftmined:obsidian_armor_leggings"
+  ]
+}

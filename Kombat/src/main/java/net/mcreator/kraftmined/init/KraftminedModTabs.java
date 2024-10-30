@@ -27,6 +27,30 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.QUIVER_CHESTPLATE.get());
 				tabData.accept(KraftminedModItems.EYEPATCH_HELMET.get());
 				tabData.accept(KraftminedModItems.OBSIDIAN_SCRAP.get());
+				tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.WOOD_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.WOOD_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.WOOD_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.WOOD_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.STONE_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.STONE_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.STONE_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.STONE_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.LAPIS_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.LAPIS_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.LAPIS_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.LAPIS_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.CACTUS_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.CACTUS_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.CACTUS_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.CACTUS_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.TNT_ARMOR_HELMET.get());
+				tabData.accept(KraftminedModItems.TNT_ARMOR_CHESTPLATE.get());
+				tabData.accept(KraftminedModItems.TNT_ARMOR_LEGGINGS.get());
+				tabData.accept(KraftminedModItems.TNT_ARMOR_BOOTS.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -34,6 +58,30 @@ public class KraftminedModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 
 			tabData.accept(KraftminedModItems.EYEPATCH_HELMET.get());
+			tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.OBSIDIAN_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.WOOD_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.WOOD_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.WOOD_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.WOOD_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.STONE_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.STONE_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.STONE_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.STONE_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.LAPIS_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.LAPIS_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.LAPIS_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.LAPIS_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.CACTUS_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.CACTUS_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.CACTUS_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.CACTUS_ARMOR_BOOTS.get());
+			tabData.accept(KraftminedModItems.TNT_ARMOR_HELMET.get());
+			tabData.accept(KraftminedModItems.TNT_ARMOR_CHESTPLATE.get());
+			tabData.accept(KraftminedModItems.TNT_ARMOR_LEGGINGS.get());
+			tabData.accept(KraftminedModItems.TNT_ARMOR_BOOTS.get());
 
 		}
 	}

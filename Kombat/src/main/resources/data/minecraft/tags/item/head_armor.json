@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "kraftmined:tnt_armor_helmet",
+    "kraftmined:cactus_armor_helmet",
+    "kraftmined:lapis_armor_helmet",
+    "kraftmined:stone_armor_helmet",
+    "kraftmined:wood_armor_helmet",
+    "kraftmined:obsidian_armor_helmet",
     "kraftmined:eyepatch_helmet"
   ]
 }
