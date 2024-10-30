@@ -74,7 +74,7 @@ public class BuffedWeaponsProcedure {
 				}
 			}
 		}
-		if (Math.random() <= 0.05) {
+		if (Math.random() <= 0.01) {
 			if (entity instanceof LivingEntity _entity) {
 				ItemStack _setstack = new ItemStack(Items.TOTEM_OF_UNDYING).copy();
 				_setstack.setCount(1);

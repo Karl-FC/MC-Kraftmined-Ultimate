@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "kraftmined:obsidian_armor_leggings",
+    "kraftmined:wood_armor_leggings",
+    "kraftmined:stone_armor_leggings",
+    "kraftmined:lapis_armor_leggings",
+    "kraftmined:cactus_armor_leggings",
+    "kraftmined:tnt_armor_leggings",
+    "kraftmined:nickel_armor_leggings",
+    "kraftmined:tungsten_armor_leggings",
+    "kraftmined:titanium_armor_leggings",
+    "minecraft:leather_leggings",
+    "minecraft:chainmail_leggings",
+    "minecraft:iron_leggings",
+    "minecraft:golden_leggings",
+    "minecraft:diamond_leggings",
+    "minecraft:netherite_leggings"
+  ]
+}

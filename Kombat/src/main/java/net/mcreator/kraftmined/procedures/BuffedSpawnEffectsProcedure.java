@@ -38,10 +38,10 @@ public class BuffedSpawnEffectsProcedure {
 			if (entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(KraftminedModAttributes.ENHANCED))
 				_livingEntity0.getAttribute(KraftminedModAttributes.ENHANCED).setBaseValue(1);
 			Effect = Mth.nextInt(RandomSource.create(), 1, 10);
-			if (Math.random() >= 0.05) {
+			if (Math.random() <= 0.05) {
 				if (entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(KraftminedModAttributes.ENHANCED))
 					_livingEntity2.getAttribute(KraftminedModAttributes.ENHANCED).setBaseValue(2);
-				if (Math.random() >= 0.05) {
+				if (Math.random() <= 0.05) {
 					if (entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(KraftminedModAttributes.ENHANCED))
 						_livingEntity3.getAttribute(KraftminedModAttributes.ENHANCED).setBaseValue(3);
 				}

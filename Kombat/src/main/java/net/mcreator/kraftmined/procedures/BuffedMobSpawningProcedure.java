@@ -38,7 +38,7 @@ public class BuffedMobSpawningProcedure {
 		double BuffChance = 0;
 		double Difficulty = 0;
 		double Size = 0;
-		if ((world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS)) == 0 && !(entity instanceof Player)) {
+		if ((world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS)) > 0 && !(entity instanceof Player)) {
 			Difficulty = (world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS));
 			BuffChance = Difficulty * 0.25;
 			if (Math.random() <= BuffChance) {
@@ -46,7 +46,7 @@ public class BuffedMobSpawningProcedure {
 					_livingEntity4.getAttribute(KraftminedModAttributes.BUFF_LEVEL).setBaseValue((Mth.nextInt(RandomSource.create(), 0, 3)));
 				if ((entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(KraftminedModAttributes.BUFF_LEVEL) ? _livingEntity5.getAttribute(KraftminedModAttributes.BUFF_LEVEL).getBaseValue() : 0) > 0) {
 					BuffedWeaponsProcedure.execute(entity);
-					BuffedArmorProcedure.execute(entity);
+					BuffedArmorSpawningProcedure.execute(entity);
 				}
 				if (world.getLevelData().getGameRules().getBoolean(KraftminedModGameRules.SIZE_DIFFERENCE) == true) {
 					Size = entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.SCALE) ? _livingEntity7.getAttribute(Attributes.SCALE).getBaseValue() : 0;
