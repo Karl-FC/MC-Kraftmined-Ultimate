@@ -1,0 +1,135 @@
+{
+  "mod_elements": [
+    {
+      "name": "Pebble",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/pebble.json",
+          "src/main/java/net/mcreator/kraftmined/item/PebbleItem.java"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleDrop",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/loot_table/blocks/stone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleCobblestone",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_cobblestone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/pebble_cobblestone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "Dent",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dent",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/dent.json",
+          "src/main/java/net/mcreator/kraftmined/item/DentItem.java"
+        ]
+      },
+      "path": "~/Cursed"
+    },
+    {
+      "name": "TridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/recipe/trident_recipe.json"
+        ]
+      },
+      "path": "~/Cursed"
+    },
+    {
+      "name": "Materwelon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "materwelon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/materwelon.json",
+          "src/main/java/net/mcreator/kraftmined/item/MaterwelonItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KraftmineUnplayable",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_unplayable",
+      "metadata": {
+        "files": []
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.kraftmined.pebble": "Pebble",
+      "item.kraftmined.materwelon": "Materwelon",
+      "item.kraftmined.dent": "Dent",
+      "item_group.kraftmined.kraftmine_unplayable": "K Cursed"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Nature",
+        "children": []
+      },
+      {
+        "name": "Cursed",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "kraftmined",
+    "modName": "Un-Unplayable",
+    "version": "1.0.0",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.mcreator.kraftmined"
+  },
+  "mcreatorVersion": 202400342716
+}

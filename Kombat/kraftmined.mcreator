@@ -340,7 +340,8 @@
           "src/main/resources/assets/kraftmined/models/item/obsidian_scrap.json",
           "src/main/java/net/mcreator/kraftmined/item/ObsidianScrapItem.java"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "ObsidianArmor",
@@ -1120,6 +1121,11 @@
     "ITEMS:kraftmined:chestplate3": [
       "Items.DIAMOND_CHESTPLATE",
       "Items.NETHERITE_CHESTPLATE"
+    ],
+    "ITEMS:kraftmined:totems": [
+      "CUSTOM:TotemCreeping",
+      "CUSTOM:TotemDying",
+      "Items.TOTEM_OF_UNDYING"
     ],
     "ITEMS:kraftmined:weapon2": [
       "Items.IRON_SWORD",

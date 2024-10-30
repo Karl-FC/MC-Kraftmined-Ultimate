@@ -18,6 +18,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.kraftmined.init.KraftminedModTabs;
 import net.mcreator.kraftmined.init.KraftminedModItems;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -39,6 +40,8 @@ public class KraftminedMod {
 		modEventBus.addListener(this::registerNetworking);
 
 		KraftminedModItems.REGISTRY.register(modEventBus);
+
+		KraftminedModTabs.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init
