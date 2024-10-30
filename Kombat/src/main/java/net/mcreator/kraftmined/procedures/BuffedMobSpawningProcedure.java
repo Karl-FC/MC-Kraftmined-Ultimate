@@ -22,7 +22,7 @@ import net.mcreator.kraftmined.init.KraftminedModAttributes;
 import javax.annotation.Nullable;
 
 @EventBusSubscriber
-public class BuffedSpawningProcedure {
+public class BuffedMobSpawningProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinLevelEvent event) {
 		execute(event, event.getLevel(), event.getEntity());
@@ -38,7 +38,7 @@ public class BuffedSpawningProcedure {
 		double BuffChance = 0;
 		double Difficulty = 0;
 		double Size = 0;
-		if ((world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS)) > 0 == !(entity instanceof Player)) {
+		if ((world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS)) == 0 && !(entity instanceof Player)) {
 			Difficulty = (world.getLevelData().getGameRules().getInt(KraftminedModGameRules.BUFFED_MOBS));
 			BuffChance = Difficulty * 0.25;
 			if (Math.random() <= BuffChance) {

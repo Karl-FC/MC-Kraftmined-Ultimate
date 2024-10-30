@@ -186,29 +186,6 @@
       "path": "~/Quality of Life"
     },
     {
-      "name": "BuffedSpawning",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "buffed_spawning",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/BuffedSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Quality of Life"
-    },
-    {
       "name": "BuffedSpawnEffects",
       "type": "procedure",
       "compiles": true,
@@ -347,6 +324,29 @@
           }
         ]
       }
+    },
+    {
+      "name": "BuffedMobSpawning",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffed_mob_spawning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/BuffedMobSpawningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quality of Life"
     }
   ],
   "variable_elements": [

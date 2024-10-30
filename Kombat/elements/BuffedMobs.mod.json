@@ -6,7 +6,7 @@
     "displayName": "Buffed Mobs",
     "description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
     "category": "MOBS",
-    "defaultValueLogic": true,
+    "defaultValueLogic": false,
     "defaultValueNumber": 0
   }
 }
