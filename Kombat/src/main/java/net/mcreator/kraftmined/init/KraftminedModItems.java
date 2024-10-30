@@ -15,6 +15,8 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.kraftmined.item.WoodArmorItem;
 import net.mcreator.kraftmined.item.TungstenIngotItem;
 import net.mcreator.kraftmined.item.TungstenArmorItem;
+import net.mcreator.kraftmined.item.TotemDyingItem;
+import net.mcreator.kraftmined.item.TotemCreepingItem;
 import net.mcreator.kraftmined.item.TntArmorItem;
 import net.mcreator.kraftmined.item.TitaniumIngotItem;
 import net.mcreator.kraftmined.item.TitaniumArmorItem;
@@ -87,6 +89,8 @@ public class KraftminedModItems {
 	public static final DeferredItem<Item> TITANIUM_ARMOR_CHESTPLATE = REGISTRY.register("titanium_armor_chestplate", TitaniumArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> TITANIUM_ARMOR_LEGGINGS = REGISTRY.register("titanium_armor_leggings", TitaniumArmorItem.Leggings::new);
 	public static final DeferredItem<Item> TITANIUM_ARMOR_BOOTS = REGISTRY.register("titanium_armor_boots", TitaniumArmorItem.Boots::new);
+	public static final DeferredItem<Item> TOTEM_CREEPING = REGISTRY.register("totem_creeping", TotemCreepingItem::new);
+	public static final DeferredItem<Item> TOTEM_DYING = REGISTRY.register("totem_dying", TotemDyingItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

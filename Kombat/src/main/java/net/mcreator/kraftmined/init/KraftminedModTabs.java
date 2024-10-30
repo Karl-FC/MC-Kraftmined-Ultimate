@@ -63,6 +63,8 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_CHESTPLATE.get());
 				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(KraftminedModItems.TITANIUM_ARMOR_BOOTS.get());
+				tabData.accept(KraftminedModItems.TOTEM_CREEPING.get());
+				tabData.accept(KraftminedModItems.TOTEM_DYING.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
