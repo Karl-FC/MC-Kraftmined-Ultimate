@@ -226,15 +226,194 @@
         ]
       },
       "path": "~/Things"
+    },
+    {
+      "name": "GolemArm",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golem_arm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/kraftmined/models/item/golem_arm.json",
+          "src/main/java/net/mcreator/kraftmined/item/GolemArmItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "GolemArmLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golem_arm_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/GolemArmLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Big",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/entity/BigEntity.java",
+          "src/main/resources/data/kraftmined/neoforge/biome_modifier/big_biome_modifier.json",
+          "src/main/java/net/mcreator/kraftmined/client/renderer/BigRenderer.java",
+          "src/main/resources/assets/kraftmined/models/item/big_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Goose",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/kraftmined/neoforge/biome_modifier/goose_biome_modifier.json",
+          "src/main/resources/assets/kraftmined/models/item/goose_spawn_egg.json",
+          "src/main/java/net/mcreator/kraftmined/entity/GooseEntity.java",
+          "src/main/java/net/mcreator/kraftmined/client/renderer/GooseRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GooseOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/GooseOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GooseTargetLock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose_target_lock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/GooseTargetLockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlyingSquidNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_squid_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/procedures/FlyingSquidNaturalEntitySpawningConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlyingSquid",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_squid",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/entity/FlyingSquidEntity.java",
+          "src/main/java/net/mcreator/kraftmined/client/renderer/FlyingSquidRenderer.java",
+          "src/main/resources/assets/kraftmined/models/item/flying_squid_spawn_egg.json",
+          "src/main/resources/data/kraftmined/neoforge/biome_modifier/flying_squid_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
+    "ENTITIES:minecraft:aquatic": [
+      "~CUSTOM:FlyingSquid"
+    ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:DyingPan"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:GolemArm",
       "~CUSTOM:FryingPan",
       "~CUSTOM:Dident",
       "~CUSTOM:Monodent"
@@ -249,12 +428,19 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.kraftmined.pebble": "Pebble",
       "item.kraftmined.materwelon": "Materwelon",
-      "item.kraftmined.frying_pan": "Frying Pan",
+      "entity.kraftmined.big": "Big",
       "item.kraftmined.monodent": "Monodent",
-      "enchantment.kraftmined.dying_pan": "Dying Pan",
+      "entity.kraftmined.goose": "Goose",
+      "item.kraftmined.golem_arm": "Golem Arm",
+      "entity.kraftmined.flying_squid": "Flying Squid",
       "item.kraftmined.dent": "Dent",
+      "item.kraftmined.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
+      "item.kraftmined.pebble": "Pebble",
+      "item.kraftmined.frying_pan": "Frying Pan",
+      "item.kraftmined.goose_spawn_egg": "Goose Spawn Egg",
+      "item.kraftmined.big_spawn_egg": "Big Spawn Egg",
+      "enchantment.kraftmined.dying_pan": "Dying Pan",
       "item_group.kraftmined.kraftmine_unplayable": "K Cursed",
       "item.kraftmined.dident": "Dident"
     }
@@ -268,6 +454,10 @@
       },
       {
         "name": "Things",
+        "children": []
+      },
+      {
+        "name": "Mobs",
         "children": []
       }
     ]

@@ -28,6 +28,7 @@ public class KraftminedModTabs {
 				tabData.accept(KraftminedModItems.DIDENT.get());
 				tabData.accept(KraftminedModItems.FRYING_PAN.get());
 				tabData.accept(KraftminedModItems.GOLEM_ARM.get());
+				tabData.accept(KraftminedModItems.BIG_SPAWN_EGG.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -36,6 +37,12 @@ public class KraftminedModTabs {
 
 			tabData.accept(KraftminedModItems.MONODENT.get());
 			tabData.accept(KraftminedModItems.DIDENT.get());
+
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+
+			tabData.accept(KraftminedModItems.BIG_SPAWN_EGG.get());
+			tabData.accept(KraftminedModItems.GOOSE_SPAWN_EGG.get());
+			tabData.accept(KraftminedModItems.FLYING_SQUID_SPAWN_EGG.get());
 
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 

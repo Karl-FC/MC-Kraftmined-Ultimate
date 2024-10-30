@@ -1,0 +1,21 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "badlands",
+    "beach",
+    "deep_dark",
+    "forest",
+    "mangrove_swamp",
+    "plains",
+    "river",
+    "snowy_beach",
+    "swamp",
+    "warm_ocean"
+  ],
+  "spawners": {
+    "type": "kraftmined:goose",
+    "weight": 8,
+    "minCount": 3,
+    "maxCount": 7
+  }
+}

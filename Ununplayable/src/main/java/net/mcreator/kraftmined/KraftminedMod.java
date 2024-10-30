@@ -20,6 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.kraftmined.init.KraftminedModTabs;
 import net.mcreator.kraftmined.init.KraftminedModItems;
+import net.mcreator.kraftmined.init.KraftminedModEntities;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class KraftminedMod {
 		modEventBus.addListener(this::registerNetworking);
 
 		KraftminedModItems.REGISTRY.register(modEventBus);
-
+		KraftminedModEntities.REGISTRY.register(modEventBus);
 		KraftminedModTabs.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
