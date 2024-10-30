@@ -1081,6 +1081,21 @@
       "Items.GOLDEN_LEGGINGS",
       "Items.GOLDEN_BOOTS"
     ],
+    "ITEMS:kraftmined:armor2": [
+      "Items.IRON_HELMET",
+      "Items.IRON_CHESTPLATE",
+      "Items.IRON_LEGGINGS",
+      "Items.IRON_BOOTS",
+      "Items.CHAINMAIL_HELMET",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.CHAINMAIL_BOOTS"
+    ],
+    "ITEMS:kraftmined:chestplate2": [
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE"
+    ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:TitaniumArmor.body",
       "~CUSTOM:TungstenArmor.body",
@@ -1092,21 +1107,6 @@
       "~CUSTOM:WoodArmor.body",
       "~CUSTOM:ObsidianArmor.body",
       "~CUSTOM:Quiver.body"
-    ],
-    "ITEMS:kraftmined:chestplate2": [
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE"
-    ],
-    "ITEMS:kraftmined:armor2": [
-      "Items.IRON_HELMET",
-      "Items.IRON_CHESTPLATE",
-      "Items.IRON_LEGGINGS",
-      "Items.IRON_BOOTS",
-      "Items.CHAINMAIL_HELMET",
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.CHAINMAIL_LEGGINGS",
-      "Items.CHAINMAIL_BOOTS"
     ],
     "ITEMS:kraftmined:armor3": [
       "Items.DIAMOND_HELMET",
@@ -1325,8 +1325,8 @@
       "item.kraftmined.totem_creeping": "Totem of Creeping",
       "item.kraftmined.wood_armor_leggings": "Wooden Leggings",
       "item.kraftmined.lapis_armor_leggings": "Lapiz Lazuli Leggings",
-      "item.kraftmined.titanium_armor_helmet": "Titanium Helmet",
       "item.kraftmined.wood_armor_helmet": "Wooden Helmet",
+      "item.kraftmined.titanium_armor_helmet": "Titanium Helmet",
       "block.kraftmined.titanium_block": "Block of Titanium",
       "item.kraftmined.obsidian_armor_helmet": "Obsidian Helmet",
       "item.kraftmined.tnt_armor_leggings": "TNT Leggings",

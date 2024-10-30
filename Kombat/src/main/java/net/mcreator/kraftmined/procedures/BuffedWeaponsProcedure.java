@@ -76,7 +76,8 @@ public class BuffedWeaponsProcedure {
 		}
 		if (Math.random() <= 0.01) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(Items.TOTEM_OF_UNDYING).copy();
+				ItemStack _setstack = new ItemStack(
+						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("kraftmined:totems"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 				if (_entity instanceof Player _player)
