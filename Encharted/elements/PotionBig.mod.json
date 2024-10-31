@@ -1,0 +1,21 @@
+{
+  "_fv": 69,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Big",
+    "splashName": "Splash Potion of Big",
+    "lingeringName": "Lingering Potion of Big",
+    "arrowName": "Arrow of Big",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Gigasized"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

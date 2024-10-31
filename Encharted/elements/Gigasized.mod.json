@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Gigasized",
+    "icon": "gigasized",
+    "color": {
+      "value": -6750157,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "GigasizedEffectStartedapplied"
+    },
+    "onExpired": {
+      "name": "GigasizedEffectExpires"
+    }
+  }
+}

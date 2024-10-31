@@ -1254,6 +1254,141 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "BaseScale",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_scale",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BaseScaleProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_scale_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/BaseScaleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Gigasized",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/potion/GigasizedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GigasizedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/GigasizedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GigasizedEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/GigasizedEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Minimized",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minimized",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/potion/MinimizedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "MinimizedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minimized_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/MinimizedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PotionBig",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_big",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PotionSmall",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_small",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
     }
   ],
   "variable_elements": [],
@@ -1378,6 +1513,8 @@
       "item.km_encharted.infinite_fireresistance": "Infinite Potion of Fire Resistance",
       "item.km_encharted.infinite_invisibility": "Infinite Potion of Invisibility",
       "item.km_encharted.infinite_resistance": "Infinite Potion of Resistance",
+      "item.minecraft.lingering_potion.effect.potion_big": "Lingering Potion of Big",
+      "item.minecraft.splash_potion.effect.potion_small": "Splash Potion of Small",
       "enchantment.kraftmined.backstabbing": "Backstabbing",
       "enchantment.km_encharted.efficacy": "Efficacy",
       "enchantment.kraftmined.unblood": "Unblood",
@@ -1391,18 +1528,26 @@
       "item.km_encharted.infinite_leaping": "Infinite Potion of Leaping",
       "item.km_encharted.infinite_saturation": "Infinite Potion of Saturation",
       "item.km_encharted.infinite_strength": "Infinite Potion of Strength",
+      "attribute.km_encharted.base_scale": "Base Scale",
       "enchantment.kraftmined.racerism": "Racism",
       "enchantment.km_encharted.curse_of_interchanging": "Curse Of Interchanging",
       "enchantment.km_encharted.baneof_metapods": "Bane of Metapods",
+      "effect.km_encharted.gigasized": "Gigasized",
       "enchantment.kraftmined.curse_of_creeping": "Curse Of Creeping",
       "item.km_encharted.infinite_heal": "Infinite Potion of Healing",
+      "effect.km_encharted.minimized": "Minimized",
       "enchantment.kraftmined.frost_aspect": "Frost Aspect",
       "enchantment.kraftmined.committed": "Commitment",
+      "item.minecraft.lingering_potion.effect.potion_small": "Lingering Potion of Small",
       "enchantment.km_encharted.racerism": "Racism",
+      "item.minecraft.potion.effect.potion_small": "Potion of Small",
+      "item.minecraft.tipped_arrow.effect.potion_small": "Arrow of Small",
       "item.km_encharted.infinite_slowfalling": "Infinite Potion of Slow Falling",
       "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass",
       "enchantment.kraftmined.retaliation": "Retaliation",
+      "item.minecraft.splash_potion.effect.potion_big": "Splash Potion of Big",
       "attribute.km_encharted.committment": "Committment",
+      "item.minecraft.potion.effect.potion_big": "Potion of Big",
       "enchantment.kraftmined.bluntness": "Bluntness",
       "subtitles.entity.attack.metalpipe": "METAL FALLING",
       "enchantment.km_encharted.bluntness": "Bluntness",
@@ -1421,6 +1566,7 @@
       "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
       "enchantment.km_encharted.retaliation": "Retaliation",
       "item.km_encharted.infinite_nightvision": "Infinite Potion of Night Vision",
+      "item.minecraft.tipped_arrow.effect.potion_big": "Arrow of Big",
       "enchantment.km_encharted.replenishment": "Replenishment",
       "enchantment.km_encharted.committed": "Commitment"
     }

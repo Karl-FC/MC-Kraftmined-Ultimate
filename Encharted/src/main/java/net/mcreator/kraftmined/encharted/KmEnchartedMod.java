@@ -20,7 +20,9 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModTabs;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModSounds;
+import net.mcreator.kraftmined.encharted.init.KmEnchartedModPotions;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModParticleTypes;
+import net.mcreator.kraftmined.encharted.init.KmEnchartedModMobEffects;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModItems;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModAttributes;
 
@@ -46,6 +48,9 @@ public class KmEnchartedMod {
 		KmEnchartedModItems.REGISTRY.register(modEventBus);
 
 		KmEnchartedModTabs.REGISTRY.register(modEventBus);
+
+		KmEnchartedModPotions.REGISTRY.register(modEventBus);
+		KmEnchartedModMobEffects.REGISTRY.register(modEventBus);
 
 		KmEnchartedModParticleTypes.REGISTRY.register(modEventBus);
 
