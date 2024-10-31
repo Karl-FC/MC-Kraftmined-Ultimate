@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "bogged",
+    "drowned",
+    "giant",
+    "husk",
+    "piglin_brute",
+    "pillager",
+    "skeleton",
+    "stray",
+    "vex",
+    "vindicator",
+    "wither_skeleton",
+    "zombie"
+  ]
+}

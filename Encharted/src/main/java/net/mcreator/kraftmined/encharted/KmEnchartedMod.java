@@ -32,7 +32,7 @@ import java.util.ArrayList;
 @Mod("km_encharted")
 public class KmEnchartedMod {
 	public static final Logger LOGGER = LogManager.getLogger(KmEnchartedMod.class);
-	public static final String MODID = "km_encharted";
+	public static final String MODID = "kraftmined";
 
 	public KmEnchartedMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor
