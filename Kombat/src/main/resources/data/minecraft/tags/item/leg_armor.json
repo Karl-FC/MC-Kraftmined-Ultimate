@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:titanium_armor_leggings",
-    "kraftmined:tungsten_armor_leggings",
-    "kraftmined:nickel_armor_leggings",
-    "kraftmined:tnt_armor_leggings",
-    "kraftmined:cactus_armor_leggings",
-    "kraftmined:lapis_armor_leggings",
-    "kraftmined:stone_armor_leggings",
-    "kraftmined:wood_armor_leggings",
-    "kraftmined:obsidian_armor_leggings"
+    "km_kombat:titanium_armor_leggings",
+    "km_kombat:tungsten_armor_leggings",
+    "km_kombat:nickel_armor_leggings",
+    "km_kombat:tnt_armor_leggings",
+    "km_kombat:cactus_armor_leggings",
+    "km_kombat:lapis_armor_leggings",
+    "km_kombat:stone_armor_leggings",
+    "km_kombat:wood_armor_leggings",
+    "km_kombat:obsidian_armor_leggings"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:titanium_block",
-    "kraftmined:titanium_ore",
-    "kraftmined:tungsten_block",
-    "kraftmined:tungsten_ore"
+    "km_kombat:titanium_block",
+    "km_kombat:titanium_ore",
+    "km_kombat:tungsten_block",
+    "km_kombat:tungsten_ore"
   ]
 }

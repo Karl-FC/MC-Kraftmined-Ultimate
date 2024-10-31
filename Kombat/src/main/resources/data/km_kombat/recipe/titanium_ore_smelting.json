@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 2.8,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "km_kombat:titanium_ore"
+  },
+  "result": {
+    "id": "km_kombat:titanium_ingot"
+  }
+}

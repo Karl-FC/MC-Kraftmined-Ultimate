@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "km_kombat:block/titanium_ore",
+    "particle": "km_kombat:block/titanium_ore"
+  },
+  "render_type": "solid"
+}

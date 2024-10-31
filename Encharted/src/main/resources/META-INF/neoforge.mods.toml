@@ -3,8 +3,8 @@ loaderVersion="[4,)"
 license="Not specified"
 
 [[mods]]
-modId="kraftmined"
-version="1.0.0"
+modId="km_encharted"
+version="1.0.1"
 displayName="Kraftmine Encharted Enchantments"
 displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
@@ -13,14 +13,14 @@ authors="Karl, MCreator"
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[dependencies.kraftmined]]
+[[dependencies.km_encharted]]
     modId="neoforge"
     type="required"
     versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.kraftmined]]
+[[dependencies.km_encharted]]
     modId="minecraft"
     type="required"
     versionRange="[1.21.1]"

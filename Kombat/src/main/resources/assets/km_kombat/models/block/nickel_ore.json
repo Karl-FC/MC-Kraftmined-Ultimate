@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "km_kombat:block/nickel_ore",
+    "particle": "km_kombat:block/nickel_ore"
+  },
+  "render_type": "solid"
+}

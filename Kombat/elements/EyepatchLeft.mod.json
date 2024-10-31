@@ -10,8 +10,8 @@
           "image": "eyepatch_left.png",
           "use1Xscale": false,
           "anchorPoint": "CENTER",
-          "x": 0,
-          "y": -5
+          "x": -53,
+          "y": -6
         }
       }
     ],

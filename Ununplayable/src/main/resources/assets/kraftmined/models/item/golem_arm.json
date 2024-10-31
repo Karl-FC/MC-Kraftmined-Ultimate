@@ -1,7 +1,0 @@
-{
-  "parent": "kraftmined:custom/golemarm",
-  "textures": {
-    "1": "kraftmined:block/golemarm",
-    "particle": "minecraft:item/empty_slot_ingot"
-  }
-}

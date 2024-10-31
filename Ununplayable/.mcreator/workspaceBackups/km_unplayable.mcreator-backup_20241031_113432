@@ -1,0 +1,726 @@
+{
+  "mod_elements": [
+    {
+      "name": "Pebble",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/PebbleItem.java",
+          "src/main/resources/assets/km_unplayable/models/item/pebble.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleDrop",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/loot_table/blocks/stone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "PebbleCobblestone",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pebble_cobblestone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/pebble_cobblestone.json"
+        ]
+      },
+      "path": "~/Nature"
+    },
+    {
+      "name": "Dent",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dent",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/dent.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/DentItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "TridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/trident_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Materwelon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "materwelon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/materwelon.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/MaterwelonItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KraftmineUnplayable",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_unplayable",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Monodent",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monodent",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/monodent.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/MonodentItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Dident",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dident",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/dident.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/DidentItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "DidentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/dident_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "MonodentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monodent_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/monodent_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPan",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/FryingPanItem.java",
+          "src/main/resources/assets/km_unplayable/models/item/frying_pan.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPanRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/frying_pan_recipe.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "DyingPan",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dying_pan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/enchantment/dying_pan.json"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "FryingPanProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frying_pan_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/FryingPanProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "GolemArm",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golem_arm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/golem_arm.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/GolemArmItem.java"
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "GolemArmLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golem_arm_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/GolemArmLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Things"
+    },
+    {
+      "name": "Big",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/entity/BigEntity.java",
+          "src/main/java/net/mcreator/kraftmined/unplayable/client/renderer/BigRenderer.java",
+          "src/main/resources/assets/km_unplayable/models/item/big_spawn_egg.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/big_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Goose",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/goose_biome_modifier.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/entity/GooseEntity.java",
+          "src/main/resources/assets/km_unplayable/models/item/goose_spawn_egg.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/client/renderer/GooseRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GooseOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/GooseOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GooseTargetLock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goose_target_lock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/GooseTargetLockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlyingSquidNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_squid_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/FlyingSquidNaturalEntitySpawningConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlyingSquid",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_squid",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/flying_squid_spawn_egg.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/flying_squid_biome_modifier.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/entity/FlyingSquidEntity.java",
+          "src/main/java/net/mcreator/kraftmined/unplayable/client/renderer/FlyingSquidRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BaseGravity",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_gravity",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BaseGravitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_gravity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/BaseGravitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oiled",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oiled",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/potion/OiledMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "OiledOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oiled_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/OiledOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MilkedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milked_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/MilkedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Milked",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/potion/MilkedMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "MilkBottle",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milk_bottle",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "MilkMobplayerCollidesBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milk_mobplayer_collides_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/MilkMobplayerCollidesBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Milk",
+      "type": "fluid",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/fluid/types/MilkFluidType.java",
+          "src/main/resources/assets/km_unplayable/models/item/milk_bucket.json",
+          "src/main/resources/assets/km_unplayable/blockstates/milk.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/fluid/MilkFluid.java",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/MilkBlock.java",
+          "src/main/resources/assets/km_unplayable/models/block/milk.json"
+        ]
+      }
+    },
+    {
+      "name": "MilkbottleClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milkbottle_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/MilkbottleClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MilkbucketClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milkbucket_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/MilkbucketClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ENTITIES:minecraft:aquatic": [
+      "~CUSTOM:FlyingSquid"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Milk"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:DyingPan"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:GolemArm",
+      "~CUSTOM:FryingPan",
+      "~CUSTOM:Dident",
+      "~CUSTOM:Monodent"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:DyingPan"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:DyingPan"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "entity.km_unplayable.goose": "Goose",
+      "block.km_unplayable.milk": "Milk",
+      "item.kraftmined.monodent": "Monodent",
+      "attribute.km_unplayable.base_gravity": "Base Gravity",
+      "entity.kraftmined.goose": "Goose",
+      "item.km_unplayable.monodent": "Monodent",
+      "item_group.km_unplayable.kraftmine_unplayable": "K Cursed",
+      "item.km_unplayable.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
+      "item.minecraft.lingering_potion.effect.milk_bottle": "Lingering Milk Bottle",
+      "item.km_unplayable.goose_spawn_egg": "Goose Spawn Egg",
+      "entity.kraftmined.flying_squid": "Flying Squid",
+      "item.km_unplayable.dent": "Dent",
+      "item.kraftmined.dent": "Dent",
+      "item.minecraft.tipped_arrow.effect.milk_bottle": "Arrow of Milk",
+      "item.kraftmined.pebble": "Pebble",
+      "enchantment.km_unplayable.dying_pan": "Dying Pan",
+      "item.km_unplayable.big_spawn_egg": "Big Spawn Egg",
+      "item.minecraft.potion.effect.milk_bottle": "Milk Bottle",
+      "item.km_unplayable.dident": "Dident",
+      "item.km_unplayable.materwelon": "Materwelon",
+      "effect.km_unplayable.milked": "Milked",
+      "enchantment.kraftmined.dying_pan": "Dying Pan",
+      "entity.km_unplayable.flying_squid": "Flying Squid",
+      "item.kraftmined.materwelon": "Materwelon",
+      "entity.kraftmined.big": "Big",
+      "entity.km_unplayable.big": "Big",
+      "item.km_unplayable.golem_arm": "Golem Arm",
+      "item.km_unplayable.frying_pan": "Frying Pan",
+      "item.kraftmined.golem_arm": "Golem Arm",
+      "item.kraftmined.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
+      "item.minecraft.splash_potion.effect.milk_bottle": "Splash Milk Bottle",
+      "item.kraftmined.frying_pan": "Frying Pan",
+      "fluid.km_unplayable.milk": "Milk",
+      "item.kraftmined.goose_spawn_egg": "Goose Spawn Egg",
+      "item.kraftmined.big_spawn_egg": "Big Spawn Egg",
+      "item.km_unplayable.pebble": "Pebble",
+      "item_group.kraftmined.kraftmine_unplayable": "K Cursed",
+      "item.kraftmined.dident": "Dident",
+      "effect.km_unplayable.oiled": "Oiled up"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Nature",
+        "children": []
+      },
+      {
+        "name": "Things",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "km_unplayable",
+    "modName": "Un-Unplayable",
+    "version": "1.0.1",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.kraftmined.unplayable"
+  },
+  "mcreatorVersion": 202400342716
+}

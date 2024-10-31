@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "km_kombat:item/netherite_battleaxe"
+  }
+}

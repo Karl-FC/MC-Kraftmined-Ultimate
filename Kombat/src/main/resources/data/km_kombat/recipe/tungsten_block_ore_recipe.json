@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "km_kombat:tungsten_block"
+    }
+  ],
+  "result": {
+    "id": "km_kombat:tungsten_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "km_unplayable:custom/monodent",
+  "textures": {
+    "0": "km_unplayable:block/trident",
+    "particle": "km_unplayable:item/monodent"
+  }
+}

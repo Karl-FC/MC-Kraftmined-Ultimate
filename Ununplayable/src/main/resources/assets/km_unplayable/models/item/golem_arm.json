@@ -1,0 +1,7 @@
+{
+  "parent": "km_unplayable:custom/golemarm",
+  "textures": {
+    "1": "km_unplayable:block/golemarm",
+    "particle": "minecraft:item/empty_slot_ingot"
+  }
+}

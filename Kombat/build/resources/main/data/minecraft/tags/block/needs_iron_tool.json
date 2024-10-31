@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:nickel_block",
-    "kraftmined:nickel_ore"
+    "km_kombat:nickel_block",
+    "km_kombat:nickel_ore"
   ]
 }

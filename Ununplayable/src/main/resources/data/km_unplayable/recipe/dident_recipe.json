@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "km_unplayable:monodent"
+    },
+    {
+      "item": "km_unplayable:monodent"
+    }
+  ],
+  "result": {
+    "id": "km_unplayable:dident",
+    "count": 1
+  }
+}

@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:titanium_armor_boots",
-    "kraftmined:tungsten_armor_boots",
-    "kraftmined:nickel_armor_boots",
-    "kraftmined:tnt_armor_boots",
-    "kraftmined:cactus_armor_boots",
-    "kraftmined:lapis_armor_boots",
-    "kraftmined:stone_armor_boots",
-    "kraftmined:wood_armor_boots",
-    "kraftmined:obsidian_armor_boots"
+    "km_kombat:titanium_armor_boots",
+    "km_kombat:tungsten_armor_boots",
+    "km_kombat:nickel_armor_boots",
+    "km_kombat:tnt_armor_boots",
+    "km_kombat:cactus_armor_boots",
+    "km_kombat:lapis_armor_boots",
+    "km_kombat:stone_armor_boots",
+    "km_kombat:wood_armor_boots",
+    "km_kombat:obsidian_armor_boots"
   ]
 }

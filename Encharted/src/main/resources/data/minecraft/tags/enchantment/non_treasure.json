@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:fear_aspect",
-    "kraftmined:bluntness",
-    "kraftmined:retaliation",
-    "kraftmined:curse_of_creeping",
-    "kraftmined:yeeting",
-    "kraftmined:frost_aspect",
-    "kraftmined:curse_of_metal_mass",
-    "kraftmined:guarding_strike",
-    "kraftmined:unblood",
-    "kraftmined:backstabbing",
-    "kraftmined:baneof_metapods"
+    "km_encharted:fear_aspect",
+    "km_encharted:bluntness",
+    "km_encharted:retaliation",
+    "km_encharted:curse_of_creeping",
+    "km_encharted:yeeting",
+    "km_encharted:frost_aspect",
+    "km_encharted:curse_of_metal_mass",
+    "km_encharted:guarding_strike",
+    "km_encharted:unblood",
+    "km_encharted:backstabbing",
+    "km_encharted:baneof_metapods"
   ]
 }

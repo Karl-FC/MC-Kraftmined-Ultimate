@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmined:block/nickel_ore_block",
-    "particle": "kraftmined:block/nickel_ore_block"
-  },
-  "render_type": "solid"
-}

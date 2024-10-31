@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:titanium_armor_chestplate",
-    "kraftmined:tungsten_armor_chestplate",
-    "kraftmined:nickel_armor_chestplate",
-    "kraftmined:tnt_armor_chestplate",
-    "kraftmined:cactus_armor_chestplate",
-    "kraftmined:lapis_armor_chestplate",
-    "kraftmined:stone_armor_chestplate",
-    "kraftmined:wood_armor_chestplate",
-    "kraftmined:obsidian_armor_chestplate",
-    "kraftmined:quiver_chestplate"
+    "km_kombat:titanium_armor_chestplate",
+    "km_kombat:tungsten_armor_chestplate",
+    "km_kombat:nickel_armor_chestplate",
+    "km_kombat:tnt_armor_chestplate",
+    "km_kombat:cactus_armor_chestplate",
+    "km_kombat:lapis_armor_chestplate",
+    "km_kombat:stone_armor_chestplate",
+    "km_kombat:wood_armor_chestplate",
+    "km_kombat:obsidian_armor_chestplate",
+    "km_kombat:quiver_chestplate"
   ]
 }

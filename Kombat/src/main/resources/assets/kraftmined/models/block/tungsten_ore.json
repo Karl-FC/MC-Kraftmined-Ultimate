@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "kraftmined:block/tungsten_ore",
-    "particle": "kraftmined:block/tungsten_ore"
-  },
-  "render_type": "solid"
-}

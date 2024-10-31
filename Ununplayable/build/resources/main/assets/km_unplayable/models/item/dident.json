@@ -1,0 +1,7 @@
+{
+  "parent": "km_unplayable:custom/dident",
+  "textures": {
+    "0": "km_unplayable:block/trident",
+    "particle": "km_unplayable:item/dident"
+  }
+}

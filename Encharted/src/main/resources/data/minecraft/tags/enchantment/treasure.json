@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:curse_of_interchanging",
-    "kraftmined:committed",
-    "kraftmined:racerism",
-    "kraftmined:lifesteal"
+    "km_encharted:curse_of_interchanging",
+    "km_encharted:committed",
+    "km_encharted:racerism",
+    "km_encharted:lifesteal"
   ]
 }

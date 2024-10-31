@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:titanium_armor_helmet",
-    "kraftmined:tungsten_armor_helmet",
-    "kraftmined:nickel_armor_helmet",
-    "kraftmined:tnt_armor_helmet",
-    "kraftmined:cactus_armor_helmet",
-    "kraftmined:lapis_armor_helmet",
-    "kraftmined:stone_armor_helmet",
-    "kraftmined:wood_armor_helmet",
-    "kraftmined:obsidian_armor_helmet",
-    "kraftmined:eyepatch_helmet"
+    "km_kombat:titanium_armor_helmet",
+    "km_kombat:tungsten_armor_helmet",
+    "km_kombat:nickel_armor_helmet",
+    "km_kombat:tnt_armor_helmet",
+    "km_kombat:cactus_armor_helmet",
+    "km_kombat:lapis_armor_helmet",
+    "km_kombat:stone_armor_helmet",
+    "km_kombat:wood_armor_helmet",
+    "km_kombat:obsidian_armor_helmet",
+    "km_kombat:eyepatch_helmet"
   ]
 }

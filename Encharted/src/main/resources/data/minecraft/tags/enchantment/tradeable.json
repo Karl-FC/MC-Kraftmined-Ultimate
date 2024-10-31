@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:fear_aspect",
-    "kraftmined:bluntness",
-    "kraftmined:retaliation",
-    "kraftmined:curse_of_creeping",
-    "kraftmined:curse_of_interchanging",
-    "kraftmined:yeeting",
-    "kraftmined:frost_aspect",
-    "kraftmined:committed",
-    "kraftmined:curse_of_metal_mass",
-    "kraftmined:guarding_strike",
-    "kraftmined:racerism",
-    "kraftmined:unblood",
-    "kraftmined:backstabbing",
-    "kraftmined:baneof_metapods",
-    "kraftmined:lifesteal"
+    "km_encharted:fear_aspect",
+    "km_encharted:bluntness",
+    "km_encharted:retaliation",
+    "km_encharted:curse_of_creeping",
+    "km_encharted:curse_of_interchanging",
+    "km_encharted:yeeting",
+    "km_encharted:frost_aspect",
+    "km_encharted:committed",
+    "km_encharted:curse_of_metal_mass",
+    "km_encharted:guarding_strike",
+    "km_encharted:racerism",
+    "km_encharted:unblood",
+    "km_encharted:backstabbing",
+    "km_encharted:baneof_metapods",
+    "km_encharted:lifesteal"
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a",
+    "b "
+  ],
+  "key": {
+    "a": {
+      "item": "km_unplayable:monodent"
+    },
+    "b": {
+      "item": "km_unplayable:dident"
+    }
+  },
+  "result": {
+    "id": "minecraft:trident",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "km_kombat:blocks/titanium_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "km_kombat:titanium_block"
+        }
+      ]
+    }
+  ]
+}

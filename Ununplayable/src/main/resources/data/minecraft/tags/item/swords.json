@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "kraftmined:golem_arm",
-    "kraftmined:frying_pan",
-    "kraftmined:dident",
-    "kraftmined:monodent"
+    "km_unplayable:golem_arm",
+    "km_unplayable:frying_pan",
+    "km_unplayable:dident",
+    "km_unplayable:monodent"
   ]
 }

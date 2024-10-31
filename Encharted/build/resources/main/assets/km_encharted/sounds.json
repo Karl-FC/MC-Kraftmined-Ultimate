@@ -1,0 +1,19 @@
+{
+  "entity.attack.metalpipe": {
+    "subtitle": "subtitles.entity.attack.metalpipe",
+    "sounds": [
+      {
+        "name": "km_encharted:youtube_euq7uteycp0_audio",
+        "stream": false
+      },
+      {
+        "name": "km_encharted:youtube_idlmyz5hqgm_audio",
+        "stream": false
+      },
+      {
+        "name": "km_encharted:youtube_f8ml0_4gev0_audio",
+        "stream": false
+      }
+    ]
+  }
+}
