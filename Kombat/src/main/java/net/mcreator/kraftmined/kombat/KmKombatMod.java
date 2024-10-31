@@ -22,6 +22,7 @@ import net.mcreator.kraftmined.kombat.network.KmKombatModVariables;
 import net.mcreator.kraftmined.kombat.init.KmKombatModTabs;
 import net.mcreator.kraftmined.kombat.init.KmKombatModMobEffects;
 import net.mcreator.kraftmined.kombat.init.KmKombatModItems;
+import net.mcreator.kraftmined.kombat.init.KmKombatModEntities;
 import net.mcreator.kraftmined.kombat.init.KmKombatModBlocks;
 import net.mcreator.kraftmined.kombat.init.KmKombatModAttributes;
 
@@ -46,7 +47,7 @@ public class KmKombatMod {
 		KmKombatModBlocks.REGISTRY.register(modEventBus);
 
 		KmKombatModItems.REGISTRY.register(modEventBus);
-
+		KmKombatModEntities.REGISTRY.register(modEventBus);
 		KmKombatModTabs.REGISTRY.register(modEventBus);
 		KmKombatModVariables.ATTACHMENT_TYPES.register(modEventBus);
 

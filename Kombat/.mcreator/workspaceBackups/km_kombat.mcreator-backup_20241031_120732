@@ -8,8 +8,8 @@
       "registry_name": "netherite_battleaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/netherite_battleaxe.json",
-          "src/main/java/net/mcreator/kraftmined/item/NetheriteBattleaxeItem.java"
+          "src/main/resources/assets/km_kombat/models/item/netherite_battleaxe.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/NetheriteBattleaxeItem.java"
         ]
       }
     },
@@ -77,8 +77,8 @@
       "registry_name": "quiver",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/QuiverItem.java",
-          "src/main/resources/assets/kraftmined/models/item/quiver_chestplate.json"
+          "src/main/resources/assets/km_kombat/models/item/quiver_chestplate.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/QuiverItem.java"
         ]
       }
     },
@@ -101,7 +101,7 @@
       "registry_name": "buffed_weapons",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/BuffedWeaponsProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/BuffedWeaponsProcedure.java"
         ],
         "dependencies": [
           {
@@ -120,7 +120,7 @@
       "registry_name": "switch_hands",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/SwitchHandsProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/SwitchHandsProcedure.java"
         ],
         "dependencies": [
           {
@@ -151,7 +151,7 @@
       "registry_name": "size_difference_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/SizeDifferenceProcedureProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/SizeDifferenceProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -174,7 +174,7 @@
       "registry_name": "buffed_spawn_effects",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/BuffedSpawnEffectsProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/BuffedSpawnEffectsProcedure.java"
         ],
         "dependencies": [
           {
@@ -193,8 +193,8 @@
       "registry_name": "eyepatch",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/EyepatchItem.java",
-          "src/main/resources/assets/kraftmined/models/item/eyepatch_helmet.json"
+          "src/main/java/net/mcreator/kraftmined/kombat/item/EyepatchItem.java",
+          "src/main/resources/assets/km_kombat/models/item/eyepatch_helmet.json"
         ]
       }
     },
@@ -206,7 +206,7 @@
       "registry_name": "eyepatch_effect",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/potion/EyepatchEffectMobEffect.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/potion/EyepatchEffectMobEffect.java"
         ]
       }
     },
@@ -219,7 +219,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchLeftDisplayOverlayIngameProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/EyepatchLeftDisplayOverlayIngameProcedure.java"
         ],
         "dependencies": [
           {
@@ -237,7 +237,7 @@
       "registry_name": "eyepatch_left",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/client/screens/EyepatchLeftOverlay.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/client/screens/EyepatchLeftOverlay.java"
         ]
       }
     },
@@ -250,7 +250,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchRightDisplayOverlayIngameProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/EyepatchRightDisplayOverlayIngameProcedure.java"
         ],
         "dependencies": [
           {
@@ -268,7 +268,7 @@
       "registry_name": "eyepatch_right",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/client/screens/EyepatchRightOverlay.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/client/screens/EyepatchRightOverlay.java"
         ]
       }
     },
@@ -280,7 +280,7 @@
       "registry_name": "eyepatch_helmet_tick_event",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/EyepatchHelmetTickEventProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/EyepatchHelmetTickEventProcedure.java"
         ],
         "dependencies": [
           {
@@ -314,7 +314,7 @@
       "registry_name": "buffed_mob_spawning",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/BuffedMobSpawningProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/BuffedMobSpawningProcedure.java"
         ],
         "dependencies": [
           {
@@ -337,10 +337,11 @@
       "registry_name": "obsidian_scrap",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/obsidian_scrap.json",
-          "src/main/java/net/mcreator/kraftmined/item/ObsidianScrapItem.java"
+          "src/main/resources/assets/km_kombat/models/item/obsidian_scrap.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/ObsidianScrapItem.java"
         ]
-      }
+      },
+      "path": "~/Materials"
     },
     {
       "name": "ObsidianArmor",
@@ -350,11 +351,11 @@
       "registry_name": "obsidian_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/obsidian_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/obsidian_armor_boots.json",
-          "src/main/resources/assets/kraftmined/models/item/obsidian_armor_chestplate.json",
-          "src/main/java/net/mcreator/kraftmined/item/ObsidianArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/obsidian_armor_helmet.json"
+          "src/main/java/net/mcreator/kraftmined/kombat/item/ObsidianArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/obsidian_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/obsidian_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/obsidian_armor_boots.json",
+          "src/main/resources/assets/km_kombat/models/item/obsidian_armor_helmet.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -367,11 +368,11 @@
       "registry_name": "wood_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/WoodArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/wood_armor_boots.json",
-          "src/main/resources/assets/kraftmined/models/item/wood_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/wood_armor_chestplate.json",
-          "src/main/resources/assets/kraftmined/models/item/wood_armor_leggings.json"
+          "src/main/resources/assets/km_kombat/models/item/wood_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/wood_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/WoodArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/wood_armor_helmet.json",
+          "src/main/resources/assets/km_kombat/models/item/wood_armor_chestplate.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -384,11 +385,11 @@
       "registry_name": "stone_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/stone_armor_boots.json",
-          "src/main/resources/assets/kraftmined/models/item/stone_armor_chestplate.json",
-          "src/main/resources/assets/kraftmined/models/item/stone_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/stone_armor_helmet.json",
-          "src/main/java/net/mcreator/kraftmined/item/StoneArmorItem.java"
+          "src/main/resources/assets/km_kombat/models/item/stone_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/stone_armor_helmet.json",
+          "src/main/resources/assets/km_kombat/models/item/stone_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/stone_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/StoneArmorItem.java"
         ]
       },
       "path": "~/SpecialArmor"
@@ -401,11 +402,11 @@
       "registry_name": "lapis_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/lapis_armor_leggings.json",
-          "src/main/java/net/mcreator/kraftmined/item/LapisArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/lapis_armor_boots.json",
-          "src/main/resources/assets/kraftmined/models/item/lapis_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/lapis_armor_chestplate.json"
+          "src/main/resources/assets/km_kombat/models/item/lapis_armor_boots.json",
+          "src/main/resources/assets/km_kombat/models/item/lapis_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/lapis_armor_helmet.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/LapisArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/lapis_armor_chestplate.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -418,11 +419,11 @@
       "registry_name": "cactus_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/cactus_armor_chestplate.json",
-          "src/main/java/net/mcreator/kraftmined/item/CactusArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/cactus_armor_boots.json",
-          "src/main/resources/assets/kraftmined/models/item/cactus_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/cactus_armor_helmet.json"
+          "src/main/resources/assets/km_kombat/models/item/cactus_armor_boots.json",
+          "src/main/resources/assets/km_kombat/models/item/cactus_armor_leggings.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/CactusArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/cactus_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/cactus_armor_helmet.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -435,7 +436,7 @@
       "registry_name": "cactus_armorhit",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/CactusArmorhitProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/CactusArmorhitProcedure.java"
         ],
         "dependencies": [
           {
@@ -462,11 +463,11 @@
       "registry_name": "tnt_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/TntArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/tnt_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/tnt_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/tnt_armor_chestplate.json",
-          "src/main/resources/assets/kraftmined/models/item/tnt_armor_boots.json"
+          "src/main/resources/assets/km_kombat/models/item/tnt_armor_helmet.json",
+          "src/main/resources/assets/km_kombat/models/item/tnt_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/tnt_armor_leggings.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TntArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/tnt_armor_boots.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -479,7 +480,7 @@
       "registry_name": "tnt_armorhit",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/TntArmorhitProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TntArmorhitProcedure.java"
         ],
         "dependencies": [
           {
@@ -514,8 +515,8 @@
       "registry_name": "nickel_ingot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/NickelIngotItem.java",
-          "src/main/resources/assets/kraftmined/models/item/nickel_ingot.json"
+          "src/main/java/net/mcreator/kraftmined/kombat/item/NickelIngotItem.java",
+          "src/main/resources/assets/km_kombat/models/item/nickel_ingot.json"
         ]
       },
       "path": "~/Materials"
@@ -528,14 +529,14 @@
       "registry_name": "nickel_ore",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/block/NickelOreBlock.java",
-          "src/main/resources/data/kraftmined/neoforge/biome_modifier/nickel_ore_biome_modifier.json",
-          "src/main/resources/assets/kraftmined/models/block/nickel_ore.json",
-          "src/main/resources/data/kraftmined/worldgen/configured_feature/nickel_ore.json",
-          "src/main/resources/data/kraftmined/worldgen/placed_feature/nickel_ore.json",
-          "src/main/resources/assets/kraftmined/models/item/nickel_ore.json",
-          "src/main/resources/assets/kraftmined/blockstates/nickel_ore.json",
-          "src/main/resources/data/kraftmined/loot_table/blocks/nickel_ore.json"
+          "src/main/resources/data/km_kombat/loot_table/blocks/nickel_ore.json",
+          "src/main/resources/assets/km_kombat/blockstates/nickel_ore.json",
+          "src/main/resources/data/km_kombat/worldgen/configured_feature/nickel_ore.json",
+          "src/main/resources/assets/km_kombat/models/item/nickel_ore.json",
+          "src/main/resources/data/km_kombat/neoforge/biome_modifier/nickel_ore_biome_modifier.json",
+          "src/main/resources/data/km_kombat/worldgen/placed_feature/nickel_ore.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/NickelOreBlock.java",
+          "src/main/resources/assets/km_kombat/models/block/nickel_ore.json"
         ]
       },
       "path": "~/Materials"
@@ -548,11 +549,11 @@
       "registry_name": "nickel_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/nickel_block.json",
-          "src/main/resources/assets/kraftmined/models/block/nickel_block.json",
-          "src/main/resources/data/kraftmined/loot_table/blocks/nickel_block.json",
-          "src/main/java/net/mcreator/kraftmined/block/NickelBlockBlock.java",
-          "src/main/resources/assets/kraftmined/blockstates/nickel_block.json"
+          "src/main/resources/assets/km_kombat/blockstates/nickel_block.json",
+          "src/main/resources/assets/km_kombat/models/block/nickel_block.json",
+          "src/main/resources/data/km_kombat/loot_table/blocks/nickel_block.json",
+          "src/main/resources/assets/km_kombat/models/item/nickel_block.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/NickelBlockBlock.java"
         ]
       },
       "path": "~/Materials"
@@ -565,7 +566,7 @@
       "registry_name": "nickel_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/nickel_ore_block_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/nickel_ore_block_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -578,7 +579,7 @@
       "registry_name": "nickel_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/nickel_block_ore_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/nickel_block_ore_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -591,7 +592,7 @@
       "registry_name": "nickel_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/nickel_ore_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/nickel_ore_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -604,8 +605,8 @@
       "registry_name": "tungsten_ingot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/TungstenIngotItem.java",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_ingot.json"
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TungstenIngotItem.java",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_ingot.json"
         ]
       },
       "path": "~/Materials"
@@ -618,14 +619,14 @@
       "registry_name": "tungsten_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/worldgen/placed_feature/tungsten_ore.json",
-          "src/main/java/net/mcreator/kraftmined/block/TungstenOreBlock.java",
-          "src/main/resources/data/kraftmined/worldgen/configured_feature/tungsten_ore.json",
-          "src/main/resources/data/kraftmined/loot_table/blocks/tungsten_ore.json",
-          "src/main/resources/assets/kraftmined/blockstates/tungsten_ore.json",
-          "src/main/resources/assets/kraftmined/models/block/tungsten_ore.json",
-          "src/main/resources/data/kraftmined/neoforge/biome_modifier/tungsten_ore_biome_modifier.json",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_ore.json"
+          "src/main/resources/data/km_kombat/neoforge/biome_modifier/tungsten_ore_biome_modifier.json",
+          "src/main/resources/assets/km_kombat/blockstates/tungsten_ore.json",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_ore.json",
+          "src/main/resources/assets/km_kombat/models/block/tungsten_ore.json",
+          "src/main/resources/data/km_kombat/worldgen/configured_feature/tungsten_ore.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/TungstenOreBlock.java",
+          "src/main/resources/data/km_kombat/worldgen/placed_feature/tungsten_ore.json",
+          "src/main/resources/data/km_kombat/loot_table/blocks/tungsten_ore.json"
         ]
       },
       "path": "~/Materials"
@@ -638,11 +639,11 @@
       "registry_name": "tungsten_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/loot_table/blocks/tungsten_block.json",
-          "src/main/resources/assets/kraftmined/models/block/tungsten_block.json",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_block.json",
-          "src/main/resources/assets/kraftmined/blockstates/tungsten_block.json",
-          "src/main/java/net/mcreator/kraftmined/block/TungstenBlockBlock.java"
+          "src/main/resources/assets/km_kombat/models/block/tungsten_block.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/TungstenBlockBlock.java",
+          "src/main/resources/data/km_kombat/loot_table/blocks/tungsten_block.json",
+          "src/main/resources/assets/km_kombat/blockstates/tungsten_block.json",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_block.json"
         ]
       },
       "path": "~/Materials"
@@ -655,7 +656,7 @@
       "registry_name": "tungsten_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/tungsten_ore_block_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/tungsten_ore_block_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -668,7 +669,7 @@
       "registry_name": "tungsten_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/tungsten_block_ore_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/tungsten_block_ore_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -681,7 +682,7 @@
       "registry_name": "tungsten_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/tungsten_ore_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/tungsten_ore_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -694,8 +695,8 @@
       "registry_name": "titanium_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/titanium_ingot.json",
-          "src/main/java/net/mcreator/kraftmined/item/TitaniumIngotItem.java"
+          "src/main/resources/assets/km_kombat/models/item/titanium_ingot.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TitaniumIngotItem.java"
         ]
       },
       "path": "~/Materials"
@@ -708,14 +709,14 @@
       "registry_name": "titanium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/neoforge/biome_modifier/titanium_ore_biome_modifier.json",
-          "src/main/resources/assets/kraftmined/models/item/titanium_ore.json",
-          "src/main/java/net/mcreator/kraftmined/block/TitaniumOreBlock.java",
-          "src/main/resources/assets/kraftmined/models/block/titanium_ore.json",
-          "src/main/resources/data/kraftmined/loot_table/blocks/titanium_ore.json",
-          "src/main/resources/data/kraftmined/worldgen/configured_feature/titanium_ore.json",
-          "src/main/resources/assets/kraftmined/blockstates/titanium_ore.json",
-          "src/main/resources/data/kraftmined/worldgen/placed_feature/titanium_ore.json"
+          "src/main/resources/data/km_kombat/worldgen/configured_feature/titanium_ore.json",
+          "src/main/resources/assets/km_kombat/models/block/titanium_ore.json",
+          "src/main/resources/assets/km_kombat/blockstates/titanium_ore.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/TitaniumOreBlock.java",
+          "src/main/resources/data/km_kombat/neoforge/biome_modifier/titanium_ore_biome_modifier.json",
+          "src/main/resources/data/km_kombat/worldgen/placed_feature/titanium_ore.json",
+          "src/main/resources/assets/km_kombat/models/item/titanium_ore.json",
+          "src/main/resources/data/km_kombat/loot_table/blocks/titanium_ore.json"
         ]
       },
       "path": "~/Materials"
@@ -728,11 +729,11 @@
       "registry_name": "titanium_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/titanium_block.json",
-          "src/main/resources/assets/kraftmined/blockstates/titanium_block.json",
-          "src/main/resources/assets/kraftmined/models/block/titanium_block.json",
-          "src/main/java/net/mcreator/kraftmined/block/TitaniumBlockBlock.java",
-          "src/main/resources/data/kraftmined/loot_table/blocks/titanium_block.json"
+          "src/main/resources/assets/km_kombat/blockstates/titanium_block.json",
+          "src/main/resources/assets/km_kombat/models/item/titanium_block.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/block/TitaniumBlockBlock.java",
+          "src/main/resources/data/km_kombat/loot_table/blocks/titanium_block.json",
+          "src/main/resources/assets/km_kombat/models/block/titanium_block.json"
         ]
       },
       "path": "~/Materials"
@@ -745,7 +746,7 @@
       "registry_name": "titanium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/titanium_ore_block_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/titanium_ore_block_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -758,7 +759,7 @@
       "registry_name": "titanium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/titanium_block_ore_recipe.json"
+          "src/main/resources/data/km_kombat/recipe/titanium_block_ore_recipe.json"
         ]
       },
       "path": "~/Materials"
@@ -771,7 +772,7 @@
       "registry_name": "titanium_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/titanium_ore_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/titanium_ore_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -784,8 +785,8 @@
       "registry_name": "raw_nickel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/RawNickelItem.java",
-          "src/main/resources/assets/kraftmined/models/item/raw_nickel.json"
+          "src/main/resources/assets/km_kombat/models/item/raw_nickel.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/RawNickelItem.java"
         ]
       },
       "path": "~/Materials"
@@ -798,8 +799,8 @@
       "registry_name": "raw_titanium",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/raw_titanium.json",
-          "src/main/java/net/mcreator/kraftmined/item/RawTitaniumItem.java"
+          "src/main/resources/assets/km_kombat/models/item/raw_titanium.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/RawTitaniumItem.java"
         ]
       },
       "path": "~/Materials"
@@ -812,7 +813,7 @@
       "registry_name": "nickel_raw_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/nickel_raw_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/nickel_raw_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -825,7 +826,7 @@
       "registry_name": "titanium_raw_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/titanium_raw_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/titanium_raw_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -838,8 +839,8 @@
       "registry_name": "raw_tungsten",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/item/RawTungstenItem.java",
-          "src/main/resources/assets/kraftmined/models/item/raw_tungsten.json"
+          "src/main/resources/assets/km_kombat/models/item/raw_tungsten.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/RawTungstenItem.java"
         ]
       },
       "path": "~/Materials"
@@ -852,7 +853,7 @@
       "registry_name": "tungsten_raw_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/kraftmined/recipe/tungsten_raw_smelting.json"
+          "src/main/resources/data/km_kombat/recipe/tungsten_raw_smelting.json"
         ]
       },
       "path": "~/Materials"
@@ -865,11 +866,11 @@
       "registry_name": "nickel_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/nickel_armor_boots.json",
-          "src/main/java/net/mcreator/kraftmined/item/NickelArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/nickel_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/nickel_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/nickel_armor_chestplate.json"
+          "src/main/resources/assets/km_kombat/models/item/nickel_armor_boots.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/NickelArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/nickel_armor_helmet.json",
+          "src/main/resources/assets/km_kombat/models/item/nickel_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/nickel_armor_leggings.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -882,11 +883,11 @@
       "registry_name": "tungsten_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_leggings.json",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_chestplate.json",
-          "src/main/resources/assets/kraftmined/models/item/tungsten_armor_boots.json",
-          "src/main/java/net/mcreator/kraftmined/item/TungstenArmorItem.java"
+          "src/main/resources/assets/km_kombat/models/item/tungsten_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_armor_helmet.json",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_armor_boots.json",
+          "src/main/resources/assets/km_kombat/models/item/tungsten_armor_leggings.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TungstenArmorItem.java"
         ]
       },
       "path": "~/SpecialArmor"
@@ -899,11 +900,11 @@
       "registry_name": "titanium_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/kraftmined/models/item/titanium_armor_chestplate.json",
-          "src/main/resources/assets/kraftmined/models/item/titanium_armor_helmet.json",
-          "src/main/resources/assets/kraftmined/models/item/titanium_armor_boots.json",
-          "src/main/java/net/mcreator/kraftmined/item/TitaniumArmorItem.java",
-          "src/main/resources/assets/kraftmined/models/item/titanium_armor_leggings.json"
+          "src/main/resources/assets/km_kombat/models/item/titanium_armor_helmet.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TitaniumArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/titanium_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/titanium_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/titanium_armor_boots.json"
         ]
       },
       "path": "~/SpecialArmor"
@@ -916,7 +917,7 @@
       "registry_name": "armor_reflect_damage",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/ArmorReflectDamageProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/ArmorReflectDamageProcedure.java"
         ],
         "dependencies": [
           {
@@ -943,7 +944,7 @@
       "registry_name": "armor_weight",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/ArmorWeightProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/ArmorWeightProcedure.java"
         ],
         "dependencies": [
           {
@@ -962,7 +963,7 @@
       "registry_name": "buffed_armor_spawning",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/kraftmined/procedures/BuffedArmorSpawningProcedure.java"
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/BuffedArmorSpawningProcedure.java"
         ],
         "dependencies": [
           {
@@ -972,6 +973,178 @@
         ]
       },
       "path": "~/Quality of Life"
+    },
+    {
+      "name": "TotemCreeping",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_creeping",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TotemCreepingItem.java",
+          "src/main/resources/assets/km_kombat/models/item/totem_creeping.json"
+        ]
+      }
+    },
+    {
+      "name": "TotemDying",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_dying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TotemDyingItem.java",
+          "src/main/resources/assets/km_kombat/models/item/totem_dying.json"
+        ]
+      }
+    },
+    {
+      "name": "TotemofCreepingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemof_creeping_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TotemofCreepingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TotemofDyingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemof_dying_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TotemofDyingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestDummy",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/entity/TestDummyEntity.java",
+          "src/main/java/net/mcreator/kraftmined/kombat/client/renderer/TestDummyRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TestDummySpawnRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_spawn_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TestDummySpawnRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestDummySpawn",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_spawn",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_kombat/models/item/test_dummy_spawn.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TestDummySpawnItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestDummyRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TestDummyRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1010,11 +1183,6 @@
       "~CUSTOM:ObsidianArmor.body",
       "~CUSTOM:Quiver.body"
     ],
-    "ITEMS:kraftmined:chestplate2": [
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE"
-    ],
     "ITEMS:kraftmined:armor2": [
       "Items.IRON_HELMET",
       "Items.IRON_CHESTPLATE",
@@ -1024,6 +1192,11 @@
       "Items.CHAINMAIL_CHESTPLATE",
       "Items.CHAINMAIL_LEGGINGS",
       "Items.CHAINMAIL_BOOTS"
+    ],
+    "ITEMS:kraftmined:chestplate2": [
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE"
     ],
     "ITEMS:kraftmined:armor3": [
       "Items.DIAMOND_HELMET",
@@ -1038,6 +1211,11 @@
     "ITEMS:kraftmined:chestplate3": [
       "Items.DIAMOND_CHESTPLATE",
       "Items.NETHERITE_CHESTPLATE"
+    ],
+    "ITEMS:kraftmined:totems": [
+      "CUSTOM:TotemCreeping",
+      "CUSTOM:TotemDying",
+      "Items.TOTEM_OF_UNDYING"
     ],
     "ITEMS:kraftmined:weapon2": [
       "Items.IRON_SWORD",
@@ -1226,68 +1404,131 @@
   "language_map": {
     "en_us": {
       "item.kraftmined.tungsten_armor_helmet": "Tungsten Helmet",
-      "item.kraftmined.tungsten_armor_chestplate": "Tungsten Chestplate",
       "item.kraftmined.tnt_armor_boots": "TNT Boots",
       "item.kraftmined.raw_nickel": "Raw Nickel",
       "attribute.kraftmined.enhanced": "Potion_enhanced",
-      "item.kraftmined.obsidian_armor_leggings": "Obsidian Leggings",
-      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
-      "item.kraftmined.stone_armor_boots": "Stone Boots",
+      "item.km_kombat.obsidian_armor_helmet": "Obsidian Helmet",
+      "item.km_kombat.cactus_armor_leggings": "Cactus Leggings",
       "item_group.kraftmined.kraftmine_kombat": "Kraftmine Combat",
-      "item.kraftmined.wood_armor_leggings": "Wooden Leggings",
-      "item.kraftmined.lapis_armor_leggings": "Lapiz Lazuli Leggings",
+      "item.km_kombat.tungsten_armor_helmet": "Tungsten Helmet",
+      "item_group.km_kombat.kraftmine_kombat": "Kraftmine Combat",
       "item.kraftmined.titanium_armor_helmet": "Titanium Helmet",
-      "item.kraftmined.wood_armor_helmet": "Wooden Helmet",
+      "item.km_kombat.wood_armor_chestplate": "Wooden Chestplate",
       "block.kraftmined.titanium_block": "Block of Titanium",
       "item.kraftmined.obsidian_armor_helmet": "Obsidian Helmet",
-      "item.kraftmined.tnt_armor_leggings": "TNT Leggings",
-      "item.kraftmined.nickel_armor_chestplate": "Nickel Chestplate",
+      "item.km_kombat.netherite_battleaxe": "Netherite Battle Axe",
+      "item.km_kombat.tungsten_armor_chestplate": "Tungsten Chestplate",
+      "item.km_kombat.tnt_armor_boots": "TNT Boots",
       "item.kraftmined.cactus_armor_leggings": "Cactus Leggings",
       "item.kraftmined.quiver_chestplate": "Quiver",
       "item.kraftmined.cactus_armor_chestplate": "Cactus Chestplate",
-      "item.kraftmined.titanium_ingot": "Titanium",
       "block.kraftmined.nickel_block": "Block of Nickel",
-      "item.kraftmined.nickel_armor_leggings": "Nickel Leggings",
-      "item.kraftmined.titanium_armor_boots": "Titanium Boots",
-      "item.kraftmined.nickel_armor_boots": "Nickel Boots",
-      "item.kraftmined.obsidian_armor_boots": "Obsidian Boots",
+      "item.km_kombat.titanium_armor_boots": "Titanium Boots",
+      "item.km_kombat.test_dummy_spawn": "Test Dummy",
       "item.kraftmined.titanium_armor_leggings": "Titanium Leggings",
-      "block.kraftmined.tungsten_ore": "Tungsten Ore",
+      "item.km_kombat.eyepatch_helmet": "Eyepatch",
+      "item.km_kombat.titanium_armor_leggings": "Titanium Leggings",
+      "item.km_kombat.titanium_armor_helmet": "Titanium Helmet",
+      "item.km_kombat.lapis_armor_leggings": "Lapiz Lazuli Leggings",
       "item.kraftmined.tungsten_armor_boots": "Tungsten Boots",
       "item.kraftmined.lapis_armor_boots": "Lapiz Lazuli Boots",
+      "item.km_kombat.quiver_chestplate": "Quiver",
       "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
-      "item.kraftmined.tungsten_armor_leggings": "Tungsten Leggings",
       "block.kraftmined.nickel_ore": "Nickel Ore",
       "effect.kraftmined.eyepatch_effect": "Patched Vision",
       "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
       "item.kraftmined.stone_armor_chestplate": "Stone Chestplate",
-      "item.kraftmined.cactus_armor_boots": "Cactus Boots",
+      "item.km_kombat.totem_creeping": "Totem of Creeping",
       "item.kraftmined.eyepatch_helmet": "Eyepatch",
       "item.kraftmined.nickel_armor_helmet": "Nickel Helmet",
       "item.kraftmined.stone_armor_helmet": "Stone Helmet",
-      "block.kraftmined.tungsten_block": "Block of Tungsten",
-      "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
+      "item.km_kombat.wood_armor_helmet": "Wooden Helmet",
+      "entity.km_kombat.test_dummy": "Test Dummy",
+      "item.km_kombat.stone_armor_chestplate": "Stone Chestplate",
       "item.kraftmined.lapis_armor_chestplate": "Lapiz Lazuli Chestplate",
       "attribute.kraftmined.buff_level": "Buff Level",
       "item.kraftmined.wood_armor_boots": "Wooden Boots",
+      "attribute.kraftmined.buffed": "Buffed",
+      "item.km_kombat.lapis_armor_boots": "Lapiz Lazuli Boots",
+      "block.km_kombat.nickel_block": "Block of Nickel",
+      "gamerule.sizeDifference.description": "Randomizes Mob Sizing",
+      "item.kraftmined.tnt_armor_chestplate": "TNT Chestplate",
+      "item.km_kombat.nickel_armor_chestplate": "Nickel Chestplate",
+      "attribute.km_kombat.enhanced": "Potion_enhanced",
+      "block.km_kombat.tungsten_ore": "Tungsten Ore",
+      "item.km_kombat.raw_titanium": "Raw Titanium",
+      "item.kraftmined.cactus_armor_helmet": "Cactus Helmet",
+      "effect.km_kombat.eyepatch_effect": "Patched Vision",
+      "item.kraftmined.raw_titanium": "Raw Titanium",
+      "item.km_kombat.stone_armor_helmet": "Stone Helmet",
+      "item.kraftmined.tnt_armor_helmet": "TNT Helmet",
+      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons",
+      "item.kraftmined.tungsten_armor_chestplate": "Tungsten Chestplate",
+      "item.km_kombat.cactus_armor_boots": "Cactus Boots",
+      "item.kraftmined.obsidian_armor_leggings": "Obsidian Leggings",
+      "gamerule.buffedPassives.description": "Mobs spawn with a random potion effect",
+      "item.kraftmined.stone_armor_boots": "Stone Boots",
+      "block.km_kombat.nickel_ore": "Nickel Ore",
+      "item.kraftmined.totem_creeping": "Totem of Creeping",
+      "item.kraftmined.wood_armor_leggings": "Wooden Leggings",
+      "item.kraftmined.lapis_armor_leggings": "Lapiz Lazuli Leggings",
+      "item.km_kombat.obsidian_scrap": "Obsidian Scrap",
+      "item.kraftmined.wood_armor_helmet": "Wooden Helmet",
+      "item.km_kombat.tungsten_armor_boots": "Tungsten Boots",
+      "item.km_kombat.totem_dying": "Totem of Dying",
+      "item.kraftmined.tnt_armor_leggings": "TNT Leggings",
+      "item.km_kombat.wood_armor_boots": "Wooden Boots",
+      "item.km_kombat.obsidian_armor_leggings": "Obsidian Leggings",
+      "item.kraftmined.nickel_armor_chestplate": "Nickel Chestplate",
+      "item.km_kombat.titanium_armor_chestplate": "Titanium Chestplate",
+      "item.km_kombat.obsidian_armor_boots": "Obsidian Boots",
+      "item.kraftmined.titanium_ingot": "Titanium",
+      "item.kraftmined.totem_dying": "Totem of Dying",
+      "item.km_kombat.nickel_armor_leggings": "Nickel Leggings",
+      "block.km_kombat.titanium_ore": "Titanium Ore",
+      "item.kraftmined.nickel_armor_leggings": "Nickel Leggings",
+      "item.kraftmined.titanium_armor_boots": "Titanium Boots",
+      "item.km_kombat.tungsten_ingot": "Tungsten",
+      "item.kraftmined.nickel_armor_boots": "Nickel Boots",
+      "item.kraftmined.obsidian_armor_boots": "Obsidian Boots",
+      "item.km_kombat.lapis_armor_chestplate": "Lapiz Lazuli Chestplate",
+      "item.km_kombat.lapis_armor_helmet": "Lapiz Lazuli Helmet",
+      "item.km_kombat.tnt_armor_leggings": "TNT Leggings",
+      "item.km_kombat.stone_armor_leggings": "Stone Leggings",
+      "item.km_kombat.wood_armor_leggings": "Wooden Leggings",
+      "block.kraftmined.tungsten_ore": "Tungsten Ore",
+      "item.kraftmined.tungsten_armor_leggings": "Tungsten Leggings",
+      "item.km_kombat.tnt_armor_helmet": "TNT Helmet",
+      "attribute.km_kombat.buffed": "Buffed",
+      "item.kraftmined.cactus_armor_boots": "Cactus Boots",
+      "item.km_kombat.nickel_ingot": "Nickel",
+      "item.km_kombat.stone_armor_boots": "Stone Boots",
+      "item.km_kombat.nickel_armor_helmet": "Nickel Helmet",
+      "block.kraftmined.tungsten_block": "Block of Tungsten",
+      "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
+      "block.km_kombat.titanium_block": "Block of Titanium",
       "gamerule.buffedMobs": "Buffed Mobs",
       "item.kraftmined.lapis_armor_helmet": "Lapiz Lazuli Helmet",
-      "attribute.kraftmined.buffed": "Buffed",
-      "gamerule.sizeDifference.description": "Randomizes Mob Sizing",
+      "item.km_kombat.nickel_armor_boots": "Nickel Boots",
+      "item.km_kombat.titanium_ingot": "Titanium",
       "item.kraftmined.nickel_ingot": "Nickel",
-      "item.kraftmined.tnt_armor_chestplate": "TNT Chestplate",
+      "item.km_kombat.tnt_armor_chestplate": "TNT Chestplate",
+      "item.km_kombat.tungsten_armor_leggings": "Tungsten Leggings",
       "item.kraftmined.titanium_armor_chestplate": "Titanium Chestplate",
       "item.kraftmined.obsidian_armor_chestplate": "Obsidian Chestplate",
       "block.kraftmined.titanium_ore": "Titanium Ore",
+      "item.km_kombat.cactus_armor_helmet": "Cactus Helmet",
+      "item.km_kombat.raw_nickel": "Raw Nickel",
       "item.kraftmined.raw_tungsten": "Raw Tungsten",
       "gamerule.buffedPassives": "Mob Passives",
-      "item.kraftmined.cactus_armor_helmet": "Cactus Helmet",
+      "item.km_kombat.obsidian_armor_chestplate": "Obsidian Chestplate",
+      "item.km_kombat.cactus_armor_chestplate": "Cactus Chestplate",
       "item.kraftmined.stone_armor_leggings": "Stone Leggings",
+      "attribute.km_kombat.buff_level": "Buff Level",
+      "item.km_kombat.raw_tungsten": "Raw Tungsten",
       "item.kraftmined.tungsten_ingot": "Tungsten",
-      "item.kraftmined.raw_titanium": "Raw Titanium",
       "gamerule.sizeDifference": "Mob Size",
-      "item.kraftmined.tnt_armor_helmet": "TNT Helmet",
-      "gamerule.buffedMobs.description": "Buffed Hostile Mob spawning. Zombies, skeletons, and other hostile mobs now spawn with better armor and weapons"
+      "block.km_kombat.tungsten_block": "Block of Tungsten"
     }
   },
   "foldersRoot": {
@@ -1308,9 +1549,9 @@
     ]
   },
   "workspaceSettings": {
-    "modid": "kraftmined",
+    "modid": "km_kombat",
     "modName": "Kraftmine Kombat Updates",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Karl, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
@@ -1320,7 +1561,8 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
-    "modElementsPackage": "net.mcreator.kraftmined"
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.kraftmined.kombat"
   },
   "mcreatorVersion": 202400342716
 }

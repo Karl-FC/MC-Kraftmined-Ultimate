@@ -16,6 +16,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.mcreator.kraftmined.kombat.init.KmKombatModGameRules;
+import net.mcreator.kraftmined.kombat.entity.TestDummyEntity;
 
 import javax.annotation.Nullable;
 
@@ -34,10 +35,10 @@ public class SizeDifferenceProcedureProcedure {
 		if (entity == null)
 			return;
 		double Size = 0;
-		if (world.getLevelData().getGameRules().getBoolean(KmKombatModGameRules.SIZE_DIFFERENCE) == true && !(entity instanceof Player)) {
-			Size = entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.SCALE) ? _livingEntity2.getAttribute(Attributes.SCALE).getBaseValue() : 0;
-			if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.SCALE))
-				_livingEntity4.getAttribute(Attributes.SCALE).setBaseValue((Size + 0.01 * Mth.nextInt(RandomSource.create(), -20, 20)));
+		if (world.getLevelData().getGameRules().getBoolean(KmKombatModGameRules.SIZE_DIFFERENCE) == true && !(entity instanceof Player) && !(entity instanceof TestDummyEntity)) {
+			Size = entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(Attributes.SCALE) ? _livingEntity3.getAttribute(Attributes.SCALE).getBaseValue() : 0;
+			if (entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.SCALE))
+				_livingEntity5.getAttribute(Attributes.SCALE).setBaseValue((Size + 0.01 * Mth.nextInt(RandomSource.create(), -20, 20)));
 		}
 	}
 }

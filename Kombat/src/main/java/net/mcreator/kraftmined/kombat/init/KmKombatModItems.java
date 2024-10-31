@@ -20,6 +20,7 @@ import net.mcreator.kraftmined.kombat.item.TotemCreepingItem;
 import net.mcreator.kraftmined.kombat.item.TntArmorItem;
 import net.mcreator.kraftmined.kombat.item.TitaniumIngotItem;
 import net.mcreator.kraftmined.kombat.item.TitaniumArmorItem;
+import net.mcreator.kraftmined.kombat.item.TestDummySpawnItem;
 import net.mcreator.kraftmined.kombat.item.StoneArmorItem;
 import net.mcreator.kraftmined.kombat.item.RawTungstenItem;
 import net.mcreator.kraftmined.kombat.item.RawTitaniumItem;
@@ -91,6 +92,7 @@ public class KmKombatModItems {
 	public static final DeferredItem<Item> TITANIUM_ARMOR_BOOTS = REGISTRY.register("titanium_armor_boots", TitaniumArmorItem.Boots::new);
 	public static final DeferredItem<Item> TOTEM_CREEPING = REGISTRY.register("totem_creeping", TotemCreepingItem::new);
 	public static final DeferredItem<Item> TOTEM_DYING = REGISTRY.register("totem_dying", TotemDyingItem::new);
+	public static final DeferredItem<Item> TEST_DUMMY_SPAWN = REGISTRY.register("test_dummy_spawn", TestDummySpawnItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,0 +1,17 @@
+{
+  "_fv": 69,
+  "_type": "attribute",
+  "definition": {
+    "name": "Mode",
+    "minValue": 0.0,
+    "maxValue": 3.0,
+    "defaultValue": 0.0,
+    "addToAllEntities": false,
+    "addToPlayers": false,
+    "entities": [
+      {
+        "value": "CUSTOM:TestDummy"
+      }
+    ]
+  }
+}

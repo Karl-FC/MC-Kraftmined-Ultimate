@@ -11,7 +11,8 @@
           "src/main/resources/assets/km_kombat/models/item/netherite_battleaxe.json",
           "src/main/java/net/mcreator/kraftmined/kombat/item/NetheriteBattleaxeItem.java"
         ]
-      }
+      },
+      "path": "~/Weapons"
     },
     {
       "name": "KraftmineKombat",
@@ -1055,6 +1056,128 @@
           }
         ]
       }
+    },
+    {
+      "name": "TestDummy",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/entity/TestDummyEntity.java",
+          "src/main/java/net/mcreator/kraftmined/kombat/client/renderer/TestDummyRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TestDummySpawnRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_spawn_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TestDummySpawnRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestDummySpawn",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_spawn",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_kombat/models/item/test_dummy_spawn.json",
+          "src/main/java/net/mcreator/kraftmined/kombat/item/TestDummySpawnItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestDummyRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TestDummyRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DummyMode",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dummy_mode",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "TestDummyOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/TestDummyOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1081,21 +1204,6 @@
       "Items.GOLDEN_LEGGINGS",
       "Items.GOLDEN_BOOTS"
     ],
-    "ITEMS:kraftmined:chestplate2": [
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.IRON_CHESTPLATE",
-      "Items.GOLDEN_CHESTPLATE"
-    ],
-    "ITEMS:kraftmined:armor2": [
-      "Items.IRON_HELMET",
-      "Items.IRON_CHESTPLATE",
-      "Items.IRON_LEGGINGS",
-      "Items.IRON_BOOTS",
-      "Items.CHAINMAIL_HELMET",
-      "Items.CHAINMAIL_CHESTPLATE",
-      "Items.CHAINMAIL_LEGGINGS",
-      "Items.CHAINMAIL_BOOTS"
-    ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:TitaniumArmor.body",
       "~CUSTOM:TungstenArmor.body",
@@ -1107,6 +1215,21 @@
       "~CUSTOM:WoodArmor.body",
       "~CUSTOM:ObsidianArmor.body",
       "~CUSTOM:Quiver.body"
+    ],
+    "ITEMS:kraftmined:armor2": [
+      "Items.IRON_HELMET",
+      "Items.IRON_CHESTPLATE",
+      "Items.IRON_LEGGINGS",
+      "Items.IRON_BOOTS",
+      "Items.CHAINMAIL_HELMET",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.CHAINMAIL_BOOTS"
+    ],
+    "ITEMS:kraftmined:chestplate2": [
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.IRON_CHESTPLATE",
+      "Items.GOLDEN_CHESTPLATE"
     ],
     "ITEMS:kraftmined:armor3": [
       "Items.DIAMOND_HELMET",
@@ -1334,15 +1457,16 @@
       "item.kraftmined.cactus_armor_chestplate": "Cactus Chestplate",
       "block.kraftmined.nickel_block": "Block of Nickel",
       "item.km_kombat.titanium_armor_boots": "Titanium Boots",
+      "item.km_kombat.test_dummy_spawn": "Test Dummy",
       "item.kraftmined.titanium_armor_leggings": "Titanium Leggings",
       "item.km_kombat.eyepatch_helmet": "Eyepatch",
       "item.km_kombat.titanium_armor_leggings": "Titanium Leggings",
-      "item.km_kombat.lapis_armor_leggings": "Lapiz Lazuli Leggings",
       "item.km_kombat.titanium_armor_helmet": "Titanium Helmet",
+      "item.km_kombat.lapis_armor_leggings": "Lapiz Lazuli Leggings",
       "item.kraftmined.tungsten_armor_boots": "Tungsten Boots",
       "item.kraftmined.lapis_armor_boots": "Lapiz Lazuli Boots",
-      "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
       "item.km_kombat.quiver_chestplate": "Quiver",
+      "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
       "block.kraftmined.nickel_ore": "Nickel Ore",
       "effect.kraftmined.eyepatch_effect": "Patched Vision",
       "item.kraftmined.netherite_battleaxe": "Netherite Battle Axe",
@@ -1352,6 +1476,7 @@
       "item.kraftmined.nickel_armor_helmet": "Nickel Helmet",
       "item.kraftmined.stone_armor_helmet": "Stone Helmet",
       "item.km_kombat.wood_armor_helmet": "Wooden Helmet",
+      "entity.km_kombat.test_dummy": "Test Dummy",
       "item.km_kombat.stone_armor_chestplate": "Stone Chestplate",
       "item.kraftmined.lapis_armor_chestplate": "Lapiz Lazuli Chestplate",
       "attribute.kraftmined.buff_level": "Buff Level",
@@ -1434,6 +1559,7 @@
       "item.kraftmined.stone_armor_leggings": "Stone Leggings",
       "attribute.km_kombat.buff_level": "Buff Level",
       "item.km_kombat.raw_tungsten": "Raw Tungsten",
+      "attribute.km_kombat.dummy_mode": "Mode",
       "item.kraftmined.tungsten_ingot": "Tungsten",
       "gamerule.sizeDifference": "Mob Size",
       "block.km_kombat.tungsten_block": "Block of Tungsten"
@@ -1452,6 +1578,10 @@
       },
       {
         "name": "Materials",
+        "children": []
+      },
+      {
+        "name": "Weapons",
         "children": []
       }
     ]
