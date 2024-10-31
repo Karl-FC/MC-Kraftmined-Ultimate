@@ -7,6 +7,6 @@
     "description": "Mobs spawn with a random potion effect",
     "category": "MOBS",
     "defaultValueLogic": true,
-    "defaultValueNumber": 0
+    "defaultValueNumber": 1
   }
 }

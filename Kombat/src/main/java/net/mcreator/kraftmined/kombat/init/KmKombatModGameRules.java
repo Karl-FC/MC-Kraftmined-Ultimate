@@ -18,8 +18,8 @@ public class KmKombatModGameRules {
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
-		BUFFED_MOBS = GameRules.register("buffedMobs", GameRules.Category.MOBS, GameRules.IntegerValue.create(0));
-		BUFFED_PASSIVES = GameRules.register("buffedPassives", GameRules.Category.MOBS, GameRules.IntegerValue.create(0));
+		BUFFED_MOBS = GameRules.register("buffedMobs", GameRules.Category.MOBS, GameRules.IntegerValue.create(1));
+		BUFFED_PASSIVES = GameRules.register("buffedPassives", GameRules.Category.MOBS, GameRules.IntegerValue.create(1));
 		SIZE_DIFFERENCE = GameRules.register("sizeDifference", GameRules.Category.MOBS, GameRules.BooleanValue.create(true));
 	}
 }

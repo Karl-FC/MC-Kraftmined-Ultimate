@@ -25,7 +25,7 @@ public class KmKombatModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<TestDummyEntity>> TEST_DUMMY = register("test_dummy",
 			EntityType.Builder.<TestDummyEntity>of(TestDummyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.85f));
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
