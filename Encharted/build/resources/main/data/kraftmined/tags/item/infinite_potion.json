@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "km_encharted:infinite_heal",
+    "km_encharted:infinite_resistance",
+    "km_encharted:infinite_slowfalling",
+    "km_encharted:infinite_fireresistance",
+    "km_encharted:infinite_strength",
+    "km_encharted:infinite_invisibility",
+    "km_encharted:infinite_nightvision",
+    "km_encharted:infinite_waterbreathing",
+    "km_encharted:infinite_saturation",
+    "km_encharted:infinite_swiftness",
+    "km_encharted:infinite_leaping"
+  ]
+}

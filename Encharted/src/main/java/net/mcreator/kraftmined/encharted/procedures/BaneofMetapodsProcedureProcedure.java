@@ -44,11 +44,15 @@ public class BaneofMetapodsProcedureProcedure {
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) > 1) {
 			BaneLevel = (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("km_encharted:baneof_metapods"))));
-			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)),
-					Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) * 0.25 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("km_encharted:baneof_metapods"))))));
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (KmEnchartedModParticleTypes.BANEOF_METAPOD_PARTICLES.get()), (entity.getX()), (entity.getY()), (entity.getZ()), (int) BaneLevel, 1, 1, 1, 0.6);
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("km_encharted:baneof_metapods")))) > 3) {
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.SONIC_BOOM), sourceentity), Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) * 0.25 * BaneLevel));
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("km_encharted:baneof_metapods")))) <= 3) {
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC), sourceentity), Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) * 0.25 * BaneLevel));
+			}
 		}
 	}
 }

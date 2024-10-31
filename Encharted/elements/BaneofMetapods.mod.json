@@ -6,7 +6,7 @@
     "supportedSlots": "any",
     "weight": 6,
     "anvilCost": 3,
-    "maxLevel": 3,
+    "maxLevel": 5,
     "damageModifier": 0,
     "incompatibleEnchantments": [
       {

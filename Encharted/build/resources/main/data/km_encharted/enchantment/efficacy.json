@@ -2,9 +2,9 @@
   "description": {
     "translate": "enchantment.km_encharted.efficacy"
   },
-  "supported_items": "km_encharted:infinite_heal",
+  "supported_items": "#kraftmined:infinite_potion",
   "weight": 10,
-  "max_level": 3,
+  "max_level": 4,
   "min_cost": {
     "base": 1,
     "per_level_above_first": 10

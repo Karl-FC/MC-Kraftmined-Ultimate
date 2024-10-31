@@ -2,7 +2,7 @@
   "description": {
     "translate": "enchantment.km_encharted.replenishment"
   },
-  "supported_items": "km_encharted:infinite_heal",
+  "supported_items": "#kraftmined:infinite_potion",
   "weight": 10,
   "max_level": 2,
   "min_cost": {
