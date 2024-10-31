@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RestrictSunGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -32,6 +33,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.kraftmined.unplayable.procedures.FlyingSquidOnEntityTickUpdateProcedure;
 import net.mcreator.kraftmined.unplayable.procedures.FlyingSquidNaturalEntitySpawningConditionProcedure;
 import net.mcreator.kraftmined.unplayable.init.KmUnplayableModEntities;
 
@@ -53,7 +55,8 @@ public class FlyingSquidEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new Goal() {
+		this.goalSelector.addGoal(1, new RestrictSunGoal(this));
+		this.goalSelector.addGoal(2, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -75,7 +78,7 @@ public class FlyingSquidEntity extends Monster {
 			public void start() {
 				LivingEntity livingentity = FlyingSquidEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				FlyingSquidEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				FlyingSquidEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 3);
 			}
 
 			@Override
@@ -85,14 +88,14 @@ public class FlyingSquidEntity extends Monster {
 					FlyingSquidEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = FlyingSquidEntity.this.distanceToSqr(livingentity);
-					if (d0 < 16) {
+					if (d0 < 32) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						FlyingSquidEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						FlyingSquidEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 3);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1.5, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = FlyingSquidEntity.this.getRandom();
@@ -102,15 +105,15 @@ public class FlyingSquidEntity extends Monster {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.5, true) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
 	}
 
 	@Override
@@ -140,6 +143,12 @@ public class FlyingSquidEntity extends Monster {
 		if (damagesource.is(DamageTypes.DROWN))
 			return false;
 		return super.hurt(damagesource, amount);
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		FlyingSquidOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

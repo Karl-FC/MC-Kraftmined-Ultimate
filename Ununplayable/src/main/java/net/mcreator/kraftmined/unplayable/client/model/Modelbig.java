@@ -1,6 +1,7 @@
 package net.mcreator.kraftmined.unplayable.client.model;
 
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
@@ -66,10 +67,6 @@ public class Modelbig<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
@@ -81,5 +78,10 @@ public class Modelbig<T extends Entity> extends EntityModel<T> {
 		stinger.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		right_antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 		torso.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+	}
+
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.right_wing.zRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.left_wing.zRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 	}
 }

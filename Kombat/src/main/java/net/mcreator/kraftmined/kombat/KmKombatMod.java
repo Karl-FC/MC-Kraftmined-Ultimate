@@ -36,7 +36,7 @@ import java.util.ArrayList;
 @Mod("km_kombat")
 public class KmKombatMod {
 	public static final Logger LOGGER = LogManager.getLogger(KmKombatMod.class);
-	public static final String MODID = "km_kombat";
+	public static final String MODID = "kraftmined";
 
 	public KmKombatMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor

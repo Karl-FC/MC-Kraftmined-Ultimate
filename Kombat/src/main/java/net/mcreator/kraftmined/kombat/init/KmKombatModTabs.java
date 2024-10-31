@@ -65,6 +65,7 @@ public class KmKombatModTabs {
 				tabData.accept(KmKombatModItems.TITANIUM_ARMOR_BOOTS.get());
 				tabData.accept(KmKombatModItems.TOTEM_CREEPING.get());
 				tabData.accept(KmKombatModItems.TOTEM_DYING.get());
+				tabData.accept(KmKombatModItems.TEST_DUMMY_SPAWN.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

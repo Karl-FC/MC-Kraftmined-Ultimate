@@ -9,7 +9,11 @@
     "states": [],
     "name": "Test Dummy",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:KraftmineKombat"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

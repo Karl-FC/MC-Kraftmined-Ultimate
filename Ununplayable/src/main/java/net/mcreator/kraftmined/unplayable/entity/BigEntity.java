@@ -11,14 +11,14 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.BreedGoal;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacementTypes;
@@ -45,6 +45,12 @@ public class BigEntity extends Animal {
 		super(type, world);
 		xpReward = 2;
 		setNoAi(false);
+		this.moveControl = new FlyingMoveControl(this, 10, true);
+	}
+
+	@Override
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
 	}
 
 	@Override
@@ -72,7 +78,7 @@ public class BigEntity extends Animal {
 			public void start() {
 				LivingEntity livingentity = BigEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				BigEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				BigEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 			}
 
 			@Override
@@ -84,12 +90,12 @@ public class BigEntity extends Animal {
 					double d0 = BigEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						BigEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						BigEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = BigEntity.this.getRandom();
@@ -99,12 +105,14 @@ public class BigEntity extends Animal {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(Items.CARROT), false));
-		this.goalSelector.addGoal(5, new BreedGoal(this, 1));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, AgeableMob.class, (float) 6));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
+			}
+		});
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
@@ -133,6 +141,11 @@ public class BigEntity extends Animal {
 	}
 
 	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
+	}
+
+	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
 		BigEntity retval = KmUnplayableModEntities.BIG.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null);
@@ -142,6 +155,20 @@ public class BigEntity extends Animal {
 	@Override
 	public boolean isFood(ItemStack stack) {
 		return Ingredient.of(new ItemStack(Items.CARROT)).test(stack);
+	}
+
+	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		this.setNoGravity(true);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
@@ -157,6 +184,7 @@ public class BigEntity extends Animal {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 }
