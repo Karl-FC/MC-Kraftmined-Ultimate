@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "km_encharted:replenishment",
+    "km_encharted:efficacy",
     "km_encharted:fear_aspect",
     "km_encharted:bluntness",
     "km_encharted:retaliation",

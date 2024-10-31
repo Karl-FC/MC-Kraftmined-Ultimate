@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.km_encharted.efficacy"
+  },
+  "supported_items": "km_encharted:infinite_heal",
+  "weight": 10,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

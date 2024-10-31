@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.km_encharted.replenishment"
+  },
+  "supported_items": "#kraftmined:infinite_potion",
+  "weight": 10,
+  "max_level": 2,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 5,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

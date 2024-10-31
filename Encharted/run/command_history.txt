@@ -23,3 +23,7 @@
 /gamemode survival
 /tp @e ~ ~ ~
 /gamemode creative
+/enchant @s km_encharted:efficacy 3
+/enchant @s km_encharted:efficacy 2
+/enchant @s km_encharted:efficacy 1
+/gamemode survival

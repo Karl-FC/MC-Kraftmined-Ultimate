@@ -18,8 +18,10 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.kraftmined.encharted.init.KmEnchartedModTabs;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModSounds;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModParticleTypes;
+import net.mcreator.kraftmined.encharted.init.KmEnchartedModItems;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModAttributes;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -32,7 +34,7 @@ import java.util.ArrayList;
 @Mod("km_encharted")
 public class KmEnchartedMod {
 	public static final Logger LOGGER = LogManager.getLogger(KmEnchartedMod.class);
-	public static final String MODID = "kraftmined";
+	public static final String MODID = "km_encharted";
 
 	public KmEnchartedMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor
@@ -40,6 +42,10 @@ public class KmEnchartedMod {
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 		KmEnchartedModSounds.REGISTRY.register(modEventBus);
+
+		KmEnchartedModItems.REGISTRY.register(modEventBus);
+
+		KmEnchartedModTabs.REGISTRY.register(modEventBus);
 
 		KmEnchartedModParticleTypes.REGISTRY.register(modEventBus);
 

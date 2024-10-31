@@ -1,0 +1,995 @@
+{
+  "mod_elements": [
+    {
+      "name": "Lifesteal",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifesteal",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/lifesteal.json"
+        ]
+      }
+    },
+    {
+      "name": "LifestealParticles",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifesteal_particles",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/client/particle/LifestealParticlesParticle.java",
+          "src/main/resources/assets/km_encharted/particles/lifesteal_particles.json"
+        ]
+      }
+    },
+    {
+      "name": "LifestealProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifesteal_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/LifestealProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BaneofMetapods",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baneof_metapods",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/baneof_metapods.json"
+        ]
+      }
+    },
+    {
+      "name": "BaneofMetapodParticles",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baneof_metapod_particles",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/particles/baneof_metapod_particles.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/client/particle/BaneofMetapodParticlesParticle.java"
+        ]
+      }
+    },
+    {
+      "name": "BaneofMetapodsProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baneof_metapods_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/BaneofMetapodsProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Backstabbing",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backstabbing",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/backstabbing.json"
+        ]
+      }
+    },
+    {
+      "name": "Unblood",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unblood",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/unblood.json"
+        ]
+      }
+    },
+    {
+      "name": "UnbloodProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unblood_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/UnbloodProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Racerism",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racerism",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/racerism.json"
+        ]
+      }
+    },
+    {
+      "name": "RacerismProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racerism_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/RacerismProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GuardingStrike",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guarding_strike",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/guarding_strike.json"
+        ]
+      }
+    },
+    {
+      "name": "GuardingStrikeProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guarding_strike_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/GuardingStrikeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CurseOfMetalMass",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_metal_mass",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/curse_of_metal_mass.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseOfMetalMassProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_metal_mass_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/CurseOfMetalMassProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Committed",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/committed.json"
+        ]
+      }
+    },
+    {
+      "name": "Committment",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committment",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "CommittedProcedrue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "committed_procedrue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/CommittedProcedrueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FrostAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/frost_aspect.json"
+        ]
+      }
+    },
+    {
+      "name": "FrostAspectProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_aspect_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/FrostAspectProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yeeting",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeeting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/yeeting.json"
+        ]
+      }
+    },
+    {
+      "name": "YeetingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeeting_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/YeetingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CurseOfInterchanging",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_interchanging",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/curse_of_interchanging.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseofInterchangingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curseof_interchanging_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/CurseofInterchangingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CurseOfCreeping",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_creeping",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/curse_of_creeping.json"
+        ]
+      }
+    },
+    {
+      "name": "CurseOfCreepingProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_of_creeping_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/CurseOfCreepingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Retaliation",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retaliation",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/retaliation.json"
+        ]
+      }
+    },
+    {
+      "name": "RetaliationProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retaliation_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/RetaliationProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bluntness",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/bluntness.json"
+        ]
+      }
+    },
+    {
+      "name": "BluntnessProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bluntness_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/BluntnessProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FearAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/fear_aspect.json"
+        ]
+      }
+    },
+    {
+      "name": "FearAspectProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_aspect_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/FearAspectProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KraftmineEnchantments",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kraftmine_enchantments",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Efficacy",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficacy",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/efficacy.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Replenishment",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replenishment",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_encharted/enchantment/replenishment.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteHealingOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_healing_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteHealingOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteHeal",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_heal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_heal.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteHealItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteResistance",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_resistance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteResistanceItem.java",
+          "src/main/resources/assets/km_encharted/models/item/infinite_resistance.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSlowfalling",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_slowfalling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteSlowfallingItem.java",
+          "src/main/resources/assets/km_encharted/models/item/infinite_slowfalling.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteFireresistance",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_fireresistance",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_fireresistance.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteFireresistanceItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteStrength",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_strength",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_strength.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteStrengthItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteInvisibility",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_invisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteInvisibilityItem.java",
+          "src/main/resources/assets/km_encharted/models/item/infinite_invisibility.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteNightvision",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_nightvision",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_nightvision.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteNightvisionItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "entity.attack.metalpipe",
+      "files": [
+        "youtube_euq7uteycp0_audio",
+        "youtube_idlmyz5hqgm_audio",
+        "youtube_f8ml0_4gev0_audio"
+      ],
+      "category": "hostile",
+      "subtitle": "METAL FALLING"
+    }
+  ],
+  "tag_elements": {
+    "ITEMS:minecraft:pointy_weapons": [
+      "Items.WOODEN_SWORD",
+      "Items.STONE_SWORD",
+      "Items.IRON_SWORD",
+      "Items.GOLDEN_SWORD",
+      "Items.DIAMOND_SWORD",
+      "Items.NETHERITE_SWORD"
+    ],
+    "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:CurseOfMetalMass"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:CurseOfMetalMass",
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:Unblood",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:BaneofMetapods"
+    ],
+    "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:Committed",
+      "~CUSTOM:Racerism",
+      "~CUSTOM:Lifesteal"
+    ],
+    "ITEMS:minecraft:melee_weapons": [
+      "Items.WOODEN_SWORD",
+      "Items.STONE_SWORD",
+      "Items.IRON_SWORD",
+      "Items.GOLDEN_SWORD",
+      "Items.DIAMOND_SWORD",
+      "Items.NETHERITE_SWORD",
+      "Items.MACE",
+      "Items.TRIDENT",
+      "Items.WOODEN_AXE",
+      "Items.STONE_AXE",
+      "Items.IRON_AXE",
+      "Items.GOLDEN_AXE",
+      "Items.DIAMOND_AXE",
+      "Items.NETHERITE_AXE"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:Committed",
+      "~CUSTOM:CurseOfMetalMass",
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:Racerism",
+      "~CUSTOM:Unblood",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:BaneofMetapods",
+      "~CUSTOM:Lifesteal"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Replenishment",
+      "~CUSTOM:Efficacy",
+      "~CUSTOM:FearAspect",
+      "~CUSTOM:Bluntness",
+      "~CUSTOM:Retaliation",
+      "~CUSTOM:CurseOfCreeping",
+      "~CUSTOM:CurseOfInterchanging",
+      "~CUSTOM:Yeeting",
+      "~CUSTOM:FrostAspect",
+      "~CUSTOM:Committed",
+      "~CUSTOM:CurseOfMetalMass",
+      "~CUSTOM:GuardingStrike",
+      "~CUSTOM:Racerism",
+      "~CUSTOM:Unblood",
+      "~CUSTOM:Backstabbing",
+      "~CUSTOM:BaneofMetapods",
+      "~CUSTOM:Lifesteal"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.km_encharted.infinite_fireresistance": "Infinite Potion of Healing",
+      "item.km_encharted.infinite_invisibility": "Infinite Potion of Healing",
+      "enchantment.kraftmined.retaliation": "Retaliation",
+      "item.km_encharted.infinite_resistance": "Infinite Potion of Healing",
+      "enchantment.kraftmined.backstabbing": "Backstabbing",
+      "attribute.km_encharted.committment": "Committment",
+      "enchantment.km_encharted.efficacy": "Efficacy",
+      "enchantment.kraftmined.unblood": "Unblood",
+      "enchantment.kraftmined.bluntness": "Bluntness",
+      "enchantment.km_encharted.guarding_strike": "Guarding Strike",
+      "enchantment.km_encharted.frost_aspect": "Frost Aspect",
+      "item_group.km_encharted.kraftmine_enchantments": "K Encharted",
+      "subtitles.entity.attack.metalpipe": "METAL FALLING",
+      "enchantment.kraftmined.fear_aspect": "Fear Aspect",
+      "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
+      "enchantment.km_encharted.yeeting": "Yeeting",
+      "enchantment.km_encharted.bluntness": "Bluntness",
+      "enchantment.kraftmined.yeeting": "Yeeting",
+      "enchantment.km_encharted.curse_of_metal_mass": "Curse Of Metal Mass",
+      "item_group.kraftmined.kraftmine_enchantments": "K Encharted",
+      "enchantment.km_encharted.backstabbing": "Backstabbing",
+      "item.km_encharted.infinite_strength": "Infinite Potion of Healing",
+      "attribute.kraftmined.committment": "Committment",
+      "enchantment.km_encharted.fear_aspect": "Fear Aspect",
+      "enchantment.kraftmined.racerism": "Racism",
+      "enchantment.kraftmined.lifesteal": "Lifesteal",
+      "enchantment.km_encharted.curse_of_interchanging": "Curse Of Interchanging",
+      "enchantment.km_encharted.baneof_metapods": "Bane of Metapods",
+      "enchantment.kraftmined.curse_of_creeping": "Curse Of Creeping",
+      "enchantment.km_encharted.unblood": "Unblood",
+      "item.km_encharted.infinite_heal": "Infinite Potion of Healing",
+      "enchantment.kraftmined.guarding_strike": "Guarding Strike",
+      "enchantment.km_encharted.lifesteal": "Lifesteal",
+      "enchantment.kraftmined.frost_aspect": "Frost Aspect",
+      "enchantment.kraftmined.committed": "Commitment",
+      "enchantment.km_encharted.curse_of_creeping": "Curse Of Creeping",
+      "enchantment.km_encharted.racerism": "Racism",
+      "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
+      "enchantment.km_encharted.retaliation": "Retaliation",
+      "item.km_encharted.infinite_nightvision": "Infinite Potion of Healing",
+      "enchantment.km_encharted.replenishment": "Replenishment",
+      "item.km_encharted.infinite_slowfalling": "Infinite Potion of Healing",
+      "enchantment.km_encharted.committed": "Commitment",
+      "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Nautre",
+        "children": []
+      },
+      {
+        "name": "Potions",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "km_encharted",
+    "modName": "Kraftmine Encharted Enchantments",
+    "version": "1.0.1",
+    "author": "Karl, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.kraftmined.encharted"
+  },
+  "mcreatorVersion": 202400342716
+}
