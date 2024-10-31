@@ -644,7 +644,8 @@
       "registry_name": "kraftmine_enchantments",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Gamerules"
     },
     {
       "name": "Efficacy",
@@ -808,9 +809,632 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteWaterbreathing",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_waterbreathing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_waterbreathing.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteWaterbreathingItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSaturation",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_saturation",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_encharted/models/item/infinite_saturation.json",
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteSaturationItem.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteResistanceOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_resistance_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteResistanceOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSlowfallingOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_slowfalling_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteSlowfallingOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteFireresistanceOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_fireresistance_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteFireresistanceOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteStrengthOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_strength_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteStrengthOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteInvisibilityOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_invisibility_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteInvisibilityOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteNightvisionOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_nightvision_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteNightvisionOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteWaterbreathingOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_waterbreathing_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteWaterbreathingOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSaturationOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_saturation_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteSaturationOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSwiftness",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_swiftness",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteSwiftnessItem.java",
+          "src/main/resources/assets/km_encharted/models/item/infinite_swiftness.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteLeaping",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_leaping",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/item/InfiniteLeapingItem.java",
+          "src/main/resources/assets/km_encharted/models/item/infinite_leaping.json"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteSwiftnessOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_swiftness_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteSwiftnessOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InfiniteLeapingOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_leaping_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/InfiniteLeapingOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BaseScale",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_scale",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BaseScaleProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_scale_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/BaseScaleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Gigasized",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/potion/GigasizedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GigasizedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/GigasizedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GigasizedEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigasized_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/GigasizedEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Minimized",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minimized",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/potion/MinimizedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "MinimizedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minimized_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/MinimizedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PotionBig",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_big",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PotionSmall",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_small",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BaseScalePlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_scale_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/encharted/procedures/BaseScalePlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "PlayerStartingScale",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_starting_scale",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Gamerules"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Playerscale",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "entity.attack.metalpipe",
@@ -824,6 +1448,19 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:kraftmined:infinite_potion": [
+      "CUSTOM:InfiniteHeal",
+      "CUSTOM:InfiniteResistance",
+      "CUSTOM:InfiniteSlowfalling",
+      "CUSTOM:InfiniteFireresistance",
+      "CUSTOM:InfiniteStrength",
+      "CUSTOM:InfiniteInvisibility",
+      "CUSTOM:InfiniteNightvision",
+      "CUSTOM:InfiniteWaterbreathing",
+      "CUSTOM:InfiniteSaturation",
+      "CUSTOM:InfiniteSwiftness",
+      "CUSTOM:InfiniteLeaping"
+    ],
     "ITEMS:minecraft:pointy_weapons": [
       "Items.WOODEN_SWORD",
       "Items.STONE_SWORD",
@@ -916,50 +1553,67 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.km_encharted.infinite_fireresistance": "Infinite Potion of Healing",
-      "item.km_encharted.infinite_invisibility": "Infinite Potion of Healing",
-      "enchantment.kraftmined.retaliation": "Retaliation",
-      "item.km_encharted.infinite_resistance": "Infinite Potion of Healing",
+      "item.km_encharted.infinite_fireresistance": "Infinite Potion of Fire Resistance",
+      "item.km_encharted.infinite_invisibility": "Infinite Potion of Invisibility",
+      "item.minecraft.splash_potion.effect.potion_small": "Splash Potion of Small",
+      "item.minecraft.lingering_potion.effect.potion_big": "Lingering Potion of Big",
+      "item.km_encharted.infinite_resistance": "Infinite Potion of Resistance",
       "enchantment.kraftmined.backstabbing": "Backstabbing",
-      "attribute.km_encharted.committment": "Committment",
       "enchantment.km_encharted.efficacy": "Efficacy",
-      "enchantment.kraftmined.unblood": "Unblood",
-      "enchantment.kraftmined.bluntness": "Bluntness",
       "enchantment.km_encharted.guarding_strike": "Guarding Strike",
+      "enchantment.kraftmined.unblood": "Unblood",
       "enchantment.km_encharted.frost_aspect": "Frost Aspect",
       "item_group.km_encharted.kraftmine_enchantments": "K Encharted",
-      "subtitles.entity.attack.metalpipe": "METAL FALLING",
       "enchantment.kraftmined.fear_aspect": "Fear Aspect",
       "enchantment.kraftmined.baneof_metapods": "Bane of Metapods",
       "enchantment.km_encharted.yeeting": "Yeeting",
-      "enchantment.km_encharted.bluntness": "Bluntness",
-      "enchantment.kraftmined.yeeting": "Yeeting",
       "enchantment.km_encharted.curse_of_metal_mass": "Curse Of Metal Mass",
-      "item_group.kraftmined.kraftmine_enchantments": "K Encharted",
-      "enchantment.km_encharted.backstabbing": "Backstabbing",
-      "item.km_encharted.infinite_strength": "Infinite Potion of Healing",
-      "attribute.kraftmined.committment": "Committment",
-      "enchantment.km_encharted.fear_aspect": "Fear Aspect",
+      "item.km_encharted.infinite_leaping": "Infinite Potion of Leaping",
+      "item.km_encharted.infinite_saturation": "Infinite Potion of Saturation",
+      "item.km_encharted.infinite_strength": "Infinite Potion of Strength",
+      "attribute.km_encharted.base_scale": "Base Scale",
       "enchantment.kraftmined.racerism": "Racism",
-      "enchantment.kraftmined.lifesteal": "Lifesteal",
+      "gamerule.playerStartingScale.description": "How big the player is (Min: 0.0625, Max: 16)",
       "enchantment.km_encharted.curse_of_interchanging": "Curse Of Interchanging",
       "enchantment.km_encharted.baneof_metapods": "Bane of Metapods",
+      "effect.km_encharted.gigasized": "Gigasized",
       "enchantment.kraftmined.curse_of_creeping": "Curse Of Creeping",
-      "enchantment.km_encharted.unblood": "Unblood",
       "item.km_encharted.infinite_heal": "Infinite Potion of Healing",
-      "enchantment.kraftmined.guarding_strike": "Guarding Strike",
-      "enchantment.km_encharted.lifesteal": "Lifesteal",
+      "effect.km_encharted.minimized": "Minimized",
       "enchantment.kraftmined.frost_aspect": "Frost Aspect",
       "enchantment.kraftmined.committed": "Commitment",
-      "enchantment.km_encharted.curse_of_creeping": "Curse Of Creeping",
+      "item.minecraft.lingering_potion.effect.potion_small": "Lingering Potion of Small",
       "enchantment.km_encharted.racerism": "Racism",
+      "item.minecraft.potion.effect.potion_small": "Potion of Small",
+      "item.minecraft.tipped_arrow.effect.potion_small": "Arrow of Small",
+      "item.km_encharted.infinite_slowfalling": "Infinite Potion of Slow Falling",
+      "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass",
+      "enchantment.kraftmined.retaliation": "Retaliation",
+      "item.minecraft.splash_potion.effect.potion_big": "Splash Potion of Big",
+      "attribute.km_encharted.committment": "Committment",
+      "item.minecraft.potion.effect.potion_big": "Potion of Big",
+      "enchantment.kraftmined.bluntness": "Bluntness",
+      "subtitles.entity.attack.metalpipe": "METAL FALLING",
+      "enchantment.km_encharted.bluntness": "Bluntness",
+      "item.km_encharted.infinite_waterbreathing": "Infinite Potion of Water Breathing",
+      "enchantment.kraftmined.yeeting": "Yeeting",
+      "item_group.kraftmined.kraftmine_enchantments": "K Encharted",
+      "enchantment.km_encharted.backstabbing": "Backstabbing",
+      "attribute.kraftmined.committment": "Committment",
+      "item.km_encharted.infinite_swiftness": "Infinite Potion of Swiftness",
+      "enchantment.km_encharted.fear_aspect": "Fear Aspect",
+      "enchantment.kraftmined.lifesteal": "Lifesteal",
+      "enchantment.km_encharted.unblood": "Unblood",
+      "enchantment.kraftmined.guarding_strike": "Guarding Strike",
+      "enchantment.km_encharted.lifesteal": "Lifesteal",
+      "enchantment.km_encharted.curse_of_creeping": "Curse Of Creeping",
+      "gamerule.playerStartingScale": "Player Scale",
       "enchantment.kraftmined.curse_of_interchanging": "Curse Of Interchanging",
       "enchantment.km_encharted.retaliation": "Retaliation",
-      "item.km_encharted.infinite_nightvision": "Infinite Potion of Healing",
+      "item.km_encharted.infinite_nightvision": "Infinite Potion of Night Vision",
+      "item.minecraft.tipped_arrow.effect.potion_big": "Arrow of Big",
       "enchantment.km_encharted.replenishment": "Replenishment",
-      "item.km_encharted.infinite_slowfalling": "Infinite Potion of Healing",
-      "enchantment.km_encharted.committed": "Commitment",
-      "enchantment.kraftmined.curse_of_metal_mass": "Curse Of Metal Mass"
+      "enchantment.km_encharted.committed": "Commitment"
     }
   },
   "foldersRoot": {
@@ -972,13 +1626,17 @@
       {
         "name": "Potions",
         "children": []
+      },
+      {
+        "name": "Gamerules",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "km_encharted",
     "modName": "Kraftmine Encharted Enchantments",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Karl, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

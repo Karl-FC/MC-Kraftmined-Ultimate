@@ -18,6 +18,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.kraftmined.encharted.network.KmEnchartedModVariables;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModTabs;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModSounds;
 import net.mcreator.kraftmined.encharted.init.KmEnchartedModPotions;
@@ -48,6 +49,7 @@ public class KmEnchartedMod {
 		KmEnchartedModItems.REGISTRY.register(modEventBus);
 
 		KmEnchartedModTabs.REGISTRY.register(modEventBus);
+		KmEnchartedModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
 		KmEnchartedModPotions.REGISTRY.register(modEventBus);
 		KmEnchartedModMobEffects.REGISTRY.register(modEventBus);

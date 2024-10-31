@@ -3,9 +3,9 @@
   "_type": "attribute",
   "definition": {
     "name": "Base Scale",
-    "minValue": 0.0,
-    "maxValue": 255.0,
-    "defaultValue": 0.0,
+    "minValue": -0.0625,
+    "maxValue": 16.0,
+    "defaultValue": 1.0,
     "addToAllEntities": true,
     "addToPlayers": false,
     "entities": []
