@@ -584,6 +584,41 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "FlyingSquidOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_squid_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/FlyingSquidOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [],
@@ -592,11 +627,15 @@
     "ENTITIES:minecraft:aquatic": [
       "~CUSTOM:FlyingSquid"
     ],
+    "BLOCKS:minecraft:dirt": [],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:Milk"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:DyingPan"
+    ],
+    "ENTITIES:minecraft:powder_snow_walkable_mobs": [
+      "CUSTOM:Goose"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:GolemArm",
@@ -607,6 +646,8 @@
     "ENCHANTMENTS:minecraft:on_random_loot": [
       "~CUSTOM:DyingPan"
     ],
+    "BIOMES:minecraft:is_overworld": [],
+    "BLOCKS:minecraft:logs": [],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:DyingPan"
     ]
@@ -620,9 +661,11 @@
       "attribute.km_unplayable.base_gravity": "Base Gravity",
       "entity.kraftmined.goose": "Goose",
       "item.km_unplayable.monodent": "Monodent",
-      "item_group.km_unplayable.kraftmine_unplayable": "K Cursed",
+      "effect.kraftmined.oiled": "Oiled up",
+      "item_group.km_unplayable.kraftmine_unplayable": "K Unplayable",
       "item.minecraft.splash_potion.effect.milk_potion": "Splash Bottle of Milk",
       "item.km_unplayable.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
+      "effect.kraftmined.milked": "Milked",
       "item.km_unplayable.goose_spawn_egg": "Goose Spawn Egg",
       "entity.kraftmined.flying_squid": "Flying Squid",
       "item.km_unplayable.dent": "Dent",
@@ -633,15 +676,18 @@
       "item.km_unplayable.dident": "Dident",
       "item.km_unplayable.materwelon": "Materwelon",
       "effect.km_unplayable.milked": "Milked",
+      "block.kraftmined.milk": "Milk",
       "enchantment.kraftmined.dying_pan": "Dying Pan",
       "item.minecraft.potion.effect.milk_potion": "Milk Bottle",
       "entity.km_unplayable.flying_squid": "Flying Squid",
       "item.kraftmined.materwelon": "Materwelon",
       "entity.kraftmined.big": "Big",
+      "attribute.kraftmined.base_gravity": "Base Gravity",
       "entity.km_unplayable.big": "Big",
       "item.km_unplayable.golem_arm": "Golem Arm",
       "item.km_unplayable.frying_pan": "Frying Pan",
       "item.kraftmined.golem_arm": "Golem Arm",
+      "fluid.kraftmined.milk": "Milk",
       "item.kraftmined.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
       "item.kraftmined.frying_pan": "Frying Pan",
       "fluid.km_unplayable.milk": "Milk",
@@ -649,7 +695,7 @@
       "item.kraftmined.goose_spawn_egg": "Goose Spawn Egg",
       "item.kraftmined.big_spawn_egg": "Big Spawn Egg",
       "item.km_unplayable.pebble": "Pebble",
-      "item_group.kraftmined.kraftmine_unplayable": "K Cursed",
+      "item_group.kraftmined.kraftmine_unplayable": "K Unplayable",
       "item.kraftmined.dident": "Dident",
       "effect.km_unplayable.oiled": "Oiled up",
       "item.minecraft.tipped_arrow.effect.milk_potion": "Arrow of Milk"
@@ -673,9 +719,9 @@
     ]
   },
   "workspaceSettings": {
-    "modid": "kraftmined",
+    "modid": "km_unplayable",
     "modName": "Un-Unplayable",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Karl, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
