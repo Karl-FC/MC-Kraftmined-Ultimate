@@ -1324,6 +1324,60 @@
         ]
       },
       "path": "~/SpecialArmor"
+    },
+    {
+      "name": "RedstoneArmorProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_armor_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/RedstoneArmorProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "RedstoneArmorRedded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_armor_redded",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/RedstoneArmorReddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
     }
   ],
   "variable_elements": [
@@ -1547,13 +1601,7 @@
       "Items.SKULL#3",
       "Items.PIGLIN_HEAD"
     ],
-    "BLOCKS:minecraft:redstone_off": [
-      "Blocks.REDSTONE_WALL_TORCH",
-      "Blocks.UNLIT_REDSTONE_TORCH",
-      "Blocks.UNPOWERED_REPEATER",
-      "Blocks.UNPOWERED_COMPARATOR",
-      "Blocks.REDSTONE_LAMP"
-    ],
+    "BLOCKS:minecraft:redstone_off": [],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:TitaniumBlock",
       "~CUSTOM:TitaniumOre",
