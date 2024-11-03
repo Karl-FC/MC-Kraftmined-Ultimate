@@ -10,10 +10,12 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.kraftmined.kombat.potion.RededMobEffect;
 import net.mcreator.kraftmined.kombat.potion.EyepatchEffectMobEffect;
 import net.mcreator.kraftmined.kombat.KmKombatMod;
 
 public class KmKombatModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(Registries.MOB_EFFECT, KmKombatMod.MODID);
 	public static final DeferredHolder<MobEffect, MobEffect> EYEPATCH_EFFECT = REGISTRY.register("eyepatch_effect", () -> new EyepatchEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> REDED = REGISTRY.register("reded", () -> new RededMobEffect());
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "km_kombat:redstone_armor_chestplate",
     "km_kombat:titanium_armor_chestplate",
     "km_kombat:tungsten_armor_chestplate",
     "km_kombat:nickel_armor_chestplate",

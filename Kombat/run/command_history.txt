@@ -1,6 +1,3 @@
-/attribute @s minecraft:generic.scale base set 1
-/gamemode cre
-/gamemode creative
 /time set night
 /kill @e[type=!player]
 /gamemode survival
@@ -48,3 +45,6 @@
 /gamemode creative
 /give @s km_kombat:test_dummy_spawn
 /summon tnt
+/gamemode survival
+/kill @e[type=minecraft:zombie]
+/gamemode creative

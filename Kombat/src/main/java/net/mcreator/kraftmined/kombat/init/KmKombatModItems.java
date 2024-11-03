@@ -22,6 +22,7 @@ import net.mcreator.kraftmined.kombat.item.TitaniumIngotItem;
 import net.mcreator.kraftmined.kombat.item.TitaniumArmorItem;
 import net.mcreator.kraftmined.kombat.item.TestDummySpawnItem;
 import net.mcreator.kraftmined.kombat.item.StoneArmorItem;
+import net.mcreator.kraftmined.kombat.item.RedstoneArmorItem;
 import net.mcreator.kraftmined.kombat.item.RawTungstenItem;
 import net.mcreator.kraftmined.kombat.item.RawTitaniumItem;
 import net.mcreator.kraftmined.kombat.item.RawNickelItem;
@@ -93,6 +94,10 @@ public class KmKombatModItems {
 	public static final DeferredItem<Item> TOTEM_CREEPING = REGISTRY.register("totem_creeping", TotemCreepingItem::new);
 	public static final DeferredItem<Item> TOTEM_DYING = REGISTRY.register("totem_dying", TotemDyingItem::new);
 	public static final DeferredItem<Item> TEST_DUMMY_SPAWN = REGISTRY.register("test_dummy_spawn", TestDummySpawnItem::new);
+	public static final DeferredItem<Item> REDSTONE_ARMOR_HELMET = REGISTRY.register("redstone_armor_helmet", RedstoneArmorItem.Helmet::new);
+	public static final DeferredItem<Item> REDSTONE_ARMOR_CHESTPLATE = REGISTRY.register("redstone_armor_chestplate", RedstoneArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> REDSTONE_ARMOR_LEGGINGS = REGISTRY.register("redstone_armor_leggings", RedstoneArmorItem.Leggings::new);
+	public static final DeferredItem<Item> REDSTONE_ARMOR_BOOTS = REGISTRY.register("redstone_armor_boots", RedstoneArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

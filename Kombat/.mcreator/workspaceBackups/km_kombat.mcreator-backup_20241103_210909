@@ -1294,6 +1294,90 @@
           }
         ]
       }
+    },
+    {
+      "name": "RedstoneArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/item/RedstoneArmorItem.java",
+          "src/main/resources/assets/km_kombat/models/item/redstone_armor_chestplate.json",
+          "src/main/resources/assets/km_kombat/models/item/redstone_armor_leggings.json",
+          "src/main/resources/assets/km_kombat/models/item/redstone_armor_boots.json",
+          "src/main/resources/assets/km_kombat/models/item/redstone_armor_helmet.json"
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "Reded",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reded",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/potion/RededMobEffect.java"
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "RedstoneArmorProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_armor_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/RedstoneArmorProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
+    },
+    {
+      "name": "RedstoneArmorRedded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_armor_redded",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/kombat/procedures/RedstoneArmorReddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SpecialArmor"
     }
   ],
   "variable_elements": [
@@ -1336,6 +1420,7 @@
       "Items.GOLDEN_CHESTPLATE"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:RedstoneArmor.body",
       "~CUSTOM:TitaniumArmor.body",
       "~CUSTOM:TungstenArmor.body",
       "~CUSTOM:NickelArmor.body",
@@ -1482,6 +1567,7 @@
       "Items.NETHERITE_BOOTS"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:RedstoneArmor.helmet",
       "~CUSTOM:TitaniumArmor.helmet",
       "~CUSTOM:TungstenArmor.helmet",
       "~CUSTOM:NickelArmor.helmet",
@@ -1515,6 +1601,7 @@
       "Items.SKULL#3",
       "Items.PIGLIN_HEAD"
     ],
+    "BLOCKS:minecraft:redstone_off": [],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:TitaniumBlock",
       "~CUSTOM:TitaniumOre",
@@ -1541,6 +1628,7 @@
       "Items.NETHERITE_HOE"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:RedstoneArmor.boots",
       "~CUSTOM:TitaniumArmor.boots",
       "~CUSTOM:TungstenArmor.boots",
       "~CUSTOM:NickelArmor.boots",
@@ -1552,6 +1640,7 @@
       "~CUSTOM:ObsidianArmor.boots"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:RedstoneArmor.legs",
       "~CUSTOM:TitaniumArmor.legs",
       "~CUSTOM:TungstenArmor.legs",
       "~CUSTOM:NickelArmor.legs",
@@ -1585,16 +1674,17 @@
       "item.kraftmined.cactus_armor_leggings": "Cactus Leggings",
       "item.kraftmined.quiver_chestplate": "Quiver",
       "item.kraftmined.cactus_armor_chestplate": "Cactus Chestplate",
-      "entity.kraftmined.test_dummy": "Test Dummy",
       "block.kraftmined.nickel_block": "Block of Nickel",
+      "entity.kraftmined.test_dummy": "Test Dummy",
       "item.km_kombat.titanium_armor_boots": "Titanium Boots",
       "item.km_kombat.test_dummy_spawn": "Test Dummy",
       "item.kraftmined.titanium_armor_leggings": "Titanium Leggings",
       "item.km_kombat.eyepatch_helmet": "Eyepatch",
       "item.km_kombat.titanium_armor_leggings": "Titanium Leggings",
-      "item.km_kombat.titanium_armor_helmet": "Titanium Helmet",
       "item.km_kombat.lapis_armor_leggings": "Lapiz Lazuli Leggings",
+      "item.km_kombat.titanium_armor_helmet": "Titanium Helmet",
       "item.kraftmined.tungsten_armor_boots": "Tungsten Boots",
+      "item.km_kombat.redstone_armor_leggings": "Redstone Leggings",
       "item.kraftmined.lapis_armor_boots": "Lapiz Lazuli Boots",
       "item.kraftmined.wood_armor_chestplate": "Wooden Chestplate",
       "item.km_kombat.quiver_chestplate": "Quiver",
@@ -1665,6 +1755,7 @@
       "block.kraftmined.tungsten_ore": "Tungsten Ore",
       "item.kraftmined.tungsten_armor_leggings": "Tungsten Leggings",
       "item.km_kombat.tnt_armor_helmet": "TNT Helmet",
+      "item.km_kombat.redstone_armor_helmet": "Redstone Helmet",
       "attribute.km_kombat.buffed": "Buffed",
       "item.kraftmined.cactus_armor_boots": "Cactus Boots",
       "item.km_kombat.nickel_ingot": "Nickel",
@@ -1672,11 +1763,13 @@
       "item.km_kombat.nickel_armor_helmet": "Nickel Helmet",
       "block.kraftmined.tungsten_block": "Block of Tungsten",
       "item.kraftmined.obsidian_scrap": "Obsidian Scrap",
+      "item.km_kombat.redstone_armor_chestplate": "Redstone Chestplate",
       "block.km_kombat.titanium_block": "Block of Titanium",
       "gamerule.buffedMobs": "Buffed Mobs",
       "item.kraftmined.lapis_armor_helmet": "Lapiz Lazuli Helmet",
       "item.km_kombat.nickel_armor_boots": "Nickel Boots",
       "item.km_kombat.titanium_ingot": "Titanium",
+      "item.km_kombat.redstone_armor_boots": "Redstone Boots",
       "item.kraftmined.nickel_ingot": "Nickel",
       "item.km_kombat.tnt_armor_chestplate": "TNT Chestplate",
       "item.km_kombat.tungsten_armor_leggings": "Tungsten Leggings",
@@ -1686,6 +1779,7 @@
       "item.km_kombat.cactus_armor_helmet": "Cactus Helmet",
       "item.km_kombat.raw_nickel": "Raw Nickel",
       "item.kraftmined.raw_tungsten": "Raw Tungsten",
+      "effect.km_kombat.reded": "Red",
       "gamerule.buffedPassives": "Mob Passives",
       "item.km_kombat.obsidian_armor_chestplate": "Obsidian Chestplate",
       "item.km_kombat.cactus_armor_chestplate": "Cactus Chestplate",
@@ -1722,7 +1816,7 @@
   "workspaceSettings": {
     "modid": "km_kombat",
     "modName": "Kraftmine Kombat Updates",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Karl, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

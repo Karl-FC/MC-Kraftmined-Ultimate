@@ -66,6 +66,10 @@ public class KmKombatModTabs {
 				tabData.accept(KmKombatModItems.TOTEM_CREEPING.get());
 				tabData.accept(KmKombatModItems.TOTEM_DYING.get());
 				tabData.accept(KmKombatModItems.TEST_DUMMY_SPAWN.get());
+				tabData.accept(KmKombatModItems.REDSTONE_ARMOR_HELMET.get());
+				tabData.accept(KmKombatModItems.REDSTONE_ARMOR_CHESTPLATE.get());
+				tabData.accept(KmKombatModItems.REDSTONE_ARMOR_LEGGINGS.get());
+				tabData.accept(KmKombatModItems.REDSTONE_ARMOR_BOOTS.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
