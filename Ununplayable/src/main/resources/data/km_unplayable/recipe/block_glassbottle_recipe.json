@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "id": "km_unplayable:block_glassbottle",
+    "count": 1
+  }
+}

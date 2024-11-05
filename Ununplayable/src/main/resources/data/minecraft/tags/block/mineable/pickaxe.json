@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "km_unplayable:dirt_ore",
+    "km_unplayable:tropical_fish_ore",
+    "km_unplayable:cod_ore",
+    "km_unplayable:salmon_ore"
+  ]
+}

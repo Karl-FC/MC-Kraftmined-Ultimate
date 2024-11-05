@@ -1,0 +1,48 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#1"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BlockSalmon"
+    },
+    "name": "block_salmon_recpe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 69,
+  "_type": "loottable",
+  "definition": {
+    "type": "Block",
+    "pools": [
+      {
+        "minrolls": 1,
+        "maxrolls": 1,
+        "minbonusrolls": 1,
+        "maxbonusrolls": 4,
+        "hasbonusrolls": true,
+        "entries": [
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.FISH#1"
+            },
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": true,
+            "explosionDecay": false,
+            "silkTouchMode": 2
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:SalmonOre"
+            },
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 1
+          }
+        ]
+      }
+    ],
+    "name": "blocks/salmon_ore",
+    "namespace": "mod"
+  }
+}

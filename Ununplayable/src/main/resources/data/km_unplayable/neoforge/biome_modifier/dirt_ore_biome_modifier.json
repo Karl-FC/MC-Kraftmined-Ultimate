@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "features": "km_unplayable:dirt_ore",
+  "step": "underground_ores"
+}

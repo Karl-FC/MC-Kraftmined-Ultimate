@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "id": "km_unplayable:block_paper",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "km_unplayable:block/tungsten_ore",
+    "up": "km_unplayable:block/tungsten_ore",
+    "north": "km_unplayable:block/tungsten_ore",
+    "east": "km_unplayable:block/tungsten_ore",
+    "south": "km_unplayable:block/tungsten_ore",
+    "west": "km_unplayable:block/tungsten_ore",
+    "particle": "km_unplayable:block/tungsten_ore"
+  },
+  "render_type": "solid"
+}

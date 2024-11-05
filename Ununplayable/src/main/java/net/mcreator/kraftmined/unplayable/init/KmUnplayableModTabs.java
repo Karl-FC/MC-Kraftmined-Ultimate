@@ -29,6 +29,20 @@ public class KmUnplayableModTabs {
 				tabData.accept(KmUnplayableModItems.FRYING_PAN.get());
 				tabData.accept(KmUnplayableModItems.GOLEM_ARM.get());
 				tabData.accept(KmUnplayableModItems.BIG_SPAWN_EGG.get());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_PAPER.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_COD.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_SALMON.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_GLASSBOTTLE.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCKROTTENFLESH.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_PHANTOMMEMBRANE.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_FEATHER.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_EGG.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.SALMON_ORE.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.COD_ORE.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.TROPICAL_FISH_ORE.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.BLOCK_TROPICALFISH.get().asItem());
+				tabData.accept(KmUnplayableModBlocks.DIRT_ORE.get().asItem());
+				tabData.accept(KmUnplayableModItems.SURPRISE_EGG.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

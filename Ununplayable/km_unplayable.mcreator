@@ -619,20 +619,483 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "BlockPaper",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_paper",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/block/block_paper.json",
+          "src/main/resources/assets/km_unplayable/blockstates/block_paper.json",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_paper.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockPaperBlock.java",
+          "src/main/resources/assets/km_unplayable/models/item/block_paper.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockPaperRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_paper_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_paper_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockCod",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_cod",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/block/block_cod.json",
+          "src/main/resources/assets/km_unplayable/models/item/block_cod.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockCodBlock.java",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_cod.json",
+          "src/main/resources/assets/km_unplayable/blockstates/block_cod.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockSalmon",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_salmon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_salmon.json",
+          "src/main/resources/assets/km_unplayable/models/block/block_salmon.json",
+          "src/main/resources/assets/km_unplayable/models/item/block_salmon.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockSalmonBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/block_salmon.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "SilkTouch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silk_touch",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/SilkTouchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockGlassbottle",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_glassbottle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/block_glassbottle.json",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_glassbottle.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockGlassbottleBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/block_glassbottle.json",
+          "src/main/resources/assets/km_unplayable/models/block/block_glassbottle.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "Blockrottenflesh",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blockrottenflesh",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/blockrottenflesh.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockrottenfleshBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/blockrottenflesh.json",
+          "src/main/resources/assets/km_unplayable/models/block/blockrottenflesh.json",
+          "src/main/resources/assets/km_unplayable/models/item/blockrottenflesh.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockPhantommembrane",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_phantommembrane",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/block_phantommembrane.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockPhantommembraneBlock.java",
+          "src/main/resources/assets/km_unplayable/models/block/block_phantommembrane.json",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_phantommembrane.json",
+          "src/main/resources/assets/km_unplayable/blockstates/block_phantommembrane.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockFeather",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_feather",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_feather.json",
+          "src/main/resources/assets/km_unplayable/models/item/block_feather.json",
+          "src/main/resources/assets/km_unplayable/models/block/block_feather.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockFeatherBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/block_feather.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockEgg",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_egg",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/block_egg.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockEggBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/block_egg.json",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_egg.json",
+          "src/main/resources/assets/km_unplayable/models/block/block_egg.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockCodRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_cod_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_cod_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockSalmonRecpe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_salmon_recpe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_salmon_recpe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "SalmonOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmon_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/SalmonOreBlock.java",
+          "src/main/resources/assets/km_unplayable/models/item/salmon_ore.json",
+          "src/main/resources/assets/km_unplayable/blockstates/salmon_ore.json",
+          "src/main/resources/assets/km_unplayable/models/block/salmon_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/configured_feature/salmon_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/placed_feature/salmon_ore.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/salmon_ore_biome_modifier.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "CodOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cod_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/block/cod_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/configured_feature/cod_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/placed_feature/cod_ore.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/cod_ore_biome_modifier.json",
+          "src/main/resources/assets/km_unplayable/models/item/cod_ore.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/CodOreBlock.java",
+          "src/main/resources/assets/km_unplayable/blockstates/cod_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "TropicalFishOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tropical_fish_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/tropical_fish_ore.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/tropical_fish_ore_biome_modifier.json",
+          "src/main/resources/assets/km_unplayable/blockstates/tropical_fish_ore.json",
+          "src/main/resources/assets/km_unplayable/models/block/tropical_fish_ore.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/TropicalFishOreBlock.java",
+          "src/main/resources/data/km_unplayable/worldgen/configured_feature/tropical_fish_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/placed_feature/tropical_fish_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockTropicalfish",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_tropicalfish",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/block/block_tropicalfish.json",
+          "src/main/resources/assets/km_unplayable/models/item/block_tropicalfish.json",
+          "src/main/resources/assets/km_unplayable/blockstates/block_tropicalfish.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/BlockTropicalfishBlock.java",
+          "src/main/resources/data/km_unplayable/loot_table/blocks/block_tropicalfish.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "DirtOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/dirt_ore.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/block/DirtOreBlock.java",
+          "src/main/resources/assets/km_unplayable/models/block/dirt_ore.json",
+          "src/main/resources/data/km_unplayable/worldgen/placed_feature/dirt_ore.json",
+          "src/main/resources/data/km_unplayable/neoforge/biome_modifier/dirt_ore_biome_modifier.json",
+          "src/main/resources/data/km_unplayable/worldgen/configured_feature/dirt_ore.json",
+          "src/main/resources/assets/km_unplayable/blockstates/dirt_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "SalmonOreLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmon_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/salmon_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "CodOreLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cod_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/cod_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "TropicalFishLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tropical_fish_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/tropical_fish_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "DirtOreLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/loot_table/blocks/dirt_ore.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockGlassbottleRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_glassbottle_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_glassbottle_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockrottenfleshRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blockrottenflesh_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/blockrottenflesh_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockPhantommembraneRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_phantommembrane_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_phantommembrane_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockFeatherRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_feather_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_feather_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "BlockEggRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_egg_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/km_unplayable/recipe/block_egg_recipe.json"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "SurpriseEgg",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "surprise_egg",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/km_unplayable/models/item/surprise_egg.json",
+          "src/main/java/net/mcreator/kraftmined/unplayable/item/SurpriseEggItem.java"
+        ]
+      },
+      "path": "~/Blocked"
+    },
+    {
+      "name": "SurpriseEggProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "surprise_egg_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/kraftmined/unplayable/procedures/SurpriseEggProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocked"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
-    "ENTITIES:minecraft:aquatic": [
-      "~CUSTOM:FlyingSquid"
-    ],
-    "BLOCKS:minecraft:dirt": [],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:Milk"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:DyingPan"
+    ],
+    "BIOMES:minecraft:is_overworld": [],
+    "BLOCKS:minecraft:logs": [],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:DyingPan"
+    ],
+    "ENTITIES:minecraft:aquatic": [
+      "~CUSTOM:FlyingSquid"
+    ],
+    "BLOCKS:minecraft:dirt": [],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DirtOre",
+      "~CUSTOM:TropicalFishOre",
+      "~CUSTOM:CodOre",
+      "~CUSTOM:SalmonOre"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:DirtOre",
+      "~CUSTOM:TropicalFishOre",
+      "~CUSTOM:CodOre",
+      "~CUSTOM:SalmonOre"
     ],
     "ENTITIES:minecraft:powder_snow_walkable_mobs": [
       "CUSTOM:Goose"
@@ -646,58 +1109,152 @@
     "ENCHANTMENTS:minecraft:on_random_loot": [
       "~CUSTOM:DyingPan"
     ],
-    "BIOMES:minecraft:is_overworld": [],
-    "BLOCKS:minecraft:logs": [],
-    "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:DyingPan"
+    "ITEMS:minecraft:spawnables": [
+      "CUSTOM:Big.spawn_egg",
+      "CUSTOM:Goose.spawn_egg",
+      "CUSTOM:FlyingSquid.spawn_egg",
+      "Items.SPAWN_EGG#50",
+      "Items.SPAWN_EGG#51",
+      "Items.SPAWN_EGG#52",
+      "Items.SPAWN_EGG#54",
+      "Items.SPAWN_EGG#55",
+      "Items.SPAWN_EGG#56",
+      "Items.SPAWN_EGG#57",
+      "Items.SPAWN_EGG#58",
+      "Items.SPAWN_EGG#59",
+      "Items.SPAWN_EGG#60",
+      "Items.SPAWN_EGG#61",
+      "Items.SPAWN_EGG#62",
+      "Items.SPAWN_EGG#65",
+      "Items.SPAWN_EGG#66",
+      "Items.SPAWN_EGG#67",
+      "Items.SPAWN_EGG#68",
+      "Items.SPAWN_EGG#90",
+      "Items.SPAWN_EGG#91",
+      "Items.SPAWN_EGG#92",
+      "Items.SPAWN_EGG#93",
+      "Items.SPAWN_EGG#94",
+      "Items.SPAWN_EGG#95",
+      "Items.SPAWN_EGG#96",
+      "Items.SPAWN_EGG#98",
+      "Items.SPAWN_EGG#100",
+      "Items.SPAWN_EGG#101",
+      "Items.SPAWN_EGG#120",
+      "Items.BEE_SPAWN_EGG",
+      "Items.CAT_SPAWN_EGG",
+      "Items.COD_SPAWN_EGG",
+      "Items.BOGGED_SPAWN_EGG",
+      "Items.BREEZE_SPAWN_EGG",
+      "Items.DOLPHIN_SPAWN_EGG",
+      "Items.DONKEY_SPAWN_EGG",
+      "Items.DROWNED_SPAWN_EGG",
+      "Items.ELDER_GUARDIAN_SPAWN_EGG",
+      "Items.EVOKER_SPAWN_EGG",
+      "Items.FOX_SPAWN_EGG",
+      "Items.HUSK_SPAWN_EGG",
+      "Items.LLAMA_SPAWN_EGG",
+      "Items.MULE_SPAWN_EGG",
+      "Items.PANDA_SPAWN_EGG",
+      "Items.PARROT_SPAWN_EGG",
+      "Items.PHANTOM_SPAWN_EGG",
+      "Items.PILLAGER_SPAWN_EGG",
+      "Items.POLAR_BEAR_SPAWN_EGG",
+      "Items.PUFFERFISH_SPAWN_EGG",
+      "Items.RAVAGER_SPAWN_EGG",
+      "Items.SALMON_SPAWN_EGG",
+      "Items.SHULKER_SPAWN_EGG",
+      "Items.SKELETON_HORSE_SPAWN_EGG",
+      "Items.STRAY_SPAWN_EGG",
+      "Items.TRADER_LLAMA_SPAWN_EGG",
+      "Items.TROPICAL_FISH_SPAWN_EGG",
+      "Items.TURTLE_SPAWN_EGG",
+      "Items.VEX_SPAWN_EGG",
+      "Items.VINDICATOR_SPAWN_EGG",
+      "Items.WANDERING_TRADER_SPAWN_EGG",
+      "Items.WITHER_SKELETON_SPAWN_EGG",
+      "Items.ZOMBIE_HORSE_SPAWN_EGG",
+      "Items.ZOMBIE_VILLAGER_SPAWN_EGG",
+      "Items.HOGLIN_SPAWN_EGG",
+      "Items.PIGLIN_SPAWN_EGG",
+      "Items.PIGLIN_BRUTE_SPAWN_EGG",
+      "Items.STRIDER_SPAWN_EGG",
+      "Items.ZOGLIN_SPAWN_EGG",
+      "Items.AXOLOTL_SPAWN_EGG",
+      "Items.ALLAY_SPAWN_EGG",
+      "Items.FROG_SPAWN_EGG",
+      "Items.TADPOLE_SPAWN_EGG",
+      "Items.WARDEN_SPAWN_EGG",
+      "Items.GOAT_SPAWN_EGG",
+      "Items.GLOW_SQUID_SPAWN_EGG",
+      "Items.IRON_GOLEM_SPAWN_EGG",
+      "Items.SNOW_GOLEM_SPAWN_EGG",
+      "Items.WITHER_SPAWN_EGG",
+      "Items.ENDER_DRAGON_SPAWN_EGG",
+      "Items.CAMEL_SPAWN_EGG",
+      "Items.SNIFFER_SPAWN_EGG",
+      "Items.ARMADILLO_SPAWN_EGG"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "entity.km_unplayable.goose": "Goose",
-      "block.km_unplayable.milk": "Milk",
       "item.kraftmined.monodent": "Monodent",
-      "attribute.km_unplayable.base_gravity": "Base Gravity",
       "entity.kraftmined.goose": "Goose",
-      "item.km_unplayable.monodent": "Monodent",
-      "effect.kraftmined.oiled": "Oiled up",
       "item_group.km_unplayable.kraftmine_unplayable": "K Unplayable",
-      "item.minecraft.splash_potion.effect.milk_potion": "Splash Bottle of Milk",
       "item.km_unplayable.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
       "effect.kraftmined.milked": "Milked",
       "item.km_unplayable.goose_spawn_egg": "Goose Spawn Egg",
-      "entity.kraftmined.flying_squid": "Flying Squid",
       "item.km_unplayable.dent": "Dent",
-      "item.kraftmined.dent": "Dent",
+      "block.km_unplayable.block_cod": "Block of Cod",
       "item.kraftmined.pebble": "Pebble",
       "enchantment.km_unplayable.dying_pan": "Dying Pan",
+      "block.km_unplayable.block_tropicalfish": "Block of Tropical Fish",
       "item.km_unplayable.big_spawn_egg": "Big Spawn Egg",
-      "item.km_unplayable.dident": "Dident",
       "item.km_unplayable.materwelon": "Materwelon",
       "effect.km_unplayable.milked": "Milked",
       "block.kraftmined.milk": "Milk",
       "enchantment.kraftmined.dying_pan": "Dying Pan",
-      "item.minecraft.potion.effect.milk_potion": "Milk Bottle",
       "entity.km_unplayable.flying_squid": "Flying Squid",
+      "block.km_unplayable.block_glassbottle": "Glass Bottle Block",
       "item.kraftmined.materwelon": "Materwelon",
       "entity.kraftmined.big": "Big",
       "attribute.kraftmined.base_gravity": "Base Gravity",
       "entity.km_unplayable.big": "Big",
       "item.km_unplayable.golem_arm": "Golem Arm",
-      "item.km_unplayable.frying_pan": "Frying Pan",
-      "item.kraftmined.golem_arm": "Golem Arm",
+      "block.km_unplayable.tropical_fish_ore": "Deepslate Tropical Fish Ore",
       "fluid.kraftmined.milk": "Milk",
+      "block.km_unplayable.block_phantommembrane": "Block of Phantom Membrane",
       "item.kraftmined.flying_squid_spawn_egg": "Flying Squid Spawn Egg",
       "item.kraftmined.frying_pan": "Frying Pan",
-      "fluid.km_unplayable.milk": "Milk",
       "item.minecraft.lingering_potion.effect.milk_potion": "Lingering Bottle of Milk",
-      "item.kraftmined.goose_spawn_egg": "Goose Spawn Egg",
       "item.kraftmined.big_spawn_egg": "Big Spawn Egg",
       "item.km_unplayable.pebble": "Pebble",
-      "item_group.kraftmined.kraftmine_unplayable": "K Unplayable",
+      "block.km_unplayable.cod_ore": "Deepslate Cod Ore",
+      "block.km_unplayable.dirt_ore": "Dirt Ore",
       "item.kraftmined.dident": "Dident",
+      "block.km_unplayable.block_egg": "Block of Eggs",
       "effect.km_unplayable.oiled": "Oiled up",
+      "block.km_unplayable.milk": "Milk",
+      "attribute.km_unplayable.base_gravity": "Base Gravity",
+      "item.km_unplayable.monodent": "Monodent",
+      "effect.kraftmined.oiled": "Oiled up",
+      "item.minecraft.splash_potion.effect.milk_potion": "Splash Bottle of Milk",
+      "block.km_unplayable.block_salmon": "Block of Salmon",
+      "entity.kraftmined.flying_squid": "Flying Squid",
+      "item.kraftmined.dent": "Dent",
+      "block.km_unplayable.block_paper": "Block of Paper",
+      "item.km_unplayable.dident": "Dident",
+      "block.km_unplayable.block_feather": "Block of Feather",
+      "item.minecraft.potion.effect.milk_potion": "Milk Bottle",
+      "item.km_unplayable.surprise_egg": "Surprise Egg",
+      "item.km_unplayable.frying_pan": "Frying Pan",
+      "item.kraftmined.golem_arm": "Golem Arm",
+      "block.km_unplayable.blockrottenflesh": "Block of Rotten Flesh",
+      "fluid.km_unplayable.milk": "Milk",
+      "item.kraftmined.goose_spawn_egg": "Goose Spawn Egg",
+      "block.km_unplayable.salmon_ore": "Deepslate Salmon Ore",
+      "item_group.kraftmined.kraftmine_unplayable": "K Unplayable",
       "item.minecraft.tipped_arrow.effect.milk_potion": "Arrow of Milk"
     }
   },
@@ -714,6 +1271,10 @@
       },
       {
         "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Blocked",
         "children": []
       }
     ]

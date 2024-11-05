@@ -1,0 +1,32 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "beach",
+    "cold_ocean",
+    "deep_cold_ocean",
+    "deep_dark",
+    "deep_frozen_ocean",
+    "deep_lukewarm_ocean",
+    "deep_ocean",
+    "desert",
+    "dripstone_caves",
+    "ice_spikes",
+    "jagged_peaks",
+    "lukewarm_ocean",
+    "lush_caves",
+    "mangrove_swamp",
+    "mushroom_fields",
+    "snowy_slopes",
+    "snowy_beach",
+    "snowy_plains",
+    "snowy_taiga",
+    "stony_peaks",
+    "swamp",
+    "warm_ocean",
+    "warped_forest",
+    "windswept_gravelly_hills",
+    "windswept_hills"
+  ],
+  "features": "km_unplayable:tropical_fish_ore",
+  "step": "underground_ores"
+}

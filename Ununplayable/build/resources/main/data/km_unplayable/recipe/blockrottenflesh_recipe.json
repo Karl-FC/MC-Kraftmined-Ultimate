@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "id": "km_unplayable:blockrottenflesh",
+    "count": 1
+  }
+}

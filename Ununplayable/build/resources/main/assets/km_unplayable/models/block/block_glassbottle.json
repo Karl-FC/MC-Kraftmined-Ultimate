@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "km_unplayable:block/plastic_block",
+    "up": "km_unplayable:block/plastic_block",
+    "north": "km_unplayable:block/plastic_block",
+    "east": "km_unplayable:block/plastic_block",
+    "south": "km_unplayable:block/plastic_block",
+    "west": "km_unplayable:block/plastic_block",
+    "particle": "km_unplayable:block/plastic_block"
+  },
+  "render_type": "solid"
+}

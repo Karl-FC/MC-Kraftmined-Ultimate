@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "id": "km_unplayable:block_egg",
+    "count": 1
+  }
+}

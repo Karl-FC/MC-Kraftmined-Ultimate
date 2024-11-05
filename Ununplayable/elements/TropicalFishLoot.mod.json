@@ -1,0 +1,48 @@
+{
+  "_fv": 69,
+  "_type": "loottable",
+  "definition": {
+    "type": "Block",
+    "pools": [
+      {
+        "minrolls": 1,
+        "maxrolls": 1,
+        "minbonusrolls": 1,
+        "maxbonusrolls": 4,
+        "hasbonusrolls": false,
+        "entries": [
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.FISH#2"
+            },
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 2
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:TropicalFishOre"
+            },
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 1
+          }
+        ]
+      }
+    ],
+    "name": "blocks/tropical_fish_ore",
+    "namespace": "mod"
+  }
+}
